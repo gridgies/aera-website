@@ -15,7 +15,7 @@ const FILTER_OPTIONS = [
 const EXPERTS = [
   {
     id: "1",
-    name: "Dr. Elena Fischer",
+    name: "[Bald verfügbar]",
     title: "Spezialistin für Wechseljahre & Hormone",
     specialty: "gynaekologie",
     badge: "Gynäkologie",
@@ -25,7 +25,7 @@ const EXPERTS = [
   },
   {
     id: "2",
-    name: "Sarah Neumann",
+    name: "[Bald verfügbar]",
     title: "Ernährungswissenschaftlerin (M.Sc.)",
     specialty: "hashimoto",
     badge: "Ernährung",
@@ -35,7 +35,7 @@ const EXPERTS = [
   },
   {
     id: "3",
-    name: "Dr. Julia Weber",
+    name: "[Bald verfügbar]",
     title: "Fachärztin für Endokrinologie",
     specialty: "pcos",
     badge: "Endokrinologie",
