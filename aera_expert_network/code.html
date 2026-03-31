@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#f0fde5",
+              "outline-variant": "#b2b2ab",
+              "secondary-container": "#e8f5dd",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e3e3db",
+              "primary-container": "#f8ddd2",
+              "error": "#aa371c",
+              "primary": "#6f5b53",
+              "on-tertiary-fixed": "#4a4154",
+              "on-surface-variant": "#5e605a",
+              "on-tertiary-fixed-variant": "#675d71",
+              "inverse-primary": "#fee2d8",
+              "on-error": "#fff7f6",
+              "error-container": "#fa7150",
+              "surface-container-high": "#e9e8e1",
+              "surface-variant": "#e3e3db",
+              "secondary-fixed": "#e8f5dd",
+              "primary-fixed-dim": "#eacfc5",
+              "on-error-container": "#671200",
+              "inverse-surface": "#0e0e0c",
+              "outline": "#7a7b75",
+              "surface-tint": "#6f5b53",
+              "surface-container": "#efeee8",
+              "secondary-fixed-dim": "#d9e7d0",
+              "on-secondary-container": "#515e4c",
+              "tertiary": "#655b6f",
+              "on-primary-fixed-variant": "#6b574f",
+              "tertiary-container": "#f4e6ff",
+              "on-surface": "#31332e",
+              "primary-dim": "#624f47",
+              "tertiary-fixed": "#f4e6ff",
+              "on-tertiary-container": "#5c5367",
+              "secondary": "#566350",
+              "secondary-dim": "#4b5745",
+              "tertiary-fixed-dim": "#e5d8f0",
+              "on-primary": "#fff7f5",
+              "primary-fixed": "#f8ddd2",
+              "tertiary-dim": "#594f63",
+              "on-primary-fixed": "#4d3b34",
+              "surface": "#fbf9f4",
+              "inverse-on-surface": "#9e9d99",
+              "error-dim": "#821a01",
+              "on-primary-container": "#614e46",
+              "on-secondary-fixed": "#3f4b3a",
+              "surface-container-low": "#f5f4ee",
+              "background": "#fbf9f4",
+              "on-tertiary": "#fef6ff",
+              "surface-bright": "#fbf9f4",
+              "on-secondary-fixed-variant": "#5c6855",
+              "surface-dim": "#dadad2",
+              "on-background": "#31332e"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fbf9f4;
+            color: #31332e;
+        }
+        .noto-serif { font-family: 'Noto Serif', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm shadow-[#31332e]/5">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-3xl font-serif font-bold text-[#6f5b53] dark:text-[#d8c7c0] italic noto-serif tracking-tight">Aera</div>
+<div class="hidden md:flex items-center gap-8 font-serif font-medium text-lg leading-tight noto-serif">
+<a class="text-[#6f5b53]/70 dark:text-[#d8c7c0]/70 hover:text-[#6f5b53] hover:opacity-80 transition-all duration-300" href="#">Solutions</a>
+<a class="text-[#6f5b53]/70 dark:text-[#d8c7c0]/70 hover:text-[#6f5b53] hover:opacity-80 transition-all duration-300" href="#">How it works</a>
+<a class="text-[#6f5b53] dark:text-[#f8ddd2] border-b-2 border-[#f8ddd2] pb-1" href="#">About us</a>
+<a class="text-[#6f5b53]/70 dark:text-[#d8c7c0]/70 hover:text-[#6f5b53] hover:opacity-80 transition-all duration-300" href="#">Science</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium scale-95 transition-transform duration-200 ease-out hover:scale-100">
+            Get Started
+        </button>
+</div>
+<div class="bg-[#f5f4ee] dark:bg-stone-800 h-px w-full"></div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto">
+<!-- Hero Header -->
+<header class="mb-16 max-w-3xl">
+<h1 class="text-5xl md:text-6xl noto-serif font-bold text-primary mb-6 leading-[1.1]">Access the right support</h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed">
+            Scientifically-backed guidance from world-class specialists. We combine medical expertise with holistic well-being for every phase of your life.
+        </p>
+</header>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Sidebar Filter -->
+<aside class="w-full lg:w-72 shrink-0">
+<div class="bg-surface-container-low rounded-xl p-8 sticky top-32">
+<h2 class="text-xl noto-serif font-semibold text-primary mb-6">Specialization</h2>
+<nav class="flex flex-col gap-4">
+<label class="flex items-center gap-3 group cursor-pointer">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">All areas</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Menopause</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Hashimoto &amp; Thyroid</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Fertility</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Endometriosis</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">PCOS</span>
+</label>
+</nav>
+<div class="mt-10 pt-8 border-t border-outline-variant/20">
+<h2 class="text-xl noto-serif font-semibold text-primary mb-6">Availability</h2>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary/20" name="availability" type="radio"/>
+<span class="text-on-surface-variant">This week</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Expert Grid -->
+<section class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-80 overflow-hidden">
+<img alt="Expert" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="professional headshot of a middle-aged female doctor in a bright modern medical office with soft natural lighting and warm atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvOb-MZy738kzI_RYWWjtXc5HVd1GnFVbCJ9ALpHQJAZ8YgawjLEf9fO2xdyzj5ZRoQx2F_tBnMg3t4xiAHgim8n1CXLtRY6LTWHxLml2n6YbgayG0Lyok2eJ5hU0mwRUuEWxTUJTkqMS197K5V4gU7qeNU5N7T7uPaDEeo6AsD3hPvSmL2OiFdsW6MvLC_1FRRLrMUMl9aEzvmWAzL21gwpasux2tQkP1I6toTTg9XqTBUOE-ikgHKhji4xJWkxI-59r4MWoUYGkG"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">Gynecology</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl noto-serif font-bold text-on-surface mb-1">Dr. Elena Fischer</h3>
+<p class="text-tertiary font-medium mb-4">Specialist for Menopause &amp; Hormones</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Over 15 years of experience in holistic hormone therapy and preventive women's health.</p>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-bold hover:bg-primary hover:text-on-primary transition-colors duration-300 flex items-center justify-center gap-2">
+                            Book appointment
+                            <span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-80 overflow-hidden">
+<img alt="Expert" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="portrait of a confident female nutritionist in a light airy studio with green plants in the background, soft editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5QLiy3YeJOZPU-LvjCtBgtpD0bizgl9U0e-rNnHrMQYhP6MNCFF2CcTT1dxQrni3gAn_c6AvhYdb4IsZsvuahDC9qqsHHZFD1tUT5drrDtA9yRPAw6ILH_gC3VKbyBTVpi_kbOYolfxxfu5ov7_I5d7tQc5mcsbcuywO1GvsdpGOp1i4zF3vnl2o8wDgw2jfY3l1GpLdJf3Ly9pWjCFM0tTcKrTTN5sGk4DjVkbsOcTp68nCWj_IKwQhERL_j764WQDp2jC2Ca2tt"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">Nutrition</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl noto-serif font-bold text-on-surface mb-1">Sarah Neumann</h3>
+<p class="text-tertiary font-medium mb-4">Nutritionist (M.Sc.)</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Expert in anti-inflammatory nutrition for Hashimoto's and autoimmune conditions.</p>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-bold hover:bg-primary hover:text-on-primary transition-colors duration-300 flex items-center justify-center gap-2">
+                            Book appointment
+                            <span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-80 overflow-hidden">
+<img alt="Expert" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="warm portrait of a female endocrinologist in professional attire, leaning against a wooden desk in a stylish office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCB4N-W8ZeFkMSgeNuOmglPObtK9g07H5pwqe2Rl_ekkCkFe9j3j5ePS3OHoa0qNC3cEsnQWAiI9PPVySS-Qsryc9xNGUXS2n8wTDm-DVD2mAGCukL76VkIy3SB6mf2alqByza71pumbOh0-PBd88FdDYmKL1xpKSUQLa02RaKcJj7_XU4KX6l3P-1MGaR20uYeYVz0aQ_qI6w5YBhFK1Akii9xmzm2wic1bnYZ7dBszbr7Ju57RuWyjzXfFPTj5k0K1inHKz5UVTv"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">Endocrinology</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl noto-serif font-bold text-on-surface mb-1">Dr. Julia Weber</h3>
+<p class="text-tertiary font-medium mb-4">Specialist in Endocrinology</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Specialized in complex hormonal disorders and metabolic health for women.</p>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-bold hover:bg-primary hover:text-on-primary transition-colors duration-300 flex items-center justify-center gap-2">
+                            Book appointment
+                            <span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+</button>
+</div>
+</div>
+<!-- Card 4 (Bento-style tall or emphasized) -->
+<div class="bg-primary text-on-primary rounded-xl p-10 flex flex-col justify-center items-center text-center">
+<div class="w-20 h-20 bg-primary-container/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-primary-container" data-icon="clinical_notes">clinical_notes</span>
+</div>
+<h3 class="text-3xl noto-serif font-bold mb-4">Not sure who you need?</h3>
+<p class="text-on-primary/80 mb-8 max-w-xs">Take our Aera Vitality Check to find the perfect expert for your needs.</p>
+<button class="bg-surface-container-lowest text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary-container transition-colors">
+                        Start Vitality Check
+                    </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Featured Section (Editorial Layout) -->
+<section class="mt-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl overflow-hidden bg-surface-container-high">
+<div class="relative h-[500px] lg:h-auto">
+<img alt="Sanctuary Space" class="w-full h-full object-cover" data-alt="high-end spa-like clinic reception with warm wood textures, curved furniture, and minimalist zen aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjqLzXxpHKlHh1rBQ1f_xQtVsJ5EYex5w2_HHBWwAwKlaQHzoy-UwSHcYtpceRRsGWXq-LDHbwDH42iMS04i4rji5FO6OmfrFGmdIUr47u2QK3y35NSCP8A3pnOiWuckhLVtYw_qCvUDNubPknC_W7W7KHpf2MuEGUP0Q1aify8Ev3kd6dF96IvI-aHLrNQ7mT8hdSsNmPloUkaMTdyqKJcT7CKIJyOb5KxbDSMX6zKnVe42P0eyCor6D9HCGxkL9SpUzw6_HPIrNC"/>
+</div>
+<div class="p-12 lg:p-20 flex flex-col justify-center">
+<span class="text-tertiary font-semibold tracking-widest uppercase text-xs mb-4">Built with medical expertise</span>
+<h2 class="text-4xl noto-serif font-bold text-primary mb-8 leading-tight">Holistic care at the highest medical level.</h2>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-bold text-on-surface">Certified Expertise</h4>
+<p class="text-on-surface-variant text-sm">All our partners hold board-certified medical titles or qualified Master's degrees.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="sync_alt">sync_alt</span>
+<div>
+<h4 class="font-bold text-on-surface">Interdisciplinary Approach</h4>
+<p class="text-on-surface-variant text-sm">We work as a network. Your gynecologist speaks with your nutritionist — for your optimal results.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f5f4ee] dark:bg-stone-950 border-t border-[#b2b2ab]/15 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-[#6f5b53] dark:text-[#d8c7c0] italic noto-serif">Aera</div>
+<div class="flex gap-8 font-sans text-sm tracking-wide manrope text-[#6f5b53]/60 dark:text-[#d8c7c0]/60">
+<a class="hover:text-[#6f5b53] underline decoration-[#f8ddd2] underline-offset-4 transition-opacity" href="#">Imprint</a>
+<a class="hover:text-[#6f5b53] underline decoration-[#f8ddd2] underline-offset-4 transition-opacity" href="#">Privacy</a>
+<a class="hover:text-[#6f5b53] underline decoration-[#f8ddd2] underline-offset-4 transition-opacity" href="#">Terms</a>
+</div>
+<div class="text-[#6f5b53] dark:text-[#d8c7c0] font-sans text-sm tracking-wide manrope">
+            © Aera. All rights reserved.
+        </div>
+</div>
+</footer>
+</body></html>
