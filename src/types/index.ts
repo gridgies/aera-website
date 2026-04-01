@@ -1,7 +1,15 @@
+export interface QuizScores {
+  P: number; // Perimenopause / Wechseljahre
+  H: number; // Hashimoto / Schilddrüse
+  C: number; // Cortisol / HPA-Achse
+  E: number; // Östrogendominanz / Progesteronmangel
+}
+
 export interface QuizOption {
   icon: string;
   label: string;
   description: string;
+  scores: QuizScores;
 }
 
 export interface QuizQuestion {
