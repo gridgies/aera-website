@@ -54,7 +54,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       },
     ],
   },
-  schlafstörungen: {
+  schlafstoerungen: {
     slug: "schlafstoerungen",
     name: "Schlafstörungen",
     nameFull: "Schlafstörungen",
@@ -91,7 +91,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       },
     ],
   },
-  müdigkeit: {
+  muedigkeit: {
     slug: "muedigkeit",
     name: "Müdigkeit",
     nameFull: "Chronische Müdigkeit und Erschöpfung",
@@ -286,7 +286,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
     ],
   },
 
-  nachtschweiß: {
+  nachtschweiss: {
     slug: "nachtschweiss",
     name: "Nachtschweiß",
     nameFull: "Nachtschweiß bei Frauen",
