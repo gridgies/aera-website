@@ -32,9 +32,9 @@ export default function AGBPage() {
             <h2 className="text-xl font-headline font-bold text-primary mb-4">1. Geltungsbereich</h2>
             <p className="text-sm text-on-surface-variant">
               Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung der Website
-              aerahealth.de sowie aller darüber angebotenen Dienste (nachfolgend „Aera" oder
-              „Dienst") von {LEGAL.name}, {LEGAL.street}, {LEGAL.zip} {LEGAL.city}
-              {" "}(nachfolgend „wir" oder „Anbieter"). Mit der Nutzung unseres Dienstes erkennst
+              aerahealth.de sowie aller darüber angebotenen Dienste (nachfolgend &bdquo;Aera&ldquo; oder
+              &bdquo;Dienst&ldquo;) von {LEGAL.name}, {LEGAL.street}, {LEGAL.zip} {LEGAL.city}{" "}
+              (nachfolgend &bdquo;wir&ldquo; oder &bdquo;Anbieter&ldquo;). Mit der Nutzung unseres Dienstes erkennst
               du diese AGB an.
             </p>
           </section>
