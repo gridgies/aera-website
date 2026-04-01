@@ -83,7 +83,7 @@ export const STEPS: Step[] = [
   {
     number: "Zwei",
     title: "Erkenntnisse erhalten",
-    description: "Du erhältst eine detaillierte Auswertung, die dir erklärt, warum du dich so fühlst und was deine Hormone damit zu tun haben.",
+    description: "Du erhältst eine erste Auswertung, die dir erklärt, warum du dich so fühlst und was deine Hormone damit zu tun haben.",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDn76Mslg8j3mTZfcfDQROTNrTWZmX1Hgbnb6Cs80R5BqnTGcnzYIJMz7K8NcOFz9G_1Ev6_h4oOooWa4S7LV5RRO3awhW43i4h4pvqt_YZ2xvpA59QqmZmIpz7s8u4c-GU76CCkp2D0iPbVUS8eIaKTDVVP_31ogLN9U8cfHPHY6vVQa6Cl-gajnqA0N2G-xXVYlygAhvNeZWkdIlYK4T8sSNRpg_eMBP5GYcNS0hFts3VtSYBjvdpxmwRcytMIwsm6V7QXot4y1Sj",
   },
   {

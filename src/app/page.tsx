@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { CONDITIONS, STEPS, TRUST_BADGES, WAITLIST_TOPICS, PROBLEM_ITEMS } from "@/lib/constants";
+import { CONDITIONS, STEPS, TRUST_BADGES, PROBLEM_ITEMS } from "@/lib/constants";
+import { WaitlistForm } from "@/components/ui/WaitlistForm";
 
 export default function HomePage() {
   return (
@@ -242,35 +243,7 @@ export default function HomePage() {
           <p className="text-lg text-on-surface-variant mb-16 max-w-xl mx-auto leading-relaxed font-body opacity-80">
             Werde Teil von Aera und erhalte frühen Zugang zur personalisierten Frauengesundheit.
           </p>
-          <form className="max-w-md mx-auto space-y-6">
-            <input
-              type="email"
-              placeholder="Deine E-Mail-Adresse"
-              className="w-full px-8 py-5 rounded-full bg-white border border-outline-variant/20 focus:ring-1 focus:ring-primary/20 focus:border-primary/20 transition-all placeholder:text-on-surface-variant/40 font-body text-sm"
-            />
-            <select
-              defaultValue=""
-              className="w-full px-8 py-5 rounded-full bg-white border border-outline-variant/20 focus:ring-1 focus:ring-primary/20 focus:border-primary/20 transition-all text-on-surface-variant font-body text-sm appearance-none cursor-pointer"
-            >
-              <option value="" disabled>
-                Dein Hauptthema wählen
-              </option>
-              {WAITLIST_TOPICS.map((topic) => (
-                <option key={topic.value} value={topic.value}>
-                  {topic.label}
-                </option>
-              ))}
-            </select>
-            <button
-              type="submit"
-              className="w-full bg-primary text-on-primary py-5 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-primary-dim transition-all shadow-xl shadow-primary/10 active:scale-95"
-            >
-              Warteliste beitreten
-            </button>
-            <p className="text-[9px] text-on-surface-variant/50 mt-8 uppercase tracking-[0.2em] font-bold">
-              Datenschutz garantiert. Jederzeit abmeldbar.
-            </p>
-          </form>
+          <WaitlistForm />
         </div>
       </section>
     </div>

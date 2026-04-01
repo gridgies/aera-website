@@ -9,16 +9,16 @@ export function Footer() {
         </Link>
 
         <div className="flex flex-wrap justify-center gap-8 font-body text-[10px] uppercase tracking-[0.2em] text-on-surface/50">
-          <Link href="#" className="hover:text-primary transition-colors">
+          <Link href="/impressum" className="hover:text-primary transition-colors">
             Impressum
           </Link>
-          <Link href="#" className="hover:text-primary transition-colors">
+          <Link href="/datenschutz" className="hover:text-primary transition-colors">
             Datenschutz
           </Link>
-          <Link href="#" className="hover:text-primary transition-colors">
+          <Link href="/agb" className="hover:text-primary transition-colors">
             AGB
           </Link>
-          <Link href="#" className="hover:text-primary transition-colors">
+          <Link href="/kontakt" className="hover:text-primary transition-colors">
             Kontakt
           </Link>
         </div>
