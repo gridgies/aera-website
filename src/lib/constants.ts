@@ -63,7 +63,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         scores: { P: 1, H: 0, C: 1, E: 3 },
       },
       {
-        icon: "anxiety",
+        icon: "sentiment_worried",
         label: "Innere Unruhe, obwohl ich erschöpft bin",
         description: "Ich bin müde, aber kann nicht abschalten. Angst oder Nervosität ohne klaren Auslöser.",
         scores: { P: 0, H: 0, C: 4, E: 1 },
