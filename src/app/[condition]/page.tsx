@@ -49,7 +49,7 @@ export default async function ConditionPage({ params }: Props) {
   ).slice(0, 6);
 
   // Age pages only for wechseljahre
-  const ageAlters = conditionSlug === "wechseljahre" ? Object.keys(AGE_PAGES) : [];
+  const ageAlters = conditionSlug === "menopause" ? Object.keys(AGE_PAGES) : [];
 
   const breadcrumbs = [
     { name: "Startseite", url: BASE_URL },

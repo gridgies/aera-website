@@ -10,15 +10,15 @@ export interface Condition {
 }
 
 export const CONDITIONS_DATA: Record<string, Condition> = {
-  wechseljahre: {
-    slug: "wechseljahre",
-    name: "Wechseljahre",
-    nameLong: "Wechseljahre (Menopause & Perimenopause)",
-    aliases: ["Menopause", "Klimakterium", "Perimenopause", "Postmenopause"],
+  menopause: {
+    slug: "menopause",
+    name: "Menopause",
+    nameLong: "Menopause & Perimenopause",
+    aliases: ["Wechseljahre", "Klimakterium", "Perimenopause", "Postmenopause"],
     description:
-      "Die Wechseljahre bezeichnen den natürlichen hormonellen Übergang im Leben einer Frau, bei dem die Eierstöcke die Östrogenproduktion reduzieren und die Menstruation endet.",
+      "Die Menopause bezeichnet den natürlichen hormonellen Übergang im Leben einer Frau, bei dem die Eierstöcke die Östrogenproduktion reduzieren und die Menstruation endet.",
     metaDescription:
-      "Alles über Wechseljahre: Symptome, Phasen, Behandlung und natürliche Hilfe bei Menopause und Perimenopause. Medizinisch fundiert für Frauen in Deutschland.",
+      "Alles über Menopause & Wechseljahre: Symptome, Phasen, Behandlung und natürliche Hilfe bei Perimenopause. Medizinisch fundiert für Frauen in Deutschland.",
     symptoms: [
       "hitzewallungen",
       "schlafstoerungen",
@@ -54,7 +54,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
       "verstopfung",
       "trockene-haut",
     ],
-    relatedConditions: ["wechseljahre", "schilddruese", "hormone"],
+    relatedConditions: ["menopause", "schilddruese", "hormone"],
   },
   schilddruese: {
     slug: "schilddruese",
@@ -78,7 +78,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
       "konzentrationsprobleme",
       "verstopfung",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre", "hormone"],
+    relatedConditions: ["hashimoto", "menopause", "hormone"],
   },
   hormone: {
     slug: "hormone",
@@ -105,6 +105,6 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
       "libidoverlust",
       "schlafstoerungen",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto", "schilddruese"],
+    relatedConditions: ["menopause", "hashimoto", "schilddruese"],
   },
 };

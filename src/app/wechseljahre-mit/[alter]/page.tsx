@@ -41,7 +41,7 @@ export default async function AgeWechseljahreSeite({ params }: Props) {
 
   const breadcrumbs = [
     { name: "Startseite", url: BASE_URL },
-    { name: "Wechseljahre", url: `${BASE_URL}/wechseljahre` },
+    { name: "Menopause", url: `${BASE_URL}/menopause` },
     { name: `Wechseljahre mit ${page.alterLabel}`, url: pageUrl },
   ];
 
@@ -74,7 +74,7 @@ export default async function AgeWechseljahreSeite({ params }: Props) {
         <nav className="text-xs text-on-surface-variant mb-12 flex gap-2 flex-wrap" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-primary transition-colors">Startseite</Link>
           <span>/</span>
-          <Link href="/wechseljahre" className="hover:text-primary transition-colors">Wechseljahre</Link>
+          <Link href="/menopause" className="hover:text-primary transition-colors">Menopause</Link>
           <span>/</span>
           <span className="text-on-surface">Mit {page.alterLabel}</span>
         </nav>
@@ -91,7 +91,7 @@ export default async function AgeWechseljahreSeite({ params }: Props) {
         {/* Header */}
         <header className="mb-16">
           <span className="inline-block py-1 px-4 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
-            Wechseljahre
+            Menopause
           </span>
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-on-surface leading-tight mb-6">
             {page.title}
@@ -193,8 +193,8 @@ export default async function AgeWechseljahreSeite({ params }: Props) {
           <span className="material-symbols-outlined text-primary font-extralight text-2xl flex-shrink-0">menu_book</span>
           <div>
             <p className="text-xs text-on-surface-variant font-body mb-1">Mehr zum Thema</p>
-            <Link href="/wechseljahre" className="font-bold text-on-surface hover:text-primary transition-colors">
-              Der komplette Wechseljahre-Ratgeber →
+            <Link href="/menopause" className="font-bold text-on-surface hover:text-primary transition-colors">
+              Der komplette Menopause-Ratgeber →
             </Link>
           </div>
         </div>

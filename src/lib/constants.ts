@@ -1,8 +1,7 @@
 import { QuizQuestion, Condition, Step, NavLink } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Lösungen", href: "/#loesungen" },
-  { label: "Wie es funktioniert", href: "/#wie-es-funktioniert" },
+  { label: "Themen", href: "/themen" },
   { label: "Expert:innen", href: "/experten" },
   { label: "Wissenschaft", href: "/wissenschaft" },
 ];
@@ -166,11 +165,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
 ];
 
 export const CONDITIONS: Condition[] = [
-  { icon: "eco", title: "Schilddrüse & Hashimoto", description: "Stoffwechsel optimieren und Entzündungen reduzieren.", href: "/check" },
-  { icon: "light_mode", title: "Wechseljahre", description: "Souverän durch die Transition mit sanfter Balance.", href: "/check" },
-  { icon: "favorite", title: "Kinderwunsch & Hormone", description: "Deinen Körper optimal auf eine Schwangerschaft vorbereiten.", href: "/check" },
-  { icon: "cyclone", title: "Zyklus & PMS", description: "Beschwerdefrei leben in jeder Phase deines Monats.", href: "/check" },
-  { icon: "bolt", title: "Erschöpfung & Energie", description: "Zurück zu deiner vollen Kraft und Lebensfreude.", href: "/check" },
+  { icon: "light_mode", title: "Menopause", description: "Souverän durch die Transition mit sanfter Balance.", href: "/menopause" },
+  { icon: "eco", title: "Hashimoto", description: "Stoffwechsel optimieren und Entzündungen reduzieren.", href: "/hashimoto" },
+  { icon: "science", title: "Schilddrüse", description: "TSH-Werte verstehen und Energie zurückgewinnen.", href: "/schilddruese" },
+  { icon: "favorite", title: "Hormone", description: "Östrogen, Progesteron und Cortisol in Balance bringen.", href: "/hormone" },
 ];
 
 export const STEPS: Step[] = [
@@ -196,7 +194,7 @@ export const STEPS: Step[] = [
 
 export const WAITLIST_TOPICS = [
   { value: "hormone-zyklus", label: "Hormone & Zyklus" },
-  { value: "wechseljahre", label: "Wechseljahre" },
+  { value: "menopause", label: "Menopause" },
   { value: "energie-stoffwechsel", label: "Energie & Stoffwechsel" },
   { value: "allgemeine-vitalitaet", label: "Allgemeine Vitalität" },
 ];

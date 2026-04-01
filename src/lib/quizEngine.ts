@@ -57,7 +57,7 @@ export const PROFILE_DEFINITIONS: Record<ProfileKey, HormonProfil> = {
       "Hormontherapie (HRT) besprechen: Aktuelle Leitlinien (DGGG 2020) sehen HRT als sicher und wirksam für gesunde Frauen unter 60",
       "Pflanzliche Alternativen prüfen: Traubsilberkerze und Rotklee-Isoflavone haben die stärkste Evidenz",
     ],
-    conditionSlug: "wechseljahre",
+    conditionSlug: "menopause",
     icon: "wb_sunny",
     color: "bg-amber-50",
     textColor: "text-amber-800",

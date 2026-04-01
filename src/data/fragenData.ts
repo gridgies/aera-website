@@ -45,7 +45,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
       "hitzewallungen-was-hilft-sofort",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Wann hören Hitzewallungen auf?",
@@ -83,7 +83,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-lange-dauern-wechseljahre",
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Kann die Menopause mit 40 beginnen?",
@@ -122,7 +122,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-lange-dauern-wechseljahre",
       "welche-hormone-testen-lassen",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Wie erkenne ich, ob ich in der Perimenopause bin?",
@@ -243,7 +243,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-erkenne-ich-hashimoto",
       "welche-blutwerte-bei-muedigkeit",
     ],
-    relatedConditions: ["hormone", "wechseljahre", "hashimoto"],
+    relatedConditions: ["hormone", "menopause", "hashimoto"],
     faqs: [
       {
         question: "Kann ich einen Hormontest zuhause machen?",
@@ -281,7 +281,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-lange-dauern-wechseljahre",
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Hilft Magnesium gegen Hitzewallungen?",
@@ -403,7 +403,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "welche-hormone-testen-lassen",
       "progesteronmangel-symptome",
     ],
-    relatedConditions: ["hormone", "wechseljahre"],
+    relatedConditions: ["hormone", "menopause"],
     faqs: [
       {
         question: "Kann Östrogendominanz Haarausfall verursachen?",
@@ -441,7 +441,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "oestrogendominanz-symptome",
       "welche-hormone-testen-lassen",
     ],
-    relatedConditions: ["hormone", "wechseljahre"],
+    relatedConditions: ["hormone", "menopause"],
     faqs: [
       {
         question: "Kann Progesteronmangel Angst verursachen?",
@@ -518,7 +518,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-erkenne-ich-hashimoto",
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto"],
+    relatedConditions: ["menopause", "hashimoto"],
     faqs: [
       {
         question: "Geht Brain Fog nach den Wechseljahren weg?",
@@ -556,7 +556,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "welche-hormone-testen-lassen",
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Wo kann ich einen zuverlässigen Wechseljahre-Test kaufen?",
@@ -594,7 +594,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-lange-dauern-wechseljahre",
       "wann-beginnen-die-wechseljahre",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Woran erkenne ich, dass die Perimenopause endet?",
@@ -676,7 +676,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
       "progesteronmangel-symptome",
     ],
-    relatedConditions: ["wechseljahre", "hormone"],
+    relatedConditions: ["menopause", "hormone"],
     faqs: [
       {
         question: "Warum funktioniert Diät in den Wechseljahren nicht mehr?",
@@ -719,7 +719,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "welche-hormone-testen-lassen",
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre"],
+    relatedConditions: ["hashimoto", "menopause"],
     faqs: [
       {
         question: "Kann Hashimoto die Wechseljahre vorziehen?",
@@ -762,7 +762,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "welche-hormone-testen-lassen",
       "wechseljahre-gewichtszunahme-vermeiden",
     ],
-    relatedConditions: ["hormone", "wechseljahre"],
+    relatedConditions: ["hormone", "menopause"],
     faqs: [
       {
         question: "Wie messe ich Cortisol zuhause?",
@@ -801,7 +801,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
       "progesteronmangel-symptome",
     ],
-    relatedConditions: ["wechseljahre", "hormone"],
+    relatedConditions: ["menopause", "hormone"],
     faqs: [
       {
         question: "Kann man gleichzeitig PMS und Perimenopause haben?",
@@ -883,7 +883,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-erkenne-ich-hashimoto",
       "hashimoto-muedigkeit-was-hilft",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre", "hormone"],
+    relatedConditions: ["hashimoto", "menopause", "hormone"],
     faqs: [
       {
         question: "Kann man durch Sonnenlicht genug Vitamin D tanken?",
@@ -922,7 +922,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "hitzewallungen-was-hilft-sofort",
       "wie-lange-dauern-wechseljahre",
     ],
-    relatedConditions: ["wechseljahre", "hormone"],
+    relatedConditions: ["menopause", "hormone"],
     faqs: [
       {
         question: "Sind Phytoöstrogene bei Brustkrebs sicher?",
@@ -1043,7 +1043,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "welche-hormone-testen-lassen",
       "hashimoto-und-wechseljahre-zusammenhang",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Kann ich mit früher Menopause noch schwanger werden?",
@@ -1082,7 +1082,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "was-sind-die-ersten-anzeichen-der-wechseljahre",
       "cortisol-zu-hoch-symptome-frau",
     ],
-    relatedConditions: ["wechseljahre", "hormone"],
+    relatedConditions: ["menopause", "hormone"],
     faqs: [
       {
         question: "Ist Angst in den Wechseljahren normal?",
@@ -1125,7 +1125,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "progesteronmangel-symptome",
       "perimenopause-angst-panikattacken",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Helfen Schlafmittel bei Wechseljahres-Schlafstörungen?",

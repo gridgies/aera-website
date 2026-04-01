@@ -35,7 +35,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Kühlende Kleidung und Bettwäsche",
       "Entspannungsübungen und Atemtechniken",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Wie lange dauern Hitzewallungen in den Wechseljahren?",
@@ -77,7 +77,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Magnesium am Abend",
       "Entspannungsroutinen (Yoga, Meditation)",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto", "hormone"],
+    relatedConditions: ["menopause", "hashimoto", "hormone"],
     faqs: [
       {
         question: "Warum schlafen Frauen in den Wechseljahren schlecht?",
@@ -116,7 +116,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Stressreduktion",
       "Schlafhygiene verbessern",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre", "schilddruese", "hormone"],
+    relatedConditions: ["hashimoto", "menopause", "schilddruese", "hormone"],
     faqs: [
       {
         question: "Warum bin ich als Frau immer so müde?",
@@ -154,7 +154,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Stressmanagement",
       "Intervallfasten (nach ärztlicher Rücksprache)",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto", "schilddruese", "hormone"],
+    relatedConditions: ["menopause", "hashimoto", "schilddruese", "hormone"],
     faqs: [
       {
         question: "Warum nehme ich in den Wechseljahren zu?",
@@ -192,7 +192,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Scalp-Massagen",
       "Sanfte Haarpflege, kein Hitzestress",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre", "schilddruese", "hormone"],
+    relatedConditions: ["hashimoto", "menopause", "schilddruese", "hormone"],
     faqs: [
       {
         question: "Welche Blutwerte bei Haarausfall testen lassen?",
@@ -230,7 +230,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Soziale Unterstützung",
       "Schlaf priorisieren",
     ],
-    relatedConditions: ["wechseljahre", "hormone", "hashimoto"],
+    relatedConditions: ["menopause", "hormone", "hashimoto"],
     faqs: [
       {
         question: "Sind Stimmungsschwankungen in den Wechseljahren normal?",
@@ -266,7 +266,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Stressreduktion und Achtsamkeitstraining",
       "Blutwerte prüfen: B12, Vitamin D, TSH",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto", "schilddruese"],
+    relatedConditions: ["menopause", "hashimoto", "schilddruese"],
     faqs: [
       {
         question: "Was ist Brain Fog bei Frauen?",
@@ -310,7 +310,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Traubsilberkerze (Cimicifuga) – pflanzliche Option",
       "Leichte Entspannungsübungen vor dem Schlaf",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Warum schwitze ich nachts so stark?",
@@ -349,7 +349,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Lokale Östrogentherapie (bei Scheidentrockenheit)",
       "Gleitgel auf Wasserbasis",
     ],
-    relatedConditions: ["wechseljahre", "hormone"],
+    relatedConditions: ["menopause", "hormone"],
     faqs: [
       {
         question: "Ist Libidoverlust in den Wechseljahren normal?",
@@ -388,7 +388,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Hyaluronsäure-Gels (nicht-hormonell)",
       "Baumwolle als Unterwäsche bevorzugen",
     ],
-    relatedConditions: ["wechseljahre"],
+    relatedConditions: ["menopause"],
     faqs: [
       {
         question: "Ist Scheidentrockenheit ein Zeichen der Wechseljahre?",
@@ -507,7 +507,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Vitamin D optimieren",
       "Schilddrüsenwerte prüfen lassen",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre"],
+    relatedConditions: ["hashimoto", "menopause"],
     faqs: [
       {
         question: "Kann Hashimoto trockene Haut verursachen?",
