@@ -30,6 +30,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
       "nachtschweiß",
       "scheidentrockenheit",
       "konzentrationsprobleme",
+      "trockene-haut",
     ],
     relatedConditions: ["hashimoto", "schilddrüse", "hormone"],
   },
