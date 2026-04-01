@@ -8,7 +8,7 @@ import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib
 const BASE_URL = "https://aerahealth.de";
 
 interface Props {
-  params: { condition: string; symptom: string };
+  params: Promise<{ condition: string; symptom: string }>;
 }
 
 export async function generateStaticParams() {
@@ -24,13 +24,14 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const condition = CONDITIONS_DATA[params.condition];
-  const symptom = SYMPTOMS_DATA[params.symptom];
+  const { condition: conditionSlug, symptom: symptomSlug } = await params;
+  const condition = CONDITIONS_DATA[conditionSlug];
+  const symptom = SYMPTOMS_DATA[symptomSlug];
   if (!condition || !symptom) return {};
 
   const title = `${symptom.name} bei ${condition.name}: Ursachen & Hilfe`;
   const description = `${symptom.name} bei ${condition.name}: ${symptom.metaDescription}`;
-  const url = `/${params.condition}/${params.symptom}`;
+  const url = `/${conditionSlug}/${symptomSlug}`;
 
   return {
     title,
@@ -44,13 +45,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ConditionSymptomPage({ params }: Props) {
-  const condition = CONDITIONS_DATA[params.condition];
-  const symptom = SYMPTOMS_DATA[params.symptom];
+export default async function ConditionSymptomPage({ params }: Props) {
+  const { condition: conditionSlug, symptom: symptomSlug } = await params;
+  const condition = CONDITIONS_DATA[conditionSlug];
+  const symptom = SYMPTOMS_DATA[symptomSlug];
 
   if (!condition || !symptom) notFound();
 
-  const pageUrl = `${BASE_URL}/${params.condition}/${params.symptom}`;
+  const pageUrl = `${BASE_URL}/${conditionSlug}/${symptomSlug}`;
   const today = new Date().toISOString().split("T")[0];
 
   const breadcrumbs = [
@@ -213,11 +215,11 @@ export default function ConditionSymptomPage({ params }: Props) {
             </h2>
             <div className="flex flex-wrap gap-3">
               {symptom.relatedConditions
-                .filter((slug) => slug !== params.condition && CONDITIONS_DATA[slug])
+                .filter((slug) => slug !== conditionSlug && CONDITIONS_DATA[slug])
                 .map((slug) => (
                   <Link
                     key={slug}
-                    href={`/${slug}/${params.symptom}`}
+                    href={`/${slug}/${symptomSlug}`}
                     className="px-4 py-2 bg-surface-container rounded-full text-sm font-body hover:bg-surface-container-high transition-colors"
                   >
                     {symptom.name} bei {CONDITIONS_DATA[slug].name}

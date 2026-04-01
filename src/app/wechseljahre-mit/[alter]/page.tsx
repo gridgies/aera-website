@@ -7,7 +7,7 @@ import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib
 const BASE_URL = "https://aerahealth.de";
 
 interface Props {
-  params: { alter: string };
+  params: Promise<{ alter: string }>;
 }
 
 export async function generateStaticParams() {
@@ -15,26 +15,28 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const page = AGE_PAGES[params.alter];
+  const { alter } = await params;
+  const page = AGE_PAGES[alter];
   if (!page) return {};
 
   return {
     title: page.title,
     description: page.metaDescription,
-    alternates: { canonical: `/wechseljahre-mit/${params.alter}` },
+    alternates: { canonical: `/wechseljahre-mit/${alter}` },
     openGraph: {
       title: page.title,
       description: page.metaDescription,
-      url: `${BASE_URL}/wechseljahre-mit/${params.alter}`,
+      url: `${BASE_URL}/wechseljahre-mit/${alter}`,
     },
   };
 }
 
-export default function AgeWechseljahreSeite({ params }: Props) {
-  const page = AGE_PAGES[params.alter];
+export default async function AgeWechseljahreSeite({ params }: Props) {
+  const { alter } = await params;
+  const page = AGE_PAGES[alter];
   if (!page) notFound();
 
-  const pageUrl = `${BASE_URL}/wechseljahre-mit/${params.alter}`;
+  const pageUrl = `${BASE_URL}/wechseljahre-mit/${alter}`;
   const today = new Date().toISOString().split("T")[0];
 
   const breadcrumbs = [
@@ -173,7 +175,7 @@ export default function AgeWechseljahreSeite({ params }: Props) {
           </h2>
           <div className="flex flex-wrap gap-3">
             {["35", "40", "45", "50", "55"]
-              .filter((a) => a !== params.alter)
+              .filter((a) => a !== alter)
               .map((a) => (
                 <Link
                   key={a}

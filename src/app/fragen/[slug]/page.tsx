@@ -8,7 +8,7 @@ import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib
 const BASE_URL = "https://aerahealth.de";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -16,26 +16,28 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const frage = FRAGEN_DATA[params.slug];
+  const { slug } = await params;
+  const frage = FRAGEN_DATA[slug];
   if (!frage) return {};
 
   return {
     title: frage.metaTitle,
     description: frage.metaDescription,
-    alternates: { canonical: `/fragen/${params.slug}` },
+    alternates: { canonical: `/fragen/${slug}` },
     openGraph: {
       title: frage.metaTitle,
       description: frage.metaDescription,
-      url: `${BASE_URL}/fragen/${params.slug}`,
+      url: `${BASE_URL}/fragen/${slug}`,
     },
   };
 }
 
-export default function FragePage({ params }: Props) {
-  const frage = FRAGEN_DATA[params.slug];
+export default async function FragePage({ params }: Props) {
+  const { slug } = await params;
+  const frage = FRAGEN_DATA[slug];
   if (!frage) notFound();
 
-  const pageUrl = `${BASE_URL}/fragen/${params.slug}`;
+  const pageUrl = `${BASE_URL}/fragen/${slug}`;
   const today = new Date().toISOString().split("T")[0];
 
   const breadcrumbs = [

@@ -10,7 +10,7 @@ import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 const BASE_URL = "https://aerahealth.de";
 
 interface Props {
-  params: { condition: string };
+  params: Promise<{ condition: string }>;
 }
 
 export async function generateStaticParams() {
@@ -18,36 +18,38 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const condition = CONDITIONS_DATA[params.condition];
+  const { condition: conditionSlug } = await params;
+  const condition = CONDITIONS_DATA[conditionSlug];
   if (!condition) return {};
 
   return {
     title: `${condition.name}: Symptome, Ursachen & Behandlung`,
     description: condition.metaDescription,
-    alternates: { canonical: `/${params.condition}` },
+    alternates: { canonical: `/${conditionSlug}` },
     openGraph: {
       title: `${condition.name}: Symptome, Ursachen & Behandlung`,
       description: condition.metaDescription,
-      url: `${BASE_URL}/${params.condition}`,
+      url: `${BASE_URL}/${conditionSlug}`,
     },
   };
 }
 
-export default function ConditionPage({ params }: Props) {
-  const condition = CONDITIONS_DATA[params.condition];
+export default async function ConditionPage({ params }: Props) {
+  const { condition: conditionSlug } = await params;
+  const condition = CONDITIONS_DATA[conditionSlug];
   if (!condition) notFound();
 
-  const pageUrl = `${BASE_URL}/${params.condition}`;
+  const pageUrl = `${BASE_URL}/${conditionSlug}`;
   const today = new Date().toISOString().split("T")[0];
   const symptomsWithData = condition.symptoms.filter((s) => SYMPTOMS_DATA[s]);
 
   // Related questions for this condition
   const relatedFragen = FRAGEN_LIST.filter((f) =>
-    f.relatedConditions.includes(params.condition)
+    f.relatedConditions.includes(conditionSlug)
   ).slice(0, 6);
 
   // Age pages only for wechseljahre
-  const ageAlters = params.condition === "wechseljahre" ? Object.keys(AGE_PAGES) : [];
+  const ageAlters = conditionSlug === "wechseljahre" ? Object.keys(AGE_PAGES) : [];
 
   const breadcrumbs = [
     { name: "Startseite", url: BASE_URL },
@@ -129,7 +131,7 @@ export default function ConditionPage({ params }: Props) {
                 return (
                   <Link
                     key={slug}
-                    href={`/${params.condition}/${slug}`}
+                    href={`/${conditionSlug}/${slug}`}
                     className="group p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/20 hover:shadow-md transition-all"
                   >
                     <h3 className="font-bold text-on-surface group-hover:text-primary transition-colors mb-2">
