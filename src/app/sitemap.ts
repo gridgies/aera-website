@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
+import { AGE_PAGES } from "@/data/agePages";
+import { FRAGEN_LIST } from "@/data/fragenData";
 
 const BASE_URL = "https://aerahealth.de";
 
@@ -21,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/fragen`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/experten`,
       lastModified: now,
       changeFrequency: "weekly",
@@ -31,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/ueber-uns`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}/kontakt`,
@@ -63,5 +77,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return [...staticPages, ...conditionPages, ...symptomPages];
+  // Age-specific Wechseljahre pages
+  const agePages: MetadataRoute.Sitemap = Object.keys(AGE_PAGES).map((alter) => ({
+    url: `${BASE_URL}/wechseljahre-mit/${alter}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  // FAQ / question pages
+  const fragenPages: MetadataRoute.Sitemap = FRAGEN_LIST.map((frage) => ({
+    url: `${BASE_URL}/fragen/${frage.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  return [...staticPages, ...conditionPages, ...symptomPages, ...agePages, ...fragenPages];
 }

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
+import { FRAGEN_LIST } from "@/data/fragenData";
+import { AGE_PAGES } from "@/data/agePages";
 import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 
 const BASE_URL = "https://aerahealth.de";
@@ -38,6 +40,14 @@ export default function ConditionPage({ params }: Props) {
   const pageUrl = `${BASE_URL}/${params.condition}`;
   const today = new Date().toISOString().split("T")[0];
   const symptomsWithData = condition.symptoms.filter((s) => SYMPTOMS_DATA[s]);
+
+  // Related questions for this condition
+  const relatedFragen = FRAGEN_LIST.filter((f) =>
+    f.relatedConditions.includes(params.condition)
+  ).slice(0, 6);
+
+  // Age pages only for wechseljahre
+  const ageAlters = params.condition === "wechseljahre" ? Object.keys(AGE_PAGES) : [];
 
   const breadcrumbs = [
     { name: "Startseite", url: BASE_URL },
@@ -154,6 +164,64 @@ export default function ConditionPage({ params }: Props) {
               ))}
           </div>
         </section>
+
+        {/* Age-specific pages — wechseljahre only */}
+        {ageAlters.length > 0 && (
+          <section className="mb-16" aria-labelledby="alter-heading">
+            <h2 id="alter-heading" className="text-xl font-headline font-bold mb-6">
+              Wechseljahre nach Lebensphase
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-3">
+              {ageAlters.map((alter) => (
+                <Link
+                  key={alter}
+                  href={`/wechseljahre-mit/${alter}`}
+                  className="group p-5 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/20 hover:shadow-md transition-all text-center"
+                >
+                  <p className="text-2xl font-headline font-bold text-primary mb-1">{alter}</p>
+                  <p className="text-xs text-on-surface-variant font-body">
+                    Wechseljahre mit {alter}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Related questions */}
+        {relatedFragen.length > 0 && (
+          <section className="mb-16" aria-labelledby="fragen-heading">
+            <h2 id="fragen-heading" className="text-xl font-headline font-bold mb-6">
+              Häufige Fragen zu {condition.name}
+            </h2>
+            <div className="space-y-2">
+              {relatedFragen.map((frage) => (
+                <Link
+                  key={frage.slug}
+                  href={`/fragen/${frage.slug}`}
+                  className="flex items-center gap-3 p-4 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors group"
+                >
+                  <span className="material-symbols-outlined text-primary font-extralight text-sm flex-shrink-0">
+                    help
+                  </span>
+                  <span className="text-sm font-body text-on-surface group-hover:text-primary transition-colors">
+                    {frage.question}
+                  </span>
+                  <span className="material-symbols-outlined text-on-surface-variant font-extralight text-sm ml-auto flex-shrink-0">
+                    arrow_forward
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <Link
+              href="/fragen"
+              className="inline-flex items-center gap-2 mt-4 text-sm text-primary font-body hover:underline"
+            >
+              Alle Fragen ansehen
+              <span className="material-symbols-outlined text-sm font-extralight">arrow_forward</span>
+            </Link>
+          </section>
+        )}
 
         {/* CTA */}
         <div className="bg-primary-container rounded-3xl p-10 text-center">
