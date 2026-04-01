@@ -201,7 +201,7 @@ export default function UeberUnsPage() {
             Hinter Aera
           </h2>
           <p className="text-on-surface-variant font-body leading-relaxed mb-8">
-            Aera wurde von Maria Strunden und Graciella Dharmawan in Frankfurt am Main
+            Aera wurde in Frankfurt am Main
             gegründet – aus persönlicher Erfahrung mit dem Mangel an zugänglichen,
             vertrauenswürdigen Informationen zur Frauengesundheit.
           </p>
