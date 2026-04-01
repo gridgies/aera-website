@@ -323,7 +323,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-erkenne-ich-hashimoto",
       "welche-hormone-testen-lassen",
     ],
-    relatedConditions: ["hashimoto", "schilddrüse", "hormone"],
+    relatedConditions: ["hashimoto", "schilddruese", "hormone"],
     faqs: [
       {
         question: "Was wenn alle Werte normal sind, ich aber trotzdem müde bin?",
@@ -479,7 +479,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-erkenne-ich-hashimoto",
       "welche-blutwerte-bei-muedigkeit",
     ],
-    relatedConditions: ["hashimoto", "schilddrüse"],
+    relatedConditions: ["hashimoto", "schilddruese"],
     faqs: [
       {
         question: "Was bedeutet TSH zu hoch?",
@@ -844,7 +844,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-erkenne-ich-hashimoto",
       "welche-blutwerte-bei-muedigkeit",
     ],
-    relatedConditions: ["hashimoto", "schilddrüse"],
+    relatedConditions: ["hashimoto", "schilddruese"],
     faqs: [
       {
         question: "Was tun, wenn der Arzt sagt 'alles normal' aber ich mich schlecht fühle?",
@@ -961,7 +961,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       "wie-erkenne-ich-hashimoto",
       "tsh-wert-normal-trotzdem-symptome",
     ],
-    relatedConditions: ["schilddrüse", "hashimoto"],
+    relatedConditions: ["schilddruese", "hashimoto"],
     faqs: [
       {
         question: "Wie viele Frauen haben eine Schilddrüsenunterfunktion?",

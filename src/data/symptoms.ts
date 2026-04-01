@@ -55,7 +55,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
     ],
   },
   schlafstörungen: {
-    slug: "schlafstörungen",
+    slug: "schlafstoerungen",
     name: "Schlafstörungen",
     nameFull: "Schlafstörungen",
     description:
@@ -92,7 +92,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
     ],
   },
   müdigkeit: {
-    slug: "müdigkeit",
+    slug: "muedigkeit",
     name: "Müdigkeit",
     nameFull: "Chronische Müdigkeit und Erschöpfung",
     description:
@@ -116,7 +116,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Stressreduktion",
       "Schlafhygiene verbessern",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre", "schilddrüse", "hormone"],
+    relatedConditions: ["hashimoto", "wechseljahre", "schilddruese", "hormone"],
     faqs: [
       {
         question: "Warum bin ich als Frau immer so müde?",
@@ -154,7 +154,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Stressmanagement",
       "Intervallfasten (nach ärztlicher Rücksprache)",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto", "schilddrüse", "hormone"],
+    relatedConditions: ["wechseljahre", "hashimoto", "schilddruese", "hormone"],
     faqs: [
       {
         question: "Warum nehme ich in den Wechseljahren zu?",
@@ -192,7 +192,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Scalp-Massagen",
       "Sanfte Haarpflege, kein Hitzestress",
     ],
-    relatedConditions: ["hashimoto", "wechseljahre", "schilddrüse", "hormone"],
+    relatedConditions: ["hashimoto", "wechseljahre", "schilddruese", "hormone"],
     faqs: [
       {
         question: "Welche Blutwerte bei Haarausfall testen lassen?",
@@ -266,7 +266,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Stressreduktion und Achtsamkeitstraining",
       "Blutwerte prüfen: B12, Vitamin D, TSH",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto", "schilddrüse"],
+    relatedConditions: ["wechseljahre", "hashimoto", "schilddruese"],
     faqs: [
       {
         question: "Was ist Brain Fog bei Frauen?",
@@ -287,7 +287,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
   },
 
   nachtschweiß: {
-    slug: "nachtschweiß",
+    slug: "nachtschweiss",
     name: "Nachtschweiß",
     nameFull: "Nachtschweiß bei Frauen",
     description:
@@ -428,7 +428,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Warme, schichtweise Kleidung",
       "Ausreichend Kalorien und Nährstoffe zuführen",
     ],
-    relatedConditions: ["hashimoto", "schilddrüse"],
+    relatedConditions: ["hashimoto", "schilddruese"],
     faqs: [
       {
         question: "Warum friere ich immer, obwohl es anderen nicht kalt ist?",
@@ -468,7 +468,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Flohsamen oder Leinsamen",
       "Schilddrüsenwerte prüfen lassen",
     ],
-    relatedConditions: ["hashimoto", "schilddrüse"],
+    relatedConditions: ["hashimoto", "schilddruese"],
     faqs: [
       {
         question: "Kann Hashimoto Verstopfung verursachen?",

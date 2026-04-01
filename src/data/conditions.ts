@@ -21,18 +21,18 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
       "Alles über Wechseljahre: Symptome, Phasen, Behandlung und natürliche Hilfe bei Menopause und Perimenopause. Medizinisch fundiert für Frauen in Deutschland.",
     symptoms: [
       "hitzewallungen",
-      "schlafstörungen",
+      "schlafstoerungen",
       "gewichtszunahme",
       "stimmungsschwankungen",
-      "müdigkeit",
+      "muedigkeit",
       "haarausfall",
       "libidoverlust",
-      "nachtschweiß",
+      "nachtschweiss",
       "scheidentrockenheit",
       "konzentrationsprobleme",
       "trockene-haut",
     ],
-    relatedConditions: ["hashimoto", "schilddrüse", "hormone"],
+    relatedConditions: ["hashimoto", "schilddruese", "hormone"],
   },
   hashimoto: {
     slug: "hashimoto",
@@ -44,20 +44,20 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     metaDescription:
       "Hashimoto Thyreoiditis: Symptome erkennen, Diagnose verstehen, Behandlung und Ernährung. Umfassender Ratgeber für Frauen mit Hashimoto in Deutschland.",
     symptoms: [
-      "müdigkeit",
+      "muedigkeit",
       "gewichtszunahme",
       "haarausfall",
       "konzentrationsprobleme",
-      "schlafstörungen",
+      "schlafstoerungen",
       "stimmungsschwankungen",
       "frieren",
       "verstopfung",
       "trockene-haut",
     ],
-    relatedConditions: ["wechseljahre", "schilddrüse", "hormone"],
+    relatedConditions: ["wechseljahre", "schilddruese", "hormone"],
   },
-  schilddrüse: {
-    slug: "schilddrüse",
+  schilddruese: {
+    slug: "schilddruese",
     name: "Schilddrüse",
     nameLong: "Schilddrüsenerkrankungen",
     aliases: [
@@ -71,7 +71,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     metaDescription:
       "Schilddrüsenerkrankungen bei Frauen: Schilddrüsenunterfunktion, TSH-Werte verstehen, Symptome und Behandlung. Medizinisch fundierter Ratgeber.",
     symptoms: [
-      "müdigkeit",
+      "muedigkeit",
       "gewichtszunahme",
       "haarausfall",
       "frieren",
@@ -98,13 +98,13 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     symptoms: [
       "stimmungsschwankungen",
       "gewichtszunahme",
-      "müdigkeit",
+      "muedigkeit",
       "haarausfall",
       "akne",
       "pms",
       "libidoverlust",
-      "schlafstörungen",
+      "schlafstoerungen",
     ],
-    relatedConditions: ["wechseljahre", "hashimoto", "schilddrüse"],
+    relatedConditions: ["wechseljahre", "hashimoto", "schilddruese"],
   },
 };
