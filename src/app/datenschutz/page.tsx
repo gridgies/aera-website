@@ -30,7 +30,7 @@ export default function DatenschutzPage() {
                   {line}
                 </p>
               ))}
-              <p className="pt-2">E-Mail: {LEGAL.emailPrivacy}</p>
+              <p className="pt-2">E-Mail: {LEGAL.email}</p>
             </div>
           </section>
 
@@ -170,10 +170,10 @@ export default function DatenschutzPage() {
               <p className="pt-2">
                 Um deine Rechte auszuüben:{" "}
                 <a
-                  href={`mailto:${LEGAL.emailPrivacy}`}
+                  href={`mailto:${LEGAL.email}`}
                   className="font-semibold underline underline-offset-4"
                 >
-                  {LEGAL.emailPrivacy}
+                  {LEGAL.email}
                 </a>
               </p>
             </div>

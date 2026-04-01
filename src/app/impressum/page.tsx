@@ -35,11 +35,6 @@ export default function ImpressumPage() {
                   {LEGAL.email}
                 </a>
               </p>
-              {LEGAL.phone && (
-                <p>
-                  <span className="font-medium text-on-surface">Telefon:</span> {LEGAL.phone}
-                </p>
-              )}
             </div>
           </section>
 
