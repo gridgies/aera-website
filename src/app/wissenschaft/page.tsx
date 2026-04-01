@@ -1,9 +1,21 @@
 import Link from "next/link";
 import { METHODOLOGY_STEPS, SCIENCE_PRINCIPLES } from "@/lib/constants";
 
-export const metadata = {
-  title: "Wissenschaft | Aera",
-  description: "Erfahre mehr über die wissenschaftliche Methodik und evidenzbasierte Basis hinter Aera.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wissenschaftliche Methodik – Evidenzbasierte Frauengesundheit",
+  description:
+    "Erfahre, wie Aera Health evidenzbasierte Medizin, aktuelle Leitlinien und Hormonforschung vereint, um Frauen bei Wechseljahren, Hashimoto und hormonellen Beschwerden zu unterstützen.",
+  alternates: {
+    canonical: "/wissenschaft",
+  },
+  openGraph: {
+    title: "Wissenschaftliche Methodik – Aera Health",
+    description:
+      "Evidenzbasierte Frauengesundheit: Hormone, Wechseljahre und Hashimoto nach aktuellen medizinischen Leitlinien.",
+    url: "https://aerahealth.de/wissenschaft",
+  },
 };
 
 export default function WissenschaftPage() {

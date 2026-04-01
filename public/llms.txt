@@ -1,0 +1,38 @@
+# Aera Health
+
+> Aera Health ist eine deutsche Plattform für Frauengesundheit mit Fokus auf hormonelle Gesundheit, Wechseljahre, Hashimoto und Schilddrüsenerkrankungen.
+
+## Beschreibung
+
+Aera Health bietet personalisierte, evidenzbasierte Unterstützung für Frauen mit hormonellen Beschwerden. Die Plattform verbindet wissenschaftlich fundierte Informationen mit praktischen Werkzeugen wie dem Symptom-Check.
+
+**Zielgruppe:** Frauen in Deutschland, insbesondere in der Perimenopause und Menopause, sowie Frauen mit Hashimoto oder hormonellen Dysbalancen.
+
+**Sprache:** Deutsch (de-DE)
+
+**Betreiber:** Maria Strunden & Graciella Dharmawan, Frankfurt am Main
+
+## Wichtige Seiten
+
+- Startseite: https://aerahealth.de
+- Symptom-Check: https://aerahealth.de/check
+- Experten: https://aerahealth.de/experten
+- Wissenschaft & Methodik: https://aerahealth.de/wissenschaft
+- Über uns: https://aerahealth.de/ueber-uns
+- Kontakt: https://aerahealth.de/kontakt
+
+## Themen
+
+- Wechseljahre (Menopause, Perimenopause, Klimakterium)
+- Hashimoto Thyreoiditis
+- Schilddrüsenerkrankungen (Schilddrüsenunterfunktion)
+- Hormonelle Balance (Östrogen, Progesteron, Cortisol)
+- Symptome: Hitzewallungen, Schlafstörungen, Müdigkeit, Haarausfall
+
+## Medizinischer Hinweis
+
+Inhalte auf aerahealth.de dienen zu Informationszwecken und ersetzen keine ärztliche Beratung. Alle Inhalte werden mit medizinisch geschultem Personal erstellt und basieren auf aktuellen Leitlinien (AWMF, Deutsche Gesellschaft für Endokrinologie, PubMed).
+
+## Kontakt
+
+E-Mail: hello@aerahealth.de

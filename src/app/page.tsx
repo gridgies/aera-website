@@ -1,9 +1,48 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CONDITIONS, STEPS, TRUST_BADGES, PROBLEM_ITEMS } from "@/lib/constants";
 import { WaitlistForm } from "@/components/ui/WaitlistForm";
+import { faqSchema, jsonLd } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: "Aera Health | Frauengesundheit: Hormone, Wechseljahre & Hashimoto verstehen",
+  description:
+    "Personalisierte Unterstützung für Wechseljahre, Hashimoto, Schilddrüse und hormonelle Balance. Wissenschaftlich fundiert, für Frauen in Deutschland.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
+const HOME_FAQS = [
+  {
+    question: "Was ist Aera Health?",
+    answer:
+      "Aera Health ist eine digitale Plattform, die Frauen dabei hilft, hormonelle Beschwerden wie Wechseljahre, Hashimoto und Schilddrüsenerkrankungen besser zu verstehen. Wir bieten evidenzbasierte Informationen, einen Symptom-Check und Zugang zu Expertinnen.",
+  },
+  {
+    question: "Für wen ist Aera Health geeignet?",
+    answer:
+      "Aera Health richtet sich an Frauen, die unter hormonellen Beschwerden leiden – insbesondere Wechseljahre (Perimenopause, Menopause), Hashimoto Thyreoiditis, Schilddrüsenunterfunktion oder allgemeine Hormonstörungen.",
+  },
+  {
+    question: "Ersetzt Aera Health den Arztbesuch?",
+    answer:
+      "Nein. Aera Health ersetzt keine ärztliche Beratung oder Behandlung. Wir bieten Informationen und Orientierung, damit Frauen besser informiert in Arztgespräche gehen können. Bei gesundheitlichen Beschwerden wende dich immer an eine Ärztin oder einen Arzt.",
+  },
+  {
+    question: "Ist Aera Health kostenlos?",
+    answer:
+      "Der Symptom-Check und grundlegende Informationen sind kostenlos. Trage dich in unsere Warteliste ein, um frühen Zugang zu allen Funktionen zu erhalten.",
+  },
+];
 
 export default function HomePage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(faqSchema(HOME_FAQS))}
+      />
     <div className="overflow-x-hidden">
       {/* Hero */}
       <section className="relative px-6 py-16 md:py-32 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center pt-32 md:pt-40">
@@ -247,5 +286,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

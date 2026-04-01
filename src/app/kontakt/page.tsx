@@ -102,7 +102,7 @@ export default function KontaktPage() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-1">Standort</p>
-                  <p className="text-on-surface font-medium">[STADT], Deutschland</p>
+                  <p className="text-on-surface font-medium">Frankfurt, Deutschland</p>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function KontaktPage() {
                 favorite
               </span>
               <h3 className="text-lg font-headline font-bold text-on-primary-container mb-3">
-                Noch auf der Warteliste?
+                Noch nicht auf der Warteliste?
               </h3>
               <p className="text-on-primary-container/80 text-sm font-body leading-relaxed mb-4">
                 Trag dich ein und erhalte als Erste Zugang, wenn Aera startet.
