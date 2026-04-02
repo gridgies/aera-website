@@ -5,9 +5,22 @@ import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { FRAGEN_LIST } from "@/data/fragenData";
 import { AGE_PAGES } from "@/data/agePages";
-import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { PILLAR_CONTENT } from "@/data/pillarContent";
+import { breadcrumbSchema, medicalWebPageSchema, faqSchema, jsonLd } from "@/lib/schema";
 
 const BASE_URL = "https://aerahealth.de";
+
+/** Renders a paragraph string, converting **text** to <strong> elements. */
+function RichParagraph({ text, className }: { text: string; className?: string }) {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return (
+    <p className={className}>
+      {parts.map((part, i) =>
+        i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+      )}
+    </p>
+  );
+}
 
 interface Props {
   params: Promise<{ condition: string }>;
@@ -51,6 +64,8 @@ export default async function ConditionPage({ params }: Props) {
   // Age pages only for wechseljahre
   const ageAlters = conditionSlug === "menopause" ? Object.keys(AGE_PAGES) : [];
 
+  const pillar = PILLAR_CONTENT[conditionSlug] ?? null;
+
   const breadcrumbs = [
     { name: "Startseite", url: BASE_URL },
     { name: condition.name, url: pageUrl },
@@ -73,6 +88,12 @@ export default async function ConditionPage({ params }: Props) {
           })
         )}
       />
+      {pillar && pillar.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLd(faqSchema(pillar.faqs))}
+        />
+      )}
 
       <div className="max-w-4xl mx-auto px-6 pt-40 pb-32">
         {/* Breadcrumb */}
@@ -114,6 +135,72 @@ export default async function ConditionPage({ params }: Props) {
               </span>
             ))}
           </div>
+        )}
+
+        {/* Pillar intro paragraph */}
+        {pillar && (
+          <p className="text-base text-on-surface-variant font-body leading-relaxed mb-14 max-w-3xl">
+            {pillar.intro}
+          </p>
+        )}
+
+        {/* Key statistics */}
+        {pillar && pillar.stats.length > 0 && (
+          <section className="mb-16" aria-labelledby="statistiken-heading">
+            <h2 id="statistiken-heading" className="text-2xl font-headline font-bold mb-8">
+              Das Wichtigste in Zahlen
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {pillar.stats.map((stat, i) => (
+                <div
+                  key={i}
+                  className="p-6 bg-surface-container rounded-2xl border border-outline-variant/10"
+                >
+                  <p className="text-2xl font-headline font-bold text-primary mb-2">{stat.value}</p>
+                  <p className="text-sm font-body text-on-surface mb-3 leading-snug">{stat.label}</p>
+                  <p className="text-xs text-on-surface-variant font-body italic">{stat.source}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Pillar content sections */}
+        {pillar && pillar.sections.length > 0 && (
+          <article className="mb-16 space-y-14" aria-label={`Ausführliche Informationen zu ${condition.name}`}>
+            {pillar.sections.map((section, i) => (
+              <section key={i}>
+                <h2 className="text-2xl font-headline font-bold text-on-surface mb-2 leading-tight">
+                  {section.heading}
+                </h2>
+                {section.subheading && (
+                  <h3 className="text-base font-body font-semibold text-primary mb-4">
+                    {section.subheading}
+                  </h3>
+                )}
+                <div className="space-y-4 mt-5">
+                  {section.paragraphs.map((para, j) => (
+                    <RichParagraph key={j} text={para} className="text-base font-body text-on-surface leading-relaxed" />
+                  ))}
+                </div>
+                {section.bullets && section.bullets.length > 0 && (
+                  <ul className="mt-5 space-y-2">
+                    {section.bullets.map((bullet, k) => (
+                      <li
+                        key={k}
+                        className="flex gap-3 items-start text-sm font-body text-on-surface-variant"
+                      >
+                        <span className="material-symbols-outlined text-primary font-extralight text-base flex-shrink-0 mt-0.5">
+                          check_circle
+                        </span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            ))}
+          </article>
         )}
 
         {/* Symptoms grid */}
@@ -166,6 +253,53 @@ export default async function ConditionPage({ params }: Props) {
               ))}
           </div>
         </section>
+
+        {/* FAQs from pillar content */}
+        {pillar && pillar.faqs.length > 0 && (
+          <section className="mb-16" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="text-2xl font-headline font-bold mb-8">
+              Häufige Fragen zu {condition.name}
+            </h2>
+            <div className="space-y-4">
+              {pillar.faqs.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group bg-surface-container rounded-2xl border border-outline-variant/10 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-body font-semibold text-on-surface text-sm group-open:text-primary transition-colors">
+                    <span>{faq.question}</span>
+                    <span className="material-symbols-outlined text-on-surface-variant font-extralight flex-shrink-0 transition-transform group-open:rotate-180 text-base">
+                      expand_more
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="text-sm font-body text-on-surface-variant leading-relaxed">{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Sources / Literatur */}
+        {pillar && pillar.sources.length > 0 && (
+          <section className="mb-16" aria-labelledby="quellen-heading">
+            <h2 id="quellen-heading" className="text-lg font-headline font-bold mb-5 text-on-surface-variant">
+              Quellen & Literatur
+            </h2>
+            <ol className="space-y-3 list-decimal list-inside">
+              {pillar.sources.map((src, i) => (
+                <li key={i} className="text-xs font-body text-on-surface-variant leading-relaxed">
+                  <span className="font-semibold">{src.authors}</span> ({src.year}). {src.title}.{" "}
+                  <em>{src.journal}</em>.
+                  {src.note && (
+                    <span className="block mt-1 text-on-surface-variant/70 italic ml-4">{src.note}</span>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
 
         {/* Age-specific pages — wechseljahre only */}
         {ageAlters.length > 0 && (
