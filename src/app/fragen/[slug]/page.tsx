@@ -77,7 +77,7 @@ export default async function FragePage({ params }: Props) {
         dangerouslySetInnerHTML={jsonLd(faqSchema(allFaqs))}
       />
 
-      <article className="max-w-3xl mx-auto px-6 pt-40 pb-32">
+      <article className="max-w-4xl mx-auto px-6 pt-40 pb-32">
         {/* Breadcrumb */}
         <nav className="text-xs text-on-surface-variant mb-12 flex gap-2 flex-wrap" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-primary transition-colors">Startseite</Link>

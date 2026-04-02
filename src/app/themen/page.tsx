@@ -49,7 +49,7 @@ export default function ThemenPage() {
         dangerouslySetInnerHTML={jsonLd(breadcrumbSchema(breadcrumbs))}
       />
 
-      <div className="max-w-5xl mx-auto px-6 pt-40 pb-32">
+      <div className="max-w-4xl mx-auto px-6 pt-40 pb-32">
         {/* Breadcrumb */}
         <nav className="text-xs text-on-surface-variant mb-12 flex gap-2" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-primary transition-colors">Startseite</Link>
