@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { InlineSignupForm } from "@/components/ui/InlineSignupForm";
 
 const BASE_URL = "https://aerahealth.de";
 
@@ -206,6 +207,14 @@ export default async function ConditionSymptomPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* Inline signup */}
+        <div className="mb-16">
+          <InlineSignupForm
+            source={`${conditionSlug}-${symptomSlug}`}
+            subline={`Erhalte fundierte Infos zu ${condition.topicName} und hormoneller Gesundheit – direkt in dein Postfach.`}
+          />
+        </div>
 
         {/* Related conditions */}
         {symptom.relatedConditions.length > 0 && (

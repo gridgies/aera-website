@@ -11,6 +11,7 @@ const CONTENT_LINKS = [
   { href: "/themen", label: "Alle Themen" },
   { href: "/fragen", label: "Fragen & Antworten" },
   { href: "/wissenschaft", label: "Wissenschaft" },
+  { href: "/quellen-und-methodik", label: "Quellen & Methodik" },
   { href: "/experten", label: "Expert:innen" },
 ];
 
