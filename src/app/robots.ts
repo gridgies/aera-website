@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/impressum", "/datenschutz", "/agb", "/ueber-uns", "/llms.txt"],
+        disallow: ["/impressum", "/datenschutz", "/agb"],
       },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
