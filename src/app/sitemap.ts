@@ -3,6 +3,7 @@ import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { AGE_PAGES } from "@/data/agePages";
 import { FRAGEN_LIST } from "@/data/fragenData";
+import { VERGLEICHE_LIST } from "@/data/vergleiche";
 
 const BASE_URL = "https://aerahealth.de";
 
@@ -93,5 +94,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  return [...staticPages, ...conditionPages, ...symptomPages, ...agePages, ...fragenPages];
+  // Comparison pages
+  const vergleichPages: MetadataRoute.Sitemap = VERGLEICHE_LIST.map((v) => ({
+    url: `${BASE_URL}/vergleich/${v.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...conditionPages, ...symptomPages, ...agePages, ...fragenPages, ...vergleichPages];
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CONDITIONS_DATA } from "@/data/conditions";
 import { FRAGEN_LIST } from "@/data/fragenData";
 import { AGE_PAGES } from "@/data/agePages";
+import { VERGLEICHE_LIST } from "@/data/vergleiche";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 
 const BASE_URL = "https://aerahealth.de";
@@ -172,6 +173,40 @@ export default function ThemenPage() {
                   )}
                 </div>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Comparison pages */}
+        <section className="mb-24" aria-labelledby="vergleich-heading">
+          <h2 id="vergleich-heading" className="text-2xl font-headline font-bold text-on-surface mb-3">
+            Symptome vergleichen & unterscheiden
+          </h2>
+          <p className="text-on-surface-variant font-body text-sm mb-8">
+            Viele hormonelle Erkrankungen haben ähnliche Symptome. Diese Vergleiche helfen dir bei der Einordnung.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {VERGLEICHE_LIST.map((v) => (
+              <Link
+                key={v.slug}
+                href={`/vergleich/${v.slug}`}
+                className="group flex items-center gap-4 p-5 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/20 hover:shadow-md transition-all"
+              >
+                <span className="material-symbols-outlined text-primary font-extralight text-2xl flex-shrink-0">
+                  compare_arrows
+                </span>
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">
+                    {v.conditionAName} vs. {v.conditionBName}
+                  </p>
+                  <p className="text-xs text-on-surface-variant font-body mt-0.5 line-clamp-1">
+                    {v.metaDescription}
+                  </p>
+                </div>
+                <span className="material-symbols-outlined text-on-surface-variant font-extralight text-sm flex-shrink-0 group-hover:text-primary transition-colors">
+                  arrow_forward
+                </span>
+              </Link>
             ))}
           </div>
         </section>
