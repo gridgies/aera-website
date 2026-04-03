@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     "hormonelles Gleichgewicht",
     "Perimenopause",
   ],
+  verification: { google: "zuslK36IIa_TEif-K3sk9Z8nw7UjrelibJZwx0LZeAE" },
   authors: [{ name: "Aera Health" }],
   metadataBase: new URL("https://aerahealth.de"),
   alternates: {
