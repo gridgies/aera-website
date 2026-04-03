@@ -150,7 +150,7 @@ export default function ThemenPage() {
             {conditions.map((condition) => (
               <div key={condition.slug} className="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
                 <h3 className="font-bold text-sm text-on-surface mb-4">
-                  Symptome bei {condition.name}
+                  Symptome bei {condition.topicName}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {condition.symptoms.slice(0, 5).map((symptomSlug) => (

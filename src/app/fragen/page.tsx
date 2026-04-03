@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FRAGEN_LIST } from "@/data/fragenData";
 import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { FragenList } from "@/components/ui/FragenList";
 
 const BASE_URL = "https://aerahealth.de";
 
@@ -64,33 +65,10 @@ export default function FragenIndex() {
           </p>
         </header>
 
-        {/* Questions list */}
+        {/* Questions list with category filter */}
         <section aria-labelledby="fragen-heading">
           <h2 id="fragen-heading" className="sr-only">Alle Fragen</h2>
-          <div className="space-y-3">
-            {FRAGEN_LIST.map((frage) => (
-              <Link
-                key={frage.slug}
-                href={`/fragen/${frage.slug}`}
-                className="flex items-center gap-4 p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/20 hover:shadow-md transition-all group"
-              >
-                <span className="material-symbols-outlined text-primary font-extralight text-xl flex-shrink-0">
-                  help
-                </span>
-                <div className="flex-1 min-w-0">
-                  <p className="font-bold text-on-surface group-hover:text-primary transition-colors">
-                    {frage.question}
-                  </p>
-                  <p className="text-xs text-on-surface-variant font-body mt-1 line-clamp-1">
-                    {frage.metaDescription}
-                  </p>
-                </div>
-                <span className="material-symbols-outlined text-on-surface-variant font-extralight flex-shrink-0 group-hover:text-primary transition-colors">
-                  arrow_forward
-                </span>
-              </Link>
-            ))}
-          </div>
+          <FragenList questions={FRAGEN_LIST} />
         </section>
 
         {/* CTA */}

@@ -1,7 +1,9 @@
 export interface Condition {
   slug: string;
-  name: string;
-  nameLong: string;
+  name: string;        // short label: nav, badges, breadcrumbs
+  nameLong: string;    // full descriptive name: page H1
+  topicName: string;   // grammatically correct form for prose: "Symptome bei X", "bei X"
+  ctaQuestion: string; // full CTA question for the condition page bottom section
   aliases: string[];
   description: string;
   metaDescription: string;
@@ -14,6 +16,8 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     slug: "menopause",
     name: "Menopause",
     nameLong: "Menopause & Perimenopause",
+    topicName: "Menopause",
+    ctaQuestion: "Leidest du unter Menopause-Symptomen?",
     aliases: ["Wechseljahre", "Klimakterium", "Perimenopause", "Postmenopause"],
     description:
       "Die Menopause bezeichnet den natürlichen hormonellen Übergang im Leben einer Frau, bei dem die Eierstöcke die Östrogenproduktion reduzieren und die Menstruation endet.",
@@ -38,6 +42,8 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     slug: "hashimoto",
     name: "Hashimoto",
     nameLong: "Hashimoto Thyreoiditis",
+    topicName: "Hashimoto",
+    ctaQuestion: "Leidest du unter Hashimoto-Symptomen?",
     aliases: ["Hashimoto-Thyreoiditis", "Hashimoto's Thyreoiditis", "autoimmune Thyreoiditis"],
     description:
       "Hashimoto Thyreoiditis ist eine Autoimmunerkrankung, bei der das Immunsystem die Schilddrüse angreift, was zu einer chronischen Entzündung und häufig zu einer Schilddrüsenunterfunktion führt.",
@@ -60,6 +66,8 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     slug: "schilddruese",
     name: "Schilddrüse",
     nameLong: "Schilddrüsenerkrankungen",
+    topicName: "Schilddrüsenerkrankungen",
+    ctaQuestion: "Hast du Beschwerden mit deiner Schilddrüse?",
     aliases: [
       "Schilddrüsenunterfunktion",
       "Hypothyreose",
@@ -84,6 +92,8 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     slug: "hormone",
     name: "Hormone",
     nameLong: "Hormonelle Balance bei Frauen",
+    topicName: "Hormonstörungen",
+    ctaQuestion: "Leidest du unter hormonellen Beschwerden?",
     aliases: [
       "Hormonstörung",
       "Hormonhaushalt",

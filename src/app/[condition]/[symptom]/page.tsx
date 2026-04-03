@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const symptom = SYMPTOMS_DATA[symptomSlug];
   if (!condition || !symptom) return {};
 
-  const title = `${symptom.name} bei ${condition.name}: Ursachen & Hilfe`;
-  const description = `${symptom.name} bei ${condition.name}: ${symptom.metaDescription}`;
+  const title = `${symptom.name} bei ${condition.topicName}: Ursachen & Hilfe`;
+  const description = `${symptom.name} bei ${condition.topicName}: ${symptom.metaDescription}`;
   const url = `/${conditionSlug}/${symptomSlug}`;
 
   return {
@@ -71,7 +71,7 @@ export default async function ConditionSymptomPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLd(
           medicalWebPageSchema({
-            name: `${symptom.name} bei ${condition.name}`,
+            name: `${symptom.name} bei ${condition.topicName}`,
             description: symptom.metaDescription,
             url: pageUrl,
             dateModified: today,
@@ -112,10 +112,10 @@ export default async function ConditionSymptomPage({ params }: Props) {
             {condition.name}
           </span>
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-on-surface leading-tight mb-6">
-            {symptom.name} bei {condition.name}: Ursachen, Diagnose & Hilfe
+            {symptom.name} bei {condition.topicName}: Ursachen, Diagnose & Hilfe
           </h1>
           <p className="text-xl text-on-surface-variant font-body leading-relaxed italic">
-            {symptom.description} Im Zusammenhang mit {condition.name} ist {symptom.name.toLowerCase()} ein häufiges und belastendes Symptom – aber es gibt wirksame Hilfe.
+            {symptom.description} Im Zusammenhang mit {condition.topicName} ist {symptom.name.toLowerCase()} ein häufiges und belastendes Symptom – aber es gibt wirksame Hilfe.
           </p>
         </header>
 
@@ -125,7 +125,7 @@ export default async function ConditionSymptomPage({ params }: Props) {
           <ul className="space-y-2 text-on-primary-container/80 text-sm font-body">
             <li className="flex gap-2">
               <span className="material-symbols-outlined text-sm font-extralight flex-shrink-0">check_circle</span>
-              {symptom.name} ist ein häufiges Symptom bei {condition.name}
+              {symptom.name} ist ein häufiges Symptom bei {condition.topicName}
             </li>
             <li className="flex gap-2">
               <span className="material-symbols-outlined text-sm font-extralight flex-shrink-0">check_circle</span>
@@ -141,7 +141,7 @@ export default async function ConditionSymptomPage({ params }: Props) {
         {/* Causes */}
         <section className="mb-16" aria-labelledby="ursachen-heading">
           <h2 id="ursachen-heading" className="text-2xl font-headline font-bold mb-6">
-            Ursachen für {symptom.name} bei {condition.name}
+            Ursachen für {symptom.name} bei {condition.topicName}
           </h2>
           <p className="text-on-surface-variant font-body leading-relaxed mb-6">
             {symptom.name} im Zusammenhang mit {condition.nameLong} kann verschiedene hormonelle und physiologische Ursachen haben:
@@ -192,7 +192,7 @@ export default async function ConditionSymptomPage({ params }: Props) {
         {symptom.faqs.length > 0 && (
           <section className="mb-16" aria-labelledby="faq-heading">
             <h2 id="faq-heading" className="text-2xl font-headline font-bold mb-8">
-              Häufige Fragen zu {symptom.name} bei {condition.name}
+              Häufige Fragen zu {symptom.name} bei {condition.topicName}
             </h2>
             <div className="space-y-6">
               {symptom.faqs.map((faq) => (

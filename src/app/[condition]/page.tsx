@@ -36,11 +36,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!condition) return {};
 
   return {
-    title: `${condition.name}: Symptome, Ursachen & Behandlung`,
+    title: `${condition.topicName}: Symptome, Ursachen & Behandlung`,
     description: condition.metaDescription,
     alternates: { canonical: `/${conditionSlug}` },
     openGraph: {
-      title: `${condition.name}: Symptome, Ursachen & Behandlung`,
+      title: `${condition.topicName}: Symptome, Ursachen & Behandlung`,
       description: condition.metaDescription,
       url: `${BASE_URL}/${conditionSlug}`,
     },
@@ -81,7 +81,7 @@ export default async function ConditionPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLd(
           medicalWebPageSchema({
-            name: `${condition.name}: Symptome, Ursachen & Behandlung`,
+            name: `${condition.topicName}: Symptome, Ursachen & Behandlung`,
             description: condition.metaDescription,
             url: pageUrl,
             dateModified: today,
@@ -167,7 +167,7 @@ export default async function ConditionPage({ params }: Props) {
 
         {/* Pillar content sections */}
         {pillar && pillar.sections.length > 0 && (
-          <article className="mb-16 space-y-14" aria-label={`Ausführliche Informationen zu ${condition.name}`}>
+          <article className="mb-16 space-y-14" aria-label={`Ausführliche Informationen zu ${condition.topicName}`}>
             {pillar.sections.map((section, i) => (
               <section key={i}>
                 <h2 className="text-2xl font-headline font-bold text-on-surface mb-2 leading-tight">
@@ -207,10 +207,10 @@ export default async function ConditionPage({ params }: Props) {
         {symptomsWithData.length > 0 && (
           <section className="mb-16" aria-labelledby="symptome-heading">
             <h2 id="symptome-heading" className="text-2xl font-headline font-bold mb-8">
-              Symptome bei {condition.name}
+              Symptome bei {condition.topicName}
             </h2>
             <p className="text-on-surface-variant font-body leading-relaxed mb-8">
-              {condition.name} kann sich durch viele verschiedene Symptome äußern. Klicke auf ein Symptom, um mehr zu erfahren:
+              Die Symptome bei {condition.topicName} sind vielfältig. Klicke auf ein Symptom, um mehr zu erfahren:
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {symptomsWithData.map((slug) => {
@@ -258,7 +258,7 @@ export default async function ConditionPage({ params }: Props) {
         {pillar && pillar.faqs.length > 0 && (
           <section className="mb-16" aria-labelledby="faq-heading">
             <h2 id="faq-heading" className="text-2xl font-headline font-bold mb-8">
-              Häufige Fragen zu {condition.name}
+              Häufige Fragen zu {condition.topicName}
             </h2>
             <div className="space-y-4">
               {pillar.faqs.map((faq, i) => (
@@ -328,7 +328,7 @@ export default async function ConditionPage({ params }: Props) {
         {relatedFragen.length > 0 && (
           <section className="mb-16" aria-labelledby="fragen-heading">
             <h2 id="fragen-heading" className="text-xl font-headline font-bold mb-6">
-              Häufige Fragen zu {condition.name}
+              Weitere Fragen zu {condition.topicName}
             </h2>
             <div className="space-y-2">
               {relatedFragen.map((frage) => (
@@ -362,7 +362,7 @@ export default async function ConditionPage({ params }: Props) {
         {/* CTA */}
         <div className="bg-primary-container rounded-3xl p-10 text-center">
           <h2 className="text-xl font-headline font-bold text-on-primary-container mb-3">
-            Leidet du unter {condition.name}-Symptomen?
+            {condition.ctaQuestion}
           </h2>
           <p className="text-on-primary-container/80 font-body text-sm mb-6">
             Mach unseren kostenlosen 2-Minuten-Symptom-Check für eine erste Einschätzung.
