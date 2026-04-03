@@ -88,7 +88,7 @@ export function AuswertungClient() {
     );
   }
 
-  const { primary, secondary, scores, klarheit } = result;
+  const { primary, secondary, scores, klarheit, noPattern, lowScore } = result;
   const maxScore = Math.max(...Object.values(scores));
 
   const profileColors: Record<string, string> = {
@@ -105,6 +105,77 @@ export function AuswertungClient() {
     E: "Östrogendominanz",
   };
 
+  // No pattern: all-zero or near-zero answers → reassuring result, no diagnosis
+  if (noPattern) {
+    return (
+      <div className="min-h-screen">
+        <section className="px-6 max-w-4xl mx-auto pt-40 pb-16">
+          <div className="rounded-3xl p-10 md:p-14 bg-teal-50">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-teal-700 opacity-70">
+              Deine persönliche Auswertung
+            </span>
+            <h1 className="text-3xl md:text-4xl font-headline font-bold leading-tight mb-4 text-teal-800">
+              Kein auffälliges hormonelles Muster
+            </h1>
+            <p className="text-lg font-body leading-relaxed max-w-2xl text-teal-800 opacity-80">
+              Deine Antworten zeigen kein klares Signal für eine hormonelle Dysbalance – das ist eine gute Nachricht.
+            </p>
+          </div>
+        </section>
+
+        <section className="px-6 max-w-4xl mx-auto pb-16 grid md:grid-cols-2 gap-8">
+          <div className="bg-surface-container-low rounded-3xl p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="material-symbols-outlined text-2xl font-extralight text-teal-600">check_circle</span>
+              <h2 className="text-xl font-headline font-bold text-on-surface">Was das bedeutet</h2>
+            </div>
+            <p className="text-sm text-on-surface-variant font-body leading-relaxed">
+              Basierend auf deinen Antworten gibt es aktuell keine starken Hinweise auf Perimenopause, Hashimoto, eine Stresshormon-Dysbalance oder Östrogendominanz. Das bedeutet nicht, dass du keine Beschwerden haben kannst – aber die klassischen Symptommuster dieser Erkrankungen treten in deinen Antworten nicht deutlich hervor.
+            </p>
+          </div>
+          <div className="bg-surface-container-low rounded-3xl p-8">
+            <h2 className="text-xl font-headline font-bold text-on-surface mb-6">Empfehlung</h2>
+            <ul className="space-y-3">
+              {[
+                "Falls du trotzdem Beschwerden hast, die dich belasten, besprich diese mit deiner Ärztin oder deinem Arzt.",
+                "Hormonelle Veränderungen entwickeln sich manchmal langsam. Ein jährlicher Check (TSH, Hormonstatus) kann sinnvoll sein.",
+                "Du kannst den Check jederzeit wiederholen, wenn sich deine Symptome verändern.",
+              ].map((text) => (
+                <li key={text} className="flex gap-3 text-sm text-on-surface-variant font-body">
+                  <span className="material-symbols-outlined text-base font-extralight flex-shrink-0 mt-0.5 text-teal-600">
+                    arrow_forward
+                  </span>
+                  {text}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="px-6 max-w-4xl mx-auto pb-16">
+          <h2 className="text-xl font-headline font-bold text-on-surface mb-6">Zur Information</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <Link href="/themen" className="group p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/20 hover:shadow-md transition-all">
+              <span className="material-symbols-outlined text-primary font-extralight text-xl mb-3 block">menu_book</span>
+              <p className="font-bold text-sm text-on-surface group-hover:text-primary transition-colors mb-1">Alle Gesundheitsthemen</p>
+              <p className="text-xs text-on-surface-variant font-body">Menopause, Hashimoto, Schilddrüse & Hormone</p>
+            </Link>
+            <Link href="/fragen" className="group p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/20 hover:shadow-md transition-all">
+              <span className="material-symbols-outlined text-primary font-extralight text-xl mb-3 block">help</span>
+              <p className="font-bold text-sm text-on-surface group-hover:text-primary transition-colors mb-1">Häufige Fragen</p>
+              <p className="text-xs text-on-surface-variant font-body">Medizinisch fundierte Antworten</p>
+            </Link>
+            <Link href="/check" className="group p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/20 hover:shadow-md transition-all">
+              <span className="material-symbols-outlined text-primary font-extralight text-xl mb-3 block">replay</span>
+              <p className="font-bold text-sm text-on-surface group-hover:text-primary transition-colors mb-1">Check wiederholen</p>
+              <p className="text-xs text-on-surface-variant font-body">Andere Antworten ausprobieren</p>
+            </Link>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -117,7 +188,9 @@ export function AuswertungClient() {
             {primary.titel}
           </h1>
           <p className={`text-lg font-body leading-relaxed max-w-2xl ${primary.textColor} opacity-80`}>
-            {primary.untertitel}
+            {lowScore
+              ? `Deine Antworten könnten auf ${primary.titel} hinweisen – das Signal ist jedoch schwach und muss ärztlich abgeklärt werden.`
+              : primary.untertitel}
           </p>
 
           {/* Klarheits-Indikator */}
@@ -159,6 +232,21 @@ export function AuswertungClient() {
           </div>
         </div>
       </section>
+
+      {/* Low-score notice */}
+      {lowScore && (
+        <section className="px-6 max-w-4xl mx-auto pb-8">
+          <div className="bg-surface-container rounded-2xl p-6 border border-outline-variant/20 flex gap-4 items-start">
+            <span className="material-symbols-outlined text-on-surface-variant font-extralight flex-shrink-0 mt-0.5">info</span>
+            <div>
+              <p className="text-sm font-bold text-on-surface mb-1">Schwaches Signal – Ergebnis vorläufig</p>
+              <p className="text-sm text-on-surface-variant font-body leading-relaxed">
+                Deine Symptome sind nur leicht ausgeprägt. Dieses Profil ist eine erste Orientierung, aber kein Hinweis auf eine gesicherte hormonelle Störung. Bitte besprich deine Beschwerden mit einer Ärztin oder einem Arzt, bevor du Schlussfolgerungen ziehst.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="px-6 max-w-4xl mx-auto pb-16 grid md:grid-cols-2 gap-8">
         {/* Hauptprofil: Beschreibung */}

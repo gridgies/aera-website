@@ -164,6 +164,10 @@ export interface QuizResult {
   scores: Record<ProfileKey, number>;
   /** 0–100, wie eindeutig das Ergebnis ist */
   klarheit: number;
+  /** true wenn kein relevantes Signal erkannt wurde (topScore < 5) */
+  noPattern: boolean;
+  /** true wenn Signal schwach ist – weichere Sprache verwenden (topScore < 10) */
+  lowScore: boolean;
 }
 
 export function berechneErgebnis(answers: QuizAnswer[]): QuizResult {
@@ -196,5 +200,10 @@ export function berechneErgebnis(answers: QuizAnswer[]): QuizResult {
   const maxPossible = 20; // 5 Fragen × max 4 Punkte
   const klarheit = Math.min(100, Math.round((topScore / maxPossible) * 100));
 
-  return { primary, secondary, scores: totals, klarheit };
+  // < 5 Punkte: kein klares Signal → noPattern
+  // < 10 Punkte: schwaches Signal → weichere Sprache in der Auswertung
+  const noPattern = topScore < 5;
+  const lowScore = topScore < 10;
+
+  return { primary, secondary, scores: totals, klarheit, noPattern, lowScore };
 }

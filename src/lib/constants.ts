@@ -36,6 +36,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         description: "Ich bin dauerhaft erschöpft oder ausgebrannt, ohne dass Ärzte etwas finden.",
         scores: { P: 1, H: 2, C: 2, E: 0 },
       },
+      {
+        icon: "sentiment_satisfied",
+        label: "Keine dieser Situationen trifft auf mich zu",
+        description: "Ich habe keine bekannte Diagnose und fühle mich grundsätzlich gut.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+      },
     ],
   },
   {
@@ -66,6 +72,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         label: "Innere Unruhe, obwohl ich erschöpft bin",
         description: "Ich bin müde, aber kann nicht abschalten. Angst oder Nervosität ohne klaren Auslöser.",
         scores: { P: 0, H: 0, C: 4, E: 1 },
+      },
+      {
+        icon: "sentiment_satisfied",
+        label: "Keine starken Beschwerden",
+        description: "Ich fühle mich aktuell gut oder habe nur leichte, gelegentliche Symptome.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
       },
     ],
   },
@@ -98,6 +110,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         description: "Mein Herz rast oder stolpert – oft abends oder ohne körperliche Anstrengung.",
         scores: { P: 1, H: 0, C: 3, E: 1 },
       },
+      {
+        icon: "sentiment_satisfied",
+        label: "Keines davon trifft auf mich zu",
+        description: "Ich beobachte keine dieser körperlichen Veränderungen.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+      },
     ],
   },
   {
@@ -129,6 +147,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         description: "In der Woche vor oder während meiner Blutung schlafe ich deutlich schlechter.",
         scores: { P: 0, H: 0, C: 1, E: 3 },
       },
+      {
+        icon: "sentiment_satisfied",
+        label: "Ich schlafe gut und fühle mich ausgeschlafen",
+        description: "Mein Schlaf ist erholsam, ich habe keine Einschlaf- oder Durchschlafprobleme.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+      },
     ],
   },
   {
@@ -159,6 +183,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         label: "Zyklus regelmäßig, aber ich fühle mich trotzdem nicht gut",
         description: "Mein Zyklus ist unauffällig, aber ich fühle mich dauerhaft erschöpft oder unwohl.",
         scores: { P: 0, H: 2, C: 2, E: 1 },
+      },
+      {
+        icon: "sentiment_satisfied",
+        label: "Zyklus ist regelmäßig und mir geht es gut",
+        description: "Ich habe keine Zyklusbeschwerden und fühle mich insgesamt wohl.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
       },
     ],
   },
