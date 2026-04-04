@@ -1092,6 +1092,514 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
     ],
   },
 
+  "haarausfall-frau-hormone": {
+    slug: "haarausfall-frau-hormone",
+    question: "Haarausfall bei Frauen durch Hormone: Ursachen & Hilfe",
+    metaTitle: "Haarausfall Frau Hormone: Ursachen, Tests & Behandlung",
+    metaDescription:
+      "Haarausfall bei Frauen ist oft hormonell bedingt. Welche Hormone Haarausfall verursachen, welche Tests helfen und was wirklich wirkt.",
+    answer:
+      "Haarausfall bei Frauen ist häufig hormonell bedingt: Östrogenmangel (Wechseljahre), Schilddrüsenfehlfunktion (Hashimoto), Ferritinmangel, erhöhte Androgene (PCOS) oder Nachwirkungen der Antibabypille sind die häufigsten Ursachen. Entscheidend ist die Ursachenabklärung durch Bluttest.",
+    content: {
+      sections: [
+        {
+          heading: "Die häufigsten hormonellen Ursachen für Haarausfall",
+          text: "Diffuser Haarausfall bei Frauen hat in den meisten Fällen eine hormonelle oder mangelbedingte Ursache. Die häufigsten sind: Schilddrüsenfehlfunktion (Hashimoto, Hypothyreose) – Schilddrüsenhormone steuern den Haarwachstumszyklus direkt. Ferritinmangel – Ferritin unter 70 µg/l ist eine der häufigsten übersehenen Ursachen. Östrogenmangel in der Perimenopause – Haarfollikel haben Östrogenrezeptoren. Erhöhte Androgene (PCOS, Androgenisierung) – führen zu androgenetischem Haarausfall. Nachwirkungen der Antibabypille nach Absetzen – vorübergehend, aber ausgeprägt.",
+        },
+        {
+          heading: "Welche Bluttests bei Haarausfall sinnvoll sind",
+          text: "Beim Arztgespräch sollten diese Werte aktiv angesprochen werden: Ferritin (Zielwert >70 µg/l), TSH, fT3, fT4 und Anti-TPO (Schilddrüse und Hashimoto), Östradiol und FSH (Perimenopause), Testosteron und DHEA-S (Androgenisierung), Vitamin D (25-OH), Zink und Biotin. Ein TSH-Wert allein ist nicht ausreichend – fT3 und Antikörper können trotz normalem TSH pathologisch sein.",
+        },
+        {
+          heading: "Was wirklich hilft – je nach Ursache",
+          text: "Bei Ferritinmangel: Eisenpräparate bringen Haarwachstum erst nach 3–6 Monaten zurück. Bei Hashimoto: Korrekte L-Thyroxin-Einstellung und Selen 200 µg täglich (senkt Antikörper und unterstützt Schilddrüse). Bei Östrogenmangel: Hormontherapie (topisch oder systemisch) zeigt den stärksten Effekt. Bei Androgenisierung: Anti-androgene Therapie, ggf. Speironolacton. Allgemein: Stressreduktion, Zink, Biotin – aber Supplemente helfen nur bei tatsächlichem Mangel.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "wie-erkenne-ich-hashimoto",
+      "ferritin-mangel-symptome",
+      "schilddruesenwerte-verstehen",
+    ],
+    relatedConditions: ["hashimoto", "menopause", "hormone"],
+    faqs: [
+      {
+        question: "Ab wann ist Haarausfall bei Frauen behandlungsbedürftig?",
+        answer:
+          "Frauen verlieren normalerweise 50–100 Haare täglich. Wenn der Verlust deutlich zunimmt, Geheimratsecken entstehen oder der Scheitel breiter wird, ist Abklärung sinnvoll. Trichoskopie beim Dermatologen und ein vollständiger Hormonstatus geben Klarheit.",
+      },
+      {
+        question: "Kann Stress Haarausfall verursachen?",
+        answer:
+          "Ja. Schwerer akuter Stress (Telogeneffluvium) führt 3–6 Monate nach dem Stressereignis zu verstärktem Haarausfall. Chronischer Stress erhöht Cortisol, das wiederum Schilddrüse, Progesteron und Östrogen unterdrückt – ein indirekter hormoneller Weg.",
+      },
+    ],
+  },
+
+  "hormonersatztherapie-vor-und-nachteile": {
+    slug: "hormonersatztherapie-vor-und-nachteile",
+    question: "Hormonersatztherapie: Vor- und Nachteile im Überblick",
+    metaTitle: "Hormonersatztherapie (HRT): Vor- und Nachteile, Risiken & Nutzen",
+    metaDescription:
+      "Hormonersatztherapie bei Wechseljahren: Was sind die Vorteile, welche Risiken gibt es wirklich? Aktuelle Studienlage und Empfehlungen der DGGG.",
+    answer:
+      "Die Hormonersatztherapie (HRT) ist die wirksamste Behandlung von Wechseljahresbeschwerden. Aktuelle Leitlinien (DGGG 2020) sehen HRT als sicher für gesunde Frauen unter 60 ohne Risikofaktoren. Das früher befürchtete Brustkrebsrisiko war in der WHI-Studie stark überschätzt worden.",
+    content: {
+      sections: [
+        {
+          heading: "Vorteile der Hormonersatztherapie",
+          text: "HRT lindert vasomotorische Symptome (Hitzewallungen, Nachtschweiß) bei 80–90 % der Frauen wirksam. Weitere belegte Vorteile: Verbesserung von Schlaf, Stimmung und Libido. Schutz vor Osteoporose (belegt durch multiple RCTs). Reduzierung des kardiovaskulären Risikos, wenn in den ersten 10 Jahren nach Menopause begonnen (Window of Opportunity). Schutz vor urogenitaler Atrophie (lokale Östrogentherapie). Mögliche Reduktion des Demenzrisikos bei frühem Beginn.",
+        },
+        {
+          heading: "Risiken und für wen HRT nicht geeignet ist",
+          text: "Das Brustkrebsrisiko durch HRT ist geringer als lange angenommen: Die vieldiskutierte WHI-Studie hatte methodische Mängel und verwendete synthetische Hormone. Bioidentische Östrogen-Progesteron-Kombinationen zeigen in neueren Studien (KEEPS, ELITE) kein erhöhtes Brustkrebsrisiko. Kontraindikationen: Östrogenabhängige Tumoren (Brustkrebs, bestimmte Uteruskarzinome), aktive Thrombose/Lungenembolie, schwere Lebererkrankung. Bei Raucherinnen über 35: transdermal statt oral, um Thromboserisiko zu minimieren.",
+        },
+        {
+          heading: "Bioidentische vs. synthetische Hormone",
+          text: "Bioidentische Hormone haben dieselbe Molekülstruktur wie körpereigene Hormone. Östradiolpflaster und mikronisiertes Progesteron (z.B. Utrogest) gelten als verträglicher als synthetische Gestagene. Besonders Progesteron hat einen direkten schlaffördernden und angstlösenden Effekt – ein Vorteil gegenüber synthetischen Alternativen. Die DGGG empfiehlt 2020: 'HRT kann für die Mehrzahl der Frauen unter 60 Jahren oder innerhalb von 10 Jahren nach der Menopause empfohlen werden, wenn der Nutzen die Risiken überwiegt.'",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "wechseljahre-natuerlich-behandeln",
+      "progesteronmangel-symptome",
+      "besser-schlafen-wechseljahre",
+    ],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Wie lange kann man Hormonersatztherapie nehmen?",
+        answer:
+          "Es gibt keine festgelegte Höchstdauer. Die DGGG empfiehlt die kleinstmögliche wirksame Dosis für die kürzest notwendige Zeit – aber 'so kurz wie nötig' kann bei anhaltenden Beschwerden auch 10+ Jahre bedeuten. Entscheidend: jährliche Überprüfung von Nutzen und Risiko gemeinsam mit der Ärztin.",
+      },
+      {
+        question: "Kann man HRT auch bei Hashimoto nehmen?",
+        answer:
+          "Ja, in der Regel ist HRT bei Hashimoto möglich und kann sogar die Schilddrüsenfunktion unterstützen, da Östrogen die Schilddrüsenhormonbindung beeinflusst. Die L-Thyroxin-Dosis muss unter HRT manchmal angepasst werden. Absprache mit Endokrinologe und Gynäkologin ist empfehlenswert.",
+      },
+    ],
+  },
+
+  "cortisol-senken-natuerlich": {
+    slug: "cortisol-senken-natuerlich",
+    question: "Cortisol natürlich senken: Was wirklich funktioniert",
+    metaTitle: "Cortisol senken natürlich: Evidenzbasierte Methoden gegen chronischen Stress",
+    metaDescription:
+      "Cortisol dauerhaft zu hoch? Diese evidenzbasierten Methoden senken Cortisol natürlich – mit Studienbelegs zu Ashwagandha, Schlaf, Ernährung und Atemtechniken.",
+    answer:
+      "Cortisol natürlich senken: Die stärkste Evidenz haben Ashwagandha (Reduktion um 27–30 % in RCTs), regelmäßige Ausdauerübung in moderater Intensität, Schlaf vor 23 Uhr, Magnesiumglycinat abends und Reduzierung von Koffein nach 14 Uhr.",
+    content: {
+      sections: [
+        {
+          heading: "Warum chronisch erhöhtes Cortisol gefährlich ist",
+          text: "Cortisol ist das primäre Stresshormon der HPA-Achse (Hypothalamus-Hypophysen-Nebennieren). Kurzfristig lebensnotwendig – langfristig erhöht zerstört es Muskelmasse, erhöht Blutzucker, supprimiert das Immunsystem, stört den Schlaf und blockiert die Produktion von Östrogen, Progesteron und Schilddrüsenhormonen (Pregnenolon-Steal). Typische Zeichen zu hohen Cortisols: Bauchfett trotz normaler Ernährung, Einschlafprobleme um 22–2 Uhr, Herzrasen ohne Anlass, Heißhunger auf Süßes, tired-but-wired.",
+        },
+        {
+          heading: "Evidenzbasierte Maßnahmen mit der stärksten Wirkung",
+          text: "Ashwagandha (Withania somnifera, 300–600 mg Vollextrakt täglich): Eine randomisierte Doppelblindstudie (Chandrasekhar et al. 2012) zeigte eine Cortisol-Reduktion um 27,9 %. Mehrere Meta-Analysen bestätigen die Wirkung. Ausdauertraining (150 min/Woche, moderat): Senkt Basiscortisol und verbessert Cortisolabbau. Wichtig: Übermäßiges Hochintensiv-Training erhöht Cortisol. Schlaf 7–9 Stunden, Schlafbeginn vor 23 Uhr: Die Nebennieren regenerieren primär zwischen 22 und 2 Uhr. Atemübungen (4-7-8-Atmung, Kohärenzatmung): Aktivieren den Vagusnerv und senken Cortisol innerhalb von Minuten.",
+        },
+        {
+          heading: "Ernährung und Supplemente",
+          text: "Magnesiumglycinat 300–400 mg abends: Magnesium ist Co-Faktor der Cortisolsynthese; Mangel erhöht Stressanfälligkeit. Phosphatidylserin 400 mg: Reduziert stressinduzierte Cortisol-Spitzen, gut belegt durch mehrere RCTs. Koffein nach 14 Uhr meiden: Koffein verlängert die Cortisol-Erhöhungsphase und verschlechtert Schlaf. Zucker und Alkohol reduzieren: Beide triggern Cortisol-Ausschüttung. Omega-3-Fettsäuren (EPA/DHA 2 g täglich): Meta-Analysen zeigen Cortisol-senkende Wirkung bei psychischem Stress.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "cortisol-zu-hoch-symptome-frau",
+      "besser-schlafen-wechseljahre",
+      "brain-fog-frauen",
+    ],
+    relatedConditions: ["hormone"],
+    faqs: [
+      {
+        question: "Wie lange dauert es, bis Cortisol sinkt?",
+        answer:
+          "Das hängt von der Maßnahme ab. Atemübungen senken akutes Cortisol innerhalb von Minuten. Ashwagandha zeigt messbare Effekte nach 4–8 Wochen. Lebensstiländerungen (Schlaf, Sport, Ernährung) brauchen 4–12 Wochen für stabile Ergebnisse. Ein Speichel-Cortisol-Tagesprofil zeigt, ob Maßnahmen wirken.",
+      },
+      {
+        question: "Kann ich Cortisol selbst testen?",
+        answer:
+          "Ja. Speichel-Cortisoltests (z.B. von Cerascreen oder medivere) messen das Cortisol-Tagesprofil an 4 Zeitpunkten (morgens, mittags, abends, nachts) und sind aussagekräftiger als ein einmaliger Blutwert. Gesundes Cortisol ist morgens hoch (Cortisol Awakening Response) und sinkt bis abends stark ab.",
+      },
+    ],
+  },
+
+  "libidoverlust-frau-ursachen": {
+    slug: "libidoverlust-frau-ursachen",
+    question: "Libidoverlust bei Frauen: Ursachen & Hilfe",
+    metaTitle: "Libidoverlust Frau: Hormonelle Ursachen, Tests & Behandlung",
+    metaDescription:
+      "Libidoverlust bei Frauen hat meist hormonelle Ursachen – Östrogenmangel, Testosteronmangel, erhöhtes Cortisol, Hashimoto. Was wirklich hilft.",
+    answer:
+      "Libidoverlust bei Frauen ist häufig hormonell bedingt: Östrogenmangel (Wechseljahre, Pille), niedriges Testosteron, erhöhtes Cortisol (Stress), Schilddrüsenunterfunktion und Progesteronmangel sind die häufigsten Ursachen. Psychologische Faktoren spielen meist eine verstärkende Rolle.",
+    content: {
+      sections: [
+        {
+          heading: "Hormonelle Ursachen für nachlassende Libido",
+          text: "Testosteron ist auch für Frauen das wichtigste Libidohormon. Frauen produzieren es in Eierstöcken und Nebennieren, aber die Produktion sinkt ab dem 30. Lebensjahr und fällt in den Wechseljahren stark ab. Östrogenmangel führt zu Scheidentrockenheit und Schmerzen beim Sex – ein häufiger indirekter Grund für schwindende Lust. Cortisol (chronischer Stress) konkurriert mit Sexualhormonen: Der Körper priorisiert Überleben. Schilddrüsenunterfunktion (Hashimoto) dämpft den gesamten Stoffwechsel, inklusive Sexualtrieb. Antidepressiva (SSRI), Antibabypille (senkt Testosteron und erhöht SHBG) als häufige nicht-hormonelle Auslöser.",
+        },
+        {
+          heading: "Diagnose: Welche Werte testen lassen?",
+          text: "Für eine vollständige Abklärung sinnvoll: Testosteron (Gesamttestosteron) und SHBG (Sexualhormon-bindendes Globulin) – freies Testosteron ist oft entscheidender als Gesamttestosteron. Östradiol (E2) und FSH. Cortisol-Tagesprofil (Speichel). TSH, fT3, fT4, Anti-TPO. Progesteron (Lutealphase, Tag 19–22). DHEA-S als Vorläufer von Testosteron und Östrogen.",
+        },
+        {
+          heading: "Was wirklich hilft",
+          text: "Topisches Testosteron für Frauen: In Deutschland als Off-Label-Therapie verfügbar; Studien zeigen signifikante Libidoverbesserung. Östrogen lokal (Creme, Zäpfchen): Lindert Scheidentrockenheit, macht Sex wieder angenehm. Stressreduktion: Cortisol-Management ist oft der unterschätzteste Hebel. Bei Schilddrüsenproblemen: Korrekte TSH-Einstellung auf 0,5–2,0 mU/L verbessert Libido deutlich. Offene Kommunikation in der Partnerschaft und ggf. Sexualtherapie ergänzen medizinische Maßnahmen wirkungsvoll.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "oestrogendominanz-symptome",
+      "progesteronmangel-symptome",
+      "cortisol-zu-hoch-symptome-frau",
+    ],
+    relatedConditions: ["menopause", "hormone"],
+    faqs: [
+      {
+        question: "Ist Libidoverlust in den Wechseljahren normal?",
+        answer:
+          "Häufig ja – aber 'normal' bedeutet nicht, dass nichts getan werden kann. Bis zu 40 % der Frauen in der Perimenopause berichten von nachlassender Libido. Hormontherapie, insbesondere topisches Testosteron und Östrogen, kann die Libido effektiv wiederherstellen.",
+      },
+      {
+        question: "Kann die Antibabypille Libidoverlust verursachen?",
+        answer:
+          "Ja. Kombinationspillen erhöhen SHBG (Sexualhormon-bindendes Globulin), das Testosteron bindet und inaktiviert. Das senkt freies Testosteron deutlich. SHBG kann nach Absetzen der Pille noch Monate erhöht bleiben ('post-pill syndrome'). Alternative Verhütungsmethoden können die Libido in diesen Fällen erheblich verbessern.",
+      },
+    ],
+  },
+
+  "selen-hashimoto-dosierung": {
+    slug: "selen-hashimoto-dosierung",
+    question: "Selen bei Hashimoto: Dosierung, Wirkung & Studienlage",
+    metaTitle: "Selen bei Hashimoto: Richtige Dosierung & wissenschaftliche Evidenz",
+    metaDescription:
+      "Selen kann Anti-TPO-Antikörper bei Hashimoto senken – was zeigen die Studien? Welche Dosierung ist sinnvoll und was ist zu beachten?",
+    answer:
+      "Selen 200 µg täglich kann Anti-TPO-Antikörper bei Hashimoto signifikant senken. Meta-Analysen (Fan et al. 2014, Ventura et al. 2017) zeigen eine Reduktion um 40–60 %. Die empfohlene Dosierung liegt bei 100–200 µg Selenomethionin täglich. Nicht mehr als 300 µg täglich einnehmen.",
+    content: {
+      sections: [
+        {
+          heading: "Warum Selen bei Hashimoto wichtig ist",
+          text: "Die Schilddrüse hat die höchste Selenkonzentration aller Organe. Selen ist essentiell für die Produktion von Selenoproteinen, die oxidativen Stress in der Schilddrüse neutralisieren. Bei Hashimoto entsteht durch den Autoimmunprozess erheblicher oxidativer Stress – Selen kann diese Entzündungsreaktion dämpfen. Gleichzeitig ist Selen Co-Faktor der Deiodinase, des Enzyms, das inaktives T4 in aktives T3 umwandelt. Selenmangel verschlechtert daher sowohl die Schilddrüsenfunktion als auch den Autoimmunprozess.",
+        },
+        {
+          heading: "Was die Studien zeigen",
+          text: "Eine Meta-Analyse von Fan et al. (2014) mit 7 randomisierten Studien zeigte: Selen 200 µg täglich senkt Anti-TPO-Antikörper um durchschnittlich 49 % nach 12 Monaten. Eine Cochrane-Übersichtsarbeit (2013) bestätigte diesen Effekt, forderte aber weitere Langzeitstudien. Die SELENOH-Studie (2018) zeigte, dass Selen neben Antikörpern auch die Lebensqualität verbessert. Wichtig: Selen senkt Antikörper, kuriert Hashimoto aber nicht. Es ist eine wichtige Begleitmaßnahme, keine Monotherapie.",
+        },
+        {
+          heading: "Dosierung, Form und Sicherheit",
+          text: "Empfohlene Dosierung: 100–200 µg täglich. Die organische Form Selenomethionin (in Nahrungsergänzungsmitteln und natürlichen Quellen wie Paranüssen) wird besser absorbiert als anorganisches Natriumselenit. Natürliche Quellen: 2–3 Paranüsse täglich liefern ca. 100–150 µg Selen – eine einfache Alternative. Obere sichere Grenze: 300 µg täglich (EU). Bei dauerhaft mehr als 400 µg täglich droht Selenvergiftung (Selenose) mit Haarausfall, Nagelbrüchigkeit und neurologischen Symptomen. Bluttest: Selengehalt im Vollblut kann gemessen werden (Zielwert: 120–160 µg/l).",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "wie-erkenne-ich-hashimoto",
+      "hashimoto-ernaehrung-was-essen",
+      "hashimoto-muedigkeit-was-hilft",
+    ],
+    relatedConditions: ["hashimoto"],
+    faqs: [
+      {
+        question: "Wann merkt man die Wirkung von Selen bei Hashimoto?",
+        answer:
+          "Antikörperwerte sinken messbar nach 3–6 Monaten regelmäßiger Einnahme. Subjektive Verbesserungen (mehr Energie, weniger Haarausfall) berichten viele Betroffene bereits nach 6–8 Wochen. Ein Anti-TPO-Test nach 6 Monaten zeigt, ob die Supplementierung wirkt.",
+      },
+      {
+        question: "Muss ich Selen dauerhaft nehmen?",
+        answer:
+          "Die meisten Studien liefen über 12 Monate. Bei dauerhafter Supplementierung empfiehlt sich eine Pause von 2–4 Wochen pro Jahr und gelegentliche Kontrolle des Selenspiegels im Blut, um Überdosierung zu vermeiden.",
+      },
+    ],
+  },
+
+  "fsh-wert-wechseljahre": {
+    slug: "fsh-wert-wechseljahre",
+    question: "FSH-Wert und Wechseljahre: Was bedeutet der Wert?",
+    metaTitle: "FSH-Wert Wechseljahre: Normwerte, Interpretation & Bedeutung",
+    metaDescription:
+      "Was sagt der FSH-Wert über Wechseljahre und Perimenopause aus? Normwerte, Grenzbereiche und warum FSH allein nicht ausreicht.",
+    answer:
+      "FSH (follikelstimulierendes Hormon) steigt in der Perimenopause an, weil die Eierstöcke nachlassen. Ein FSH-Wert über 25 IU/L deutet auf Perimenopause hin, über 40 IU/L auf Menopause. FSH allein ist aber kein zuverlässiger Einzelwert – er schwankt stark.",
+    content: {
+      sections: [
+        {
+          heading: "FSH-Normwerte in verschiedenen Lebensphasen",
+          text: "FSH (follikelstimulierendes Hormon) wird in der Hirnanhangsdrüse produziert und stimuliert die Eierstöcke zur Follikelreifung. Normwerte: Reproduktives Alter (Früh-Zyklusphase, Tag 3–5): 3–10 IU/L. Ovulationsphase: 6–17 IU/L. Perimenopause: 10–25 IU/L (schwankend). Menopause: >40 IU/L (dauerhaft). Ein einmalig erhöhter FSH-Wert ist nicht beweisend – in der Perimenopause kann FSH von Monat zu Monat stark schwanken. Für eine verlässliche Aussage sind mehrere Messungen über 6–12 Monate empfehlenswert.",
+        },
+        {
+          heading: "Warum FSH allein nicht ausreicht",
+          text: "FSH ist der Standard-Screening-Test, hat aber wichtige Grenzen: FSH kann trotz perimenopausaler Symptome monatelang im 'normalen' Bereich bleiben. Eine einmalige Messung erfasst den Schwankungsbereich nicht. Besser in Kombination: Östradiol (E2) – sinkt bei Perimenopause; AMH (Anti-Müller-Hormon) – misst die Eierstockreserve präziser als FSH und schwankt kaum; LH (luteinisierendes Hormon) – steigt parallel zu FSH. Außerdem: Die Symptome sind oft aussagekräftiger als die Laborwerte. Eine Frau mit typischen Perimenopause-Symptomen sollte ernst genommen werden, auch wenn FSH noch normal ist.",
+        },
+        {
+          heading: "Was tun bei erhöhtem FSH?",
+          text: "Ein FSH-Wert über 25 IU/L zusammen mit typischen Symptomen ist ein klares Signal für eine gynäkologische Abklärung. Sinnvolle nächste Schritte: Vollständiges Hormonsetting (FSH, LH, Östradiol, AMH, Progesteron, TSH). Symptomtagebuch führen – Zyklusveränderungen dokumentieren. Gespräch über Hormontherapie oder pflanzliche Alternativen mit der Gynäkologin führen. Bei FSH >40 IU/L ohne Periode seit 12 Monaten: Menopause kann rückblickend bestätigt werden.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "amh-wert-zu-niedrig",
+      "welche-hormone-testen-lassen",
+      "wann-beginnen-die-wechseljahre",
+    ],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Kann ein hoher FSH-Wert auch andere Ursachen haben?",
+        answer:
+          "Ja. Erhöhtes FSH kann auch auf primäre Ovarialinsuffizienz (POI, frühe Menopause unter 40), Hypophysentumore oder genetische Ursachen hinweisen. Eine weiterführende Abklärung ist bei FSH >25 IU/L unter 40 Jahren immer empfehlenswert.",
+      },
+    ],
+  },
+
+  "ferritin-mangel-symptome": {
+    slug: "ferritin-mangel-symptome",
+    question: "Ferritinmangel bei Frauen: Symptome, Grenzwerte & Behandlung",
+    metaTitle: "Ferritinmangel Symptome Frau: Werte, Ursachen & was hilft",
+    metaDescription:
+      "Ferritinmangel ist bei Frauen häufig und führt zu Erschöpfung, Haarausfall und Konzentrationsproblemen – auch bei normalem Blutbild. Welche Werte wirklich zählen.",
+    answer:
+      "Ferritinmangel bei Frauen verursacht Erschöpfung, diffusen Haarausfall, Konzentrationsprobleme und Restless Legs – auch wenn der Hämoglobinwert (Blutbild) noch normal ist. Der optimale Ferritinwert liegt bei >70–100 µg/l, nicht nur im Laborbereich 'normal' (>12 µg/l).",
+    content: {
+      sections: [
+        {
+          heading: "Warum der Laborbereich 'normal' täuscht",
+          text: "Die meisten Labore markieren Ferritinwerte ab 12–15 µg/l als 'normal'. Klinisch relevante Mangelzustände beginnen aber oft schon unter 50–70 µg/l. Haarausfall tritt ab Ferritin unter 70 µg/l auf, Erschöpfung und Konzentrationsprobleme ab unter 50 µg/l. Der Grund: Ferritin ist der Eisenspeicher. Wenn er niedrig ist, priorisiert der Körper die Versorgung der roten Blutkörperchen über andere Gewebe – Gehirn, Haarfollikel und Muskulatur kommen zu kurz. Das Hämoglobin bleibt noch normal, während die Körperspeicher bereits erschöpft sind.",
+        },
+        {
+          heading: "Häufige Symptome bei Ferritinmangel",
+          text: "Chronische Erschöpfung, die sich durch Schlaf nicht bessert. Diffuser Haarausfall (besonders am Scheitel und Temporalbereich). Konzentrationsprobleme und Wortfindungsstörungen. Restless-Legs-Syndrom (unruhige Beine, besonders nachts). Blasse Haut, Blässe der Schleimhäute. Herzrasen bei Belastung. Verminderte Kältetoleranz. Brüchige Nägel. Diese Symptome werden häufig mit Burnout, Schilddrüsenproblemen oder Wechseljahresbeschwerden verwechselt – ein Ferritintest ist oft der schnellste Weg zur Aufklärung.",
+        },
+        {
+          heading: "Behandlung: Wie Ferritin effektiv aufgebaut wird",
+          text: "Eisensupplemente: Eisenbisglycinat ist verträglicher als Eisensulfat (weniger Magenbeschwerden). 14–25 mg elementares Eisen täglich auf nüchternen Magen oder mit Vitamin C eingenommen verbessert die Aufnahme. Nicht gleichzeitig mit Kaffee, Tee, Calcium oder Schilddrüsenmedikamenten einnehmen. Ernährung: Rotes Fleisch, Hülsenfrüchte, Kürbiskerne, Nüsse. Eisenräuber meiden: Kaffee und Tee innerhalb von 1 Stunde nach der Mahlzeit blockieren die Eisenaufnahme um bis zu 50 %. Zeitrahmen: Ferritinspiegel steigen langsam – realistische Verbesserung nach 3–6 Monaten. Haarausfall bessert sich oft erst nach 6–12 Monaten.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "haarausfall-frau-hormone",
+      "welche-blutwerte-bei-muedigkeit",
+      "brain-fog-frauen",
+    ],
+    relatedConditions: ["hashimoto", "hormone"],
+    faqs: [
+      {
+        question: "Welcher Ferritinwert ist optimal?",
+        answer:
+          "Für Symptomfreiheit empfehlen viele Funktionalmediziner einen Ferritinwert von 70–100 µg/l. Laboratorien markieren oft bereits 12–15 µg/l als 'normal', was für aktives Wohlbefinden nicht ausreicht. Bei anhaltenden Beschwerden trotz 'normalen' Werten immer den absoluten Zahlenwert erfragen.",
+      },
+      {
+        question: "Warum haben Frauen so oft Ferritinmangel?",
+        answer:
+          "Menstruation ist der Hauptgrund: Frauen verlieren jeden Zyklus 20–60 ml Blut (ca. 10–30 mg Eisen). Bei starken Blutungen kann der Verlust nicht durch Ernährung kompensiert werden. In der Perimenopause, wo Blutungen oft verstärkt werden, verschlechtert sich der Ferritinmangel häufig.",
+      },
+    ],
+  },
+
+  "hashimoto-gewichtszunahme-was-hilft": {
+    slug: "hashimoto-gewichtszunahme-was-hilft",
+    question: "Gewichtszunahme bei Hashimoto: Ursachen & was wirklich hilft",
+    metaTitle: "Hashimoto Gewichtszunahme: Ursachen, Ernährung & Behandlung",
+    metaDescription:
+      "Gewichtszunahme trotz Diät bei Hashimoto: Welche hormonellen Mechanismen dahinterstecken und was wirklich hilft – von Schilddrüsenwerten bis Ernährung.",
+    answer:
+      "Gewichtszunahme bei Hashimoto entsteht durch verlangsamten Stoffwechsel (T3-Mangel), Wassereinlagerungen und Insulinresistenz. Korrekte Schilddrüseneinstellung (TSH 0,5–2,0 mU/L), ausreichendes fT3 und anti-entzündliche Ernährung sind die wichtigsten Hebel.",
+    content: {
+      sections: [
+        {
+          heading: "Warum Hashimoto zu Gewichtszunahme führt",
+          text: "Schilddrüsenhormone regulieren den Grundumsatz – die Energie, die der Körper in Ruhe verbrennt. Bei Hashimoto sinkt T3 (das aktive Schilddrüsenhormon), was den Stoffwechsel verlangsamt. Die häufigsten Mechanismen: Verlangsamter Grundumsatz – 200–500 kcal täglich weniger Verbrauch. Myxödem (Wassereinlagerungen) durch veränderte Gewebeproteine. Insulinresistenz – Hashimoto erhöht das Risiko für Insulinresistenz, die weitere Gewichtszunahme fördert. Verstopfung verlangsamt den Darmtransit. Erschöpfung reduziert körperliche Aktivität.",
+        },
+        {
+          heading: "Schilddrüsenwerte optimieren – der wichtigste Schritt",
+          text: "Viele Frauen mit Hashimoto nehmen L-Thyroxin, aber ihr TSH ist 'im Normbereich' – z.B. 3,0 mU/L. Das reicht oft nicht aus. Funktional-medizinischer Zielwert: TSH 0,5–2,0 mU/L. Wichtig: fT3 separat messen, da die Umwandlung von T4 zu T3 bei Hashimoto oft gestört ist. Bei gutem TSH aber niedrigem fT3: T3-Zusatz (Liothyronin) besprechen. Selen 200 µg täglich verbessert die T4-zu-T3-Konversion. Der Arzt muss auf ein Ziel eingestellt werden, nicht nur auf 'Normbereich'.",
+        },
+        {
+          heading: "Ernährung bei Hashimoto und Gewicht",
+          text: "Anti-entzündliche Ernährung ist das Fundament: Wenig verarbeitete Lebensmittel, keine Transfette, wenig Zucker. Glutenfreier Selbstversuch (3 Monate): Bei gleichzeitiger Zöliakie (häufig bei Hashimoto) deutliche Verbesserung. Bei Non-Zöliakie-Glutensensitivität anekdotisch wirksam. Kohlenhydratmoderat, nicht ketogen: Extreme Kalorienrestriktion erhöht Cortisol, was T3 weiter senkt. Jod: Kein Jodexzess – zu viel Jod kann Hashimoto-Schübe triggern. Normaler Jodgehalt (jodiertes Salz, gelegentlich Seefisch) ist unbedenklich. Intervallfasten: 16:8 kann Insulinresistenz verbessern, aber nur bei guter Schilddrüsenfunktion – bei aktiver Hypothyreose mit Vorsicht.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "hashimoto-ernaehrung-was-essen",
+      "schilddruesenwerte-verstehen",
+      "selen-hashimoto-dosierung",
+    ],
+    relatedConditions: ["hashimoto"],
+    faqs: [
+      {
+        question: "Kann man mit Hashimoto abnehmen?",
+        answer:
+          "Ja – aber erst wenn die Schilddrüse korrekt eingestellt ist. Ohne ausreichendes T3 ist Abnehmen sehr schwer, egal wie wenig gegessen wird. Wenn TSH, fT3 und fT4 im optimalen Bereich sind, funktioniert Abnehmen mit ausgewogener Ernährung und Bewegung genauso wie ohne Hashimoto.",
+      },
+      {
+        question: "Hilft Sport bei Hashimoto trotz Erschöpfung?",
+        answer:
+          "Moderater Sport (Spazierengehen, Yoga, Schwimmen) hilft – exzessives Hochintensivtraining kann Hashimoto-Schübe triggern. 30–45 Minuten moderate Bewegung täglich verbessert Insulin-Sensitivität, hebt die Stimmung und unterstützt das Gewichtsmanagement ohne die Nebennieren zu belasten.",
+      },
+    ],
+  },
+
+  "stimmungsschwankungen-wechseljahre-behandlung": {
+    slug: "stimmungsschwankungen-wechseljahre-behandlung",
+    question: "Stimmungsschwankungen in den Wechseljahren: Ursachen & Hilfe",
+    metaTitle: "Stimmungsschwankungen Wechseljahre: Ursachen, Behandlung & Hausmittel",
+    metaDescription:
+      "Stimmungsschwankungen, Reizbarkeit und Weinen in den Wechseljahren: Was hormonell dahintersteckt und welche Behandlungen wirklich helfen.",
+    answer:
+      "Stimmungsschwankungen in den Wechseljahren entstehen, weil Östrogen den Serotonin-Haushalt und GABA-Rezeptoren beeinflusst. Progesteron wirkt direkt beruhigend auf das Gehirn. Wenn beide sinken, wird das Nervensystem anfälliger. Hormontherapie und Lebensstilanpassungen helfen effektiv.",
+    content: {
+      sections: [
+        {
+          heading: "Warum Wechseljahre die Stimmung so stark beeinflussen",
+          text: "Östrogen moduliert Serotonin, Dopamin und GABA – die drei wichtigsten 'Wohlfühl-Neurotransmitter'. Wenn Östrogen sinkt, sinkt die serotonerge Aktivität, was Reizbarkeit, Stimmungstiefs und emotionale Instabilität erklärt. Progesteron ist ein natürlicher GABA-Modulator: Es beruhigt das Gehirn. In der Perimenopause sinkt Progesteron oft als erstes, was zu Angst, innerer Unruhe und schlechtem Schlaf führt – oft noch bevor Hitzewallungen auftreten. Hinzu kommt: Schlechter Schlaf durch hormonelle Veränderungen verstärkt emotionale Instabilität zusätzlich.",
+        },
+        {
+          heading: "Behandlungsmöglichkeiten",
+          text: "Hormontherapie (HRT): Die wirksamste Behandlung, wenn Stimmungsschwankungen hormonell bedingt sind. Mikronisiertes Progesteron (z.B. Utrogest) hat dabei einen zusätzlichen stimmungsstabilisierenden Effekt. Pflanzliche Alternativen: Traubsilberkerze (Cimicifuga racemosa) zeigte in Meta-Analysen signifikante Verbesserung von Stimmung und vasomotorischen Symptomen. Johanniskraut (Hypericum perforatum, 600–900 mg täglich): Gut belegt bei leichter bis mittelschwerer Depression, auch in den Wechseljahren. Cave: Wechselwirkungen mit Medikamenten. Magnesiumglycinat 400 mg abends: Unterstützt GABA, verbessert Schlaf, reduziert Reizbarkeit.",
+        },
+        {
+          heading: "Lebensstil: Was den Unterschied macht",
+          text: "Regelmäßiger Sport (4× wöchentlich, 30–45 min) erhöht Serotonin und BDNF (Brain-Derived Neurotrophic Factor) nachweislich. Schlafoptimierung ist zentral – Schlafmangel verstärkt Stimmungsschwankungen dramatisch. Stressmanagement (Meditation, Atemübungen): Cortisol senken hilft, weil Cortisol Progesteron weiter abbaut. Soziale Verbindungen: Isolierung verstärkt perimenopausale Depression. Aktiver Aufbau von Gemeinschaft und Unterstützung. Wenn Stimmungsschwankungen in klinische Depression übergehen: Psychiatrische Abklärung und ggf. antidepressive Behandlung parallel zur Hormontherapie.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "perimenopause-angst-panikattacken",
+      "besser-schlafen-wechseljahre",
+      "progesteronmangel-symptome",
+    ],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Sind Stimmungsschwankungen in den Wechseljahren dasselbe wie Depression?",
+        answer:
+          "Nein, aber der Übergang ist fließend. Perimenopausale Stimmungsschwankungen sind hormonell bedingt und situativ – sie kommen und gehen. Klinische Depression ist anhaltend, betrifft das Funktionieren im Alltag und benötigt psychiatrische Behandlung. Beide können gleichzeitig vorliegen. Wenn Symptome mehr als 2 Wochen anhalten und den Alltag stark beeinträchtigen, ist ärztliche Abklärung dringend empfehlenswert.",
+      },
+    ],
+  },
+
+  "amh-wert-zu-niedrig": {
+    slug: "amh-wert-zu-niedrig",
+    question: "AMH-Wert zu niedrig: Was bedeutet das für die Fruchtbarkeit?",
+    metaTitle: "AMH-Wert zu niedrig: Bedeutung, Normwerte & nächste Schritte",
+    metaDescription:
+      "Ein niedriger AMH-Wert zeigt geringe Eierstockreserve an. Was das für Fruchtbarkeit und Perimenopause bedeutet, welche Normwerte gelten und was man tun kann.",
+    answer:
+      "AMH (Anti-Müller-Hormon) misst die Eierstockreserve. Ein niedriger AMH-Wert bedeutet wenige verbliebene Eizellen – nicht, dass eine Schwangerschaft unmöglich ist. AMH sinkt mit dem Alter und ist der verlässlichste frühe Marker für eine nahende Perimenopause.",
+    content: {
+      sections: [
+        {
+          heading: "Was ist AMH und was misst es?",
+          text: "Anti-Müller-Hormon (AMH) wird von den Granulosazellen kleiner Follikel in den Eierstöcken produziert. Es ist ein direktes Maß für die Anzahl verbliebener Follikel – also die Eierstockreserve (ovarian reserve). AMH sinkt mit dem Alter und mit abnehmender Follikelzahl. Wichtige Eigenschaften: AMH schwankt kaum im Zyklus (kann an jedem Zyklustag gemessen werden). AMH ist früher aussagekräftig als FSH – es sinkt schon Jahre bevor FSH ansteigt. AMH ist der beste einzelne Marker für die Eierstockreserve, besser als FSH allein.",
+        },
+        {
+          heading: "Normwerte nach Altersgruppe",
+          text: "AMH-Referenzwerte variieren je nach Labor, aber typische Orientierungswerte: 25–35 Jahre: 1,5–4,0 ng/ml (normal). 35–40 Jahre: 1,0–2,5 ng/ml. 40–45 Jahre: 0,5–1,5 ng/ml. 45+ Jahre: <1,0 ng/ml (häufig, Perimenopause). Unter 0,5–1,0 ng/ml: Stark eingeschränkte Ovarialreserve. Unter 0,2 ng/ml: Sehr geringe Reserve, baldige Menopause wahrscheinlich. Diese Werte sind Orientierungspunkte – der klinische Kontext (Alter, Symptome, Kinderwunsch) ist für die Interpretation entscheidend.",
+        },
+        {
+          heading: "Niedriger AMH: Was tun?",
+          text: "Mit Kinderwunsch: Reproduktionsmedizinische Beratung baldmöglichst – weniger Zeit bis zur Menopause bedeutet weniger Zeit für eine natürliche Schwangerschaft oder reproduktive Optionen. IVF kann bei niedrigem AMH trotzdem erfolgreich sein. Ohne Kinderwunsch: Niedriger AMH deutet auf frühe Perimenopause hin. Symptome ernst nehmen, Hormonpanel (FSH, Östradiol, AMH) regelmäßig kontrollieren. Präventive Maßnahmen: Rauchen stoppen (beschleunigt Follikelverlust), Stressreduktion, optimale Ernährung. AMH kann nicht direkt 'erhöht' werden – die Follikelzahl ist genetisch und alterskorrekt. DHEA-Supplementierung (25–75 mg täglich) wird diskutiert, Evidenz ist noch begrenzt.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "fsh-wert-wechseljahre",
+      "welche-hormone-testen-lassen",
+      "fruehere-wechseljahre-ursachen",
+    ],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Kann ein niedriger AMH-Wert bei einer jungen Frau auf POI hinweisen?",
+        answer:
+          "Ja. Eine primäre Ovarialinsuffizienz (POI) – frühere Bezeichnung: vorzeitige Menopause – betrifft ca. 1 % der Frauen unter 40. Bei AMH unter 0,5 ng/ml in Kombination mit erhöhtem FSH und Zyklusunregelmäßigkeiten vor dem 40. Lebensjahr ist eine erweiterte Abklärung (Chromosomenanalyse, Autoimmunmarker) empfehlenswert.",
+      },
+    ],
+  },
+
+  "progesteron-erhoehen-natuerlich": {
+    slug: "progesteron-erhoehen-natuerlich",
+    question: "Progesteron natürlich erhöhen: Was hilft wirklich?",
+    metaTitle: "Progesteron erhöhen natürlich: Evidenzbasierte Methoden & Supplemente",
+    metaDescription:
+      "Progesteronmangel natürlich beheben: Welche Lebensstiländerungen, Kräuter und Supplemente wirklich helfen – und wann bioidentisches Progesteron sinnvoll ist.",
+    answer:
+      "Progesteron natürlich erhöhen: Mönchspfeffer (Vitex agnus-castus) hat die stärkste pflanzliche Evidenz. Stressreduktion ist zentral (Cortisol konkurriert mit Progesteron). Zink und Vitamin B6 unterstützen die Progesteronproduktion. Bei deutlichem Mangel ist bioidentisches Progesteron (Utrogest) hochwirksam.",
+    content: {
+      sections: [
+        {
+          heading: "Warum Progesteronmangel so häufig ist",
+          text: "Progesteron wird hauptsächlich nach der Ovulation vom Corpus luteum produziert. Sinkt die Ovulationsqualität – was in der Perimenopause schleichend passiert –, sinkt Progesteron als erstes Hormon. Hinzu kommt: Chronischer Stress führt zu erhöhtem Cortisol, das über den sogenannten 'Pregnenolon-Steal' Progesteron verdrängt. Beide Mechanismen (Perimenopause + Stress) zusammen erklären, warum so viele Frauen ab Mitte 30 unter Progesteronmangel-Symptomen leiden: PMS, Schlafprobleme, Angst vor der Periode, Brustspannen, Wassereinlagerungen.",
+        },
+        {
+          heading: "Natürliche Maßnahmen mit Evidenz",
+          text: "Mönchspfeffer (Vitex agnus-castus, 20–40 mg täglich): Mehrere Meta-Analysen zeigen Wirksamkeit bei PMS, Lutealphase-Defizit und Progesteronmangel. Wirkung tritt nach 3 Monaten ein. Nicht bei hormonell empfindlichen Erkrankungen oder gleichzeitiger Pille anwenden. Stressreduktion: Cortisol senken ist der wichtigste indirekte Hebel. Ashwagandha, Atemübungen, Schlaf vor 23 Uhr. Zink (15–25 mg täglich): Essentiell für die Progesteronproduktion und Lutealphase. Vitamin B6 (50 mg täglich): Unterstützt Progesteron-Synthese und reduziert PMS-Symptome (Meta-Analyse: signifikante PMS-Reduktion). Magnesium (300–400 mg täglich): Reduziert PMS-bedingte Stimmungssymptome und unterstützt Schlaf in der Lutealphase.",
+        },
+        {
+          heading: "Wann bioidentisches Progesteron sinnvoll ist",
+          text: "Wenn natürliche Maßnahmen nicht ausreichen, ist bioidentisches Progesteron (mikronisiertes Progesteron, z.B. Utrogest 200–300 mg Tag 14–28) eine sehr wirksame Option. Es ist verschreibungspflichtig in Deutschland und unterscheidet sich von synthetischen Gestagenen (Progestinen): Bioidentisches Progesteron hat dieselbe Molekülstruktur wie körpereigenes Progesteron. Es wirkt über GABA-Rezeptoren schlaffördernd und angstlösend. Es zeigt in Studien kein erhöhtes Brustkrebsrisiko (im Gegensatz zu synthetischen Gestagenen). Die Gynäkologin fragen: Utrogest vaginal (höhere Bioverfügbarkeit) oder oral (stärker sedierend).",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "progesteronmangel-symptome",
+      "oestrogendominanz-symptome",
+      "pms-oder-perimenopause-unterschied",
+    ],
+    relatedConditions: ["hormone", "menopause"],
+    faqs: [
+      {
+        question: "Kann Progesteron-Creme helfen?",
+        answer:
+          "Topische Progesteron-Cremes sind in Apotheken ohne Rezept erhältlich, haben aber eine sehr variable Aufnahme. Die Bioverfügbarkeit ist nicht standardisiert und schwer messbar. Sie können als ergänzende Maßnahme ausprobiert werden, sind aber kein zuverlässiger Ersatz für orale oder vaginale bioidentische Produkte bei klinisch relevantem Progesteronmangel.",
+      },
+    ],
+  },
+
+  "wechseljahre-natuerlich-behandeln": {
+    slug: "wechseljahre-natuerlich-behandeln",
+    question: "Wechseljahre natürlich behandeln: Was wirklich hilft",
+    metaTitle: "Wechseljahre natürlich behandeln: Evidenzbasierte Methoden ohne Hormone",
+    metaDescription:
+      "Wechseljahre ohne Hormontherapie behandeln: Diese pflanzlichen Mittel, Lebensstiländerungen und Supplemente sind wissenschaftlich belegt.",
+    answer:
+      "Wechseljahre natürlich behandeln: Die stärkste Evidenz haben Traubsilberkerze (Hitzewallungen), Rotklee-Isoflavone (Knochenschutz, leichte Hitzewallungen), regelmäßiger Sport, Magnesium und Mönchspfeffer. Für starke Beschwerden bleibt Hormontherapie die wirksamste Option.",
+    content: {
+      sections: [
+        {
+          heading: "Pflanzliche Mittel mit belegter Wirkung",
+          text: "Traubsilberkerze (Cimicifuga racemosa, 20–40 mg täglich): Die am besten untersuchte pflanzliche Alternative. Meta-Analysen zeigen signifikante Reduktion von Hitzewallungen (ca. 26 %) und Stimmungssymptomen. Wirkung tritt nach 4–8 Wochen ein. Nicht bei östrogenabhängigen Erkrankungen anwenden. Rotklee-Isoflavone (40–80 mg täglich): Zeigen in Meta-Analysen moderate Wirkung auf Hitzewallungen und günstigen Effekt auf Knochendichte. Phytoöstrogen-Wirkung, aber schwächer als körpereigenes Östrogen. Mönchspfeffer (Vitex agnus-castus): Besonders bei Progesteronmangel-betonten Symptomen (PMS-ähnliche Perimenopause, Stimmungsschwankungen). Johanniskraut (Hypericum perforatum): Gut belegt bei stimmungsbezogenen Wechseljahresbeschwerden.",
+        },
+        {
+          heading: "Lebensstilmaßnahmen mit starker Evidenz",
+          text: "Regelmäßiger Sport (150 min/Woche, aerob): Reduziert Hitzewallungen, verbessert Schlaf und Stimmung, schützt Knochen und Herz. Yoga und Meditations-basierte Ansätze: Cochrane-Review zeigt signifikante Reduktion von Hitzewallungen durch Mind-Body-Interventionen. Ernährung: Mehr Phytoöstrogene (Soja, Leinsamen, Hülsenfrüchte), weniger Trigger-Lebensmittel (Alkohol, Koffein, scharfe Speisen). Gewichtsmanagement: Adipositas verstärkt Hitzewallungen, da Fettgewebe Östrogen produziert und den Wärmehaushalt stört. Schlafoptimierung: Kühles Schlafzimmer, atmungsaktive Bettwäsche, kein Alkohol.",
+        },
+        {
+          heading: "Supplemente mit wissenschaftlicher Grundlage",
+          text: "Magnesium (300–400 mg abends): Verbessert Schlaf, reduziert Reizbarkeit und Muskelkrämpfe. Vitamin D (2000–4000 IE täglich): Essentiell für Knochenschutz und Stimmung; Mangel verschlechtert Wechseljahresbeschwerden. Omega-3-Fettsäuren (2 g EPA/DHA täglich): Zeigen in einigen Studien moderate Reduktion von Hitzewallungen und Depressivität. Probiotika: Darm-Mikrobiom beeinflusst Östrogenmetabolismus (Östrobolom). Vielversprechende Forschung, aber noch keine abschließende Evidenz. Wenn natürliche Maßnahmen nicht ausreichen: Die DGGG empfiehlt ausdrücklich, HRT nicht zu vermeiden, wenn es klinisch sinnvoll ist. Angst vor Hormonen ist bei gesunden Frauen unter 60 oft unbegründet.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "hormonersatztherapie-vor-und-nachteile",
+      "hitzewallungen-was-hilft-sofort",
+      "besser-schlafen-wechseljahre",
+    ],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Sind pflanzliche Mittel bei Wechseljahren sicher?",
+        answer:
+          "Die meisten sind gut verträglich. Wichtige Ausnahmen: Traubsilberkerze nicht bei östrogenabhängigen Erkrankungen (Brustkrebs). Johanniskraut hat Wechselwirkungen mit vielen Medikamenten (Pille, Gerinnungshemmer, Antidepressiva). Immer den Arzt informieren, auch über pflanzliche Präparate.",
+      },
+      {
+        question: "Wie lange brauchen natürliche Mittel, bis sie wirken?",
+        answer:
+          "Pflanzliche Mittel brauchen länger als Hormontherapie: Traubsilberkerze und Mönchspfeffer zeigen Wirkung nach 4–8 Wochen. Lebensstiländerungen (Sport, Ernährung) brauchen 8–12 Wochen für messbare Effekte. Geduld und Konsequenz sind wichtig – die meisten Studien liefen über 3–12 Monate.",
+      },
+    ],
+  },
+
   "besser-schlafen-wechseljahre": {
     slug: "besser-schlafen-wechseljahre",
     question: "Besser schlafen in den Wechseljahren: Was hilft wirklich?",

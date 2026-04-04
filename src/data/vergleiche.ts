@@ -414,6 +414,259 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     ],
   },
 
+  "burnout-oder-hashimoto": {
+    slug: "burnout-oder-hashimoto",
+    conditionASlug: "hashimoto",
+    conditionBSlug: "hormone",
+    conditionAName: "Hashimoto",
+    conditionBName: "Burnout",
+    title: "Burnout oder Hashimoto? So erkennst du den Unterschied",
+    metaTitle: "Burnout oder Hashimoto? Symptome, Unterschiede & Diagnose",
+    metaDescription:
+      "Erschöpfung, Konzentrationsprobleme, Antriebslosigkeit – Burnout und Hashimoto haben fast identische Symptome. Welcher Bluttest entscheidet und was wirklich dahintersteckt.",
+    intro:
+      "Erschöpfung, die sich durch Schlaf nicht bessert. Konzentration weg. Antriebslosigkeit. Innerlich leer. Diese Symptome werden häufig als 'Burnout' oder 'chronischer Stress' abgetan – dabei steckt in einem erheblichen Anteil der Fälle eine unerkannte Schilddrüsenerkrankung dahinter. Hashimoto Thyreoiditis wird in Deutschland durchschnittlich erst nach 5–10 Jahren diagnostiziert. Wer die Unterschiede kennt, kann sich diese Zeit ersparen.",
+    confusionNote:
+      "Burnout und Hashimoto überlappen sich symptomatisch nahezu vollständig. Beide verursachen chronische Erschöpfung, Konzentrationsprobleme, depressive Verstimmung und Leistungsabfall. Der entscheidende Unterschied liegt in der Ursache: Burnout ist eine psychophysische Erschöpfung durch anhaltende Überlastung. Hashimoto ist eine Autoimmunerkrankung, die die Schilddrüsenhormonproduktion stört. Erschwerend: Chronischer Stress (Burnout-Auslöser) kann Hashimoto-Schübe triggern und verschlechtern – beide können gleichzeitig vorliegen.",
+    sharedSymptoms: [
+      "muedigkeit",
+      "konzentrationsprobleme",
+      "stimmungsschwankungen",
+      "schlafstoerungen",
+      "antriebslosigkeit",
+      "haarausfall",
+    ],
+    conditionAOnlySymptoms: ["frieren", "gewichtszunahme", "verstopfung", "trockene-haut"],
+    conditionBOnlySymptoms: ["emotionale-erschoepfung", "zynismus", "innere-leere"],
+    keyDifferences: [
+      {
+        aspect: "Ursache",
+        a: "Autoimmunerkrankung – Immunsystem greift Schilddrüse an",
+        b: "Psychophysische Erschöpfung durch chronische Überlastung",
+      },
+      {
+        aspect: "Kälteintoleranz",
+        a: "Typisch – ständiges Frieren auch in warmer Umgebung",
+        b: "Nicht typisch",
+      },
+      {
+        aspect: "Gewicht",
+        a: "Häufig Gewichtszunahme trotz normaler Ernährung",
+        b: "Kein typisches Muster, manchmal Gewichtsverlust durch Appetitmangel",
+      },
+      {
+        aspect: "Herzfrequenz",
+        a: "Verlangsamter Puls (Bradykardie) möglich",
+        b: "Oft erhöhte Herzfrequenz durch Cortisolstress",
+      },
+      {
+        aspect: "Blutbild",
+        a: "Erhöhte Anti-TPO-Antikörper, ggf. erhöhtes TSH",
+        b: "Blutbild unauffällig",
+      },
+      {
+        aspect: "Auslöser",
+        a: "Genetische Prädisposition, Stress triggert Schübe",
+        b: "Anhaltende Überlastung ohne ausreichende Erholung",
+      },
+    ],
+    labTests: [
+      {
+        test: "TSH",
+        a: "Erhöht (>2,5 mU/L bei Symptomen verdächtig, >4,0 manifest)",
+        b: "Normal",
+      },
+      {
+        test: "fT3 & fT4",
+        a: "fT3 erniedrigt oder fT4 erniedrigt bei manifester Hypothyreose",
+        b: "Normal",
+      },
+      {
+        test: "Anti-TPO-Antikörper",
+        a: "Erhöht bei 90 % der Hashimoto-Fälle",
+        b: "Normal",
+      },
+      {
+        test: "Cortisol (Tagesprofil)",
+        a: "Kann durch Autoimmunstress leicht erhöht sein",
+        b: "Oft erhöht morgens, dysregulierter Tagesrhythmus",
+      },
+      {
+        test: "Ferritin",
+        a: "Häufig erniedrigt (<70 µg/l) – verstärkt Symptome",
+        b: "Normal bis erniedrigt bei chronischem Stress",
+      },
+      {
+        test: "CRP (Entzündungsmarker)",
+        a: "Kann bei aktiven Hashimoto-Schüben leicht erhöht sein",
+        b: "Normal oder leicht erhöht",
+      },
+    ],
+    howToDifferentiate:
+      "Der entscheidende Test: Anti-TPO-Antikörper messen lassen. Ein normales TSH schließt Hashimoto nicht aus – die Antikörper können erhöht sein, bevor der TSH-Wert auffällig wird. Für eine vollständige Abklärung: TSH, fT3, fT4, Anti-TPO, Anti-Thyreoglobulin, Ferritin und ggf. Schilddrüsen-Ultraschall. Wichtig: Burnout und Hashimoto können gleichzeitig vorliegen. Wer einen Burnout behandelt (Auszeit, Psychotherapie), aber trotzdem keine Besserung erfährt, sollte die Schilddrüse ausschließen lassen.",
+    faqs: [
+      {
+        question: "Kann Stress Hashimoto verursachen?",
+        answer:
+          "Stress verursacht Hashimoto nicht direkt – aber er kann die Erkrankung triggern und Schübe auslösen. Chronischer Stress erhöht Cortisol, das Entzündungsprozesse moduliert und das Immungleichgewicht verschiebt. Frauen mit genetischer Prädisposition für Hashimoto haben oft einen stressreichen Lebensabschnitt kurz vor der Erstdiagnose erlebt.",
+      },
+      {
+        question: "Welcher Arzt ist der richtige Ansprechpartner?",
+        answer:
+          "Für die Hashimoto-Abklärung: Hausarzt, Internist oder Endokrinologe. Für Burnout: Hausarzt, Psychiater oder psychosomatische Klinik. Da beide häufig gemeinsam auftreten, ist eine Abklärung beider Seiten sinnvoll – manchmal erst Hashimoto behandeln und dann sehen, was an Erschöpfung bleibt.",
+      },
+      {
+        question: "Bessert sich Burnout automatisch, wenn Hashimoto behandelt wird?",
+        answer:
+          "Häufig ja, teilweise. Die Normalisierung der Schilddrüsenfunktion durch L-Thyroxin und Lebensstilanpassungen kann die Erschöpfung erheblich reduzieren. Wenn anhaltende psychische Belastungen (Arbeit, Beziehungen, Trauma) nicht adressiert werden, bleibt ein Burnout-Anteil bestehen.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Dayan CM, Panicker V",
+        year: 2013,
+        title: "Hypothyroidism and depression",
+        journal: "European Thyroid Journal",
+      },
+      {
+        authors: "Sategna-Guidetti C et al.",
+        year: 2001,
+        title: "Prevalence of thyroid disorders in untreated adult celiac disease patients",
+        journal: "American Journal of Gastroenterology",
+      },
+      {
+        authors: "Stenlöf K et al.",
+        year: 2017,
+        title: "Burnout and autoimmune thyroid disease",
+        journal: "Thyroid Research",
+      },
+    ],
+  },
+
+  "perimenopause-oder-depression": {
+    slug: "perimenopause-oder-depression",
+    conditionASlug: "menopause",
+    conditionBSlug: "hormone",
+    conditionAName: "Perimenopause",
+    conditionBName: "Depression",
+    title: "Perimenopause oder Depression? Wenn Hormonschwankungen die Stimmung überwältigen",
+    metaTitle: "Perimenopause oder Depression? Symptome, Unterschiede & Diagnose",
+    metaDescription:
+      "Stimmungstiefs, Antriebslosigkeit und Weinen ohne Grund – ist es die Perimenopause oder eine Depression? Wie man unterscheidet und was wirklich hilft.",
+    intro:
+      "Frauen in der Perimenopause haben ein 2–3-fach erhöhtes Risiko für depressive Erkrankungen im Vergleich zu reproduktivem Alter – das zeigen mehrere große Kohortenstudien (SWAN, Penn Ovarian Aging Study). Und doch werden perimenopausale Stimmungsprobleme häufig falsch eingeordnet: entweder als reine Depression (behandelt mit Antidepressiva ohne Hormonadressierung) oder als rein hormonell (behandelt mit HRT, ohne psychologische Komponente zu berücksichtigen). Die Wahrheit ist: Beide Zustände überlappen sich stark und können gleichzeitig vorliegen.",
+    confusionNote:
+      "Perimenopausale Stimmungsschwankungen entstehen durch Östrogen- und Progesteronveränderungen, die direkt auf Serotonin, Dopamin und GABA wirken. Klinische Depression ist eine eigenständige psychiatrische Erkrankung. Der entscheidende Unterschied liegt in Verlauf, Auslöser und Begleitphänomenen: Perimenopausale Stimmungsschwankungen sind oft zyklisch, von körperlichen Symptomen begleitet und stark schlafabhängig. Depressionen sind anhaltender, durchgehend und weniger zykluskorreliert.",
+    sharedSymptoms: [
+      "stimmungsschwankungen",
+      "antriebslosigkeit",
+      "schlafstoerungen",
+      "konzentrationsprobleme",
+      "erschoepfung",
+      "reizbarkeit",
+    ],
+    conditionAOnlySymptoms: ["hitzewallungen", "nachtschweiss", "zyklusveraenderungen", "libidoverlust"],
+    conditionBOnlySymptoms: ["anhedonie", "hoffnungslosigkeit", "suizidgedanken"],
+    keyDifferences: [
+      {
+        aspect: "Verlauf",
+        a: "Oft schwankend, zyklisch oder schubweise",
+        b: "Anhaltend, mindestens 2 Wochen täglich",
+      },
+      {
+        aspect: "Körperliche Begleitsymptome",
+        a: "Hitzewallungen, Nachtschweiß, Zyklusveränderungen",
+        b: "Keine spezifischen hormonellen Körpersymptome",
+      },
+      {
+        aspect: "Freude & Interesse",
+        a: "Teilweise erhalten – gute Tage und schlechte Tage",
+        b: "Anhaltend reduziert (Anhedonie – kein Erleben von Freude)",
+      },
+      {
+        aspect: "Zeitlicher Zusammenhang",
+        a: "Korreliert mit Zyklusveränderungen oder Schlaf",
+        b: "Unabhängig vom Zyklus, persistent",
+      },
+      {
+        aspect: "Alter beim Auftreten",
+        a: "Typischerweise 40–55 Jahre, mit weiteren Perimenopause-Zeichen",
+        b: "Jedes Alter, keine altersgebundene hormonelle Ursache",
+      },
+      {
+        aspect: "Ansprechen auf Hormontherapie",
+        a: "Oft deutliche Besserung unter HRT/Progesteron",
+        b: "Meist keine oder geringe Besserung unter HRT allein",
+      },
+    ],
+    labTests: [
+      {
+        test: "FSH & Östradiol",
+        a: "FSH erhöht (>10–25 IU/L), Östradiol schwankend",
+        b: "Normal für Alter",
+      },
+      {
+        test: "Progesteron (Lutealphase)",
+        a: "Häufig erniedrigt (<5 ng/ml)",
+        b: "Normal",
+      },
+      {
+        test: "TSH, fT3, Anti-TPO",
+        a: "Normal oder auffällig (Hashimoto ausschließen)",
+        b: "Normal (Schilddrüse als Ursache ausschließen)",
+      },
+      {
+        test: "Cortisol (Tagesprofil)",
+        a: "Kann dysreguliert sein bei Schlafstörungen",
+        b: "Oft erhöht bei Stress-assoziierter Depression",
+      },
+      {
+        test: "Vitamin D (25-OH)",
+        a: "Häufig erniedrigt – verschlechtert Stimmung",
+        b: "Häufig erniedrigt – bekannter Risikofaktor für Depression",
+      },
+    ],
+    howToDifferentiate:
+      "Schlüsselfragen für die Unterscheidung: Gibt es Hitzewallungen, Nachtschweiß oder Zyklusveränderungen? Wenn ja, ist Perimenopause wahrscheinlich beteiligt. Gibt es 'gute Tage', an denen die Stimmung sich aufhellt? Zyklische Perimenopause – bei anhaltender Freudlosigkeit eher Depression. Hat die Stimmung nach einem Schlafproblem begonnen? Oft perimenopausaler Ursprung. Besteht die depressive Verstimmung seit mehr als 2 Wochen täglich ohne Schwankungen? Psychiatrische Abklärung dringend. Wichtig: Ein Hormontest klärt nicht automatisch, ob jemand depressiv ist – und umgekehrt. Beide Diagnosen können koexistieren und müssen parallel behandelt werden.",
+    faqs: [
+      {
+        question: "Helfen Antidepressiva bei perimenopausalen Stimmungsproblemen?",
+        answer:
+          "Teilweise. SSRIs (z.B. Escitalopram) helfen auch bei perimenopausaler Depression – und reduzieren nebenbei Hitzewallungen. Aber wenn die Grundursache ein Hormonmangel ist, ist HRT oft wirksamer und adressiert das Problem an der Wurzel. Idealerweise: Abklärung des Hormonprofils VOR oder gleichzeitig mit dem Start einer antidepressiven Behandlung.",
+      },
+      {
+        question: "Kann Hormontherapie eine bestehende Depression verschlechtern?",
+        answer:
+          "Das ist selten, aber möglich, wenn synthetische Gestagene verwendet werden. Einige Frauen reagieren empfindlich auf synthetische Progestine. Bioidentisches Progesteron (Utrogest) hat dagegen einen anxiolytischen und stimmungsaufhellenden Effekt und ist bei gleichzeitiger Depression meist die bessere Wahl.",
+      },
+      {
+        question: "Ab wann brauche ich psychiatrische Hilfe?",
+        answer:
+          "Bei Gedanken an Selbstverletzung oder Suizid: sofort. Bei anhaltender Freudlosigkeit über mehr als 2 Wochen: psychiatrische oder psychotherapeutische Abklärung nicht aufschieben. Bei starker Beeinträchtigung der Alltagsfunktion (Arbeit, Beziehungen): auch ohne Suizidgedanken gilt professionelle Hilfe als dringlich.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Freeman EW et al.",
+        year: 2006,
+        title: "Associations of hormones and menopausal status with depressed mood in women with no history of depression",
+        journal: "Archives of General Psychiatry",
+      },
+      {
+        authors: "Bromberger JT, Kravitz HM",
+        year: 2011,
+        title: "Mood and menopause: findings from the Study of Women's Health Across the Nation (SWAN)",
+        journal: "Obstetrics and Gynecology Clinics of North America",
+      },
+      {
+        authors: "DGGG – Deutsche Gesellschaft für Gynäkologie und Geburtshilfe",
+        year: 2020,
+        title: "S3-Leitlinie Peri- und Postmenopause – Diagnostik und Interventionen",
+        journal: "AWMF Register Nr. 015-062",
+      },
+    ],
+  },
+
   "hormonstoerungen-oder-menopause": {
     slug: "hormonstoerungen-oder-menopause",
     conditionASlug: "hormone",
