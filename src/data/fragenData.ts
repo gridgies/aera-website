@@ -1642,6 +1642,68 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       },
     ],
   },
+
+  "hashimoto-ursachen": {
+    slug: "hashimoto-ursachen",
+    question: "Hashimoto Ursachen: Warum greift das Immunsystem die Schilddrüse an?",
+    metaTitle: "Hashimoto Ursachen: Warum das Immunsystem die Schilddrüse angreift",
+    metaDescription:
+      "Was sind die Ursachen von Hashimoto? Genetik, Trigger und Risikofaktoren erklärt – warum Frauen häufiger betroffen sind und was die Erkrankung auslöst.",
+    answer:
+      "Hashimoto-Thyreoiditis ist eine Autoimmunerkrankung: Das Immunsystem bildet fälschlicherweise Antikörper gegen Schilddrüsengewebe. Die genaue Ursache ist nicht vollständig geklärt, aber eine Kombination aus genetischer Veranlagung und Umwelttriggern (Infektionen, Stress, Jod, hormonelle Veränderungen) gilt als wahrscheinlich.",
+    content: {
+      sections: [
+        {
+          heading: "Genetische Veranlagung: Der wichtigste Risikofaktor",
+          text: "Hashimoto hat eine starke genetische Komponente. Wer Verwandte ersten Grades mit Hashimoto oder anderen Autoimmunerkrankungen (Typ-1-Diabetes, rheumatoide Arthritis, Zöliakie) hat, trägt ein deutlich erhöhtes Risiko. Bestimmte HLA-Gene (Human Leukocyte Antigen), insbesondere HLA-DR3 und HLA-DR5, werden in Studien häufiger bei Hashimoto-Patientinnen gefunden. Das bedeutet: Die genetische Veranlagung schafft den Boden, aber allein reicht sie in den meisten Fällen nicht aus.",
+        },
+        {
+          heading: "Was löst Hashimoto aus? Bekannte Trigger",
+          text: "Auf dem Boden einer genetischen Veranlagung können verschiedene Trigger die Autoimmunreaktion auslösen oder verstärken: Virusinfektionen (insbesondere Epstein-Barr-Virus/Mononukleose), übermäßige Jodzufuhr (z.B. durch bestimmte Medikamente wie Amiodaron oder jodhaltigen Kontrastmittel), chronischer psychischer oder körperlicher Stress mit dauerhaft erhöhtem Cortisol, Schwangerschaft und Geburt (postpartale Thyreoiditis als Vorstufe), sowie Selen- und Vitamin-D-Mangel. Diese Trigger beeinflussen die Immunregulation und können dazu führen, dass das Immunsystem die Toleranz gegenüber dem eigenen Schilddrüsengewebe verliert.",
+        },
+        {
+          heading: "Warum sind Frauen 7–10× häufiger betroffen?",
+          text: "Frauen erkranken an Hashimoto wesentlich häufiger als Männer – das Verhältnis liegt bei etwa 7:1 bis 10:1. Der Hauptgrund liegt in der Wirkung von Sexualhormonen auf das Immunsystem: Östrogen fördert generell eine stärkere Immunantwort und kann zur Autoimmunreaktion beitragen. Testosteron wirkt dagegen eher immunsuppressiv. Besonders gefährdet sind Frauen in hormonellen Übergangsphasen: Pubertät, Schwangerschaft/Wochenbett und Wechseljahre. Viele Frauen erhalten ihre Diagnose zwischen 30 und 50 Jahren – genau in der Zeit, wenn hormonelle Schwankungen am ausgeprägtesten sind.",
+        },
+        {
+          heading: "Der Mechanismus: Wie zerstört das Immunsystem die Schilddrüse?",
+          text: "Bei Hashimoto richtet sich das Immunsystem mit zwei Hauptmechanismen gegen die Schilddrüse: Erstens produziert es Antikörper – vor allem Anti-TPO (Antikörper gegen Thyreoidperoxidase) und Anti-Thyreoglobulin-Antikörper. Diese Antikörper markieren Schilddrüsenzellen zur Zerstörung. Zweitens infiltrieren Immunzellen (T-Lymphozyten) das Schilddrüsengewebe direkt und lösen eine chronische Entzündung aus. Im Verlauf der Erkrankung wird immer mehr Schilddrüsengewebe zerstört, bis die Drüse zu wenig Schilddrüsenhormone produzieren kann – es entsteht eine Hypothyreose (Schilddrüsenunterfunktion).",
+        },
+        {
+          heading: "Können Ernährung und Lebensstil Hashimoto verursachen?",
+          text: "Ernährung allein verursacht keine Hashimoto-Erkrankung. Allerdings können bestimmte Faktoren das Immunsystem beeinflussen und bei genetischer Veranlagung als Trigger wirken: Zöliakie und nicht-zöliakische Glutensensitivität sind bei Hashimoto-Patientinnen überdurchschnittlich häufig – eine glutenfreie Ernährung kann bei betroffenen Frauen die Antikörper senken. Selenmangel ist ebenfalls mit höherer Krankheitsaktivität assoziiert – Selen ist wichtig für die Entgiftung reaktiver Sauerstoffspezies in der Schilddrüse. Vitamin-D-Mangel findet sich häufig bei Autoimmunerkrankungen. Ob diese Faktoren Ursache oder Folge sind, ist noch nicht vollständig geklärt.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "hashimoto-was-essen",
+      "schilddruese-werte-verstehen",
+      "selen-hashimoto-dosierung",
+    ],
+    relatedConditions: ["hashimoto", "schilddruese"],
+    faqs: [
+      {
+        question: "Kann man Hashimoto selbst verursacht haben?",
+        answer:
+          "Nein. Hashimoto ist eine Autoimmunerkrankung mit starker genetischer Komponente – man 'verursacht' sie nicht durch Ernährung oder Verhalten. Allerdings können bestimmte Faktoren (Stress, Jodüberschuss, Infektionen) bei genetischer Veranlagung als Trigger wirken. Schuld ist fehl am Platz: Die Erkrankung entsteht durch ein komplexes Zusammenspiel aus Genen und Umwelt.",
+      },
+      {
+        question: "Warum bekommt man Hashimoto nach einer Schwangerschaft?",
+        answer:
+          "Schwangerschaft verändert das Immunsystem tiefgreifend: Um das fremde Gewebe des Kindes zu tolerieren, wird das Immunsystem während der Schwangerschaft gedämpft. Nach der Geburt 'schwingt' es zurück – oft stärker als zuvor. Diese Immunreaktion kann bei genetisch veranlagten Frauen eine postpartale Thyreoiditis oder Hashimoto auslösen. Etwa 5–10% aller Frauen entwickeln eine postpartale Thyreoiditis; ein Teil davon entwickelt langfristig eine chronische Hashimoto-Erkrankung.",
+      },
+      {
+        question: "Kann Hashimoto durch Stress ausgelöst werden?",
+        answer:
+          "Stress allein verursacht keine Hashimoto-Erkrankung, kann aber bei genetischer Veranlagung als Trigger wirken. Chronisch erhöhter Cortisol dysreguliert das Immunsystem und kann die Autoimmuntoleranz beeinträchtigen. Viele Patientinnen berichten, dass ihre Diagnose nach einer Phase starker Belastung erfolgte – ein erster Hashimoto-Schub oder eine Verschlechterung der Symptome wurde ausgelöst.",
+      },
+      {
+        question: "Ist Hashimoto heilbar?",
+        answer:
+          "Hashimoto ist derzeit nicht heilbar im Sinne einer vollständigen Remission mit Normalisierung der Antikörper. Allerdings können viele Frauen sehr gut mit der Erkrankung leben: Wenn eine Hypothyreose vorliegt, wird sie mit L-Thyroxin behandelt – die meisten Frauen sind mit der richtigen Dosis beschwerdefrei. Einige Patientinnen erleben eine natürliche Schwankung der Krankheitsaktivität. Lebensstilanpassungen (Selen, Vitamin D, Stressreduktion, ggf. glutenfrei bei Zöliakie) können den Krankheitsverlauf positiv beeinflussen.",
+      },
+    ],
+  },
 };
 
 export const FRAGEN_LIST = Object.values(FRAGEN_DATA);

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CONDITIONS_DATA } from "@/data/conditions";
-import { SYMPTOMS_DATA } from "@/data/symptoms";
+import { SYMPTOMS_DATA, type DiagnosticTest } from "@/data/symptoms";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { InlineSignupForm } from "@/components/ui/InlineSignupForm";
 
@@ -139,6 +139,20 @@ export default async function ConditionSymptomPage({ params }: Props) {
           </ul>
         </div>
 
+        {/* Detailed explanation */}
+        {symptom.detailedExplanation && (
+          <section className="mb-16" aria-labelledby="erklaerung-heading">
+            <h2 id="erklaerung-heading" className="text-2xl font-headline font-bold mb-6">
+              {symptom.name} bei {condition.topicName}: Was steckt dahinter?
+            </h2>
+            <div className="prose prose-sm max-w-none text-on-surface-variant font-body leading-relaxed space-y-4">
+              {symptom.detailedExplanation.split("\n\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Causes */}
         <section className="mb-16" aria-labelledby="ursachen-heading">
           <h2 id="ursachen-heading" className="text-2xl font-headline font-bold mb-6">
@@ -169,6 +183,29 @@ export default async function ConditionSymptomPage({ params }: Props) {
             {symptom.whenToSeeDoctor}
           </p>
         </section>
+
+        {/* Diagnostic tests */}
+        {symptom.diagnosticTests && symptom.diagnosticTests.length > 0 && (
+          <section className="mb-16" aria-labelledby="diagnose-heading">
+            <h2 id="diagnose-heading" className="text-2xl font-headline font-bold mb-6">
+              Diagnose: Welche Untersuchungen sind sinnvoll?
+            </h2>
+            <p className="text-on-surface-variant font-body leading-relaxed mb-6">
+              Um die Ursache von {symptom.name.toLowerCase()} bei {condition.topicName} abzuklären, empfehlen sich folgende Untersuchungen:
+            </p>
+            <div className="space-y-4">
+              {symptom.diagnosticTests.map((dt: DiagnosticTest) => (
+                <div key={dt.test} className="flex gap-4 bg-surface-container-low rounded-xl p-5 border border-outline-variant/10">
+                  <span className="material-symbols-outlined text-primary font-extralight flex-shrink-0 mt-0.5">lab_research</span>
+                  <div>
+                    <p className="font-bold text-on-surface text-sm mb-1">{dt.test}</p>
+                    <p className="text-on-surface-variant font-body text-sm leading-relaxed">{dt.relevance}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Natural remedies */}
         {symptom.naturalRemedies.length > 0 && (
