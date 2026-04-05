@@ -14,12 +14,12 @@ Aera Health bietet personalisierte, evidenzbasierte Unterstützung für Frauen m
 
 ## Wichtige Seiten
 
-- Startseite: https://aerahealth.de
-- Symptom-Check: https://aerahealth.de/check
-- Experten: https://aerahealth.de/experten
-- Wissenschaft & Methodik: https://aerahealth.de/wissenschaft
-- Über uns: https://aerahealth.de/ueber-uns
-- Kontakt: https://aerahealth.de/kontakt
+- Startseite: https://www.aerahealth.de
+- Symptom-Check: https://www.aerahealth.de/check
+- Experten: https://www.aerahealth.de/experten
+- Wissenschaft & Methodik: https://www.aerahealth.de/wissenschaft
+- Über uns: https://www.aerahealth.de/ueber-uns
+- Kontakt: https://www.aerahealth.de/kontakt
 
 ## Themen
 

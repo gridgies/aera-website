@@ -8,6 +8,16 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "aerahealth.de" }],
+        destination: "https://www.aerahealth.de/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

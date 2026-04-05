@@ -6,7 +6,7 @@ import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { breadcrumbSchema, medicalWebPageSchema, faqSchema, jsonLd } from "@/lib/schema";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 interface Props {
   params: Promise<{ slug: string }>;

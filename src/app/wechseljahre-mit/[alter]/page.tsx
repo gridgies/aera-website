@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AGE_PAGES } from "@/data/agePages";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 interface Props {
   params: Promise<{ alter: string }>;

@@ -5,7 +5,7 @@ import { AGE_PAGES } from "@/data/agePages";
 import { FRAGEN_LIST } from "@/data/fragenData";
 import { VERGLEICHE_LIST } from "@/data/vergleiche";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

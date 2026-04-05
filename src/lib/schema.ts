@@ -1,4 +1,4 @@
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 export function organizationSchema() {
   return {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Über uns – Aera Health",
     description:
       "Erfahre, wer hinter Aera Health steht und warum wir Frauengesundheit anders denken.",
-    url: "https://aerahealth.de/ueber-uns",
+    url: "https://www.aerahealth.de/ueber-uns",
   },
 };
 
@@ -45,7 +45,7 @@ const TRUST_PRINCIPLES = [
 ];
 
 export default function UeberUnsPage() {
-  const pageUrl = "https://aerahealth.de/ueber-uns";
+  const pageUrl = "https://www.aerahealth.de/ueber-uns";
 
   return (
     <>

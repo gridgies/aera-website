@@ -8,7 +8,7 @@ import { AGE_PAGES } from "@/data/agePages";
 import { PILLAR_CONTENT } from "@/data/pillarContent";
 import { breadcrumbSchema, medicalWebPageSchema, faqSchema, jsonLd } from "@/lib/schema";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 /** Renders a paragraph string, converting **text** to <strong> elements. */
 function RichParagraph({ text, className }: { text: string; className?: string }) {

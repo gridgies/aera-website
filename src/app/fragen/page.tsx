@@ -4,7 +4,7 @@ import { FRAGEN_LIST } from "@/data/fragenData";
 import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { FragenList } from "@/components/ui/FragenList";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 export const metadata: Metadata = {
   title: "Fragen & Antworten: Wechseljahre, Hashimoto, Hormone",

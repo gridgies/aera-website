@@ -6,7 +6,7 @@ import { AGE_PAGES } from "@/data/agePages";
 import { VERGLEICHE_LIST } from "@/data/vergleiche";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 export const metadata: Metadata = {
   title: "Gesundheitsthemen – Menopause, Hashimoto & Hormone | Aera Health",

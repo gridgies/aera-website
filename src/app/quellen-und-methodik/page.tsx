@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 export const metadata: Metadata = {
   title: "Quellen & Methodik – So entstehen unsere Inhalte",

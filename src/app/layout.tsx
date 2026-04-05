@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   ],
   verification: { google: "zuslK36IIa_TEif-K3sk9Z8nw7UjrelibJZwx0LZeAE" },
   authors: [{ name: "Aera Health" }],
-  metadataBase: new URL("https://aerahealth.de"),
+  metadataBase: new URL("https://www.aerahealth.de"),
   alternates: {
     canonical: "/",
     languages: { "de-DE": "/" },
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Aera Health",
     locale: "de_DE",
     type: "website",
-    url: "https://aerahealth.de",
+    url: "https://www.aerahealth.de",
   },
   twitter: {
     card: "summary_large_image",

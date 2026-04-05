@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Wissenschaftliche Methodik – Aera Health",
     description:
       "Evidenzbasierte Frauengesundheit: Hormone, Wechseljahre und Hashimoto nach aktuellen medizinischen Leitlinien.",
-    url: "https://aerahealth.de/wissenschaft",
+    url: "https://www.aerahealth.de/wissenschaft",
   },
 };
 

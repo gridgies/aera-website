@@ -6,7 +6,7 @@ import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { InlineSignupForm } from "@/components/ui/InlineSignupForm";
 
-const BASE_URL = "https://aerahealth.de";
+const BASE_URL = "https://www.aerahealth.de";
 
 interface Props {
   params: Promise<{ condition: string; symptom: string }>;
