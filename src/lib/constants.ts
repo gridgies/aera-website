@@ -201,24 +201,25 @@ export const CONDITIONS: Condition[] = [
   { icon: "favorite", title: "Hormone", description: "Östrogen, Progesteron und Cortisol in Balance bringen.", href: "/hormone" },
 ];
 
+
 export const STEPS: Step[] = [
   {
     number: "Eins",
     title: "Fragen beantworten",
     description: "In einem fundierten digitalen Fragebogen erfassen wir deine Symptome, deinen Lebensstil und deine Ziele.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAa92dzA0uVUD4DwL08n7hlGsDUKyQdxMyyE57fDdME7uzJeHM9cKgaUKpZvhBvOwVzh-Jdsx-UqlPC-pMFxGO9DveA60rT8jnqfMB-Gpw_OI3ZDjgJnnCGDtBlVDhBtxUL9awaZbhyrEikRsQQPRfUjkAnA1f2oWgtUb_1CmnXafG0c7En-DoZGeFO-uPShURTDGlShYDijdXIgn9Abbqnr0ZX7_hzqZgg2c81Q8tm2oC26UGzlulB8uofwJnUCerRYWNmjqXiZlge",
+    image: "/images/step-1.webp",
   },
   {
     number: "Zwei",
     title: "Erkenntnisse erhalten",
     description: "Du erhältst eine erste Auswertung, die dir erklärt, warum du dich so fühlst und was deine Hormone damit zu tun haben.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDn76Mslg8j3mTZfcfDQROTNrTWZmX1Hgbnb6Cs80R5BqnTGcnzYIJMz7K8NcOFz9G_1Ev6_h4oOooWa4S7LV5RRO3awhW43i4h4pvqt_YZ2xvpA59QqmZmIpz7s8u4c-GU76CCkp2D0iPbVUS8eIaKTDVVP_31ogLN9U8cfHPHY6vVQa6Cl-gajnqA0N2G-xXVYlygAhvNeZWkdIlYK4T8sSNRpg_eMBP5GYcNS0hFts3VtSYBjvdpxmwRcytMIwsm6V7QXot4y1Sj",
+    image: "/images/step-2.webp",
   },
   {
     number: "Drei",
     title: "Unterstützung bekommen",
     description: "Erhalte einen personalisierten Plan mit Empfehlungen für Ernährung, Supplements und Zugang zu Fachärzt:innen.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAa92dzA0uVUD4DwL08n7hlGsDUKyQdxMyyE57fDdME7uzJeHM9cKgaUKpZvhBvOwVzh-Jdsx-UqlPC-pMFxGO9DveA60rT8jnqfMB-Gpw_OI3ZDjgJnnCGDtBlVDhBtxUL9awaZbhyrEikRsQQPRfUjkAnA1f2oWgtUb_1CmnXafG0c7En-DoZGeFO-uPShURTDGlShYDijdXIgn9Abbqnr0ZX7_hzqZgg2c81Q8tm2oC26UGzlulB8uofwJnUCerRYWNmjqXiZlge",
+    image: "/images/step-3.webp",
   },
 ];
 
