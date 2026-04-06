@@ -13,6 +13,48 @@ export interface AgePage {
 }
 
 export const AGE_PAGES: Record<string, AgePage> = {
+  "30": {
+    alter: "30",
+    alterLabel: "30",
+    title: "Wechseljahre mit 30: Frühe Perimenopause oder andere Ursachen?",
+    metaDescription:
+      "Wechseljahre mit 30? Hormonelle Symptome in den Dreißigern können eine frühe Perimenopause, Hashimoto, PCOS oder Stress sein. Was dahintersteckt und wann zum Arzt.",
+    intro:
+      "Zyklusveränderungen, Erschöpfung, Stimmungsschwankungen oder PMS-Symptome mit 30 – das ist kein seltenes Phänomen. Aber echte Wechseljahre mit 30 sind ungewöhnlich. Was dahintersteckt, ist oft eine Kombination aus hormonellen Faktoren, Stress, Schilddrüsenveränderungen oder einer beginnenden Hormondysregulation. Dieses Begleitdokument hilft, die Ursachen zu verstehen.",
+    phase: "Prämenopause / mögliche frühe Hormondysregulation",
+    phaseDescription:
+      "Mit 30 ist eine echte Perimenopause sehr ungewöhnlich – sie betrifft nur etwa 1 % der Frauen unter 35. Wahrscheinlichere Ursachen hormoneller Symptome mit 30 sind: Hashimoto-Thyreoiditis (häufig in dieser Altersgruppe), PCOS (polyzystisches Ovarsyndrom), Eisenmangel, Vitamin-D-Mangel, chronischer Stress mit Cortisolanstieg oder das Absetzen hormoneller Verhütung.",
+    typicalSymptoms: [
+      "Zyklusveränderungen (kürzer, länger oder unregelmäßig)",
+      "Verstärkte PMS-Symptome",
+      "Unerklärliche Müdigkeit und Erschöpfung",
+      "Stimmungsschwankungen, Reizbarkeit",
+      "Haarausfall oder veränderte Haarqualität",
+      "Gewichtsveränderungen ohne Änderung der Ernährung",
+    ],
+    uniqueContext:
+      "Mit 30 ist es besonders wichtig, andere Ursachen vollständig auszuschließen, bevor eine frühe Perimenopause vermutet wird. Ein vollständiges Hormonpanel (TSH, Anti-TPO, FSH, Östradiol, Testosteron, DHEA-S, AMH, Ferritin, Vitamin D) gibt Aufschluss. Hashimoto ist in dieser Altersgruppe besonders häufig und kann alle typischen 'Hormonsymptome' verursachen.",
+    whenToSeeDoctor:
+      "Wenn Sie mit 30 unregelmäßige Zyklen, starke PMS-Symptome, anhaltende Müdigkeit oder Haarausfall bemerken: Gynäkologin oder Endokrinologin aufsuchen. Eine frühe Diagnose – egal ob Hashimoto, PCOS oder eine andere Hormonstörung – ermöglicht frühzeitige Unterstützung. Vorzeitige Ovarialinsuffizienz (POI) sollte bei anhaltend erhöhtem FSH ausgeschlossen werden.",
+    faqs: [
+      {
+        question: "Kann man mit 30 schon in den Wechseljahren sein?",
+        answer:
+          "Echte Wechseljahre (Perimenopause) mit 30 sind sehr selten – sie betreffen ca. 1 % der Frauen. Eine vorzeitige Ovarialinsuffizienz (POI, früher 'vorzeitige Menopause') tritt bei ca. 1 % der Frauen unter 40 auf und ist durch dauerhaft erhöhte FSH-Werte und ausbleibende Periode gekennzeichnet. Häufiger sind mit 30 andere hormonelle Ursachen: Hashimoto, PCOS, Stress-Hormonstörungen oder Nachwirkungen nach dem Absetzen der Pille.",
+      },
+      {
+        question: "Was kann hormonelle Symptome mit 30 verursachen?",
+        answer:
+          "Die häufigsten Ursachen: Hashimoto-Thyreoiditis (oft Erstmanifestation zwischen 25–40), PCOS mit Androgenüberschuss und Zyklusstörungen, Eisenmangel (sehr häufig bei Frauen mit starker Menstruation), Vitamin-D-Mangel, chronischer Stress mit Cortisol-Dysregulation, Nachwirkungen nach dem Absetzen der Pille ('Post-Pill-Syndrom'). Ein vollständiges Laborpanel klärt die Ursache.",
+      },
+      {
+        question: "Welche Tests sind mit 30 bei Hormonsymptomen sinnvoll?",
+        answer:
+          "Empfohlenes Panel: TSH, fT3, fT4, Anti-TPO (Schilddrüse/Hashimoto), FSH, LH, Östradiol (Ovarfunktion), Testosteron, DHEA-S (Androgenüberschuss/PCOS), AMH (Eierstockreserve), Ferritin, Blutbild (Eisenmangel), Vitamin D. Bei Zyklusunregelmäßigkeiten zusätzlich ein Schilddrüsen-Ultraschall und gynäkologischer Ultraschall.",
+      },
+    ],
+  },
+
   "35": {
     alter: "35",
     alterLabel: "35",
@@ -220,6 +262,48 @@ export const AGE_PAGES: Record<string, AgePage> = {
         question: "Ist Hormontherapie mit 55 noch sinnvoll?",
         answer:
           "Für Frauen, die vor dem 60. Lebensjahr und innerhalb von 10 Jahren nach der Menopause beginnen, wird HRT in aktuellen Leitlinien als sichere Option bewertet. Bei anhaltenden Beschwerden oder hohem Osteoporoserisiko lohnt sich das Gespräch mit einer Spezialistin.",
+      },
+    ],
+  },
+
+  "60": {
+    alter: "60",
+    alterLabel: "60",
+    title: "Nach den Wechseljahren mit 60: Postmenopause, Knochen & Herzgesundheit",
+    metaDescription:
+      "Wechseljahre mit 60: Was passiert in der Postmenopause? Osteoporose, Herzgesundheit, Beschwerden und was Frauen ab 60 wissen sollten – medizinisch fundiert.",
+    intro:
+      "Mit 60 sind die meisten Frauen seit einigen Jahren in der Postmenopause – der Phase nach der letzten Menstruation. Hitzewallungen nehmen oft ab, aber andere gesundheitliche Aspekte gewinnen an Bedeutung: Knochengesundheit, Herzgesundheit, kognitive Funktion und Scheidentrockenheit. Diese Phase birgt eigene Herausforderungen und Chancen.",
+    phase: "Postmenopause (meist 7–15+ Jahre nach der letzten Menstruation)",
+    phaseDescription:
+      "Die Postmenopause beginnt 12 Monate nach der letzten Menstruation und hält für den Rest des Lebens an. Östrogen bleibt dauerhaft auf niedrigem Niveau. Typisch sind: nachlassende Hitzewallungen bei vielen Frauen, aber persistierende oder neue Beschwerden wie Scheidentrockenheit, Gelenkschmerzen, kognitive Veränderungen und erhöhtes Risiko für Osteoporose und Herzerkrankungen.",
+    typicalSymptoms: [
+      "Scheidentrockenheit und Beschwerden beim Geschlechtsverkehr (GSM – genitourinary syndrome of menopause)",
+      "Erhöhtes Osteoporoserisiko durch anhaltenden Östrogenmangel",
+      "Gelenkschmerzen und Muskelabbau",
+      "Kognitive Veränderungen ('Brain Fog', Gedächtnisveränderungen)",
+      "Schlafstörungen (oft persistierend auch nach Ende der Hitzewallungen)",
+      "Gewichtszunahme, insbesondere viszerales Fettgewebe",
+    ],
+    uniqueContext:
+      "Mit 60 rücken Prävention und Langzeitgesundheit in den Vordergrund: Knochendichtemessung (DXA) empfohlen, kardiovaskuläres Risiko überprüfen, Koloskopie und Mammographie aktuell halten. Scheidentrockenheit (GSM) wird von vielen Frauen schweigend ertragen – lokale Östrogentherapie (vaginal) ist auch noch nach Jahren der Postmenopause wirksam und sicher. Hashimoto tritt auch in der Postmenopause häufig erstmals auf – TSH-Kontrolle sinnvoll.",
+    whenToSeeDoctor:
+      "Bei Osteoporose-Risikofaktoren (Rauchen, Untergewicht, Familienanamnese, langjährige Kortison-Einnahme) ist eine DXA-Knochendichtemessung wichtig. Bei neu auftretenden Beschwerden wie starker Müdigkeit, Gewichtszunahme oder Kälteunverträglichkeit: Schilddrüse abklären. Scheidentrockenheit und Blasenbeschwerden: Gynäkologin aufsuchen – wirksame lokale Therapien sind verfügbar.",
+    faqs: [
+      {
+        question: "Hören Hitzewallungen mit 60 endlich auf?",
+        answer:
+          "Für viele Frauen ja – aber nicht für alle. Studien zeigen, dass etwa 40 % der Frauen auch in der Postmenopause (über 60) noch Hitzewallungen haben. Die SWAN-Studie zeigte, dass Hitzewallungen im Median 7,4 Jahre andauern, bei manchen Frauen aber 10–15 Jahre. Wenn Hitzewallungen mit 60 noch stark sind und die Lebensqualität beeinträchtigen, ist ein Gespräch über Therapieoptionen (inklusive lokaler oder systemischer HRT) sinnvoll.",
+      },
+      {
+        question: "Wie schütze ich meine Knochen in der Postmenopause?",
+        answer:
+          "Die wichtigsten Maßnahmen: täglich 1000–1200 mg Kalzium über Ernährung (Milchprodukte, grünes Gemüse, calciumreiches Mineralwasser), Vitamin D auf 40–60 ng/ml optimieren, 2× wöchentlich Krafttraining (der stärkste Knochenstimulus), kein Rauchen, wenig Alkohol. Eine Knochendichtemessung (DXA-Scan) gibt Auskunft über den aktuellen Status – empfohlen für Frauen ab 60 oder früher bei Risikofaktoren.",
+      },
+      {
+        question: "Kann ich mit 60 noch mit Hormontherapie anfangen?",
+        answer:
+          "Das hängt von Ihrer individuellen Situation ab. Die aktuelle S3-Leitlinie der DGGG empfiehlt, HRT am besten innerhalb von 10 Jahren nach der Menopause und vor dem 60. Lebensjahr zu beginnen ('Window of Opportunity'). Wer nach diesem Fenster beginnt, hat ein höheres kardiovaskuläres Risiko. Für lokale Beschwerden wie Scheidentrockenheit ist eine vaginale (lokale) Östrogentherapie auch deutlich später noch sicher und wirksam – ohne systemische Risiken.",
       },
     ],
   },

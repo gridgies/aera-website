@@ -6,6 +6,7 @@ export interface Condition {
   ctaQuestion: string; // full CTA question for the condition page bottom section
   aliases: string[];
   description: string;
+  metaTitle?: string;  // override the default "<topicName>: Symptome, Ursachen & Behandlung"
   metaDescription: string;
   symptoms: string[];
   relatedConditions: string[];
@@ -47,6 +48,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     aliases: ["Hashimoto-Thyreoiditis", "Hashimoto's Thyreoiditis", "autoimmune Thyreoiditis"],
     description:
       "Hashimoto Thyreoiditis ist eine Autoimmunerkrankung, bei der das Immunsystem die Schilddrüse angreift, was zu einer chronischen Entzündung und häufig zu einer Schilddrüsenunterfunktion führt.",
+    metaTitle: "Hashimoto bei Frauen: Symptome, Diagnose & was wirklich hilft",
     metaDescription:
       "Hashimoto Thyreoiditis: Symptome erkennen, Diagnose verstehen, Behandlung und Ernährung. Umfassender Ratgeber für Frauen mit Hashimoto in Deutschland.",
     symptoms: [

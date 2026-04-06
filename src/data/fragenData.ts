@@ -1643,6 +1643,255 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
     ],
   },
 
+  "hashimoto-was-essen": {
+    slug: "hashimoto-was-essen",
+    question: "Hashimoto Ernährung: Was wirklich hilft (und was schadet)",
+    metaTitle: "Hashimoto Ernährung: Was essen, was meiden – evidenzbasierter Ratgeber",
+    metaDescription:
+      "Hashimoto Ernährung: Glutenfrei, Selen, Jod und entzündungshemmende Kost – was hat Evidenz, was ist Mythos? Praktische Ernährungstipps für Hashimoto-Patientinnen.",
+    answer:
+      "Bei Hashimoto gibt es keine Einheitsdiät. Die wichtigsten Ernährungsregeln: selenhaltiges Essen täglich (Paranüsse, Fisch), ausreichend – aber kein Überschuss – an Jod (keine Jodsupplemente), entzündungshemmende Kost (Omega-3, viel Gemüse, wenig Zucker). Glutenfrei nur bei nachgewiesener Zöliakie oder Glutensensitivität sinnvoll.",
+    content: {
+      sections: [
+        {
+          heading: "Glutenfrei bei Hashimoto: wer braucht es wirklich?",
+          text: "Glutenfreie Ernährung bei Hashimoto ist eines der meistdiskutierten Themen – und eines der meistmissverstandenen. Die Evidenz ist klar: Frauen mit Hashimoto und gleichzeitiger Zöliakie profitieren stark von glutenfreier Ernährung, weil die chronische Darmentzündung die Autoimmunaktivität verstärkt. Studien zeigen, dass bei diesen Frauen eine glutenfreie Diät die TPO-Antikörper senken und die Schilddrüsenfunktion verbessern kann. Für Frauen ohne Zöliakie oder Glutensensitivität gibt es hingegen keine ausreichende Evidenz, dass glutenfreie Ernährung die Hashimoto-Aktivität beeinflusst. Ein Screening auf Zöliakie (Transglutaminase-IgA-Antikörper, Gesamt-IgA) lohnt sich bei Hashimoto immer – die Koinzidenz beider Erkrankungen ist signifikant erhöht.",
+        },
+        {
+          heading: "Selen: das wichtigste Mineral für die Schilddrüse",
+          text: "Selen ist der am besten belegte Nahrungsergänzungsstoff bei Hashimoto. Die Schilddrüse hat die höchste Selenkonzentration aller Gewebe im Körper – Selen ist essenziell für die Entgiftung reaktiver Sauerstoffspezies, die bei der Schilddrüsenhormonproduktion entstehen. Mehrere Metaanalysen (u.a. van Zuuren et al., 2014) zeigen, dass Selen-Supplementierung (200 µg täglich als Natriumselenit oder Selenomethionin) die TPO-Antikörper signifikant senkt. Selenreiche Lebensmittel: Paranüsse (1–2 täglich = ca. 100–200 µg Selen), Thunfisch, Hering, Sonnenblumenkerne, Ei. Wer Selen supplementiert: Blutspiegel vorher messen, da Selen in hohen Dosen toxisch sein kann.",
+        },
+        {
+          heading: "Jod bei Hashimoto: wie viel ist richtig?",
+          text: "Jod ist kontrovers bei Hashimoto. Die Schilddrüse braucht Jod, um T3 und T4 zu produzieren. Aber: hohe Joddosen (> 500 µg/Tag) können die Autoimmunaktivität bei Hashimoto verschlechtern – durch oxidativen Stress in der Schilddrüse. Die offizielle Empfehlung der Deutschen Gesellschaft für Ernährung (DGE): 150–200 µg Jod täglich über Jodsalz und Lebensmittel. Jodsupplemente oder sehr hohe Algenpräparate sollten Hashimoto-Patientinnen vermeiden. Normale jodhaltige Lebensmittel (Seefisch, Jodsalz) sind in üblichen Mengen unbedenklich.",
+        },
+        {
+          heading: "Entzündungshemmende Kost: die wichtigste Grundregel",
+          text: "Unabhängig von Gluten und Jod ist eine entzündungshemmende Ernährungsweise bei Autoimmunerkrankungen sinnvoll: viel buntes Gemüse und Obst (Antioxidantien), Omega-3-Fettsäuren aus fettem Fisch (Lachs, Makrele, Hering) oder Algenöl, Olivenöl als Hauptfettquelle, wenig Zucker und hochverarbeitete Lebensmittel (erhöhen systemische Inflammation), Vitamin D in der Zielzone 40–60 ng/ml (immunmodulierend). Diese Maßnahmen reduzieren systemische Entzündungsmarker und unterstützen die Immunregulation – ohne dass es speziell für Hashimoto belegt werden müsste.",
+        },
+        {
+          heading: "Was kann ich bei Hashimoto meiden?",
+          text: "Bestimmte Lebensmittel und Gewohnheiten sollten Hashimoto-Patientinnen meiden oder einschränken: Rohes Kreuzblütlergemüse (Brokkoli, Kohl, Grünkohl) in großen Mengen – enthält Goitrogene, die bei sehr hohem Konsum die Jodverwertung hemmen können. Gegart sind diese Gemüse unbedenklich. Sojaprodukte in sehr großen Mengen – Isoflavone können die Schilddrüsenfunktion leicht beeinflussen; normale Mengen Tofu oder Sojamilch sind kein Problem. Hochverarbeitete Lebensmittel und Zucker verschlechtern die Insulinsensitivität und erhöhen Entzündungsmarker. Sehr hohe Algenpräparate (Kelp, Spirulina) mit unkontrolliertem Jodgehalt.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "selen-hashimoto-dosierung",
+      "hashimoto-ursachen",
+      "hashimoto-blutwerte-verstehen",
+    ],
+    relatedConditions: ["hashimoto", "schilddruese"],
+    faqs: [
+      {
+        question: "Muss ich bei Hashimoto glutenfrei essen?",
+        answer:
+          "Nur wenn eine Zöliakie oder Glutensensitivität nachgewiesen ist. Bei gleichzeitiger Zöliakie ist glutenfreie Ernährung essenziell und senkt die Autoimmunaktivität nachweislich. Ohne diese Diagnose gibt es keine ausreichende Evidenz für einen Nutzen. Ein Zöliakie-Screening (Transglutaminase-IgA) sollte bei Hashimoto immer erfolgen.",
+      },
+      {
+        question: "Wie viel Selen sollte ich bei Hashimoto nehmen?",
+        answer:
+          "Studien zeigen Wirksamkeit bei 200 µg Selen täglich (als Natriumselenit oder Selenomethionin). Vorher Selenspiegel im Blut bestimmen lassen, da Überdosierung toxisch ist. Alternativ 1–2 Paranüsse täglich liefern ca. 100–200 µg Selen natürlich.",
+      },
+      {
+        question: "Darf ich bei Hashimoto Jodsalz verwenden?",
+        answer:
+          "Ja, normales Jodsalz in üblichen Kochmengen ist bei Hashimoto unbedenklich. Die darin enthaltenen Jodmengen (< 150 µg/Tag) liegen weit unter dem Schwellenwert, der die Autoimmunaktivität verschlechtern kann. Zu vermeiden sind jedoch hochdosierte Jodpräparate oder Algenpräparate mit unkontrolliertem Jodgehalt.",
+      },
+    ],
+  },
+
+  "hormontest-kosten": {
+    slug: "hormontest-kosten",
+    question: "Hormontest für Frauen: Was kostet er und was zahlt die Kasse?",
+    metaTitle: "Hormontest Frau Kosten: Was zahlt die Kasse, was kostet ein Privattest?",
+    metaDescription:
+      "Hormontest Kosten für Frauen: Was zahlt die gesetzliche Krankenkasse, was kostet ein vollständiges Privatpanel? Mit Übersicht der wichtigsten Hormone.",
+    answer:
+      "Ein vollständiges Hormonpanel beim Arzt kostet privat 80–250 €. Die gesetzliche Krankenkasse übernimmt Hormontests nur bei konkretem Verdacht auf eine Erkrankung (z.B. Schilddrüsenunterfunktion). Home-Hormontests kosten 49–149 € und sind für erste Hinweise geeignet, aber kein Ersatz für eine ärztliche Diagnose.",
+    content: {
+      sections: [
+        {
+          heading: "Was kostet ein Hormontest beim Arzt?",
+          text: "Die Kosten für einen Hormontest hängen stark davon ab, welche Hormone getestet werden und ob die Krankenkasse zahlt. Ein vollständiges Hormonpanel (TSH, FSH, LH, Östradiol, Testosteron, DHEA-S, Progesteron, Cortisol, fT3, fT4, Anti-TPO) kostet beim Arzt als Privatleistung (IGeL) üblicherweise 80–250 €. Einzelne Werte wie TSH allein kosten 15–30 € privat. Viele Gynäkologinnen und Endokrinologinnen bieten Hormonpanels als Selbstzahlerleistung an.",
+        },
+        {
+          heading: "Was zahlt die gesetzliche Krankenkasse?",
+          text: "Die GKV zahlt Hormontests nur bei medizinischer Indikation – also wenn ein konkreter Verdacht auf eine Erkrankung besteht. Kassenleistung bei eindeutiger Indikation: TSH bei Verdacht auf Schilddrüsenerkrankung, FSH und Östradiol bei Zyklusstörungen, Testosteron bei Verdacht auf Androgenüberschuss (PCOS). Nicht von der Kasse erstattet: präventives Hormon-Screening ohne Symptome, vollständige Hormonpanels als Check-up, AMH (Anti-Müller-Hormon) außer bei Reproduktionsmedizin. Wenn Sie Symptome haben (Müdigkeit, Zyklusstörungen, Hitzewallungen), ist die Wahrscheinlichkeit höher, dass Ihr Arzt bestimmte Werte auf Kasse anordnet.",
+        },
+        {
+          heading: "Home-Hormontests: sinnvoll oder nicht?",
+          text: "Home-Hormontests aus Blut, Speichel oder Urin werden online für 49–149 € angeboten. Vorteile: keine Arztkosten, unkompliziert. Nachteile: Genauigkeit variiert je nach Anbieter und Testmethode (Speichel- und Urintests sind oft weniger präzise als Blutuntersuchungen); keine Interpretation durch einen Arzt; keine Folgeuntersuchung. Home-Tests sind sinnvoll als erste Orientierung oder wenn Sie einen Arztbesuch vorbereiten möchten. Sie ersetzen nicht die ärztliche Diagnose, besonders nicht bei Verdacht auf Hashimoto, Perimenopause oder andere hormonelle Erkrankungen.",
+        },
+        {
+          heading: "Welche Hormone sollte ich testen lassen?",
+          text: "Ein sinnvolles Basis-Hormonpanel für Frauen ab 35 umfasst: TSH, fT3, fT4, Anti-TPO (Schilddrüse und Hashimoto), FSH, LH, Östradiol (Eierstockfunktion und Wechseljahre), Testosteron gesamt (Androgenüberschuss), DHEA-S (Nebennierenrinde), AMH (Eierstockreserve, besonders ab 35), Vitamin D (25-OH), Eisen und Ferritin (häufige Ursache von Müdigkeit). Je nach Symptomen kann das Panel erweitert werden (z.B. Cortisol, Progesteron, Schilddrüsen-Ultraschall).",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "schilddruese-werte-verstehen",
+      "hashimoto-blutwerte-verstehen",
+      "tsh-wert-tabelle",
+    ],
+    relatedConditions: ["hormone", "hashimoto"],
+    faqs: [
+      {
+        question: "Kann ich Hormontests bei meiner Gynäkologin oder beim Hausarzt machen lassen?",
+        answer:
+          "Ja. Gynäkologinnen testen üblicherweise FSH, Östradiol, LH und Geschlechtshormone. Hausärzte oder Internisten testen oft TSH und Schilddrüsenwerte. Für ein vollständiges Panel inklusive Cortisol und Nebennierenmarker empfiehlt sich ein Endokrinologe oder ein auf Hormone spezialisierter Gynäkologe. Viele Praxen bieten auch IGeL-Hormonpanels an.",
+      },
+      {
+        question: "Wann ist der beste Zeitpunkt für einen Hormontest?",
+        answer:
+          "TSH und Schilddrüsenwerte: morgens nüchtern, immer zur gleichen Tageszeit. FSH, LH, Östradiol: idealerweise am 3. Zyklustag (bei Frauen mit Zyklus). Testosteron: morgens. Cortisol: morgens (zwischen 8 und 9 Uhr), da der Spiegel tageszeitlich stark schwankt. Progesteron: in der Lutealphase (Tag 20–22 des Zyklus). Bei Frauen ohne Zyklus: zu jedem Zeitpunkt möglich.",
+      },
+    ],
+  },
+
+  "wechseljahre-beschwerden-lindern": {
+    slug: "wechseljahre-beschwerden-lindern",
+    question: "Wechseljahre Beschwerden lindern: Was wirklich hilft (evidenzbasiert)",
+    metaTitle: "Wechseljahre Beschwerden lindern: Evidenzbasierte Maßnahmen im Überblick",
+    metaDescription:
+      "Wechseljahre Beschwerden lindern: Hormontherapie, pflanzliche Mittel und Lebensstiländerungen – was hat echte Evidenz? Praxisnaher Ratgeber.",
+    answer:
+      "Die wirksamste Behandlung von Wechseljahresbeschwerden ist die Hormontherapie (HRT) – sie reduziert Hitzewallungen um 70–90 %. Pflanzliche Alternativen (Isoflavone, Traubensilberkerze) helfen bei leichten bis mittleren Beschwerden. Lebensstilmaßnahmen (Bewegung, Schlafhygiene, Stressreduktion) sind wichtige Basis-Bestandteile.",
+    content: {
+      sections: [
+        {
+          heading: "Hormontherapie (HRT): die wirksamste Option",
+          text: "Für Frauen mit mittleren bis starken Wechseljahresbeschwerden ist die Hormontherapie die wirksamste Behandlung. Aktuelle Studien und die S3-Leitlinie der DGGG (2020) bestätigen: Hitzewallungen werden durch HRT um 70–90 % reduziert. Schlafqualität, Stimmung, Konzentration und Scheidentrockenheit verbessern sich signifikant. Moderne HRT mit bioidentischen Hormonen (transdermales Östrogen + mikronisiertes Progesteron) hat ein günstigeres Risikoprofil als ältere synthetische Hormonpräparate. Frauen, die vor dem 60. Lebensjahr und innerhalb von 10 Jahren nach der letzten Menstruation beginnen, haben ein sehr günstiges Nutzen-Risiko-Verhältnis. Kontraindikationen: hormonabhängige Krebserkrankungen, aktive Thrombose, unbehandelte Hypertonie.",
+        },
+        {
+          heading: "Pflanzliche Mittel: was hat Evidenz?",
+          text: "Isoflavone (Soja, Rotklee) wirken als schwache Phytoöstrogene. Metaanalysen zeigen eine Reduktion der Hitzewallungshäufigkeit um 20–30 % – deutlich weniger als HRT, aber besser als Placebo. Wirkung tritt nach 3–4 Wochen ein; optimal für leichte bis mittlere Beschwerden. Traubensilberkerze (Cimicifuga racemosa) hat in mehreren Studien positive Effekte auf Hitzewallungen und Stimmung gezeigt. Mechanismus nicht vollständig geklärt, aber keine östrogenartige Wirkung. Keine Verwendung bei hormonabhängigen Erkrankungen in der Vorgeschichte ohne Rücksprache. Wenig Evidenz haben: Nachtkerzenöl, Mönchspfeffer (bei Wechseljahren), hochdosierte Vitamine.",
+        },
+        {
+          heading: "Lebensstil: Ernährung, Bewegung, Schlaf",
+          text: "Regelmäßige körperliche Aktivität (mindestens 150 min/Woche moderates Ausdauertraining) reduziert Hitzewallungen, verbessert Schlaf, Stimmung und schützt Knochen und Herz. Krafttraining 2x/Woche ist besonders wichtig für Knochendichte und Muskelerhalt. Schlafhygiene: kühles Schlafzimmer (18–19 °C), keine Bildschirme 1 Stunde vor dem Schlafen, Alkohol vermeiden (Trigger für Hitzewallungen und schlechten Schlaf). Ernährung: ausreichend Kalzium (1000–1200 mg/Tag), Vitamin D optimieren (40–60 ng/ml), wenig Zucker und hochverarbeitete Lebensmittel, mediterrane Kost reduziert Inflammationsmarker. Stressreduktion durch Yoga, Achtsamkeit oder kognitive Verhaltenstherapie (KVT) hat nachgewiesene Effekte auf vasomotorische Symptome.",
+        },
+        {
+          heading: "Wann zum Arzt?",
+          text: "Wenn Hitzewallungen, Schlafstörungen oder Stimmungsschwankungen die Lebensqualität erheblich beeinträchtigen, ist ein Arztgespräch wichtig. Eine Gynäkologin oder ein auf Hormone spezialisierter Internist/Endokrinologe kann: den Hormonstatus bestimmen, Hashimoto und andere Erkrankungen ausschließen (viele Frauen haben beides gleichzeitig), das richtige Therapieprogramm aus HRT, pflanzlichen Mitteln und Lebensstilmaßnahmen zusammenstellen.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "wie-lange-dauern-wechseljahre",
+      "wann-beginnen-die-wechseljahre",
+      "hormonersatztherapie-vor-und-nachteile",
+    ],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Was hilft am schnellsten gegen Hitzewallungen?",
+        answer:
+          "Am schnellsten wirkt die Hormontherapie (HRT): erste Besserung oft nach 1–2 Wochen, volle Wirkung nach 4–6 Wochen. Pflanzliche Mittel brauchen 3–4 Wochen. Sofortmaßnahmen: kühle Getränke, kühle Umgebung, Kleidung in Lagen, Stressreduktion, Alkohol und Schärfe vermeiden (Trigger).",
+      },
+      {
+        question: "Kann ich Wechseljahresbeschwerden ohne Hormone lindern?",
+        answer:
+          "Ja. Für leichte bis mittlere Beschwerden: Isoflavone (Soja, Rotklee), Traubensilberkerze, regelmäßige Bewegung, Schlafhygiene, Stressreduktion. Kognitive Verhaltenstherapie ist ebenfalls wirksam für Hitzewallungen und Schlaf. Bei starken Beschwerden sind diese Maßnahmen meist nicht ausreichend.",
+      },
+    ],
+  },
+
+  "hashimoto-blutwerte-verstehen": {
+    slug: "hashimoto-blutwerte-verstehen",
+    question: "Hashimoto Blutwerte: TSH, fT3, fT4 und Anti-TPO richtig lesen",
+    metaTitle: "Hashimoto Blutwerte: TSH, fT3, fT4 und Anti-TPO einfach erklärt",
+    metaDescription:
+      "Hashimoto Blutwerte verstehen: Was bedeuten TSH, fT3, fT4 und Anti-TPO? Welche Werte sind optimal, nicht nur 'normal'? Ratgeber für Hashimoto-Patientinnen.",
+    answer:
+      "Die wichtigsten Blutwerte bei Hashimoto: TSH (Zielwert für Patientinnen: 0,5–2,5 mU/L), fT3 (aktives Hormon, oberes Drittel der Norm anstreben), fT4, Anti-TPO-Antikörper (zeigen Autoimmunaktivität). Viele Frauen fühlen sich bei 'normalem' TSH im Bereich 2–4 mU/L noch schlecht – fT3 gibt oft mehr Aufschluss.",
+    content: {
+      sections: [
+        {
+          heading: "TSH: was bedeutet der Wert bei Hashimoto?",
+          text: "TSH (Thyreoidea-stimulierendes Hormon) ist der wichtigste Screening-Wert für die Schilddrüsenfunktion. Er zeigt, wie stark die Hypophyse die Schilddrüse stimulieren muss. Ein erhöhter TSH bedeutet: Die Schilddrüse produziert zu wenig Hormone, die Hypophyse gibt Gas. Labor-Normalbereich: meist 0,4–4,0 mU/L. Für Frauen mit Hashimoto und Beschwerden wird jedoch oft ein Zielwert von 0,5–2,5 mU/L empfohlen – im oberen Normalbereich fühlen sich viele Patientinnen noch symptomatisch. Wichtig: TSH allein reicht nicht für eine vollständige Beurteilung. Viele Frauen mit TSH 3,5 mU/L haben eindeutige Hypothyreose-Symptome, während andere mit TSH 4,0 mU/L beschwerdefrei sind.",
+        },
+        {
+          heading: "fT3 und fT4: die eigentlichen Aktivhormone",
+          text: "fT4 (freies Thyroxin) ist das Prohormon, das von der Schilddrüse produziert wird. fT3 (freies Trijodthyronin) ist das aktive Hormon, zu dem fT4 in Geweben umgewandelt wird. Für die tatsächliche Hormonwirkung an den Zellen zählt fT3. Viele Frauen mit Hashimoto konvertieren fT4 schlecht in fT3 – ihr fT4 ist normal, aber fT3 liegt im unteren Drittel der Norm. Das kann zu persistenten Symptomen führen, obwohl TSH 'normal' aussieht. Optimal: fT3 im oberen Drittel des Referenzbereichs. Dies ist besonders relevant, wenn die Patientin nur L-Thyroxin (T4) einnimmt und trotz normaler TSH-Werte Symptome hat.",
+        },
+        {
+          heading: "Anti-TPO und Anti-Thyreoglobulin: Antikörper verstehen",
+          text: "Anti-TPO-Antikörper (Antikörper gegen Thyreoidperoxidase) sind der Marker für Hashimoto. Erhöhte Anti-TPO (> 34 IU/mL, je nach Labor) bestätigen die Autoimmunreaktion. Die Höhe der Antikörper korreliert nicht 1:1 mit der Symptomschwere, aber steigende Werte zeigen eine aktive Erkrankungsphase. Anti-Thyreoglobulin-Antikörper sind ein zweiter Hashimoto-Marker, der bei manchen Frauen erhöht ist, während Anti-TPO normal bleibt. Selen-Supplementierung (200 µg/Tag) kann Anti-TPO über 3–6 Monate signifikant senken – das ist einer der am besten belegten Ernährungseffekte bei Hashimoto.",
+        },
+        {
+          heading: "Optimale Werte vs. Laborwerte: der Unterschied",
+          text: "'Normal' im Labor bedeutet nicht immer 'optimal' für die Patientin. Laborwerte werden aus Bevölkerungsdurchschnitten erstellt und berücksichtigen nicht, wie sich eine Patientin dabei fühlt. Viele Endokrinologen und Funktionsmediziner orientieren sich an Zielwerten: TSH 0,5–2,5 mU/L für Hashimoto-Patientinnen, fT3 oberes Drittel des Normbereichs, Vitamin D 40–60 ng/ml (nicht nur > 20 ng/ml), Ferritin > 80 ng/ml (nicht nur > 12 ng/ml). Wenn Sie trotz 'normaler' Werte Symptome haben, lohnt es sich, mit einer spezialisierten Endokrinologin über Ihre individuellen Zielwerte zu sprechen.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "tsh-wert-tabelle",
+      "selen-hashimoto-dosierung",
+      "hashimoto-ursachen",
+    ],
+    relatedConditions: ["hashimoto", "schilddruese"],
+    faqs: [
+      {
+        question: "Ab welchem TSH-Wert sollte man Hashimoto behandeln?",
+        answer:
+          "Offiziell ab TSH > 4,0 mU/L bei manifester Hypothyreose. Bei subklinischer Hypothyreose (TSH 2,5–4,0 mU/L) und gleichzeitigen Symptomen empfehlen viele Spezialisten einen Therapieversuch. In der Schwangerschaft gelten striktere Grenzen: TSH > 2,5 mU/L im ersten Trimester ist behandlungsbedürftig.",
+      },
+      {
+        question: "Warum fühle ich mich schlecht, obwohl mein TSH normal ist?",
+        answer:
+          "Mehrere mögliche Gründe: fT3 liegt im unteren Normbereich (schlechte T4-zu-T3-Konversion), TSH liegt im oberen Normalbereich (2,5–4,0 mU/L) – optimal für viele Patientinnen sind niedrigere Werte, Ferritin oder Vitamin D sind suboptimal (beides beeinflusst Schilddrüsenhormonwirkung), andere Ursachen wurden nicht ausgeschlossen (Eisenmangel, Schlafmangel, Depression). fT3 bestimmen lassen und mit einer Endokrinologin besprechen.",
+      },
+    ],
+  },
+
+  "tsh-wert-tabelle": {
+    slug: "tsh-wert-tabelle",
+    question: "TSH Wert Tabelle: Normalwerte, Referenzbereiche & was sie bedeuten",
+    metaTitle: "TSH Wert Tabelle: Normalwerte nach Alter, Schwangerschaft & bei Hashimoto",
+    metaDescription:
+      "TSH Normalwerte als Tabelle: Referenzbereiche nach Alter, in der Schwangerschaft und bei Schilddrüsenerkrankungen. Was bedeutet ein erhöhter oder niedriger TSH?",
+    answer:
+      "Der TSH-Normalbereich liegt je nach Labor bei 0,4–4,0 mU/L. Für Frauen mit Hashimoto/Hypothyreose wird oft ein Zielwert von 0,5–2,5 mU/L empfohlen. In der Schwangerschaft gelten strengere Grenzen (< 2,5 mU/L im 1. Trimester). Der TSH-Wert steigt physiologisch mit dem Alter leicht an.",
+    content: {
+      sections: [
+        {
+          heading: "TSH-Normalwerte: Überblick nach Situation",
+          text: "TSH-Referenzbereiche variieren je nach Labor, Alter und physiologischem Zustand. Die folgenden Richtwerte gelten für die meisten deutschen Labore: Erwachsene (allgemein): 0,4–4,0 mU/L. Frauen im gebärfähigen Alter: 0,4–3,0 mU/L. Frauen ab 50: 0,4–4,5 mU/L (physiologisch leichter Anstieg). Kinder: engere Grenzen, altersabhängig. Hinweis: Laborwerte sind Bevölkerungsstatistiken, keine absoluten Schwellenwerte. Viele Endokrinologen orientieren sich bei Patientinnen mit Beschwerden an einem Zielwert von 0,5–2,5 mU/L.",
+        },
+        {
+          heading: "TSH bei Hashimoto und Schilddrüsenunterfunktion",
+          text: "Bei Hashimoto-Thyreoiditis gilt: Erhöhter TSH (> 4,0 mU/L) zeigt eine manifeste Hypothyreose an – L-Thyroxin-Therapie ist indiziert. TSH 2,5–4,0 mU/L + Symptome = subklinische Hypothyreose – Therapieversuch oft sinnvoll. TSH < 0,5 mU/L bei L-Thyroxin-Therapie = zu hoch dosiert, Überfunktionsrisiko. TSH 0,5–2,5 mU/L = Zielbereich für die meisten Hashimoto-Patientinnen. Wichtig: TSH allein reicht nicht – immer auch fT3, fT4 und Anti-TPO bestimmen.",
+        },
+        {
+          heading: "TSH in der Schwangerschaft",
+          text: "In der Schwangerschaft gelten strengere TSH-Grenzen, weil ausreichend Schilddrüsenhormon für die fetale Gehirnentwicklung essenziell ist: 1. Trimester: TSH < 2,5 mU/L (Zielwert < 2,0 mU/L). 2. Trimester: TSH < 3,0 mU/L. 3. Trimester: TSH < 3,0–3,5 mU/L. Frauen mit Hashimoto sollten ihren TSH-Wert idealerweise vor einer Schwangerschaft optimieren (< 2,5 mU/L) und direkt nach Feststellung einer Schwangerschaft kontrollieren. L-Thyroxin-Bedarf steigt in der Schwangerschaft oft um 25–50 %.",
+        },
+        {
+          heading: "Warum sind TSH-Referenzbereiche umstritten?",
+          text: "Die obere Grenze des TSH-Normalbereichs wird in der Fachwelt diskutiert: Der klassische Normbereich (bis 4,0 mU/L) wurde aus gemischten Bevölkerungsstichproben berechnet, die auch unerkannte Schilddrüsenerkrankungen enthalten. Manche Experten plädieren für eine Absenkung der oberen Grenze auf 2,5 mU/L, da viele Studien zeigen, dass Frauen im Bereich TSH 2,5–4,0 mU/L mit gleichzeitigen Hypothyreose-Symptomen von L-Thyroxin profitieren. Entscheidend ist die individuelle Beurteilung durch eine Spezialistin – nicht allein der Laborwert.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "hashimoto-blutwerte-verstehen",
+      "hormontest-kosten",
+      "selen-hashimoto-dosierung",
+    ],
+    relatedConditions: ["hashimoto", "schilddruese"],
+    faqs: [
+      {
+        question: "Was bedeutet ein TSH-Wert von 3,5 mU/L?",
+        answer:
+          "Ein TSH von 3,5 mU/L liegt innerhalb des Labornormalbereichs (0,4–4,0 mU/L). Für Frauen ohne Schilddrüsenerkrankung ist das meist unproblematisch. Frauen mit Hashimoto-Symptomen (Müdigkeit, Frieren, Verstopfung) können bei TSH 3,5 mU/L bereits eine subklinische Hypothyreose haben, die behandlungsbedürftig ist. fT3 und Anti-TPO bestimmen lassen.",
+      },
+      {
+        question: "Kann der TSH-Wert morgens und abends unterschiedlich sein?",
+        answer:
+          "Ja. TSH unterliegt einem Tagesrhythmus: Die höchsten Werte werden nachts und früh morgens gemessen, die niedrigsten am Nachmittag und frühen Abend. Schwankungen von 50–100 % innerhalb eines Tages sind normal. Für Verlaufskontrollen sollte TSH immer zur gleichen Tageszeit und möglichst nüchtern gemessen werden.",
+      },
+    ],
+  },
+
   "hashimoto-ursachen": {
     slug: "hashimoto-ursachen",
     question: "Hashimoto Ursachen: Warum greift das Immunsystem die Schilddrüse an?",

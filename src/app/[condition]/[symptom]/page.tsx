@@ -226,6 +226,62 @@ export default async function ConditionSymptomPage({ params }: Props) {
           </section>
         )}
 
+        {/* Comparison table */}
+        {symptom.comparisonTable && (
+          <section className="mb-16" aria-labelledby="vergleich-heading">
+            <h2 id="vergleich-heading" className="text-2xl font-headline font-bold mb-6">
+              {symptom.comparisonTable.caption}
+            </h2>
+            <div className="overflow-x-auto rounded-2xl border border-outline-variant/10">
+              <table className="w-full text-sm font-body border-collapse">
+                <thead>
+                  <tr>
+                    <th className="text-left p-4 bg-surface-container-high font-bold text-on-surface border-b border-outline-variant/10 w-[18%]">
+                      Aspekt
+                    </th>
+                    {symptom.comparisonTable.headers.map((h) => (
+                      <th key={h} className="text-left p-4 bg-surface-container-high font-bold text-on-surface border-b border-l border-outline-variant/10">
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {symptom.comparisonTable.rows.map((row, i) => (
+                    <tr key={row.aspect} className={i % 2 === 0 ? "bg-white" : "bg-surface-container-low/40"}>
+                      <td className="p-4 font-bold text-on-surface align-top border-b border-outline-variant/10">
+                        {row.aspect}
+                      </td>
+                      {row.values.map((val, j) => (
+                        <td key={j} className="p-4 text-on-surface-variant align-top border-b border-l border-outline-variant/10 leading-relaxed">
+                          {val}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
+        {/* Research */}
+        {symptom.research && symptom.research.length > 0 && (
+          <section className="mb-16" aria-labelledby="forschung-heading">
+            <h2 id="forschung-heading" className="text-2xl font-headline font-bold mb-6">
+              Was die Forschung sagt
+            </h2>
+            <div className="space-y-4">
+              {symptom.research.map((r, i) => (
+                <div key={i} className="bg-surface-container-low rounded-xl p-5 border border-outline-variant/10">
+                  <p className="text-sm font-body text-on-surface leading-relaxed mb-2">{r.finding}</p>
+                  <p className="text-[11px] text-on-surface-variant/70 font-body">{r.citation}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* FAQs */}
         {symptom.faqs.length > 0 && (
           <section className="mb-16" aria-labelledby="faq-heading">

@@ -19,6 +19,14 @@ export interface Symptom {
   detailedExplanation?: string;
   /** Optional: structured diagnostic tests relevant to this symptom */
   diagnosticTests?: DiagnosticTest[];
+  /** Optional: comparison table showing this symptom across different conditions/causes */
+  comparisonTable?: {
+    caption: string;
+    headers: string[];
+    rows: { aspect: string; values: string[] }[];
+  };
+  /** Optional: research findings with citations */
+  research?: { finding: string; citation: string }[];
   whenToSeeDoctor: string;
   naturalRemedies: string[];
   relatedConditions: string[];
@@ -681,6 +689,72 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Anti-TPO-Antikörper", relevance: "Hashimoto als häufigste Hypothyreose-Ursache identifizieren" },
       { test: "Schilddrüsen-Ultraschall", relevance: "Bei erhöhten Antikörpern: echoarmes Gewebe als typisches Hashimoto-Bild" },
       { test: "Kalzium + Magnesium", relevance: "Zu viel Kalzium oder zu wenig Magnesium verursacht Darmträgheit" },
+    ],
+    comparisonTable: {
+      caption: "Verstopfung durch hormonelle Ursachen: Vergleich",
+      headers: ["Hypothyreose (Hashimoto)", "Perimenopause", "Andere Ursachen"],
+      rows: [
+        {
+          aspect: "Mechanismus",
+          values: [
+            "T3-Mangel verlangsamt die Darmperistaltik direkt",
+            "Progesteronschwankungen entspannen glatte Darmmuskulatur (besonders Lutealphase)",
+            "Ballaststoffmangel, Flüssigkeitsmangel, Bewegungsmangel",
+          ],
+        },
+        {
+          aspect: "Typische Begleitsymptome",
+          values: [
+            "Müdigkeit, Frieren, Gewichtszunahme, trockene Haut, Haarausfall",
+            "Hitzewallungen, Schlafstörungen, Stimmungsschwankungen",
+            "Keine spezifischen hormonellen Begleitsymptome",
+          ],
+        },
+        {
+          aspect: "Zeitverlauf",
+          values: [
+            "Chronisch-schleichend, über Monate konstant",
+            "Zyklusgebunden: schlimmer in der Lutealphase, besser nach Periode",
+            "Situativ, direkt abhängig von Ernährung und Bewegung",
+          ],
+        },
+        {
+          aspect: "Schlüsselbefund im Labor",
+          values: [
+            "TSH erhöht (> 2,5 mU/L), fT3 erniedrigt, Anti-TPO positiv",
+            "FSH erhöht (> 10 IU/L bei Perimenopause), Östradiol niedrig",
+            "Schilddrüsen- und Hormonwerte im Normbereich",
+          ],
+        },
+        {
+          aspect: "Erste Behandlungsmaßnahme",
+          values: [
+            "Schilddrüsenmedikation optimieren (L-Thyroxin-Dosierung anpassen)",
+            "Ernährung, Bewegung, ggf. Progesteron-Unterstützung in der Lutealphase",
+            "Ballaststoffe erhöhen, mehr Wasser, regelmäßige Bewegung, Magnesium",
+          ],
+        },
+      ],
+    },
+    research: [
+      {
+        finding:
+          "Verstopfung tritt bei bis zu 50 % aller Frauen mit unbehandelter Hypothyreose auf. Schilddrüsenhormone (T3) stimulieren die glatte Darmmuskulatur direkt; bei T3-Mangel verlängert sich die intestinale Transitzeit messbar um bis zu 50 %.",
+        citation:
+          "Bianchi A et al. (2022). Gastrointestinal manifestations of hypothyroidism: systematic review. World Journal of Gastroenterology.",
+      },
+      {
+        finding:
+          "In der Colorado Thyroid Disease Prevalence Study (n > 25.000) berichteten Frauen mit subklinischer Hypothyreose (TSH 2,5–10 mU/L) signifikant häufiger über chronische Obstipation als euthyreote Frauen – selbst ohne manifeste Schilddrüsenunterfunktion.",
+        citation:
+          "Canaris GJ et al. (2000). The Colorado Thyroid Disease Prevalence Study. Archives of Internal Medicine.",
+      },
+      {
+        finding:
+          "Progesteron entspannt glatte Muskelzellen im Gastrointestinaltrakt und verlangsamt die Magenentleerung. Dieser Effekt erklärt die häufige Verstopfung in der Schwangerschaft und der progesteronreichen Lutealphase – und die trägere Verdauung in perimenopausalen Umbruchphasen.",
+        citation:
+          "Casey ML & MacDonald PC (1996). The endocrinology of gastrointestinal motility. Seminars in Perinatology.",
+      },
     ],
     whenToSeeDoctor:
       "Bei Blut im Stuhl, starken Bauchschmerzen, ungewolltem Gewichtsverlust oder wenn Verstopfung länger als 3 Wochen anhält. Auch wenn chronische Verstopfung von Müdigkeit, Frieren und Gewichtszunahme begleitet wird – dann immer Schilddrüse abklären.",

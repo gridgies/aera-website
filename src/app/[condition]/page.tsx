@@ -36,11 +36,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!condition) return {};
 
   return {
-    title: `${condition.topicName}: Symptome, Ursachen & Behandlung`,
+    title: condition.metaTitle ?? `${condition.topicName}: Symptome, Ursachen & Behandlung`,
     description: condition.metaDescription,
     alternates: { canonical: `/${conditionSlug}` },
     openGraph: {
-      title: `${condition.topicName}: Symptome, Ursachen & Behandlung`,
+      title: condition.metaTitle ?? `${condition.topicName}: Symptome, Ursachen & Behandlung`,
       description: condition.metaDescription,
       url: `${BASE_URL}/${conditionSlug}`,
     },

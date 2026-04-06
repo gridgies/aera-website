@@ -778,6 +778,317 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
       },
     ],
   },
+
+  "hashimoto-oder-nebennierenschwaeche": {
+    slug: "hashimoto-oder-nebennierenschwaeche",
+    conditionASlug: "hashimoto",
+    conditionBSlug: "nebenniere",
+    conditionAName: "Hashimoto",
+    conditionBName: "Nebennierenschwäche",
+    title: "Hashimoto oder Nebennierenschwäche? Symptome, Unterschiede & Diagnose",
+    metaTitle: "Hashimoto oder Nebennierenschwäche? Symptome erkennen & unterscheiden",
+    metaDescription:
+      "Hashimoto und Nebennierenschwäche haben viele gemeinsame Symptome – extreme Müdigkeit, Konzentrationsprobleme, Schlafstörungen. Wie du sie unterscheidest und welche Tests helfen.",
+    intro:
+      "Extreme Erschöpfung, Konzentrationsprobleme, Schlafstörungen, Stimmungstiefs – diese Symptome können sowohl auf Hashimoto Thyreoiditis als auch auf eine Nebenniereninsuffizienz oder sogenannte 'Nebennierenschwäche' hinweisen. Viele Frauen haben sogar beide Erkrankungen gleichzeitig, da Schilddrüse und Nebennieren über die Hypothalamus-Hypophysen-Achse miteinander verbunden sind. Dieser Ratgeber zeigt, welche Symptome für welche Erkrankung sprechen und welche Tests Klarheit bringen.",
+    confusionNote:
+      "Schilddrüse und Nebennieren sind beide Teil der endokrinen Achse und beeinflussen sich gegenseitig. Chronischer Stress erhöht Cortisol, was die T4-zu-T3-Konversion hemmen und eine latente Hashimoto-Erkrankung verschlimmern kann. Umgekehrt kann eine schlecht behandelte Hypothyreose die Nebennierenbelastung erhöhen. Das Zusammenspiel beider Systeme macht die Differenzierung komplex.",
+    sharedSymptoms: ["muedigkeit", "konzentrationsprobleme", "schlafstoerungen", "stimmungsschwankungen"],
+    conditionAOnlySymptoms: ["frieren", "verstopfung", "gewichtszunahme"],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Charakteristisches Symptom",
+        a: "Kälteintoleranz, Verstopfung, trockene Haut, Haarausfall, verlangsamter Puls",
+        b: "Erschöpfung, die sich nach Stress stark verschlechtert; Salzhunger; Schwindel beim Aufstehen (Orthostatismus)",
+      },
+      {
+        aspect: "Müdigkeitsqualität",
+        a: "Konstante Erschöpfung, besonders morgens; schläft viel, schläft aber schlecht",
+        b: "Sehr ausgeprägt nach emotionalem oder körperlichem Stress; Energieeinbruch nachmittags (14–16 Uhr) typisch",
+      },
+      {
+        aspect: "Reaktion auf Stress",
+        a: "Hashimoto-Schübe nach Infekten oder emotionalem Stress; Antikörper können ansteigen",
+        b: "Symptome deutlich stärker nach Stressbelastung; Erholung dauert ungewöhnlich lange",
+      },
+      {
+        aspect: "Ursache",
+        a: "Autoimmunreaktion gegen Schilddrüsengewebe (T3/T4-Mangel)",
+        b: "Morbus Addison: Autoimmunzerstörung der Nebennierenrinde; 'Adrenal Fatigue': keine anerkannte Erkrankung",
+      },
+      {
+        aspect: "Diagnose",
+        a: "TSH, fT3, fT4, Anti-TPO, Schilddrüsen-Ultraschall",
+        b: "Cortisol im Serum (morgens), ACTH-Stimulationstest bei Verdacht auf Addison, DHEA-S",
+      },
+    ],
+    labTests: [
+      {
+        test: "TSH + fT3 + fT4",
+        a: "Erhöhter TSH, erniedrigtes fT3/fT4 bei Hypothyreose",
+        b: "Normal (kein Schilddrüsenbefund)",
+      },
+      {
+        test: "Anti-TPO-Antikörper",
+        a: "Erhöht (> 34 IU/mL) – bestätigt Hashimoto",
+        b: "Normal",
+      },
+      {
+        test: "Cortisol morgens (8 Uhr)",
+        a: "Normal bis leicht erhöht (Stress-Response auf Hypothyreose möglich)",
+        b: "Erniedrigt (< 138 nmol/L) bei echter Nebenniereninsuffizienz; bei 'Adrenal Fatigue' oft normal",
+      },
+      {
+        test: "DHEA-S",
+        a: "Kann bei chronischer Autoimmunaktivität erniedrigt sein",
+        b: "Erniedrigt bei echter Nebenniereninsuffizienz",
+      },
+    ],
+    howToDifferentiate:
+      "Der entscheidende erste Schritt: Schilddrüsenwerte vollständig abklären (TSH, fT3, Anti-TPO). Wenn Hashimoto bestätigt und behandelt wird, verbessern sich viele Erschöpfungssymptome. Wenn trotz optimierter Schilddrüsenwerte extreme Müdigkeit, Stressunverträglichkeit und Schwindel bestehen, Cortisol und DHEA-S messen. Bei Verdacht auf echte Nebenniereninsuffizienz (Addison) ist ein ACTH-Stimulationstest beim Endokrinologen notwendig. 'Adrenal Fatigue' als Diagnose wird von der konventionellen Medizin nicht anerkannt – Laborwerte sind dabei meist normal.",
+    faqs: [
+      {
+        question: "Kann ich Hashimoto und Nebennierenschwäche gleichzeitig haben?",
+        answer:
+          "Ja. Beide Erkrankungen können gleichzeitig vorliegen – und beeinflussen sich gegenseitig. Chronischer Stress (hoher Cortisol) hemmt die T4-zu-T3-Konversion und kann eine latente Hashimoto-Erkrankung aktivieren. Umgekehrt kann eine unbehandelte Hypothyreose die Cortisol-Clearance verlangsamen. Eine vollständige endokrinologische Untersuchung inklusive Schilddrüse, Cortisol und DHEA-S ist sinnvoll.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Morbus Addison und 'Adrenal Fatigue'?",
+        answer:
+          "Morbus Addison ist eine ernsthafte, anerkannte Erkrankung mit messbarem Cortisolmangel (meist autoimmun). 'Adrenal Fatigue' (Nebennierenschwäche) ist kein anerkanntes medizinisches Krankheitsbild – Laborwerte sind bei Betroffenen meist im Normbereich. Die Symptome (Erschöpfung, Stressunverträglichkeit) sind real, haben aber möglicherweise andere Ursachen: Schlafmangel, Schilddrüsenunterfunktion, Depressionen, Eisenmangel oder Burnout.",
+      },
+      {
+        question: "Wie unterscheidet man die Müdigkeit von Hashimoto von der bei Nebennierenproblemen?",
+        answer:
+          "Hashimoto-Müdigkeit ist typischerweise konstant präsent, oft begleitet von Frieren, Verstopfung und Verlangsamung. Nebennieren-assoziierte Erschöpfung verschlechtert sich stark nach Stress und hat einen typischen Nachmittagstief (14–16 Uhr). Beide Formen verbessern sich mit 8+ Stunden Schlaf kaum. Der sicherste Weg ist die Labordiagnostik: TSH, fT3, Anti-TPO + Cortisol morgens, DHEA-S.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Garber JR et al. – American Thyroid Association",
+        year: 2012,
+        title: "Clinical practice guidelines for hypothyroidism in adults",
+        journal: "Thyroid",
+      },
+      {
+        authors: "Bornstein SR et al.",
+        year: 2016,
+        title: "Diagnosis and treatment of primary adrenal insufficiency: an Endocrine Society Clinical Practice Guideline",
+        journal: "Journal of Clinical Endocrinology & Metabolism",
+      },
+      {
+        authors: "Cadegiani FA & Kater CE",
+        year: 2016,
+        title: "Adrenal fatigue does not exist: a systematic review",
+        journal: "BMC Endocrine Disorders",
+      },
+    ],
+  },
+
+  "menopause-oder-schwangerschaft": {
+    slug: "menopause-oder-schwangerschaft",
+    conditionASlug: "menopause",
+    conditionBSlug: "schwangerschaft",
+    conditionAName: "Perimenopause",
+    conditionBName: "Schwangerschaft",
+    title: "Perimenopause oder Schwangerschaft? Symptome unterscheiden",
+    metaTitle: "Perimenopause oder Schwangerschaft? Symptome & Unterschiede erklärt",
+    metaDescription:
+      "Perimenopause oder Schwangerschaft? Viele Symptome sind ähnlich. Wie du sie unterscheidest, welche Tests helfen und wann du zum Arzt solltest.",
+    intro:
+      "Ausbleibende Periode, Müdigkeit, Stimmungsschwankungen, veränderte Schlafqualität – diese Symptome können sowohl auf eine beginnende Perimenopause als auch auf eine frühe Schwangerschaft hinweisen. Besonders für Frauen zwischen 38 und 48 Jahren ist diese Verwechslung häufig: In dieser Phase sinkt die Fruchtbarkeit, aber eine Schwangerschaft ist weiterhin möglich. Und Perimenopause beginnt oft mitten in einer Phase, in der Frauen sich noch für 'zu jung' für Wechseljahre halten.",
+    confusionNote:
+      "In der Perimenopause werden die Zyklen unregelmäßiger – Perioden können ausbleiben, sich verzögern oder verändert sein. Genau dasselbe passiert in der frühen Schwangerschaft. Beide Zustände können mit Stimmungsschwankungen, Brustspannen und Müdigkeit verbunden sein. Der entscheidende Unterschied: Ein Schwangerschaftstest löst die Unsicherheit in Minuten auf.",
+    sharedSymptoms: ["muedigkeit", "schlafstoerungen", "stimmungsschwankungen"],
+    conditionAOnlySymptoms: ["hitzewallungen", "nachtschweiss", "scheidentrockenheit"],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Charakteristisches Symptom",
+        a: "Hitzewallungen, Nachtschweiß, Scheidentrockenheit – diese treten in der Schwangerschaft nicht auf",
+        b: "Übelkeit (besonders morgens), Brustspannen, Nidationsblutung, positiver Schwangerschaftstest",
+      },
+      {
+        aspect: "Menstruation",
+        a: "Unregelmäßig, kürzer oder länger, dann immer seltener",
+        b: "Bleibt aus nach Konzeption; kann eine kurze Nidationsblutung auftreten",
+      },
+      {
+        aspect: "Körpertemperatur",
+        a: "Hitzewallungen: plötzliches Wärmegefühl, dann wieder normal",
+        b: "Basaltemperatur bleibt nach Ovulation erhöht (> 37 °C) über 16+ Tage",
+      },
+      {
+        aspect: "Bluttest",
+        a: "FSH erhöht (> 10–12 IU/L in der Perimenopause), Östradiol erniedrigt",
+        b: "HCG positiv, FSH erniedrigt",
+      },
+      {
+        aspect: "Alter",
+        a: "Typisch 45–55 Jahre, kann aber ab 40 beginnen",
+        b: "Möglich bis zur Menopause – Frauen bis 50+ können schwanger werden",
+      },
+    ],
+    labTests: [
+      {
+        test: "Schwangerschaftstest (HCG)",
+        a: "Negativ",
+        b: "Positiv (ab 10–14 Tagen nach Konzeption zuverlässig)",
+      },
+      {
+        test: "FSH",
+        a: "Erhöht: > 10 IU/L in der Perimenopause; > 25 IU/L bei Menopause",
+        b: "Erniedrigt (Schwangerschaft supprimiert FSH)",
+      },
+      {
+        test: "Östradiol (E2)",
+        a: "Schwankend und tendenziell erniedrigt in der Perimenopause",
+        b: "Steigt früh an (produziert von Corpus luteum und Plazenta)",
+      },
+    ],
+    howToDifferentiate:
+      "Der erste und einfachste Schritt: Schwangerschaftstest. Ein negativer Test schließt eine Schwangerschaft bei korrekter Durchführung (morgens, 14+ Tage nach möglicher Konzeption) zuverlässig aus. Wenn der Test negativ und die Periode weiterhin unregelmäßig ist: Bluttest mit FSH, Östradiol und HCG beim Arzt für maximale Sicherheit. Hitzewallungen und Nachtschweiß sind starke Hinweise auf Perimenopause – sie treten in der frühen Schwangerschaft nicht auf.",
+    faqs: [
+      {
+        question: "Kann man in der Perimenopause noch schwanger werden?",
+        answer:
+          "Ja. Die Perimenopause bedeutet reduzierte, nicht ausgeschlossene Fruchtbarkeit. Frauen können bis zur Menopause (12 Monate ohne Periode) ovulieren und schwanger werden. Erst 12 Monate nach der letzten Periode gilt eine Frau offiziell als nicht mehr fruchtbar. Verhütung ist in der Perimenopause weiterhin notwendig, wenn eine Schwangerschaft nicht gewünscht ist.",
+      },
+      {
+        question: "Woran erkenne ich, ob meine ausgebliebene Periode Perimenopause oder Schwangerschaft ist?",
+        answer:
+          "Ein Schwangerschaftstest ist die schnellste Antwort. Zusätzliche Hinweise auf Perimenopause: Hitzewallungen, Nachtschweiß, Scheidentrockenheit, Veränderungen über mehrere Zyklen (nicht nur ein einzelner ausgebliebener Zyklus). Hinweise auf Schwangerschaft: Übelkeit, Brustspannen, positiver Test, erhöhte Basaltemperatur.",
+      },
+      {
+        question: "Welcher Bluttest hilft bei der Unterscheidung?",
+        answer:
+          "HCG (Schwangerschaftshormon) – das zuverlässigste Unterscheidungsmerkmal. FSH: erhöht bei Perimenopause, erniedrigt in der Schwangerschaft. Östradiol: schwankt in der Perimenopause, steigt früh in der Schwangerschaft an. Ein Arzt kann alle drei Werte gleichzeitig bestimmen.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Harlow SD et al.",
+        year: 2012,
+        title: "Executive summary of the Stages of Reproductive Aging Workshop + 10 (STRAW+10)",
+        journal: "Climacteric",
+      },
+      {
+        authors: "DGGG – Deutsche Gesellschaft für Gynäkologie und Geburtshilfe",
+        year: 2020,
+        title: "S3-Leitlinie Peri- und Postmenopause – Diagnostik und Interventionen",
+        journal: "AWMF Register Nr. 015-062",
+      },
+      {
+        authors: "Santoro N",
+        year: 2016,
+        title: "Perimenopause: from research to practice",
+        journal: "Journal of Women's Health",
+      },
+    ],
+  },
+
+  "pms-oder-pmds": {
+    slug: "pms-oder-pmds",
+    conditionASlug: "hormone",
+    conditionBSlug: "hormone",
+    conditionAName: "PMS",
+    conditionBName: "PMDS",
+    title: "PMS oder PMDS? Symptome, Unterschiede & was wirklich hilft",
+    metaTitle: "PMS oder PMDS? Unterschied, Diagnose & Behandlung erklärt",
+    metaDescription:
+      "PMS oder PMDS? Der Unterschied liegt in der Schwere – PMDS ist eine ernsthafte Erkrankung mit depressiven Episoden. Symptome, Diagnose und was hilft.",
+    intro:
+      "Stimmungsschwankungen, Reizbarkeit, Schlafprobleme und körperliche Beschwerden in den Tagen vor der Periode kennen viele Frauen. Aber wann ist es 'nur' PMS (Prämenstruelles Syndrom) und wann ist es PMDS (Prämenstruelle Dysphorische Störung) – eine ernsthafte psychische Erkrankung? Der Unterschied liegt nicht in der Art der Symptome, sondern in ihrer Schwere und Auswirkung auf den Alltag.",
+    confusionNote:
+      "PMS und PMDS haben identische Symptome – der Unterschied liegt in der Intensität und den funktionellen Einschränkungen. Beide treten ausschließlich in der Lutealphase auf (nach dem Eisprung bis zur Periode) und verschwinden mit Beginn der Menstruation. Das ist gleichzeitig das wichtigste diagnostische Kriterium: Wenn die Symptome über den Zyklus hinaus bestehen, ist eine andere Erkrankung (Depression, Angststörung, Schilddrüsenerkrankung) wahrscheinlicher.",
+    sharedSymptoms: ["stimmungsschwankungen", "schlafstoerungen", "muedigkeit", "konzentrationsprobleme"],
+    conditionAOnlySymptoms: [],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Schwere der Symptome",
+        a: "Leicht bis mittel – störend, aber Alltag bleibt bewältigbar",
+        b: "Schwer – deutliche Beeinträchtigung von Arbeit, Beziehungen und sozialem Leben",
+      },
+      {
+        aspect: "Stimmungssymptome",
+        a: "Reizbarkeit, Stimmungsschwankungen, Heulattacken – unangenehm, aber keine klinische Depression",
+        b: "Schwere depressive Stimmung, Hoffnungslosigkeit, intensive Angst, Suizidgedanken möglich",
+      },
+      {
+        aspect: "Funktionelle Einschränkung",
+        a: "Geringe bis mäßige Beeinträchtigung des Alltags",
+        b: "Erhebliche Beeinträchtigung: Krankmeldungen, soziale Isolation, Beziehungsprobleme",
+      },
+      {
+        aspect: "Diagnosekriterium",
+        a: "Mindestens ein körperliches + ein psychisches Symptom in der Lutealphase (informell)",
+        b: "Mindestens 5 spezifische Symptome nach DSM-5, inklusive mindestens 1 affektives Symptom; über 2 Zyklen dokumentiert",
+      },
+      {
+        aspect: "Behandlung",
+        a: "Lebensstilmaßnahmen, Vitamine (B6, Magnesium), pflanzliche Mittel, ggf. hormonelle Verhütung",
+        b: "SSRI (Antidepressiva) sind First-Line-Therapie; orale Kontrazeptiva (Drospirenon/Ethinylöstradiol); psychotherapeutische Unterstützung",
+      },
+    ],
+    labTests: [
+      {
+        test: "Zyklusprotokoll (2 Zyklen)",
+        a: "Symptome in der Lutealphase, Besserung nach Periodeneinsetzen",
+        b: "Dasselbe – aber Schwere der Symptome deutlich höher; DSM-5-Kriterien erfüllt",
+      },
+      {
+        test: "TSH + fT3 + Anti-TPO",
+        a: "Normal (zum Ausschluss von Schilddrüsenerkrankungen)",
+        b: "Normal – Ausschlussdiagnostik essenziell vor PMDS-Diagnose",
+      },
+      {
+        test: "Östradiol + Progesteron (Lutealphase)",
+        a: "Oft normal – PMS ist keine Hormonstörung per se, sondern erhöhte Sensitivität",
+        b: "Meist normal – PMDS entsteht durch erhöhte Sensitivität der Gehirnrezeptoren gegenüber normalen Hormonschwankungen",
+      },
+    ],
+    howToDifferentiate:
+      "Das wichtigste diagnostische Werkzeug ist ein Zyklusprotokoll über zwei Monate: täglich Symptome und ihre Intensität dokumentieren. Wenn die Symptome ausschließlich in der Lutealphase auftreten und mit der Periode verschwinden, spricht das für PMS oder PMDS. Die Schwere entscheidet: Wenn Arbeit, Beziehungen oder sozialer Rückzug erheblich beeinträchtigt werden, handelt es sich um PMDS – eine ernsthafte, behandelbare Erkrankung. Immer auch Schilddrüse abklären (TSH, Anti-TPO), da Hashimoto ähnliche Stimmungssymptome verursachen kann.",
+    faqs: [
+      {
+        question: "Wie unterscheide ich PMS von PMDS?",
+        answer:
+          "PMS: Symptome sind störend, aber der Alltag ist noch bewältigbar. PMDS: erhebliche Beeinträchtigung von Arbeit, Beziehungen oder sozialem Leben; depressive Episoden, intensive Angst oder Hoffnungslosigkeit; möglicherweise Suizidgedanken. Ein Zyklusprotokoll über zwei Monate und ein Gespräch mit einer Gynäkologin oder Psychiaterin helfen bei der Differenzierung.",
+      },
+      {
+        question: "Was hilft wirklich gegen PMDS?",
+        answer:
+          "SSRI (selektive Serotonin-Wiederaufnahme-Hemmer) sind die am besten belegte Behandlung – sie können auch nur in der Lutealphase genommen werden (intermittierende Therapie). Hormonelle Verhütung mit Drospirenon/Ethinylöstradiol (z.B. Yaz/Yasmin) ist speziell für PMDS zugelassen. Psychotherapie (KVT) kann ergänzend helfen. PMS: Magnesium (300 mg/Tag), Vitamin B6, Chasteberry (Mönchspfeffer), Bewegung.",
+      },
+      {
+        question: "Kann Hashimoto PMS oder PMDS verschlimmern?",
+        answer:
+          "Ja. Eine unbehandelte Schilddrüsenunterfunktion kann die Stimmungsregulation beeinflussen und prämenstruelle Symptome verstärken. Außerdem werden Schilddrüsenerkrankungen bei Frauen mit PMS/PMDS überdurchschnittlich häufig gefunden. Eine vollständige Schilddrüsendiagnostik (TSH, fT3, Anti-TPO) ist bei schweren prämenstruellen Symptomen immer sinnvoll.",
+      },
+    ],
+    sources: [
+      {
+        authors: "American College of Obstetricians and Gynecologists (ACOG)",
+        year: 2023,
+        title: "Premenstrual Syndrome and Premenstrual Dysphoric Disorder – Clinical Practice Bulletin",
+        journal: "Obstetrics & Gynecology",
+      },
+      {
+        authors: "Yonkers KA et al.",
+        year: 2008,
+        title: "Premenstrual syndrome",
+        journal: "Lancet",
+      },
+      {
+        authors: "Bäckström T et al.",
+        year: 2011,
+        title: "The role of hormones and hormonal treatments in premenstrual syndrome",
+        journal: "CNS Drugs",
+      },
+    ],
+  },
 };
 
 export const VERGLEICHE_LIST = Object.values(VERGLEICHE_DATA);
