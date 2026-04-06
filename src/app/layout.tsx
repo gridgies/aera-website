@@ -39,6 +39,14 @@ export const metadata: Metadata = {
     "hormonelles Gleichgewicht",
     "Perimenopause",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png" }],
+  },
   verification: { google: "zuslK36IIa_TEif-K3sk9Z8nw7UjrelibJZwx0LZeAE" },
   authors: [{ name: "Aera Health" }],
   metadataBase: new URL("https://www.aerahealth.de"),
