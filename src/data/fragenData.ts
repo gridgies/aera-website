@@ -377,76 +377,114 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
 
   "oestrogendominanz-symptome": {
     slug: "oestrogendominanz-symptome",
-    question: "Was sind Symptome einer Östrogendominanz?",
-    metaTitle: "Östrogendominanz Symptome: Erkennen und behandeln",
+    question: "Östrogendominanz Symptome: Woran erkennt man zu viel Östrogen?",
+    metaTitle: "Östrogendominanz Symptome: Erkennen, Ursachen & was wirklich hilft",
     metaDescription:
-      "Östrogendominanz Symptome bei Frauen: starke Menstruation, PMS, Gewichtszunahme, Brustspannen. Ursachen und natürliche Behandlung.",
+      "Östrogendominanz Symptome: Gewichtszunahme, Stimmungsschwankungen, starke Periode und Brustschmerzen. Ursachen, Diagnose und natürliche Behandlung erklärt.",
     answer:
-      "Symptome der Östrogendominanz umfassen: starke und lange Menstruation, Brustspannen, PMS, Wassereinlagerungen, Gewichtszunahme (besonders Hüften/Oberschenkel), Stimmungsschwankungen und Reizbarkeit.",
+      "Östrogendominanz entsteht, wenn Östrogen relativ zu Progesteron erhöht ist – entweder durch zu viel Östrogen oder zu wenig Progesteron. Typische Symptome: starke, schmerzhafte Perioden, Brustschmerzen, Gewichtszunahme (besonders Hüfte/Bauch), Wassereinlagerungen, PMS, Stimmungsschwankungen und Schlafprobleme.",
     content: {
       sections: [
         {
           heading: "Was ist Östrogendominanz?",
-          text: "Östrogendominanz bedeutet nicht unbedingt zu viel Östrogen, sondern ein Ungleichgewicht zwischen Östrogen und Progesteron – wobei Östrogen relativ dominiert. Dies tritt häufig in der Perimenopause auf, wenn Progesteron zuerst sinkt, aber auch bei jüngeren Frauen durch Stress, Umwelthormone und Ernährung.",
+          text: "Östrogendominanz ist kein offizieller medizinischer Diagnose-Begriff, beschreibt aber ein reales hormonelles Ungleichgewicht: Östrogen überwiegt relativ zu Progesteron. Das kann auf zwei Wegen entstehen – entweder ist Östrogen absolut erhöht (durch Übergewicht, Leberbelastung, Xenoöstrogene aus der Umwelt oder Ernährung), oder Progesteron ist erniedrigt (durch Stress, Anovulation, Perimenopause). Beide Szenarien führen zu demselben Ungleichgewicht mit ähnlichen Symptomen. In der Perimenopause ist relatives Progesteronmangel besonders häufig: Die Eierstöcke beginnen, weniger regelmäßig zu ovulieren, der Progesteronspiegel sinkt, während Östrogen noch relativ hoch bleibt.",
         },
         {
-          heading: "Häufige Symptome im Überblick",
-          text: "Typische Zeichen: schwere, schmerzhafte Menstruation, prämenstruelles Syndrom (PMS), Brustspannen und Brustschmerzen, Wassereinlagerungen, Gewichtszunahme an Hüften und Oberschenkeln, Stimmungsschwankungen und Angst, Müdigkeit, Schlafstörungen.",
+          heading: "Die häufigsten Östrogendominanz-Symptome",
+          text: "Gynäkologische Symptome: Starke, lange Perioden mit Schmerzen und Koagelbildung. Brustschmerzen und -spannung, besonders vor der Periode. Uterusmyome und Endometriose (östrogenabhängig). Starkes PMS. Allgemeine Symptome: Gewichtszunahme besonders an Hüften, Oberschenkeln und Bauch ('Birnenform'). Wassereinlagerungen, aufgedunsenes Gefühl. Stimmungsschwankungen, Reizbarkeit, Angstzustände. Schlafprobleme, besonders Einschlafprobleme und nächtliches Aufwachen. Müdigkeit trotz ausreichend Schlaf. Kopfschmerzen, besonders zyklisch vor der Periode.",
         },
         {
-          heading: "Wie wird Östrogendominanz behandelt?",
-          text: "Maßnahmen: Progesteronspiegel stärken (bioidentisches Progesteron auf ärztliche Verschreibung), Lebergesundheit unterstützen (Leber baut Östrogen ab – weniger Alkohol, Kreuzblütler essen), Gewicht normalisieren (Fettzellen produzieren Östrogen), Xenoöstrogene meiden (Plastik, bestimmte Kosmetik).",
+          heading: "Ursachen von Östrogendominanz",
+          text: "Hauptursachen erhöhter Östrogenwirkung: Adipositas – Fettgewebe produziert Östrogen (Aromatase), je mehr Körperfett, desto mehr Östrogen außerhalb der Eierstöcke. Chronischer Stress – Cortisol 'stiehlt' Pregnenolon, das für die Progesteronproduktion benötigt wird ('Pregnenolon-Steal'). Leber-Überlastung – eine schlechte Östrogenmetabolisierung in der Leber führt zu Östrogenakkumulation. Xenoöstrogene aus Plastik (BPA), Pestiziden und bestimmten Kosmetika. Anovulatorische Zyklen (kein Eisprung = kein Progesteron). Perimenopause: Progesteronproduktion sinkt oft früher als Östrogen.",
+        },
+        {
+          heading: "Diagnose: Wie wird Östrogendominanz festgestellt?",
+          text: "Eine Östrogendominanz wird durch Hormonmessung und Klinik diagnostiziert: Östradiol (E2) in der Follikelphase und Lutealphase messen. Progesteron in der Lutealphase (Tag 20–22) – der Vergleich mit Östrogen ergibt das Verhältnis. SHBG (Sexualhormon-bindendes Globulin) – niedrig bei Insulinresistenz und Androgenüberschuss. Cortisol – erhöht bei chronischem Stress als Progesteron-Antagonist. Schilddrüse (TSH, fT3): Hypothyreose beeinträchtigt die Östrogenmetabolisierung. Kein einzelner Laborwert 'beweist' Östrogendominanz – der klinische Kontext ist entscheidend.",
+        },
+        {
+          heading: "Was hilft gegen Östrogendominanz?",
+          text: "Lebensstilanpassungen mit guter Evidenz: Gewichtsreduktion bei Übergewicht – reduziert die periphere Östrogenproduktion erheblich. Leber unterstützen: Alkohol einschränken, Kreuzblütlergemüse (Brokkoli, Kohl) enthalten DIM (Diindolylmethan), das die Östrogenmetabolisierung verbessert. Stressreduktion: Cortisol senken schützt die Progesteronproduktion. Kunststoffe meiden: BPA-freie Produkte, keine Plastikflaschen mit heißem Inhalt. Ballaststoffe: binden Östrogene im Darm und verhindern deren Reabsorption. Medizinische Optionen: Mikronisiertes Progesteron (bioidentisch) zur Ergänzung, besonders in der Perimenopause.",
         },
       ],
     },
     relatedQuestions: [
-      "welche-hormone-testen-lassen",
       "progesteronmangel-symptome",
+      "wechseljahre-beschwerden-lindern",
+      "hormontest-kosten",
     ],
     relatedConditions: ["hormone", "menopause"],
     faqs: [
       {
-        question: "Kann Östrogendominanz Haarausfall verursachen?",
+        question: "Kann man Östrogendominanz im Blut messen?",
         answer:
-          "Ja. Ein Östrogen-Progesteron-Ungleichgewicht kann Haarausfall verursachen – besonders diffusen Haarausfall. Auch Androgenüberschuss (häufig bei Östrogendominanz) stimuliert Haarausfall. Ein Hormonpanel gibt Aufschluss.",
+          "Nicht mit einem einzigen Wert. Das Verhältnis von Östradiol zu Progesteron in der Lutealphase (Tag 20–22) gibt den besten Hinweis. Ein niedrig-normales Progesteron bei gleichzeitig hohem Östradiol ist aussagekräftig. Cortisol und SHBG ergänzen das Bild. Kein Labor bietet einen offiziellen 'Östrogendominanz-Test' – die Interpretation braucht den klinischen Kontext.",
+      },
+      {
+        question: "Ist Östrogendominanz dasselbe wie zu viel Östrogen?",
+        answer:
+          "Nicht unbedingt. Östrogendominanz bedeutet ein ungünstiges Östrogen-Progesteron-Verhältnis. Östrogen kann im Normbereich liegen, aber wenn Progesteron erniedrigt ist (z.B. durch anovulatorische Zyklen oder Perimenopause), entsteht trotzdem eine relative Östrogendominanz. Deshalb reicht es nicht, nur Östrogen zu messen.",
+      },
+      {
+        question: "Hängen Myome und Endometriose mit Östrogendominanz zusammen?",
+        answer:
+          "Ja. Uterusmyome und Endometriose sind östrogenabhängige Erkrankungen – sie wachsen unter Östrogeneinfluss und schrumpfen nach der Menopause. Frauen mit diesen Erkrankungen profitieren oft von Maßnahmen, die die Östrogenbelastung reduzieren: Gewichtsreduktion, Alkohol einschränken, Leber unterstützen.",
       },
     ],
   },
 
   "progesteronmangel-symptome": {
     slug: "progesteronmangel-symptome",
-    question: "Symptome bei Progesteronmangel: Was sind die Zeichen?",
-    metaTitle: "Progesteronmangel Symptome: Erkennen und verstehen",
+    question: "Progesteronmangel Symptome: Anzeichen erkennen und was hilft",
+    metaTitle: "Progesteronmangel Symptome: Erkennen, Diagnose & Behandlung",
     metaDescription:
-      "Progesteronmangel Symptome: Schlafstörungen, Angst, PMS, kurze Zyklen und mehr. Wie Progesteronmangel diagnostiziert und behandelt wird.",
+      "Progesteronmangel Symptome bei Frauen: Schlafprobleme, Zyklusstörungen, Angst und PMS. Ursachen, Diagnose und wann Progesteron sinnvoll ist.",
     answer:
-      "Progesteronmangel zeigt sich durch: Schlafstörungen (besonders Ein- und Durchschlafen), Angst und innere Unruhe, PMS, kurze Zyklen, Schmierblutungen vor der Periode, Stimmungsschwankungen und Wassereinlagerungen.",
+      "Progesteronmangel zeigt sich durch: Schlafprobleme (Progesteron hat sedierende Wirkung), starkes PMS, Zyklusverkürzung oder Schmierblutungen, Angst und innere Unruhe, Wassereinlagerungen und Brustspannung. Häufigste Ursachen: Stress, anovulatorische Zyklen und Perimenopause.",
     content: {
       sections: [
         {
-          heading: "Die Rolle von Progesteron",
-          text: "Progesteron ist das 'Beruhigungshormon'. Es hat entspannende Wirkung auf das Gehirn (bindet an GABA-Rezeptoren), fördert den Schlaf, stabilisiert die Stimmung und gleicht Östrogen aus. In der zweiten Zyklushälfte und in der Schwangerschaft ist es besonders wichtig.",
+          heading: "Was macht Progesteron im Körper?",
+          text: "Progesteron ist weit mehr als ein 'Schwangerschaftshormon'. Es hat systemische Wirkungen: Schlaffördernd – Progesteron wird im Gehirn zu Allopregnanolon umgewandelt, das GABA-Rezeptoren aktiviert und beruhigend wirkt. Anti-ängstlich – ähnlicher Mechanismus wie Benzodiazepine, aber natürlich. Natürlicher Diuretikum – Progesteron wirkt dem Aldosteron entgegen und verhindert Wassereinlagerungen. Anti-östrogenisch – schützt das Endometrium vor unkontrolliertem Wachstum. Thermogen – erhöht die Körpertemperatur nach dem Eisprung. Knochenaufbauend – fördert Osteoblasten-Aktivität. Wenn Progesteron fehlt, fallen all diese protektiven Wirkungen weg.",
         },
         {
-          heading: "Typische Symptome bei zu wenig Progesteron",
-          text: "Häufige Zeichen: Ein- und Durchschlafprobleme (Progesteron hat schlaffördernde Wirkung), Angst, innere Unruhe und Herzrasen, starkes PMS, kurze Zyklen unter 25 Tagen, Schmierblutungen vor der Periode, Stimmungsschwankungen, erhöhte Stressempfindlichkeit.",
+          heading: "Die häufigsten Progesteronmangel-Symptome",
+          text: "Schlaf: Einschlafprobleme, häufiges nächtliches Aufwachen, wenig erholsamer Schlaf – besonders in der zweiten Zyklushälfte. Stimmung: Angstzustände, innere Unruhe, Reizbarkeit, Stimmungsschwankungen – oft zyklusgebunden (PMS). Zyklus: Verkürzter Zyklus (< 24 Tage), Schmierblutungen vor der Periode, unregelmäßige Perioden. Körperlich: Wassereinlagerungen, Brustspannung, aufgeblähter Bauch vor der Periode. Allgemein: Überempfindlichkeit gegenüber Stress, schnelle Erschöpfung, Konzentrationsprobleme.",
         },
         {
-          heading: "Diagnose und Behandlung",
-          text: "Progesteron wird an Tag 19–22 des Zyklus gemessen (nach dem Eisprung). Normwerte: in der Lutealphase >5 ng/ml, optimal >10 ng/ml. Behandlung: bioidentisches Progesteron (Utrogest) ist verschreibungspflichtig und die sicherste Option. Mönchspfeffer unterstützt die körpereigene Progesteronproduktion.",
+          heading: "Ursachen von Progesteronmangel",
+          text: "Häufigste Ursachen: Anovulatorische Zyklen – kein Eisprung bedeutet kein Corpus luteum und damit kein Progesteron. In der Perimenopause werden Zyklen zunehmend anovulatorisch. Chronischer Stress – Cortisol hemmt die Progesteronproduktion direkt. Unterfunktion des Corpus luteums (Lutealinsuffizienz). Insulinresistenz und PCOS. Hashimoto und Hypothyreose – Schilddrüsenhormonmangel stört den Eisprung. Übergewicht oder Untergewicht.",
+        },
+        {
+          heading: "Diagnose: Wie wird Progesteronmangel festgestellt?",
+          text: "Progesteron muss zur richtigen Zeit gemessen werden: Tag 20–22 des Zyklus (7 Tage nach der Ovulation, Lutealphase). Zu einem anderen Zeitpunkt ist Progesteron physiologisch niedrig und eine Messung aussagelos. Orientierungswerte: < 5 ng/mL in der Lutealphase deutet auf eine Lutealinsuffizienz hin. Ergänzend: Basaltemperatur-Kurve über 2–3 Monate, LH-Messung, Östradiol.",
+        },
+        {
+          heading: "Was hilft bei Progesteronmangel?",
+          text: "Lifestyle: Stressreduktion ist der wichtigste Hebel. Schlaf priorisieren, Gewicht normalisieren. Magnesium und B6 unterstützen die Progesteronsynthese. Mönchspfeffer (Vitex agnus-castus) fördert über LH die Gelbkörperfunktion. Medizinisch: Mikronisiertes Progesteron (Utrogest, Progestan) ist bioidentisch und gut verträglich – oral eingenommen gleichzeitig schlaffördernd.",
         },
       ],
     },
     relatedQuestions: [
       "oestrogendominanz-symptome",
-      "welche-hormone-testen-lassen",
+      "wechseljahre-beschwerden-lindern",
+      "hormonersatztherapie-vor-und-nachteile",
     ],
     relatedConditions: ["hormone", "menopause"],
     faqs: [
       {
-        question: "Kann Progesteronmangel Angst verursachen?",
+        question: "Wann sollte ich Progesteron messen lassen?",
         answer:
-          "Ja. Progesteron wird im Gehirn zu Allopregnanolon umgewandelt, das die GABA-Rezeptoren stimuliert – ähnlich wie ein natürliches Beruhigungsmittel. Sinkt Progesteron, kann Angst, innere Unruhe und Reizbarkeit zunehmen. Viele Frauen berichten von deutlicher Verbesserung durch bioidentisches Progesteron.",
+          "Nur in der Lutealphase – 7 Tage nach dem Eisprung, also typischerweise Tag 20–22 eines 28-Tage-Zyklus. Eine Messung zu einem anderen Zeitpunkt ist physiologisch niedrig und klinisch nicht aussagekräftig.",
+      },
+      {
+        question: "Ist bioidentisches Progesteron besser als synthetische Gestagene?",
+        answer:
+          "Mikronisiertes Progesteron (bioidentisch) hat dieselbe Molekularstruktur wie körpereigenes Progesteron und aktiviert dieselben Rezeptoren. Es wirkt schlaffördernd und anxiolytisch. Synthetische Gestagene (Progestine) binden zwar den Progesteronrezeptor, haben aber oft auch androgene oder glukokortikoid-ähnliche Nebenwirkungen. Aktuelle Leitlinien bevorzugen für HRT mikronisiertes Progesteron.",
+      },
+      {
+        question: "Kann Hashimoto einen Progesteronmangel verursachen?",
+        answer:
+          "Ja, indirekt. Eine unbehandelte Schilddrüsenunterfunktion kann die Ovulation stören und zu anovulatorischen Zyklen führen – ohne Eisprung kein Progesteron. TSH optimal einstellen (0,5–2,5 mU/L) verbessert bei vielen Frauen die Zyklusregularität.",
       },
     ],
   },
@@ -973,43 +1011,62 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
 
   "hashimoto-schub-symptome": {
     slug: "hashimoto-schub-symptome",
-    question: "Hashimoto-Schub: Welche Symptome und was hilft?",
-    metaTitle: "Hashimoto-Schub Symptome: Erkennen und richtig reagieren",
+    question: "Hashimoto Schub: Symptome erkennen und was dann zu tun ist",
+    metaTitle: "Hashimoto Schub Symptome: Woran du ihn erkennst & was hilft",
     metaDescription:
-      "Hashimoto-Schub erkennen: Welche Symptome auftreten, warum Schübe ausgelöst werden und was Sie jetzt tun können.",
+      "Hashimoto Schub Symptome: extreme Müdigkeit, Gelenkschmerzen, Haarausfall und mehr. Was einen Schub auslöst, wie lange er dauert und was wirklich hilft.",
     answer:
-      "Ein Hashimoto-Schub kann sowohl Überfunktions- als auch Unterfunktionssymptome verursachen: Herzrasen, innere Unruhe und Erschöpfung können abwechselnd auftreten. Auslöser sind oft Infekte, Stress oder hormonelle Veränderungen.",
+      "Ein Hashimoto-Schub ist eine Phase erhöhter Autoimmunaktivität mit verstärkten Symptomen: extreme Erschöpfung, Muskel- und Gelenkschmerzen, Haarausfall, Kälteintoleranz, Konzentrationsprobleme und Stimmungstiefs. Ausgelöst wird er meist durch Infekte, starken Stress, Jodüberschuss oder hormonelle Veränderungen. Dauer: Tage bis mehrere Wochen.",
     content: {
       sections: [
         {
-          heading: "Was passiert bei einem Hashimoto-Schub?",
-          text: "Bei einem Hashimoto-Schub greift das Immunsystem die Schilddrüse verstärkt an. Dabei können Schilddrüsenhormone aus zerstörtem Gewebe ins Blut freigesetzt werden – was vorübergehend Überfunktionssymptome verursacht. Danach folgt oft eine Phase der Unterfunktion, wenn zu viel Schilddrüsengewebe beschädigt wurde.",
+          heading: "Was ist ein Hashimoto-Schub?",
+          text: "Bei Hashimoto-Thyreoiditis verläuft die Autoimmunreaktion nicht konstant – sie schwankt in ihrer Intensität. Ein 'Schub' bezeichnet eine Phase, in der die Entzündungsaktivität in der Schilddrüse zunimmt, mehr Schilddrüsengewebe angegriffen wird und die Hormonproduktion stärker beeinträchtigt ist. Diese erhöhte Aktivität zeigt sich in einem Anstieg der TPO-Antikörper und oft einem veränderten TSH-Wert – aber vor allem durch eine deutliche Verschlechterung der Symptome.",
         },
         {
-          heading: "Typische Schub-Symptome",
-          text: "Überfunktionsphase (Hashitoxikose): Herzrasen, Zittern, Schlaflosigkeit, Angst, Gewichtsverlust, Durchfall, Schweißausbrüche. Unterfunktionsphase danach: extreme Müdigkeit, Gewichtszunahme, Frieren, Verstopfung, depressive Stimmung. Manche Frauen erleben beide Phasen hintereinander innerhalb von Wochen.",
+          heading: "Typische Schub-Symptome im Überblick",
+          text: "Extreme Erschöpfung, die sich auch nach Schlaf nicht bessert – oft das erste Anzeichen. Muskelschmerzen und Gelenkschmerzen (Myalgien, Arthralgien), besonders morgens. Verstärkter Haarausfall, brüchige Nägel. Intensive Kälteintoleranz, Frieren trotz normaler Raumtemperatur. Konzentrationsprobleme und 'Brain Fog'. Stimmungstiefs, Reizbarkeit, Angstzustände. Verstopfung, aufgeblähter Bauch. Geschwollenes Gesicht, besonders morgens. Halsschmerzen oder Druckgefühl im Halsbereich.",
         },
         {
-          heading: "Was löst Schübe aus?",
-          text: "Häufige Auslöser: Infektionskrankheiten (Grippe, EBV), übermäßiger Stress, hormonelle Veränderungen (Schwangerschaft, Wechseljahre, Absetzen der Pille), zu viel Jod, extreme körperliche Belastung.",
+          heading: "Was löst einen Hashimoto-Schub aus?",
+          text: "Bekannte Trigger: Infektionen (besonders Epstein-Barr-Virus, grippale Infekte). Chronischer oder akuter psychischer Stress – Cortisol dysreguliert das Immunsystem direkt. Hormonelle Veränderungen: Schwangerschaft und Wochenbett, Perimenopause. Überschuss an anorganischem Jod – z.B. durch jodhaltiges Kontrastmittel oder hochdosierte Algenpräparate. Selenmangel. Schlafmangel und Übertraining.",
         },
         {
-          heading: "Was hilft im Schub?",
-          text: "Körper schonen und Ruhe priorisieren. Schilddrüsenwerte kontrollieren lassen – Medikamentendosis muss eventuell angepasst werden. Entzündungshemmend essen, Stress reduzieren. Bei starken Herzrasen oder anderen beunruhigenden Symptomen sofort zum Arzt.",
+          heading: "Wie lange dauert ein Hashimoto-Schub?",
+          text: "Die Dauer variiert erheblich: Leichte Schübe können wenige Tage bis zwei Wochen dauern. Mittelschwere Schübe halten typischerweise 2–6 Wochen an. Schwere Schübe mit stark erhöhten Antikörpern können mehrere Monate dauern.",
+        },
+        {
+          heading: "Was hilft bei einem Hashimoto-Schub?",
+          text: "Ruhe und Stressreduktion als wichtigste Maßnahme. L-Thyroxin-Dosis überprüfen lassen. Selen 200 µg täglich – reduziert oxidativen Stress in der Schilddrüse. Vitamin D optimieren (40–60 ng/ml). Entzündungshemmende Ernährung: wenig Zucker, viel Omega-3. Jodquellen einschränken: keine hochdosierten Algenpräparate. Schlaf priorisieren.",
         },
       ],
     },
     relatedQuestions: [
-      "wie-erkenne-ich-hashimoto",
-      "kann-hashimoto-geheilt-werden",
-      "hashimoto-ernaehrung-was-essen",
+      "hashimoto-ursachen",
+      "hashimoto-was-essen",
+      "hashimoto-blutwerte-verstehen",
     ],
-    relatedConditions: ["hashimoto"],
+    relatedConditions: ["hashimoto", "schilddruese"],
     faqs: [
+      {
+        question: "Woran erkenne ich, dass ich einen Hashimoto-Schub habe?",
+        answer:
+          "Typische Zeichen: plötzliche deutliche Verschlechterung der Erschöpfung, Muskelschmerzen, verstärkter Haarausfall und Konzentrationsprobleme – besonders wenn diese nach einem Infekt, einer Stressphase oder hormonellen Veränderungen auftreten. Im Labor: Anstieg der Anti-TPO-Antikörper und veränderte TSH/fT3-Werte im Vergleich zu Vorbefunden.",
+      },
       {
         question: "Wie lange dauert ein Hashimoto-Schub?",
         answer:
-          "Die Dauer variiert stark – von wenigen Wochen bis mehreren Monaten. Eine Hashitoxikose (Überfunktionsphase) ist meist selbstlimitierend und dauert Wochen bis 3 Monate. Danach folgt oft eine Phase der Unterfunktion. Mit ärztlicher Begleitung und Anpassung der Therapie können Schübe verkürzt werden.",
+          "Von einigen Tagen bis mehreren Monaten. Leichte Schübe klingen in 1–2 Wochen ab. Mittelschwere dauern 2–6 Wochen. Bei schweren Schüben mit stark erhöhten Antikörpern kann es Monate dauern. Mit ärztlicher Begleitung, L-Thyroxin-Anpassung und konsequenter Stressreduktion lassen sich Schübe oft verkürzen.",
+      },
+      {
+        question: "Kann man einen Hashimoto-Schub verhindern?",
+        answer:
+          "Vollständig nicht, aber Trigger reduzieren hilft: Stressmanagement, Infektprophylaxe, Selen ausreichend versorgen, Jodüberschuss meiden, Vitamin D optimieren. Viele Frauen lernen mit der Zeit, ihre persönlichen Trigger zu erkennen.",
+      },
+      {
+        question: "Sollte ich beim Hashimoto-Schub zum Arzt?",
+        answer:
+          "Ja, wenn die Symptome deutlich stärker als üblich sind, der Schub länger als 2–3 Wochen anhält, ein Druckgefühl im Halsbereich besteht oder Sie stark an Gewicht zu- oder abnehmen. Der Arzt prüft TSH, fT3 und Anti-TPO und passt ggf. die L-Thyroxin-Dosis an.",
       },
     ],
   },
@@ -1950,6 +2007,68 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
         question: "Ist Hashimoto heilbar?",
         answer:
           "Hashimoto ist derzeit nicht heilbar im Sinne einer vollständigen Remission mit Normalisierung der Antikörper. Allerdings können viele Frauen sehr gut mit der Erkrankung leben: Wenn eine Hypothyreose vorliegt, wird sie mit L-Thyroxin behandelt – die meisten Frauen sind mit der richtigen Dosis beschwerdefrei. Einige Patientinnen erleben eine natürliche Schwankung der Krankheitsaktivität. Lebensstilanpassungen (Selen, Vitamin D, Stressreduktion, ggf. glutenfrei bei Zöliakie) können den Krankheitsverlauf positiv beeinflussen.",
+      },
+    ],
+  },
+
+  "cortisol-zu-hoch-symptome": {
+    slug: "cortisol-zu-hoch-symptome",
+    question: "Cortisol zu hoch: Symptome, Ursachen und wie man es senkt",
+    metaTitle: "Cortisol zu hoch Symptome: Erkennen, Ursachen & natürlich senken",
+    metaDescription:
+      "Cortisol zu hoch Symptome: Gewichtszunahme am Bauch, Schlafprobleme, Erschöpfung und Hormonstörungen. Ursachen, Diagnose und evidenzbasierte Maßnahmen.",
+    answer:
+      "Zu hoher Cortisol (chronischer Stress) zeigt sich durch: Gewichtszunahme besonders am Bauch, Schlafprobleme (trotz Erschöpfung nicht einschlafen), Blutzuckerschwankungen, geschwächtes Immunsystem, Angstzustände, Gedächtnisprobleme und Hormonstörungen (unterdrückt Progesteron, Östrogen und Schilddrüsenhormonwirkung).",
+    content: {
+      sections: [
+        {
+          heading: "Was macht Cortisol im Körper?",
+          text: "Cortisol ist das wichtigste Stresshormon der Nebennierenrinde. Kurzfristig erhöhtes Cortisol ist lebensnotwendig: Es mobilisiert Energiereserven, schärft den Fokus und bereitet den Körper auf Kampf oder Flucht vor. Das Problem entsteht, wenn der Cortisolspiegel chronisch erhöht bleibt – über Wochen und Monate. Cortisol folgt einem natürlichen Tagesrhythmus: morgens am höchsten (6–9 Uhr), abends am niedrigsten. Bei chronischem Stress verliert dieser Rhythmus seine Amplitude: morgendlicher Anstieg fällt niedriger aus, abendlicher Abfall bleibt aus. Das Ergebnis: Morgens keine Energie, abends zu aufgedreht zum Schlafen.",
+        },
+        {
+          heading: "Symptome von chronisch erhöhtem Cortisol",
+          text: "Körperlich: Gewichtszunahme besonders im Bauch- und Nackenbereich ('Cortisolbauch'). Bluthochdruck durch Natriumretention. Erhöhter Blutzucker und Insulinresistenz. Häufige Infekte durch Immunsuppression. Schlaf und Psyche: Einschlafprobleme trotz Erschöpfung – 'wired but tired'. Nächtliches Aufwachen zwischen 2–4 Uhr. Angstzustände, Nervosität, innere Unruhe. Konzentrations- und Gedächtnisprobleme. Hormonell: Progesteronmangel – Cortisol unterdrückt die Progesteronproduktion. Hemmung der T4-zu-T3-Konversion. Niedrigere Östrogen- und Testosteronwerte. Zyklusstörungen.",
+        },
+        {
+          heading: "Ursachen von chronisch erhöhtem Cortisol",
+          text: "Häufigste Ursachen: Chronischer psychischer Stress (Arbeit, Beziehungen, finanzielle Sorgen). Schlafmangel – jede Nacht unter 6 Stunden erhöht den Cortisolspiegel messbar. Übertraining ohne ausreichende Erholung. Chronische Schmerzen und Entzündungen (inkl. aktives Hashimoto). Niedriger Blutzucker – Unterzuckerung ist ein starker Cortisolreiz. Koffein in hohen Dosen und Alkohol.",
+        },
+        {
+          heading: "Wie wird Cortisol gemessen?",
+          text: "Cortisol morgens im Serum (8 Uhr nüchtern) – Normalwert 170–540 nmol/L. 4-Punkt-Speichelcortisol (morgens, mittags, abends, nachts) – zeigt den Tagesverlauf und ob der Rhythmus intakt ist. 24-Stunden-Urin-Cortisol – für Verdacht auf Morbus Cushing. Ein einzelner Nachmittagswert ist wenig aussagekräftig, da Cortisol stark schwankt.",
+        },
+        {
+          heading: "Cortisol senken: was wirklich hilft",
+          text: "Schlaf priorisieren – keine einzelne Maßnahme senkt Cortisol so effektiv wie ausreichend guter Schlaf (7–9 Stunden). Regelmäßige moderate Bewegung (30–45 min) senkt Cortisol chronisch; intensive Belastung über 60 min erhöht es. Mindfulness und Meditation – mehrere RCT zeigen Cortisolsenkung um 10–20% nach 8-wöchiger MBSR-Praxis. Ashwagandha (300–600 mg Withanolid-Extrakt täglich) – Studien zeigen Cortisolsenkung um 15–30%. Keine langen Nahrungspausen, Koffein auf morgens beschränken.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "oestrogendominanz-symptome",
+      "progesteronmangel-symptome",
+      "hashimoto-schub-symptome",
+    ],
+    relatedConditions: ["hormone", "hashimoto"],
+    faqs: [
+      {
+        question: "Wie merke ich, ob mein Cortisol zu hoch ist?",
+        answer:
+          "Klassische Kombination: Bauchgewichtszunahme trotz Diät, Schlafprobleme (müde aber nicht einschlafen können), nachmittäglicher Energieeinbruch, häufige Infekte und Stimmungsschwankungen. Bester Test: 4-Punkt-Speichelcortisol morgens, mittags, abends, nachts. Wenn der Abendwert ebenfalls hoch ist, deutet das auf chronische Aktivierung hin.",
+      },
+      {
+        question: "Kann hohes Cortisol Hashimoto verschlimmern?",
+        answer:
+          "Ja. Chronischer Stress hemmt die T4-zu-T3-Konversion, dysreguliert das Immunsystem und kann Hashimoto-Schübe begünstigen. Außerdem steigt die Darmpermeabilität unter chronischem Stress, was die Antigenexposition erhöht. Stressreduktion ist deshalb direkte Therapieunterstützung bei Hashimoto.",
+      },
+      {
+        question: "Hilft Ashwagandha wirklich gegen hohen Cortisol?",
+        answer:
+          "Ja, mit solider Evidenz für ein pflanzliches Mittel. Mehrere randomisierte Doppelblindstudien zeigen eine Cortisolsenkung um 15–30% nach 60 Tagen (300–600 mg Withanolid-Extrakt täglich). Frauen mit Hashimoto sollten hochdosiertes Ashwagandha vorsichtig einsetzen – es kann die Schilddrüsenhormonproduktion stimulieren.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Morbus Cushing und chronisch hohem Cortisol durch Stress?",
+        answer:
+          "Morbus Cushing ist eine seltene Erkrankung mit pathologisch hohem Cortisol durch einen Tumor. Chronisch erhöhtes Cortisol durch Stress liegt im Grenzbereich des Normalen. Cushing zeigt extremere Symptome: Vollmondgesicht, Büffelhöcker, breite lila Dehnungsstreifen, Muskelabbau. Bei Verdacht: 24-Stunden-Urin-Cortisol und ACTH-Stimulationstest.",
       },
     ],
   },
