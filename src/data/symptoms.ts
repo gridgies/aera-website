@@ -27,6 +27,8 @@ export interface Symptom {
   };
   /** Optional: research findings with citations */
   research?: { finding: string; citation: string }[];
+  /** Optional: condition-specific intro paragraph shown on [condition]/[symptom] pages */
+  conditionIntros?: Record<string, string>;
   whenToSeeDoctor: string;
   naturalRemedies: string[];
   relatedConditions: string[];
@@ -57,6 +59,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "TSH", relevance: "Schilddrüsenüberfunktion (Hyperthyreose) ausschließen – verursacht ebenfalls Hitzegefühle und Schwitzen" },
       { test: "AMH", relevance: "Misst die Eierstockreserve und ist stabiler als FSH allein; früher Indikator für Perimenopause" },
     ],
+    conditionIntros: {
+      hormone:
+        "Hitzewallungen gelten als klassisches Wechseljahressymptom – doch auch ohne Perimenopause können hormonelle Dysbalancen plötzliche Hitzeschübe auslösen. Insbesondere Östrogendominanz oder starke Östrogenschwankungen im Laufe des Zyklus können den hypothalamischen Thermoregulationsmechanismus aus dem Gleichgewicht bringen. Frauen mit PMS kennen oft einen ähnlichen Effekt in der Lutealphase: Wärme, Schweißausbrüche und Herzrasen kurz vor der Periode sind hormonell bedingt und sprechen auf Progesteronausgleich an.",
+    },
     whenToSeeDoctor:
       "Wenn Hitzewallungen sehr häufig auftreten (mehr als 10-mal täglich), den Schlaf stark beeinträchtigen oder der Alltag erheblich eingeschränkt wird. Auch bei plötzlichem Beginn ohne weitere Wechseljahreszeichen sollte eine Schilddrüsenabklärung erfolgen.",
     naturalRemedies: [
@@ -114,6 +120,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Cortisol (Tagesprofil, Speichel)", relevance: "Dysreguliertes Cortisol (abends noch zu hoch) ist häufige Einschlafursache" },
       { test: "TSH + fT3", relevance: "Hyperthyreose (Herzrasen, Unruhe) oder Hypothyreose ausschließen" },
     ],
+    conditionIntros: {
+      schilddruese:
+        "Schlafstörungen bei Schilddrüsenerkrankungen sind häufig, aber oft nicht als solche erkannt. Bei Schilddrüsenüberfunktion (Hyperthyreose) sorgen erhöhte Schilddrüsenhormone für innere Unruhe, Herzrasen und Einschlafschwierigkeiten – der Körper ist im Dauerstressmodus. Bei Schilddrüsenunterfunktion (Hypothyreose) hingegen klagen Betroffene trotz Erschöpfung über nicht erholsamen Schlaf und häufiges Aufwachen. Wird die Schilddrüsenfunktion medikamentös eingestellt, bessern sich die Schlafprobleme meist deutlich.",
+    },
     whenToSeeDoctor:
       "Bei anhaltenden Schlafproblemen über mehr als 3 Wochen, wenn der Alltag stark beeinträchtigt ist oder wenn Schlafstörungen mit Herzrasen, Angstattacken oder unerklärlicher Erschöpfung kombiniert auftreten.",
     naturalRemedies: [
@@ -346,6 +356,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Cortisol (Tagesprofil)", relevance: "Chronisch erhöhtes Cortisol erschöpft Serotonin und Progesteron" },
       { test: "Vitamin D", relevance: "Vitamin D hat direkte Wirkung auf Serotoninproduktion – Mangel verursacht depressive Verstimmung" },
     ],
+    conditionIntros: {
+      schilddruese:
+        "Stimmungsschwankungen sind ein häufig unterschätztes Symptom bei Schilddrüsenerkrankungen. Die Schilddrüsenhormone T3 und T4 beeinflussen direkt die Neurotransmittersysteme im Gehirn – insbesondere Serotonin, Dopamin und Noradrenalin. Bei Unterfunktion (Hypothyreose) treten oft Antriebslosigkeit, depressive Stimmung und emotionale Stumpfheit auf; bei Überfunktion (Hyperthyreose) dominieren Reizbarkeit, Nervosität und innere Unruhe. Entscheidend: Erst wenn die Schilddrüsenwerte normalisiert sind, kann beurteilt werden, ob eine eigenständige psychische Störung vorliegt.",
+    },
     whenToSeeDoctor:
       "Bei anhaltender Niedergeschlagenheit über mehr als 2 Wochen, Angststörungen, Panikattacken oder Suizidgedanken sofort ärztliche Hilfe suchen. Auch bei starker Beeinträchtigung des Alltags immer mit einer Ärztin sprechen.",
     naturalRemedies: [
@@ -403,6 +417,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Vitamin B12", relevance: "B12-Mangel verursacht Myelinschäden und kognitive Verlangsamung – oft mit normalem Blutbild" },
       { test: "Cortisol-Tagesprofil", relevance: "Chronischer Stress schädigt Hippocampus und Gedächtnisfunktion messbar" },
     ],
+    conditionIntros: {
+      hormone:
+        "Konzentrationsprobleme und Brain Fog sind bei hormonellen Dysbalancen ein klassisches, aber wenig diskutiertes Symptom. Östrogen hat eine direkte neurotrophe Wirkung – es fördert die Bildung neuer Synapsen und schützt Neuronen im präfrontalen Kortex und Hippocampus. Fällt der Östrogenspiegel ab oder schwankt er stark (wie bei Östrogendominanz mit kurzen Östrogenspitzen), leiden kognitive Funktionen spürbar. Auch Progesteronmangel beeinträchtigt den GABA-Stoffwechsel und die Schlafqualität, was sich direkt auf die Konzentration auswirkt.",
+    },
     whenToSeeDoctor:
       "Bei plötzlich auftretenden, starken Gedächtnis- oder Konzentrationsproblemen, besonders wenn andere Symptome fehlen. Auch wenn Brain Fog stark beeinträchtigt oder sich verschlechtert. Demenz muss bei ausgeprägten Gedächtnisproblemen ab 60 ausgeschlossen werden.",
     naturalRemedies: [
@@ -460,6 +478,14 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Cortisol (Morgenwert)", relevance: "Erhöhtes nächtliches Cortisol stört den Schlaf und triggert Schwitzen" },
       { test: "Blutbild + CRP", relevance: "Infektionen und entzündliche Erkrankungen als Ursache ausschließen" },
     ],
+    conditionIntros: {
+      hashimoto:
+        "Nachtschweiß bei Hashimoto entsteht oft nicht aus dem klassischen Grund – Östrogenabfall – sondern durch die charakteristischen Hormonschübe der Erkrankung. Wenn die entzündete Schilddrüse plötzlich gespeicherte Hormone freisetzt (sogenannte Hashimoto-Schübe), kann es zu vorübergehender Hyperthyreose kommen, die sich durch Schwitzen, Herzrasen und Unruhe nachts bemerkbar macht. Betroffene, deren TSH-Werte stark schwanken, berichten häufiger über episodischen Nachtschweiß als Frauen mit stabiler Hypothyreose.",
+      schilddruese:
+        "Nachtschweiß ist ein häufiges Symptom bei Schilddrüsenüberfunktion (Hyperthyreose). Die erhöhte Stoffwechselrate – ausgelöst durch überschüssige Schilddrüsenhormone – erhöht die Körpertemperatur und aktiviert die Schweißdrüsen auch im Schlaf. Besonders bei Morbus Basedow oder bei zu hoher Levothyroxin-Dosis sind nächtliche Schweißausbrüche ein wichtiges Warnsignal, das eine Dosisanpassung nötig macht.",
+      hormone:
+        "Nachtschweiß bei hormonellen Dysbalancen entsteht durch denselben Mechanismus wie Hitzewallungen: der Östrogenspiegel schwankt oder fällt ab, was den hypothalamischen Thermoregulationsmechanismus destabilisiert. Anders als bei der Menopause passiert dies im gebärfähigen Alter häufig zyklisch – Frauen mit Östrogendominanz oder starkem PMS berichten oft von Nachtschweiß in der zweiten Zyklushälfte, wenn Progesteron relativ zur Östrogenwirkung zu niedrig ist.",
+    },
     whenToSeeDoctor:
       "Bei Nachtschweiß mehrmals pro Woche mit starker Schlafbeeinträchtigung. Sofort bei Kombination mit Fieber, ungewolltem Gewichtsverlust, Knoten oder Lymphknotenschwellung – diese Symptome erfordern sofortigen Ausschluss einer systemischen Erkrankung.",
     naturalRemedies: [
@@ -517,6 +543,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "DHEA-S", relevance: "Vorläuferhormon für Testosteron und Östrogen; sinkt mit chronischem Stress und Alter" },
       { test: "Prolaktin", relevance: "Erhöhtes Prolaktin (Medikamente, Hypophysen-Adenom) senkt Libido" },
     ],
+    conditionIntros: {
+      hashimoto:
+        "Libidoverlust bei Hashimoto ist ein häufiges, aber selten adressiertes Problem. Schilddrüsenhormone sind direkt an der Produktion von Sexualhormonen beteiligt: Bei Hypothyreose sinken Testosteron und DHEA-S, während Prolaktin ansteigt – ein Hormon, das die sexuelle Lust aktiv dämpft. Hinzu kommt die chronische Erschöpfung, die Hashimoto typischerweise begleitet. Studien zeigen, dass die sexuelle Dysfunktion bei Hashimoto-Patientinnen signifikant häufiger ist als in der Allgemeinbevölkerung und sich nach adäquater Schilddrüsentherapie in vielen Fällen bessert.",
+    },
     whenToSeeDoctor:
       "Wenn der Libidoverlust die Lebensqualität oder die Partnerschaft stark beeinträchtigt und länger als 3–6 Monate anhält. Auch bei schmerzhaftem Geschlechtsverkehr (Dyspareunie) sollte gynäkologische Abklärung erfolgen.",
     naturalRemedies: [
@@ -574,6 +604,12 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Vaginale pH-Messung", relevance: "pH >5 zeigt gestörte Mikrobiom-Balance durch Östrogenmangel" },
       { test: "Abstriche bei rezidivierenden Infektionen", relevance: "Vaginalatrophie begünstigt bakterielle Vaginose und Harnwegsinfekte" },
     ],
+    conditionIntros: {
+      hashimoto:
+        "Scheidentrockenheit wird bei Hashimoto häufig übersehen, obwohl sie eng mit dem Schilddrüsenstatus verknüpft ist. Schilddrüsenhormone regulieren die Durchblutung und die Feuchtigkeit der Schleimhäute im gesamten Körper – einschließlich der Vaginalschleimhaut. Bei Hypothyreose kommt es zu reduzierter Schleimhautdurchblutung und verminderter Lubrikation. Frauen mit suboptimal eingestelltem Hashimoto, deren TSH im oberen Normbereich liegt, berichten deutlich häufiger über urogenitale Trockenheitssymptome als gut eingestellte Patientinnen.",
+      hormone:
+        "Scheidentrockenheit im gebärfähigen Alter entsteht fast immer durch einen relativen Östrogenmangel – sei es durch Zyklusschwankungen, Stress-induzierte Unterdrückung der Östrogensynthese oder durch ein Ungleichgewicht zwischen Östrogen und Progesteron. Frauen mit ausgeprägtem PMS oder Östrogendominanz erleben diese Trockenheit oft in der zweiten Zyklushälfte. Orale Kontrazeptiva können ebenfalls eine Rolle spielen, da sie die endogene Östrogenproduktion und die Qualität des Zervixschleims beeinflussen.",
+    },
     whenToSeeDoctor:
       "Bei anhaltenden Beschwerden, Schmerzen beim Geschlechtsverkehr (Dyspareunie), wiederkehrenden Infektionen oder Blutungen nach der Menopause. Lokale Östrogentherapie ist gut verträglich und sollte nicht aus Angst herausgezögert werden.",
     naturalRemedies: [
@@ -813,6 +849,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Vitamin D (25-OH)", relevance: "Vitamin D ist essenziell für Hautbarrierefunktion und Immunmodulation" },
       { test: "Omega-3-Index (optional)", relevance: "EPA/DHA-Mangel beeinträchtigt die Hautlipidbarriere messbar" },
     ],
+    conditionIntros: {
+      schilddruese:
+        "Trockene Haut ist eines der am häufigsten genannten Symptome bei Schilddrüsenunterfunktion (Hypothyreose) und oft ein Frühzeichen der Erkrankung. Schilddrüsenhormone steuern die Talgdrüsenaktivität, die Keratinisierungsrate der Haut und die Durchblutung peripherer Gefäße. Fällt T3 ab, produziert die Haut weniger Talg und Feuchtigkeit, die Zellerneuerung verlangsamt sich – die Haut wird rau, schuppig und juckend. Charakteristisch für Hypothyreose-bedingte Hauttrockenheit ist die Kombination mit Kältegefühl, geschwollenem Gesicht und brüchigen Nägeln.",
+    },
     whenToSeeDoctor:
       "Bei extremer Hauttrockenheit, starkem Juckreiz, Hautrötungen oder wenn die Haut trotz guter Pflege sehr rau bleibt. Schilddrüsenwerte überprüfen, wenn Hauttrockenheit mit Müdigkeit, Frieren oder Gewichtszunahme kombiniert auftritt.",
     naturalRemedies: [

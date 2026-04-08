@@ -139,6 +139,15 @@ export default async function ConditionSymptomPage({ params }: Props) {
           </ul>
         </div>
 
+        {/* Condition-specific context */}
+        {symptom.conditionIntros?.[conditionSlug] && (
+          <div className="bg-surface-container rounded-2xl p-6 mb-16 border border-primary/20">
+            <p className="text-on-surface font-body leading-relaxed text-sm">
+              {symptom.conditionIntros[conditionSlug]}
+            </p>
+          </div>
+        )}
+
         {/* Detailed explanation */}
         {symptom.detailedExplanation && (
           <section className="mb-16" aria-labelledby="erklaerung-heading">

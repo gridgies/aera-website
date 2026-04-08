@@ -2072,6 +2072,291 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       },
     ],
   },
+  "hashimoto-schwangerschaft": {
+    slug: "hashimoto-schwangerschaft",
+    question: "Hashimoto und Schwangerschaft: Was muss ich beachten?",
+    metaTitle: "Hashimoto und Schwangerschaft: TSH-Werte, Risiken & was wirklich wichtig ist",
+    metaDescription:
+      "Hashimoto und Schwangerschaft: Risiken, optimale TSH-Werte, Selen und was Ärzte oft nicht sagen. Medizinisch fundierte Antworten.",
+    answer:
+      "Mit gut eingestelltem Hashimoto (TSH unter 2,5 mIU/L) sind normale Schwangerschaften die Regel. Der Schilddrüsenhormonbedarf steigt früh an, die Levothyroxin-Dosis muss angepasst werden. TSH alle 4–6 Wochen kontrollieren, Selen 200 µg täglich nehmen, nach der Geburt auf postpartale Thyreoiditis achten.",
+    relatedConditions: ["hashimoto", "schilddruese"],
+    relatedQuestions: ["wie-erkenne-ich-hashimoto", "hashimoto-blutwerte-verstehen", "kann-hashimoto-geheilt-werden"],
+    content: {
+      sections: [
+        {
+          heading: "Hashimoto und Kinderwunsch: Das Wichtigste vorab",
+          text:
+            "Hashimoto Thyreoiditis ist die häufigste Autoimmunerkrankung bei Frauen im gebärfähigen Alter und beeinflusst Fruchtbarkeit, Schwangerschaftsverlauf und kindliche Entwicklung. Die gute Nachricht: Mit optimaler Einstellung sind normale Schwangerschaften und gesunde Kinder die Regel, nicht die Ausnahme. Der Schlüssel liegt in einem TSH-Zielbereich unter 2,5 mIU/L – idealerweise bereits vor der Konzeption.",
+        },
+        {
+          heading: "Welcher TSH-Wert ist in der Schwangerschaft normal?",
+          text:
+            "Die Empfehlungen der Deutschen Gesellschaft für Endokrinologie sind eindeutig: Im 1. Trimester sollte TSH unter 2,5 mIU/L liegen, im 2. und 3. Trimester unter 3,0 mIU/L. Viele Labore geben noch den alten Normbereich (0,4–4,0) an – das ist für Schwangere mit Hashimoto zu weit. Ein TSH über 2,5 in der Frühschwangerschaft ist mit erhöhtem Risiko für Fehlgeburten, Frühgeburt und Entwicklungsstörungen des Kindes assoziiert.",
+        },
+        {
+          heading: "Beeinflusst Hashimoto die Fruchtbarkeit?",
+          text:
+            "Ja. Frauen mit Hashimoto haben eine erhöhte Rate an unerfülltem Kinderwunsch, Zyklusstörungen und Frühaborten – selbst wenn TSH im Normbereich liegt. Anti-TPO-Antikörper stören möglicherweise die Einnistung des Embryos. Studien zeigen, dass Levothyroxin-Therapie bei Frauen mit euthyreotem Hashimoto und Kinderwunsch die Schwangerschaftsrate verbessern kann. Selen (200 µg täglich) senkt Anti-TPO-Antikörper und verbessert die Schilddrüsenfunktion.",
+        },
+        {
+          heading: "Verschlimmert sich Hashimoto in der Schwangerschaft?",
+          text:
+            "Der Verlauf ist komplex: In der Schwangerschaft dämpft das Immunsystem ab, was Hashimoto vorübergehend ruhigerstellt – Anti-TPO-Antikörper sinken oft. Nach der Geburt schlägt das Immunsystem zurück: Die sogenannte postpartale Thyreoiditis betrifft 5–10 % aller Frauen, bei Hashimoto-Patientinnen deutlich häufiger. Verlauf: erst Überfunktion (Herzrasen, Unruhe), dann Unterfunktion (Erschöpfung, depressive Stimmung). Etwa 20–30 % entwickeln eine dauerhafte Hypothyreose.",
+        },
+        {
+          heading: "Konkrete Handlungsempfehlungen",
+          text:
+            "Vor der Konzeption: TSH unter 2,5 optimieren, Anti-TPO-Antikörper kennen, Selen- und Eisenstatus überprüfen. In der Schwangerschaft: TSH alle 4–6 Wochen messen, Levothyroxin-Dosis frühzeitig anpassen, Jod-Supplementierung (150–200 µg täglich) mit dem Arzt besprechen. Nach der Geburt: Engmaschige TSH-Kontrollen, auf postpartale Thyreoiditis achten. Ein Endokrinologe sollte begleitend einbezogen werden.",
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Muss ich Levothyroxin in der Schwangerschaft erhöhen?",
+        answer:
+          "Fast immer ja. Der Schilddrüsenhormonbedarf steigt in der Frühschwangerschaft um 25–50 %, weil Östrogen TBG erhöht und die Plazenta T4 abbaut. Sobald der Schwangerschaftstest positiv ist, Arzt kontaktieren und Dosis anpassen.",
+      },
+      {
+        question: "Kann ich bei Hashimoto stillen?",
+        answer:
+          "Ja, Stillen ist bei Hashimoto problemlos möglich. Levothyroxin ist in der Stillzeit sicher. Selen kann weitergenommen werden. TSH-Kontrollen bleiben wichtig.",
+      },
+      {
+        question: "Sollte ich bei Hashimoto mit dem Kinderwunsch warten?",
+        answer:
+          "Nur so lange, bis TSH stabil unter 2,5 mIU/L liegt. Wenn Hashimoto gut eingestellt ist, gibt es keinen medizinischen Grund zu warten. Eine unkontrollierte Hypothyreose hingegen erhöht das Risiko für Fehlgeburt und sollte zuerst behandelt werden.",
+      },
+    ],
+  },
+  "oestrogen-mangel-symptome": {
+    slug: "oestrogen-mangel-symptome",
+    question: "Östrogenmangel Symptome: Woran erkenne ich einen zu niedrigen Östrogenspiegel?",
+    metaTitle: "Östrogenmangel Symptome: Ursachen, Blutwerte & was wirklich hilft",
+    metaDescription:
+      "Östrogenmangel Symptome erkennen: Hitzewallungen, Scheidentrockenheit, Stimmungsschwankungen und mehr. Ursachen, Diagnose und was wirklich hilft.",
+    answer:
+      "Typische Östrogenmangel-Symptome sind Hitzewallungen, Nachtschweiß, Scheidentrockenheit, Schlafstörungen, Stimmungsschwankungen, trockene Haut und Konzentrationsprobleme. Diagnose über Östradiol (E2) und FSH im Blut. Behandlung: HRT in den Wechseljahren, Ursachenbehandlung im gebärfähigen Alter.",
+    relatedConditions: ["menopause", "hormone"],
+    relatedQuestions: ["oestrogendominanz-symptome", "progesteronmangel-symptome", "welche-hormone-testen-lassen"],
+    content: {
+      sections: [
+        {
+          heading: "Was ist Östrogenmangel?",
+          text:
+            "Östrogen wirkt auf nahezu jedes Organ – von Gehirn und Knochen bis zu Haut, Herz und Vaginalschleimhaut. Östrogenmangel entsteht nicht nur in den Wechseljahren: Auch chronischer Stress, starke sportliche Belastung, Untergewicht, Essstörungen und bestimmte Medikamente (z. B. die Pille oder GnRH-Analoga) können den Östrogenspiegel senken.",
+        },
+        {
+          heading: "Die häufigsten Symptome bei Östrogenmangel",
+          text:
+            "Vasomotorisch: Hitzewallungen und Nachtschweiß. Urogenital: Scheidentrockenheit, Schmerzen beim Sex, häufige Harnwegsinfekte, Blasenschwäche. Psychisch: Stimmungsschwankungen, Reizbarkeit, Angst, depressive Verstimmung, Konzentrationsprobleme. Schlaf: Einschlafschwierigkeiten, häufiges Aufwachen. Körperlich: Trockene Haut, Haarausfall, Gelenkschmerzen, Herzrasen, erhöhtes Osteoporoserisiko bei Langzeitmangel. Zyklus: Unregelmäßige Menstruation, ausbleibende Periode.",
+        },
+        {
+          heading: "Östrogenmangel vs. Östrogendominanz",
+          text:
+            "Paradoxerweise können beide Zustände gleichzeitig existieren. Östrogenmangel: absolut niedrige Östrogenspiegel. Östrogendominanz: Östrogen relativ zu Progesteron zu hoch – auch wenn beide Werte absolut niedrig sind. Viele Perimenopause-Frauen erleben beides abwechselnd: Phasen mit Östrogenmangel-Symptomen wechseln mit Phasen von Östrogendominanz.",
+        },
+        {
+          heading: "Diagnose: Relevante Blutwerte",
+          text:
+            "Östradiol (E2): Hauptindikator; postmenopausale Werte liegen unter 20 pg/ml. FSH: Erhöhtes FSH (>25 IU/L) zeigt, dass die Eierstöcke zu wenig Östrogen produzieren. AMH: Gibt Auskunft über Eierstockreserve; fällt vor FSH/LH ab. SHBG: Beeinflusst die Verfügbarkeit von freiem Östrogen. Tipp: Blutabnahme idealerweise am Zyklustag 3–5 für vergleichbare Werte.",
+        },
+        {
+          heading: "Was hilft bei Östrogenmangel?",
+          text:
+            "In den Wechseljahren: Hormonersatztherapie (HRT) mit bio-identischem Östrogen ist die wirksamste Therapie. Lokale Östrogentherapie (Creme, Zäpfchen) hilft gezielt bei urogenitalen Symptomen ohne systemische Risiken. Im gebärfähigen Alter: Ursache behandeln (Stress reduzieren, Gewicht normalisieren, Pille überdenken). Phytoöstrogene (Soja-Isoflavone, Rotklee) können mild unterstützen.",
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Kann Östrogenmangel auch in jungen Jahren auftreten?",
+        answer:
+          "Ja. Primäre Ovarialinsuffizienz (POI) kann schon vor dem 40. Lebensjahr auftreten. Auch intensiver Sport, Essstörungen, chronischer Stress und bestimmte Medikamente senken Östrogen. Hypothalamus-Amenorrhö ist eine häufige Ursache bei Sportlerinnen.",
+      },
+      {
+        question: "Wie unterscheide ich Östrogenmangel von normaler Müdigkeit?",
+        answer:
+          "Typisch für Östrogenmangel ist die Kombination: Müdigkeit plus Hitzewallungen, Scheidentrockenheit, Stimmungsveränderungen oder Schlafstörungen. Ein Bluttest (FSH, Östradiol) liefert Klarheit.",
+      },
+      {
+        question: "Ist Östrogenmangel dasselbe wie Wechseljahre?",
+        answer:
+          "Die Menopause ist die häufigste Ursache, aber nicht die einzige. Östrogenmangel kann auch durch andere Faktoren entstehen. Die Behandlung richtet sich nach der jeweiligen Ursache.",
+      },
+    ],
+  },
+  "insulin-resistenz-symptome": {
+    slug: "insulin-resistenz-symptome",
+    question: "Insulinresistenz Symptome bei Frauen: Erkennen, bevor es zu Diabetes wird",
+    metaTitle: "Insulinresistenz Symptome bei Frauen: Diagnose, Ursachen & was hilft",
+    metaDescription:
+      "Insulinresistenz Symptome: Bauchfett trotz Diät, Heißhunger, Erschöpfung nach Mahlzeiten und mehr. Ursachen, Diagnose und was wirklich hilft.",
+    answer:
+      "Typische Symptome der Insulinresistenz: Bauchfett trotz Diät, Energie-Einbrüche nach Mahlzeiten, Heißhunger auf Süßes, Brain Fog, Menstruationsstörungen. Diagnose: Nüchtern-Insulin + HOMA-IR (muss explizit angefordert werden). Effektivste Behandlung: Low-Carb-Ernährung und Krafttraining.",
+    relatedConditions: ["hormone", "menopause"],
+    relatedQuestions: ["wechseljahre-gewichtszunahme-vermeiden", "cortisol-zu-hoch-symptome", "welche-blutwerte-bei-muedigkeit"],
+    content: {
+      sections: [
+        {
+          heading: "Was ist Insulinresistenz?",
+          text:
+            "Insulinresistenz bedeutet, dass die Körperzellen weniger empfindlich auf Insulin reagieren. Die Bauchspeicheldrüse kompensiert mit mehr Insulin – der Blutzucker bleibt zunächst normal, aber der chronisch hohe Insulinspiegel fördert Fetteinlagerung (besonders am Bauch), schädigt Gefäße und treibt Entzündungsprozesse an. Insulinresistenz ist das Vorstadium von Typ-2-Diabetes und Metabolischem Syndrom – und bei Frauen deutlich häufiger als offiziell bekannt.",
+        },
+        {
+          heading: "Typische Symptome der Insulinresistenz",
+          text:
+            "Gewichtszunahme trotz Diät: Hohe Insulinspiegel blockieren die Fettverbrennung und fördern Bauchfett. Energie-Einbrüche nach Mahlzeiten: Schläfrigkeit 1–2 Stunden nach kohlenhydratreichen Speisen. Heißhunger auf Süßes nachmittags. Acanthosis nigricans: dunkle, samtige Hautflecken in Achseln oder Nacken. Brain Fog durch Glukoseverwertungsstörung. Menstruationsstörungen durch erhöhte Androgenproduktion.",
+        },
+        {
+          heading: "Insulinresistenz und hormonelle Dysbalancen",
+          text:
+            "Insulin und Sexualhormone stehen in enger Wechselwirkung: Chronisch hohe Insulinspiegel stimulieren die Eierstöcke zur Androgenproduktion – das unterdrückt den Eisprung und kann zu PCOS, Akne und Haarausfall führen. In der Perimenopause verstärkt der Östrogenabfall die Insulinresistenz – weshalb viele Frauen erstmals in dieser Phase Gewichtsprobleme entwickeln.",
+        },
+        {
+          heading: "Diagnose: Diese Blutwerte brauchen Sie",
+          text:
+            "Nüchtern-Insulin + Nüchtern-Glukose → HOMA-IR (Insulin × Glukose / 22,5); HOMA-IR über 2,0 deutet auf Insulinresistenz hin. HbA1c: unter 5,7 % normal, 5,7–6,4 % Prädiabetes. Nüchternglukose: 100–125 mg/dl = Prädiabetes. Triglyceride erhöht (>150 mg/dl) + niedriges HDL = Metabolisches Syndrom. Wichtig: Standard-Blutbild zeigt keine Insulinresistenz. Nüchtern-Insulin muss explizit angefordert werden.",
+        },
+        {
+          heading: "Was hilft bei Insulinresistenz?",
+          text:
+            "Ernährung ist die wirksamste Maßnahme: Reduktion schnell resorbierbarer Kohlenhydrate, mehr Ballaststoffe, Eiweiß und gesunde Fette. Low-Carb und mediterrane Ernährung verbessern die Insulinsensitivität nachweislich. Krafttraining ist besonders effektiv – Muskeln sind der wichtigste Insulinverbraucher. Schon 2–3 Einheiten pro Woche senken HOMA-IR messbar.",
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Kann Insulinresistenz ohne Übergewicht auftreten?",
+        answer:
+          "Ja. Sogenannte TOFI-Personen (Thin Outside, Fat Inside) haben normales Körpergewicht, aber erhöhtes viszerales Fett und Insulinresistenz. Besonders bei Frauen mit PCOS tritt Insulinresistenz oft unabhängig vom Gewicht auf.",
+      },
+      {
+        question: "Ist Insulinresistenz reversibel?",
+        answer:
+          "Ja, in frühen Stadien vollständig. Bereits 3–6 Monate konsequente Ernährungsumstellung und regelmäßiges Krafttraining können HOMA-IR normalisieren.",
+      },
+      {
+        question: "Welcher Arzt ist bei Insulinresistenz zuständig?",
+        answer:
+          "Primär Hausarzt oder Internist. Bei PCOS-Zusammenhang: Gynäkologin. Bei ausgeprägter Insulinresistenz: Diabetologe oder Endokrinologe.",
+      },
+    ],
+  },
+  "gelenkschmerzen-wechseljahre": {
+    slug: "gelenkschmerzen-wechseljahre",
+    question: "Gelenkschmerzen in den Wechseljahren: Warum Östrogen Ihre Gelenke schützt",
+    metaTitle: "Gelenkschmerzen in den Wechseljahren: Ursachen, Östrogen & was hilft",
+    metaDescription:
+      "Gelenkschmerzen in den Wechseljahren: Ursachen, hormoneller Zusammenhang und was wirklich hilft. Warum Östrogen die Gelenke schützt.",
+    answer:
+      "50–60 % der Frauen in der Perimenopause leiden unter neuen Gelenkschmerzen. Östrogen schützt Knorpel und hemmt Entzündungen – sein Abfall lässt Entzündungsmarker in Gelenken ansteigen. Typisch: wandernde Schmerzen an Fingern, Knien, Schultern, kein erhöhter Rheumafaktor. HRT, Krafttraining und Omega-3 helfen nachweislich.",
+    relatedConditions: ["menopause", "hormone"],
+    relatedQuestions: ["wechseljahre-beschwerden-lindern", "oestrogen-mangel-symptome", "hormonersatztherapie-vor-und-nachteile"],
+    content: {
+      sections: [
+        {
+          heading: "Warum Gelenkschmerzen in den Wechseljahren so häufig sind",
+          text:
+            "Gelenkschmerzen sind eines der häufigsten, aber seltensten diskutierten Wechseljahressymptome. Studien zeigen, dass 50–60 % der Frauen in der Perimenopause über neue oder verstärkte Gelenkbeschwerden klagen – oft ohne vorherige Gelenkkrankheit. Der Zusammenhang ist direkt: Östrogen hat ausgeprägte anti-inflammatorische und gelenkschützende Eigenschaften. Es reguliert die Synovialflüssigkeit, hemmt entzündliche Zytokine und schützt Knorpel vor Abbau.",
+        },
+        {
+          heading: "Welche Gelenke sind typischerweise betroffen?",
+          text:
+            "Fingergelenke: Schwellung, Morgensteifigkeit der kleinen Fingergelenke. Knie und Hüfte: besonders beim Aufstehen oder nach längerem Sitzen. Wirbelsäule und Rücken: diffuse Schmerzen ohne strukturelle Ursache. Schultergelenke: Frozen Shoulder kommt in der Perimenopause häufiger vor. Charakteristisch: Schmerzen sind oft wandernd, variieren mit dem Hormonstatus.",
+        },
+        {
+          heading: "Östrogen und Knorpelschutz: Der Mechanismus",
+          text:
+            "Östrogenrezeptoren wurden in Chondrozyten (Knorpelzellen), Synovialmembran und Knochen nachgewiesen. Östrogen hemmt Matrix-Metalloproteasen (Enzyme, die Knorpel abbauen), fördert die Kollagensynthese und wirkt entzündungshemmend in der Gelenkkapsel. Wenn Östrogen abfällt, steigen entzündliche Zytokine (IL-1, TNF-alpha) an – das erklärt auch, warum viele Frauen in der Perimenopause von Sehnenentzündungen berichten.",
+        },
+        {
+          heading: "Diagnose: Gelenkschmerzen richtig einordnen",
+          text:
+            "Ausschluss notwendig: Rheumafaktor, Anti-CCP-Antikörper (rheumatoide Arthritis), ANA (Lupus), CRP und BSG (Entzündungsmarker), Harnsäure (Gicht), TSH (Hypothyreose verursacht ebenfalls Gelenkschmerzen). Hormonal bedingt: typischerweise normaler Rheumafaktor, kein erhöhtes CRP, symmetrisch, wandernd, zeitlich mit Hormonveränderungen korreliert.",
+        },
+        {
+          heading: "Was wirklich hilft",
+          text:
+            "Hormonersatztherapie (HRT): Studien zeigen deutliche Reduktion der Gelenkbeschwerden. Krafttraining: Stärkt gelenkstabilisierende Muskulatur, verbessert Gelenkschmierung. Omega-3-Fettsäuren (EPA/DHA, 2–3 g täglich): Hemmen entzündliche Prostaglandine, klinisch belegt. Kollagen-Peptide (10 g täglich): Mehrere randomisierte Studien zeigen Schmerz- und Funktionsverbesserung bei Arthrose.",
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Können Gelenkschmerzen wirklich durch Wechseljahre entstehen?",
+        answer:
+          "Ja. Östrogenrezeptoren sitzen im Knorpel und in der Gelenkkapsel. Der Östrogenabfall erhöht Entzündungsmarker in Gelenken messbar. Viele Frauen berichten, dass ihre Gelenkschmerzen nach Beginn einer HRT nachlassen.",
+      },
+      {
+        question: "Wann sollte ich wegen Gelenkschmerzen zum Arzt?",
+        answer:
+          "Bei Schwellung, Rötung und Wärme an einem Gelenk, Morgensteifigkeit über 30 Minuten, unsymmetrischen Schmerzen oder stark eingeschränkter Funktion. Rheuma muss ausgeschlossen werden.",
+      },
+      {
+        question: "Hilft Kollagen bei Wechseljahres-Gelenkschmerzen?",
+        answer:
+          "Hydrolysiertes Kollagen (10 g täglich) zeigt in mehreren randomisierten Studien eine Reduktion von Gelenkschmerzen und Verbesserung der Funktion. Es kann die hormonelle Therapie ergänzen.",
+      },
+    ],
+  },
+  "menopause-depression": {
+    slug: "menopause-depression",
+    question: "Depression in den Wechseljahren: Hormonell oder psychisch?",
+    metaTitle: "Depression in den Wechseljahren: Ursachen, Behandlung & wann zum Arzt",
+    metaDescription:
+      "Depressive Verstimmung in den Wechseljahren: Wann ist es Östrogenmangel, wann echte Depression? Symptome, Ursachen und Behandlung.",
+    answer:
+      "Frauen in der Perimenopause haben ein 2–4-fach erhöhtes Risiko für Depression, weil Östrogen direkte antidepressive Wirkung hat. Östrogen-Therapie ist bei hormonal bedingter Stimmungsveränderung so wirksam wie niedrig dosierte Antidepressiva. Bei klinischer Depression (täglich über 2 Wochen) und Suizidgedanken sofort ärztliche Hilfe suchen.",
+    relatedConditions: ["menopause", "hormone"],
+    relatedQuestions: ["perimenopause-angst-panikattacken", "oestrogen-mangel-symptome", "hormonersatztherapie-vor-und-nachteile"],
+    content: {
+      sections: [
+        {
+          heading: "Warum Wechseljahre depressive Symptome auslösen können",
+          text:
+            "Die Perimenopause ist neurobiologisch eine der vulnerabelsten Phasen im Leben einer Frau. Östrogen hat direkte antidepressive Wirkung: Es erhöht Serotoninrezeptor-Dichte und -Sensitivität, stimuliert die Dopaminsynthese und schützt präfrontalen Kortex und Hippocampus. Wenn Östrogen fällt und schwankt, entstehen messbare neurochemische Veränderungen. Studien zeigen: Frauen in der Perimenopause haben ein 2–4-fach erhöhtes Risiko für neue depressive Episoden – unabhängig von psychiatrischer Vorgeschichte.",
+        },
+        {
+          heading: "Wechseljahres-Stimmungstief vs. klinische Depression",
+          text:
+            "Hormonal bedingt: eng mit Hormonschwankungen korreliert, begleitet von körperlichen Wechseljahressymptomen, reagiert gut auf Östrogen. Klinische Depression: anhaltend (täglich über 2 Wochen), keine hormonelle Korrelation, Gefühl von Hoffnungslosigkeit, reagiert auf Antidepressiva. Wichtig: Beide können gleichzeitig vorliegen, und unbehandelte Schlafstörungen durch Hitzewallungen können eine echte Depression auslösen.",
+        },
+        {
+          heading: "Die Rolle von Schlafstörungen",
+          text:
+            "Teufelskreis: Hitzewallungen stören den Schlaf, Schlafmangel lässt Serotonin abfallen, die Stimmung verschlechtert sich, das verstärkt Hitzewallungen. Studien zeigen, dass die Behandlung von Schlafstörungen allein depressive Symptome in der Perimenopause deutlich verbessert. Eine Hormontherapie für die Schlafqualität kann der erste Schritt gegen Depression sein.",
+        },
+        {
+          heading: "Behandlung: Hormone, Antidepressiva oder beides?",
+          text:
+            "Östrogentherapie ist in der Perimenopause nachweislich wirksam bei Stimmungsveränderungen – besonders wenn körperliche Wechseljahressymptome vorliegen. SSRI/SNRI bei klinischer Depression oder wenn HRT nicht möglich ist. Einige SNRI (z. B. Venlafaxin) helfen gleichzeitig bei Hitzewallungen. Psychotherapie (KVT) ist besonders effektiv in Kombination mit medikamentöser Therapie.",
+        },
+        {
+          heading: "Wann sofort Hilfe suchen",
+          text:
+            "Sofortige Hilfe bei Suizidgedanken oder wenn der Alltag nicht mehr bewältigbar ist. Krisentelefon: Telefonseelsorge 0800 111 0 111 (kostenlos, 24/7). Depression in den Wechseljahren ist eine Erkrankung, keine Schwäche – und besonders gut behandelbar, wenn der hormonelle Kontext erkannt wird.",
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Kann eine Hormontherapie meine Stimmung in den Wechseljahren verbessern?",
+        answer:
+          "Ja, wenn die Stimmungsveränderungen hormonal bedingt sind. Östrogen ist kein Antidepressivum, aber es behandelt die neurobiologische Ursache. Studien zeigen: Bei Perimenopause-Frauen ist Östrogen so wirksam wie niedrig dosierte Antidepressiva für milde bis mittelschwere Depression.",
+      },
+      {
+        question: "Muss ich Antidepressiva nehmen, wenn ich mich depressiv fühle?",
+        answer:
+          "Nicht zwingend. Mild-moderate Symptome in der Perimenopause sprechen oft auf Östrogentherapie, verbesserte Schlafqualität und Psychotherapie an. Antidepressiva sind bei klinischer Depression indiziert oder wenn Hormone nicht ausreichen.",
+      },
+      {
+        question: "Wie lange dauern depressive Symptome in den Wechseljahren?",
+        answer:
+          "Bei hormonal bedingter Verstimmung bessert sich die Stimmung oft innerhalb von Wochen nach Beginn einer Östrogentherapie. Die Perimenopause dauert durchschnittlich 4–10 Jahre; danach stabilisiert sich der Hormonspiegel auf postmenopausalem Niveau.",
+      },
+    ],
+  },
 };
 
 export const FRAGEN_LIST = Object.values(FRAGEN_DATA);
