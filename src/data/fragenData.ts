@@ -1786,7 +1786,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       ],
     },
     relatedQuestions: [
-      "schilddruese-werte-verstehen",
+      "schilddruesenwerte-verstehen",
       "hashimoto-blutwerte-verstehen",
       "tsh-wert-tabelle",
     ],
@@ -1983,7 +1983,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
     },
     relatedQuestions: [
       "hashimoto-was-essen",
-      "schilddruese-werte-verstehen",
+      "schilddruesenwerte-verstehen",
       "selen-hashimoto-dosierung",
     ],
     relatedConditions: ["hashimoto", "schilddruese"],
