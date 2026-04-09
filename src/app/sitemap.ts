@@ -59,6 +59,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    // Static guide pages (override dynamic [condition]/[symptom] routes)
+    {
+      url: `${BASE_URL}/hashimoto/ursachen`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/hashimoto/ernaehrung`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/schilddruese/werte`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   // Condition pillar pages

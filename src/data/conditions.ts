@@ -18,6 +18,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     name: "Menopause",
     nameLong: "Menopause & Perimenopause",
     topicName: "Menopause",
+    metaTitle: "Wechseljahre & Menopause: Symptome erkennen & natürlich behandeln",
     ctaQuestion: "Leidest du unter Menopause-Symptomen?",
     aliases: ["Wechseljahre", "Klimakterium", "Perimenopause", "Postmenopause"],
     description:
@@ -72,6 +73,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     name: "Schilddrüse",
     nameLong: "Schilddrüsenerkrankungen",
     topicName: "Schilddrüsenerkrankungen",
+    metaTitle: "Schilddrüse: Unterfunktion, Werte verstehen & Beschwerden behandeln",
     ctaQuestion: "Hast du Beschwerden mit deiner Schilddrüse?",
     aliases: [
       "Schilddrüsenunterfunktion",
@@ -102,6 +104,7 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     name: "Hormone",
     nameLong: "Hormonelle Balance bei Frauen",
     topicName: "Hormonstörungen",
+    metaTitle: "Weibliche Hormone: Dysbalancen erkennen, testen & ins Gleichgewicht bringen",
     ctaQuestion: "Leidest du unter hormonellen Beschwerden?",
     aliases: [
       "Hormonstörung",

@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { METHODOLOGY_STEPS, SCIENCE_PRINCIPLES } from "@/lib/constants";
+import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 
 import type { Metadata } from "next";
+
+const BASE_URL = "https://www.aerahealth.de";
 
 export const metadata: Metadata = {
   title: "Wissenschaftliche Methodik – Evidenzbasierte Frauengesundheit",
@@ -19,7 +22,20 @@ export const metadata: Metadata = {
 };
 
 export default function WissenschaftPage() {
+  const today = new Date().toISOString().split("T")[0];
+  const breadcrumbs = [
+    { name: "Startseite", url: BASE_URL },
+    { name: "Wissenschaft & Methodik", url: `${BASE_URL}/wissenschaft` },
+  ];
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbSchema(breadcrumbs))} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(medicalWebPageSchema({
+        name: "Wissenschaftliche Methodik – Evidenzbasierte Frauengesundheit",
+        description: "Wie Aera Health evidenzbasierte Medizin, aktuelle Leitlinien und Hormonforschung vereint.",
+        url: `${BASE_URL}/wissenschaft`,
+        dateModified: today,
+      }))} />
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[716px] flex items-center px-8 py-20 max-w-7xl mx-auto">
@@ -245,5 +261,6 @@ export default function WissenschaftPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

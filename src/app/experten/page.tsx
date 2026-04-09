@@ -3,6 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 
+const BASE_URL = "https://www.aerahealth.de";
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Startseite", item: BASE_URL },
+    { "@type": "ListItem", position: 2, name: "Experten", item: `${BASE_URL}/experten` },
+  ],
+});
+
 const FILTER_OPTIONS = [
   { value: "all", label: "Alle Bereiche" },
   { value: "gynaekologie", label: "Gynäkologie" },
@@ -54,6 +64,8 @@ export default function ExpertenPage() {
       : EXPERTS.filter((e) => e.specialty === activeFilter);
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbSchema }} />
     <div className="min-h-screen">
       {/* Hero Header */}
       <div className="pt-32 pb-0 px-8 max-w-7xl mx-auto">
@@ -211,5 +223,6 @@ export default function ExpertenPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }
