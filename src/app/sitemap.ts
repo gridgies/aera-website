@@ -73,10 +73,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/hashimoto/trockene-haut`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
       url: `${BASE_URL}/schilddruese/werte`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    // Static fragen overrides (richer content than dynamic template)
+    {
+      url: `${BASE_URL}/fragen/tsh-wert-tabelle`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
   ];
 

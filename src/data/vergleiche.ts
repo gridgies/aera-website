@@ -45,10 +45,10 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionBSlug: "menopause",
     conditionAName: "Hashimoto",
     conditionBName: "Menopause",
-    title: "Hashimoto oder Menopause? So erkennst du den Unterschied",
-    metaTitle: "Hashimoto oder Menopause? Symptome, Unterschiede & Diagnose",
+    title: "Hashimoto oder Wechseljahre? So erkennst du den Unterschied",
+    metaTitle: "Hashimoto oder Wechseljahre? Symptome unterscheiden & richtig testen [2026]",
     metaDescription:
-      "Hashimoto und Menopause haben viele gemeinsame Symptome – Müdigkeit, Haarausfall, Gewichtszunahme. Wie du sie unterscheidest und welche Labortests wirklich helfen.",
+      "Müdigkeit, Haarausfall, Gewichtszunahme – Hashimoto oder Menopause? Diese Tabelle zeigt die Unterschiede & welche Labortests Klarheit bringen.",
     intro:
       "Müdigkeit, Haarausfall, Schlafprobleme, Stimmungsschwankungen, Gewichtszunahme – diese Symptome können sowohl auf Hashimoto Thyreoiditis als auch auf die Perimenopause bzw. Menopause hinweisen. Viele Frauen zwischen 35 und 55 Jahren stellen sich diese Frage, und sie ist berechtigt: Die Symptome überlappen sich so stark, dass selbst erfahrene Ärztinnen ohne Laborwerte keine sichere Diagnose stellen können. Dieses Begleitdokument zeigt dir, welche Anzeichen für welche Erkrankung sprechen – und welche Tests du brauchst, um Klarheit zu bekommen.",
     confusionNote:
@@ -299,9 +299,9 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Hashimoto",
     conditionBName: "Schilddrüsenunterfunktion",
     title: "Hashimoto oder Schilddrüsenunterfunktion? Der wichtige Unterschied",
-    metaTitle: "Hashimoto oder Schilddrüsenunterfunktion? Ursachen & Unterschiede erklärt",
+    metaTitle: "Hashimoto vs. Schilddrüsenunterfunktion: Der entscheidende Unterschied erklärt",
     metaDescription:
-      "Hashimoto ist eine Autoimmunerkrankung, Schilddrüsenunterfunktion eine Funktionsstörung. Beide hängen zusammen – aber die Behandlung unterscheidet sich. Alles erklärt.",
+      "Hashimoto ist eine Autoimmunerkrankung, Hypothyreose eine Funktionsstörung – aber Hashimoto ist die häufigste Ursache. Symptome, Diagnose & Behandlung im Vergleich.",
     intro:
       "Viele Frauen bekommen die Diagnose 'Schilddrüsenunterfunktion' und fragen sich: Ist das dasselbe wie Hashimoto? Die kurze Antwort: Nein – aber Hashimoto ist in Deutschland die häufigste Ursache einer Schilddrüsenunterfunktion. Dieser Unterschied ist klinisch wichtig, denn er entscheidet über die Behandlung, den Verlauf und darüber, welche weiteren Maßnahmen sinnvoll sind.",
     confusionNote:

@@ -24,7 +24,10 @@ const STATIC = [
   // Guide pages (static overrides of dynamic routes)
   "/hashimoto/ursachen",
   "/hashimoto/ernaehrung",
+  "/hashimoto/trockene-haut",
   "/schilddruese/werte",
+  // Fragen static overrides
+  "/fragen/tsh-wert-tabelle",
 ];
 
 // ─── Condition pillar pages ───────────────────────────────────────────────────
