@@ -7,8 +7,54 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
+  // ─── Q1: Age (new) ───────────────────────────────────────────────────────────
+  // Scores are all zero; the quizEngine reads ageGroup to apply a P-multiplier.
   {
     id: 1,
+    question: "Wie alt bist du?",
+    subtitle: "Damit wir dein Ergebnis richtig einordnen können – dein Alter ist entscheidend.",
+    options: [
+      {
+        icon: "school",
+        label: "15–24 Jahre",
+        description: "Du bist jung, dein Hormonhaushalt entwickelt sich noch.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+        ageGroup: "young",
+      },
+      {
+        icon: "work",
+        label: "25–34 Jahre",
+        description: "Die Dreißiger – Hormone im Aufbau, erste Zyklusveränderungen möglich.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+        ageGroup: "thirties",
+      },
+      {
+        icon: "family_restroom",
+        label: "35–44 Jahre",
+        description: "Frühe hormonelle Veränderungen, Perimenopause kann beginnen.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+        ageGroup: "early_peri",
+      },
+      {
+        icon: "spa",
+        label: "45–54 Jahre",
+        description: "Die klassische Perimenopause- und Menopause-Phase.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+        ageGroup: "peri",
+      },
+      {
+        icon: "favorite",
+        label: "55+ Jahre",
+        description: "Postmenopause – nach der letzten Periode, neues hormonelles Gleichgewicht.",
+        scores: { P: 0, H: 0, C: 0, E: 0 },
+        ageGroup: "post",
+      },
+    ],
+  },
+
+  // ─── Q2: Situation ───────────────────────────────────────────────────────────
+  {
+    id: 2,
     question: "In welcher Situation befindest du dich aktuell?",
     subtitle: "Auch wenn du dir nicht sicher bist – wähle, was am ehesten zutrifft.",
     options: [
@@ -20,7 +66,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       },
       {
         icon: "wb_twilight",
-        label: "40+ mit spürbaren Veränderungen",
+        label: "Spürbare Veränderungen seit einigen Jahren",
         description: "Mein Zyklus, mein Schlaf oder meine Stimmung haben sich in den letzten Jahren verändert.",
         scores: { P: 3, H: 0, C: 1, E: 1 },
       },
@@ -44,8 +90,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       },
     ],
   },
+
+  // ─── Q3: Main complaint ──────────────────────────────────────────────────────
   {
-    id: 2,
+    id: 3,
     question: "Was belastet dich aktuell am stärksten?",
     subtitle: "Wähle das Symptom, das deinen Alltag am meisten einschränkt.",
     options: [
@@ -81,32 +129,35 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       },
     ],
   },
+
+  // ─── Q4: Body signals (multi-select) ────────────────────────────────────────
   {
-    id: 3,
+    id: 4,
     question: "Was beobachtest du an deinem Körper?",
-    subtitle: "Körperliche Signale sind oft die ersten Hinweise auf hormonelle Veränderungen.",
+    subtitle: "Du kannst mehrere Antworten wählen – körperliche Signale treten oft zusammen auf.",
+    multiSelect: true,
     options: [
       {
         icon: "ac_unit",
-        label: "Frieren, Haarausfall, trockene Haut",
-        description: "Ich friere leicht, verliere mehr Haare als früher und meine Haut ist deutlich trockener.",
+        label: "Frieren, Haarausfall oder trockene Haut",
+        description: "Ich friere leicht, verliere mehr Haare als früher oder meine Haut ist deutlich trockener.",
         scores: { P: 0, H: 4, C: 0, E: 0 },
       },
       {
         icon: "monitor_weight",
-        label: "Bauchgewichtszunahme trotz gleicher Ernährung",
+        label: "Gewichtszunahme am Bauch",
         description: "Ich nehme am Bauch zu, ohne mehr zu essen – und nehme trotz Sport kaum ab.",
         scores: { P: 2, H: 1, C: 1, E: 0 },
       },
       {
         icon: "water_drop",
-        label: "Blähungen, Brustspannen, Akne vor der Periode",
-        description: "In der Woche vor meiner Periode fühle ich mich aufgedunsen, meine Brust ist empfindlich oder ich bekomme Pickeln.",
+        label: "Blähungen, Brustspannen oder Akne",
+        description: "In der Woche vor meiner Periode fühle ich mich aufgedunsen, meine Brust ist empfindlich oder ich bekomme Pickel.",
         scores: { P: 0, H: 0, C: 0, E: 4 },
       },
       {
         icon: "favorite",
-        label: "Herzrasen oder Herzklopfen in Ruhephasen",
+        label: "Herzrasen oder Herzklopfen in Ruhe",
         description: "Mein Herz rast oder stolpert – oft abends oder ohne körperliche Anstrengung.",
         scores: { P: 1, H: 0, C: 3, E: 1 },
       },
@@ -115,11 +166,14 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         label: "Keines davon trifft auf mich zu",
         description: "Ich beobachte keine dieser körperlichen Veränderungen.",
         scores: { P: 0, H: 0, C: 0, E: 0 },
+        exclusive: true,
       },
     ],
   },
+
+  // ─── Q5: Sleep ───────────────────────────────────────────────────────────────
   {
-    id: 4,
+    id: 5,
     question: "Wie schläfst du?",
     subtitle: "Schlafmuster spiegeln den Hormonhaushalt direkt wider.",
     options: [
@@ -155,8 +209,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       },
     ],
   },
+
+  // ─── Q6: Cycle ───────────────────────────────────────────────────────────────
   {
-    id: 5,
+    id: 6,
     question: "Wie ist dein Zyklus aktuell?",
     subtitle: "Der Zyklus ist das sensibelste Barometer des weiblichen Hormonhaushalts.",
     options: [

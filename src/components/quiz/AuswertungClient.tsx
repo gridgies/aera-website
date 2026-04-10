@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { QuizAnswer } from "@/types";
 import { berechneErgebnis, QuizResult, PROFILE_DEFINITIONS } from "@/lib/quizEngine";
+import { ResultEmailCapture } from "./ResultEmailCapture";
 
 function ProfilBadge({ label, color, textColor }: { label: string; color: string; textColor: string }) {
   return (
@@ -43,15 +44,17 @@ function ScoreBalken({
 
 export function AuswertungClient() {
   const [result, setResult] = useState<QuizResult | null>(null);
+  const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     try {
       const raw = localStorage.getItem("aera_quiz_answers");
       if (raw) {
-        const answers: QuizAnswer[] = JSON.parse(raw);
-        if (answers.length > 0) {
-          setResult(berechneErgebnis(answers));
+        const parsed: QuizAnswer[] = JSON.parse(raw);
+        if (parsed.length > 0) {
+          setAnswers(parsed);
+          setResult(berechneErgebnis(parsed));
         }
       }
     } catch {
@@ -413,6 +416,9 @@ export function AuswertungClient() {
           </Link>
         </div>
       </section>
+
+      {/* Email capture */}
+      <ResultEmailCapture result={result} answers={answers} />
 
       {/* CTA */}
       <section className="bg-primary-container py-20 px-6">

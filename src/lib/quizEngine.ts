@@ -6,12 +6,26 @@
  * - Hashimoto/Schilddrüse (H): Billewicz-Score, Zulewski-Score
  * - HPA/Cortisol-Dysbalance (C): HPA-Achsen-Forschung (Sapolsky, Guilliams & Edwards)
  * - Östrogendominanz/Progesteronmangel (E): PMS/PMDD-Diagnostik (ACOG), Lutealphase-Defizit
+ *
+ * Age modifiers: P scores are multiplied by an age factor to prevent assigning
+ * perimenopause signals to young women. A 20-year-old with hot flashes has a
+ * very different clinical picture than a 48-year-old with the same symptom.
  */
 
 import { QuizAnswer, QuizScores } from "@/types";
 import { QUIZ_QUESTIONS } from "@/lib/constants";
 
 export type ProfileKey = "P" | "H" | "C" | "E";
+
+// ─── Age group → P multiplier ────────────────────────────────────────────────
+// Under 35: P scores are suppressed so other profiles dominate correctly.
+const AGE_P_MULTIPLIERS: Record<string, number> = {
+  young: 0.0,       // 15–24: no perimenopause
+  thirties: 0.15,   // 25–34: very rare early perimenopause (POI excluded for simplicity)
+  early_peri: 0.65, // 35–44: possible early perimenopause
+  peri: 1.0,        // 45–54: prime age, no change
+  post: 1.2,        // 55+:   postmenopause, slightly amplify
+};
 
 export interface HormonProfil {
   key: ProfileKey;
@@ -162,6 +176,8 @@ export interface QuizResult {
   primary: HormonProfil;
   secondary: HormonProfil | null;
   scores: Record<ProfileKey, number>;
+  rawScores: Record<ProfileKey, number>; // before age modifier
+  ageGroup: string;
   /** 0–100, wie eindeutig das Ergebnis ist */
   klarheit: number;
   /** true wenn kein relevantes Signal erkannt wurde (topScore < 5) */
@@ -173,17 +189,48 @@ export interface QuizResult {
 export function berechneErgebnis(answers: QuizAnswer[]): QuizResult {
   const totals: Record<ProfileKey, number> = { P: 0, H: 0, C: 0, E: 0 };
 
+  // ─── 1. Sum scores from all answers ────────────────────────────────────────
   for (const answer of answers) {
     const question = QUIZ_QUESTIONS.find((q) => q.id === answer.questionId);
     if (!question) continue;
-    const option = question.options[answer.selectedOption];
-    if (!option?.scores) continue;
-    totals.P += option.scores.P;
-    totals.H += option.scores.H;
-    totals.C += option.scores.C;
-    totals.E += option.scores.E;
+
+    // Normalize: single answer → [index], multi-select → array of indices
+    const selectedIndices = Array.isArray(answer.selectedOption)
+      ? answer.selectedOption
+      : [answer.selectedOption];
+
+    for (const idx of selectedIndices) {
+      const option = question.options[idx];
+      if (!option?.scores) continue;
+      // Skip age question scores (all zero, handled by multiplier below)
+      totals.P += option.scores.P;
+      totals.H += option.scores.H;
+      totals.C += option.scores.C;
+      totals.E += option.scores.E;
+    }
   }
 
+  // ─── 2. Determine age group and apply P multiplier ─────────────────────────
+  const ageAnswer = answers.find((a) => a.questionId === 1);
+  const ageQuestion = QUIZ_QUESTIONS.find((q) => q.id === 1);
+  let ageGroup = "peri"; // default: no suppression
+  let pMultiplier = 1.0;
+
+  if (ageAnswer && ageQuestion) {
+    const idx = Array.isArray(ageAnswer.selectedOption)
+      ? ageAnswer.selectedOption[0]
+      : ageAnswer.selectedOption;
+    const ageOption = ageQuestion.options[idx];
+    if (ageOption?.ageGroup) {
+      ageGroup = ageOption.ageGroup;
+      pMultiplier = AGE_P_MULTIPLIERS[ageGroup] ?? 1.0;
+    }
+  }
+
+  const rawScores = { ...totals };
+  totals.P = Math.round(totals.P * pMultiplier);
+
+  // ─── 3. Rank profiles ──────────────────────────────────────────────────────
   const entries = Object.entries(totals) as [ProfileKey, number][];
   entries.sort((a, b) => b[1] - a[1]);
 
@@ -191,19 +238,19 @@ export function berechneErgebnis(answers: QuizAnswer[]): QuizResult {
   const [secondKey, secondScore] = entries[1];
 
   const primary = PROFILE_DEFINITIONS[topKey];
-  // Sekundärprofil nur zeigen, wenn es mindestens 50% des primären Scores hat und min. 4 Punkte
+  // Show secondary profile only if it reaches at least 50 % of primary AND has min 4 pts
   const secondary =
     secondScore >= 4 && secondScore >= topScore * 0.5
       ? PROFILE_DEFINITIONS[secondKey]
       : null;
 
-  const maxPossible = 20; // 5 Fragen × max 4 Punkte
+  // klarheit: topScore / 20 (5 symptom questions × max 4 pts each)
+  // Multi-select can exceed 20 in rare cases → capped at 100
+  const maxPossible = 20;
   const klarheit = Math.min(100, Math.round((topScore / maxPossible) * 100));
 
-  // < 5 Punkte: kein klares Signal → noPattern
-  // < 10 Punkte: schwaches Signal → weichere Sprache in der Auswertung
   const noPattern = topScore < 5;
   const lowScore = topScore < 10;
 
-  return { primary, secondary, scores: totals, klarheit, noPattern, lowScore };
+  return { primary, secondary, scores: totals, rawScores, ageGroup, klarheit, noPattern, lowScore };
 }

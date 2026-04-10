@@ -10,6 +10,10 @@ export interface QuizOption {
   label: string;
   description: string;
   scores: QuizScores;
+  /** Age group identifier (only on the age question) */
+  ageGroup?: "young" | "thirties" | "early_peri" | "peri" | "post";
+  /** If true, selecting this deselects all others (e.g. "Keines davon") */
+  exclusive?: boolean;
 }
 
 export interface QuizQuestion {
@@ -17,11 +21,14 @@ export interface QuizQuestion {
   question: string;
   subtitle: string;
   options: QuizOption[];
+  /** Allow selecting multiple answers */
+  multiSelect?: boolean;
 }
 
 export interface QuizAnswer {
   questionId: number;
-  selectedOption: number;
+  /** Single index for single-select, array of indices for multi-select */
+  selectedOption: number | number[];
 }
 
 export interface Expert {
