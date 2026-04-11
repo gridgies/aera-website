@@ -31,10 +31,12 @@ const BRAND = {
 
 // Per-profile accent colors (hero section only)
 const PROFILE_ACCENT: Record<string, { bg: string; border: string; text: string; light: string }> = {
-  P: { bg: "#92400e", border: "#d97706", text: "#ffffff", light: "#fffbeb" },
-  H: { bg: "#1e40af", border: "#2563eb", text: "#ffffff", light: "#eff6ff" },
-  C: { bg: "#5b21b6", border: "#7c3aed", text: "#ffffff", light: "#f5f3ff" },
-  E: { bg: "#9f1239", border: "#e11d48", text: "#ffffff", light: "#fff1f2" },
+  PP: { bg: "#92400e", border: "#d97706", text: "#ffffff", light: "#fffbeb" }, // amber — perimenopause
+  M:  { bg: "#9a3412", border: "#ea580c", text: "#ffffff", light: "#fff7ed" }, // orange — menopause
+  PM: { bg: "#854d0e", border: "#ca8a04", text: "#ffffff", light: "#fefce8" }, // yellow — postmenopause
+  H:  { bg: "#1e40af", border: "#2563eb", text: "#ffffff", light: "#eff6ff" },
+  C:  { bg: "#5b21b6", border: "#7c3aed", text: "#ffffff", light: "#f5f3ff" },
+  E:  { bg: "#9f1239", border: "#e11d48", text: "#ffffff", light: "#fff1f2" },
 };
 
 // ─── Derive signals from the user's actual selected answers ──────────────────
@@ -70,6 +72,54 @@ const PROFILE_CONTENT: Record<string, {
   naechsteSchritte: string[];
   conditionUrl: string;
 }> = {
+  PP: {
+    bluttests: [
+      { wert: "AMH (Anti-Müller-Hormon)", warum: "Zeigt die Eierstockreserve – frühester Marker der Perimenopause" },
+      { wert: "Progesteron (Tag 19–22)", warum: "Sinkt als erstes Hormon in der frühen Perimenopause" },
+      { wert: "FSH & Östradiol (E2)", warum: "FSH beginnt zu steigen, Östradiol schwankt stark" },
+      { wert: "TSH, fT3, fT4", warum: "Schilddrüse ausschließen – überschneidet sich mit frühen Symptomen" },
+      { wert: "Ferritin & Vitamin D", warum: "Häufige Mangelzustände, die Beschwerden verstärken" },
+    ],
+    naechsteSchritte: [
+      "Gynäkologin ansprechen: AMH und Progesteron messen lassen – frühzeitige Diagnose erleichtert alles",
+      "Symptomtagebuch führen: Zyklusveränderungen, Stimmung, Schlaf dokumentieren",
+      "Hormontherapie frühzeitig besprechen: Frühzeitiger Beginn zeigt bessere Langzeitergebnisse",
+      "Lebensstil als Fundament: Bewegung, Schlafhygiene und Stressreduktion mildern frühe Symptome",
+    ],
+    conditionUrl: "https://www.aerahealth.de/menopause",
+  },
+  M: {
+    bluttests: [
+      { wert: "FSH (follikelstimulierend)", warum: "Wichtigster Wechseljahres-Marker – deutlich erhöht" },
+      { wert: "Östradiol (E2)", warum: "Zeigt den aktuellen Östrogenstatus; schwankt stark in der Menopause" },
+      { wert: "AMH (Anti-Müller-Hormon)", warum: "Misst die verbleibende Eierstockreserve" },
+      { wert: "TSH, fT3, fT4", warum: "Schilddrüse ausschließen – viele Symptome überschneiden sich" },
+      { wert: "Vitamin D & Calcium", warum: "Knochenschutz in den Wechseljahren besonders wichtig" },
+    ],
+    naechsteSchritte: [
+      "Gynäkologin ansprechen – explizit nach FSH, Östradiol und AMH fragen",
+      "Symptomtagebuch führen: Wann treten Hitzewallungen auf?",
+      "Hormontherapie (HRT) besprechen: Aktuelle Leitlinien sehen HRT als sicher und wirksam für gesunde Frauen unter 60",
+      "Pflanzliche Alternativen: Traubsilberkerze und Rotklee-Isoflavone haben die stärkste Evidenz",
+    ],
+    conditionUrl: "https://www.aerahealth.de/menopause",
+  },
+  PM: {
+    bluttests: [
+      { wert: "Östradiol (E2, Basislinie)", warum: "Ausgangswert für HRT-Entscheidung und Symptomkorrelation" },
+      { wert: "FSH", warum: "Bestätigt Postmenopause-Status (typisch: FSH >40 mIU/ml)" },
+      { wert: "Calcium & Vitamin D (25-OH)", warum: "Knochenstoffwechsel – Zielwert Vitamin D >40 ng/ml" },
+      { wert: "Cholesterin, HDL, LDL", warum: "Östrogenmangel verschlechtert kardiovaskuläres Risikoprofil" },
+      { wert: "TSH", warum: "Schilddrüse prüfen – Fehlfunktionen häufig in der Postmenopause" },
+    ],
+    naechsteSchritte: [
+      "Knochendichte messen (DXA-Scan): Goldstandard für Osteoporose-Früherkennung",
+      "Kardiovaskuläre Risikofaktoren besprechen: Cholesterin, Blutdruck, Gewicht",
+      "HRT-Entscheidung fundiert treffen: Nutzen für Knochen, Herz und Lebensqualität in ersten 10 Jahren am höchsten",
+      "Vitamin D + Calcium täglich: Basis für Knochen- und Immungesundheit",
+    ],
+    conditionUrl: "https://www.aerahealth.de/menopause",
+  },
   P: {
     bluttests: [
       { wert: "FSH (follikelstimulierend)", warum: "Wichtigster Perimenopause-Marker – steigt bei nachlassender Eierstockfunktion" },

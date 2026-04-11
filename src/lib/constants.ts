@@ -119,7 +119,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         icon: "sentiment_worried",
         label: "Innere Unruhe, obwohl ich erschöpft bin",
         description: "Ich bin müde, aber kann nicht abschalten. Angst oder Nervosität ohne klaren Auslöser.",
-        scores: { P: 0, H: 0, C: 4, E: 1 },
+        scores: { P: 0, H: 0, C: 5, E: 1 },
       },
       {
         icon: "sentiment_satisfied",
@@ -141,7 +141,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         icon: "ac_unit",
         label: "Frieren, Haarausfall oder trockene Haut",
         description: "Ich friere leicht, verliere mehr Haare als früher oder meine Haut ist deutlich trockener.",
-        scores: { P: 0, H: 4, C: 0, E: 0 },
+        scores: { P: 0, H: 3, C: 0, E: 0 },
       },
       {
         icon: "monitor_weight",
@@ -153,13 +153,13 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         icon: "water_drop",
         label: "Blähungen, Brustspannen oder Akne",
         description: "In der Woche vor meiner Periode fühle ich mich aufgedunsen, meine Brust ist empfindlich oder ich bekomme Pickel.",
-        scores: { P: 0, H: 0, C: 0, E: 4 },
+        scores: { P: 0, H: 0, C: 0, E: 3 },
       },
       {
         icon: "favorite",
         label: "Herzrasen oder Herzklopfen in Ruhe",
         description: "Mein Herz rast oder stolpert – oft abends oder ohne körperliche Anstrengung.",
-        scores: { P: 1, H: 0, C: 3, E: 1 },
+        scores: { P: 1, H: 0, C: 2, E: 1 },
       },
       {
         icon: "sentiment_satisfied",
@@ -193,7 +193,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         icon: "psychology",
         label: "Nicht einschlafen können – Gedankenkarussell",
         description: "Abends dreht sich mein Kopf, obwohl ich müde bin. Ich komme nicht zur Ruhe.",
-        scores: { P: 0, H: 0, C: 4, E: 1 },
+        scores: { P: 0, H: 0, C: 5, E: 1 },
       },
       {
         icon: "calendar_month",

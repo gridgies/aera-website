@@ -1,88 +1,155 @@
 /**
- * Aera Health Quiz Engine
+ * Aera Health Quiz Engine v2.0
  *
  * Scoring basiert auf validierten klinischen Symptomclustern:
- * - Perimenopause (P): MENQOL-Skala (Hilditch et al.), STRAW+10-Staging
+ * - Perimenopause-Spektrum (PP/M/PM): MENQOL-Skala (Hilditch et al.), STRAW+10-Staging
  * - Hashimoto/Schilddrüse (H): Billewicz-Score, Zulewski-Score
  * - HPA/Cortisol-Dysbalance (C): HPA-Achsen-Forschung (Sapolsky, Guilliams & Edwards)
  * - Östrogendominanz/Progesteronmangel (E): PMS/PMDD-Diagnostik (ACOG), Lutealphase-Defizit
  *
- * Age modifiers: P scores are multiplied by an age factor to prevent assigning
- * perimenopause signals to young women. A 20-year-old with hot flashes has a
- * very different clinical picture than a 48-year-old with the same symptom.
+ * v2.0: P split into PP/M/PM sub-profiles; Q4 capped at 6 pts total;
+ * C ceiling raised; secondary threshold 35%; POI warning; H+P overlap flag.
  */
 
-import { QuizAnswer, QuizScores } from "@/types";
+import { QuizAnswer } from "@/types";
 import { QUIZ_QUESTIONS } from "@/lib/constants";
 
-export type ProfileKey = "P" | "H" | "C" | "E";
+export type ProfileKey = "PP" | "M" | "PM" | "H" | "C" | "E";
+type RawProfileKey = "P" | "H" | "C" | "E";
+type RawScores = Record<RawProfileKey, number>;
 
-// ─── Age group → P multiplier ────────────────────────────────────────────────
-// Under 35: P scores are suppressed so other profiles dominate correctly.
+// ─── Age multipliers for P score ─────────────────────────────────────────────
 const AGE_P_MULTIPLIERS: Record<string, number> = {
-  young: 0.0,       // 15–24: no perimenopause
-  thirties: 0.15,   // 25–34: very rare early perimenopause (POI excluded for simplicity)
-  early_peri: 0.65, // 35–44: possible early perimenopause
-  peri: 1.0,        // 45–54: prime age, no change
-  post: 1.2,        // 55+:   postmenopause, slightly amplify
+  young: 0.0,        // 15–24: perimenopause impossible
+  thirties: 0.30,    // 25–34: suppressed, allows POI detection
+  early_peri: 0.65,  // 35–44: early perimenopause possible
+  peri: 1.0,         // 45–54: prime perimenopause/menopause age
+  post: 1.2,         // 55+: amplify postmenopause signals
 };
+
+// Tiebreaker: H > P > C > E (medical specificity / urgency)
+const TIEBREAKER_ORDER: RawProfileKey[] = ["H", "P", "C", "E"];
+
+// Q4 multi-select: cap total contribution across all profiles
+const Q4_TOTAL_CAP = 6;
 
 export interface HormonProfil {
   key: ProfileKey;
   titel: string;
   untertitel: string;
   beschreibung: string;
-  /** Was die Antworten über das Profil verraten */
+  /** Generic profile signals shown on result page */
   signale: string[];
-  /** Empfohlene Laborwerte – priorisiert nach klinischer Relevanz */
   bluttests: { wert: string; warum: string }[];
-  /** Konkrete erste Schritte */
   naechsteSchritte: string[];
-  /** Für internen Link zur Wissensseite */
   conditionSlug: string;
   icon: string;
-  color: string; // Tailwind bg class
+  color: string;    // Tailwind bg class
   textColor: string; // Tailwind text class
 }
 
 export const PROFILE_DEFINITIONS: Record<ProfileKey, HormonProfil> = {
-  P: {
-    key: "P",
-    titel: "Perimenopause & Hormoneller Übergang",
-    untertitel: "Deine Symptome deuten auf einen hormonellen Übergang hin",
+  // ─── Perimenopause-Spektrum ────────────────────────────────────────────────
+  PP: {
+    key: "PP",
+    titel: "Perimenopause – Erste Zeichen des Wandels",
+    untertitel: "Dein Körper beginnt sich zu verändern – Hormone in Bewegung",
     beschreibung:
-      "Deine Antworten zeigen mehrere klassische Zeichen der Perimenopause – der Übergangsphase, in der die Eierstöcke die Östrogen- und Progesteronproduktion reduzieren. Diese Phase beginnt in Deutschland im Durchschnitt mit 45–47 Jahren, kann aber schon ab 40 einsetzen. Hitzewallungen, Schlafstörungen und Stimmungsveränderungen entstehen, weil Östrogen direkt auf Hypothalamus, Schlafarchitektur und Neurotransmitter (Serotonin, GABA) wirkt. Das ist kein Versagen deines Körpers – es ist ein gut erforschter biologischer Übergang, der sich wirksam behandeln lässt.",
+      "Deine Antworten deuten auf die frühe Perimenopause hin – die erste Phase eines natürlichen hormonellen Wandels. Progesteron beginnt oft schon ab Mitte 30 zu sinken, während Östrogen noch schwankt. Die Eierstöcke reagieren unregelmäßiger auf FSH; Zyklen werden kürzer oder länger. Diese Übergangsphase kann 2–10 Jahre dauern und ist schwer zu erkennen, weil die Symptome dezent beginnen. Früh erkannt lässt sie sich gut begleiten.",
     signale: [
-      "Vasomotorische Symptome (Hitzewallungen, Nachtschweiß) deuten auf Östrogenabfall hin",
-      "Schlafstörungen durch Temperaturregulations-Veränderungen im Hypothalamus",
-      "Zyklusveränderungen als frühes Zeichen nachlassender Ovarialfunktion",
-      "Stimmungsschwankungen durch Einfluss von Östrogen auf Serotonin-Haushalt",
+      "Erste Zyklusveränderungen als frühes Zeichen nachlassender Ovarialfunktion",
+      "Leichte Schlafveränderungen durch abfallenden Progesteronspiegel",
+      "Gelegentliche Stimmungsschwankungen durch Östrogenschwankungen",
+      "AMH (Eierstockreserve) beginnt zu sinken",
     ],
     bluttests: [
-      { wert: "FSH (follikelstimulierend)", warum: "Steigt, wenn die Eierstöcke nachlassen – wichtigster Perimenopause-Marker" },
-      { wert: "Östradiol (E2)", warum: "Zeigt den aktuellen Östrogenstatus; schwankt stark in der Perimenopause" },
-      { wert: "AMH (Anti-Müller-Hormon)", warum: "Misst die Eierstockreserve – aussagekräftiger als FSH allein" },
-      { wert: "TSH, fT3, fT4", warum: "Schilddrüse ausschließen – überschneidet sich mit vielen Wechseljahressymptomen" },
+      { wert: "AMH (Anti-Müller-Hormon)", warum: "Zeigt die Eierstockreserve – frühester Marker der Perimenopause" },
+      { wert: "Progesteron (Tag 19–22)", warum: "Sinkt als erstes Hormon in der frühen Perimenopause" },
+      { wert: "FSH & Östradiol (E2)", warum: "FSH beginnt zu steigen, Östradiol schwankt stark" },
+      { wert: "TSH, fT3, fT4", warum: "Schilddrüse ausschließen – überschneidet sich mit frühen Symptomen" },
       { wert: "Ferritin & Vitamin D", warum: "Häufige Mangelzustände, die Beschwerden verstärken" },
     ],
     naechsteSchritte: [
-      "Gynäkologin ansprechen – explizit nach FSH, Östradiol und AMH fragen",
-      "Symptomtagebuch führen: Wann treten Hitzewallungen auf? Zusammenhang mit Zyklus?",
-      "Hormontherapie (HRT) besprechen: Aktuelle Leitlinien (DGGG 2020) sehen HRT als sicher und wirksam für gesunde Frauen unter 60",
-      "Pflanzliche Alternativen prüfen: Traubsilberkerze und Rotklee-Isoflavone haben die stärkste Evidenz",
+      "Gynäkologin ansprechen: AMH und Progesteron messen lassen – frühzeitige Diagnose erleichtert alles",
+      "Symptomtagebuch führen: Zyklusveränderungen, Stimmung, Schlaf dokumentieren",
+      "Hormontherapie frühzeitig besprechen: Frühzeitiger Beginn zeigt bessere Langzeitergebnisse",
+      "Lebensstil als Fundament: Bewegung, Schlafhygiene und Stressreduktion mildern frühe Symptome",
     ],
     conditionSlug: "menopause",
-    icon: "wb_sunny",
+    icon: "wb_twilight",
     color: "bg-amber-50",
     textColor: "text-amber-800",
   },
 
+  M: {
+    key: "M",
+    titel: "Wechseljahre – Mitten in der Transition",
+    untertitel: "Deutliche Symptome, aktiver hormoneller Wandel",
+    beschreibung:
+      "Deine Antworten zeigen ein klassisches Wechseljahres-Bild. Der Östrogenspiegel sinkt deutlich, FSH steigt, und der Körper befindet sich im aktiven hormonellen Übergang. Hitzewallungen, Schlafstörungen und Stimmungsveränderungen entstehen, weil Östrogen direkt auf Hypothalamus, Schlafarchitektur und Neurotransmitter (Serotonin, GABA) wirkt. Aktuelle Leitlinien (DGGG 2020) bewerten Hormontherapie für gesunde Frauen unter 60 als sicher und wirksam.",
+    signale: [
+      "Vasomotorische Symptome (Hitzewallungen, Nachtschweiß) durch Östrogenabfall",
+      "Schlafstörungen durch Temperaturregulations-Veränderungen im Hypothalamus",
+      "Zyklusveränderungen und zunehmend unregelmäßige oder ausbleibende Perioden",
+      "Stimmungsschwankungen durch Einfluss von Östrogen auf den Serotonin-Haushalt",
+    ],
+    bluttests: [
+      { wert: "FSH (follikelstimulierend)", warum: "Wichtigster Wechseljahres-Marker – deutlich erhöht" },
+      { wert: "Östradiol (E2)", warum: "Zeigt den aktuellen Östrogenstatus; schwankt stark in der Menopause" },
+      { wert: "AMH (Anti-Müller-Hormon)", warum: "Misst die verbleibende Eierstockreserve" },
+      { wert: "TSH, fT3, fT4", warum: "Schilddrüse ausschließen – viele Symptome überschneiden sich" },
+      { wert: "Vitamin D & Calcium", warum: "Knochenschutz in den Wechseljahren besonders wichtig" },
+    ],
+    naechsteSchritte: [
+      "Gynäkologin ansprechen – explizit nach FSH, Östradiol und AMH fragen",
+      "Symptomtagebuch führen: Wann treten Hitzewallungen auf? Zusammenhang mit Zyklus?",
+      "Hormontherapie (HRT) besprechen: Aktuelle Leitlinien sehen HRT als sicher und wirksam für gesunde Frauen unter 60",
+      "Pflanzliche Alternativen: Traubsilberkerze und Rotklee-Isoflavone haben die stärkste Evidenz",
+    ],
+    conditionSlug: "menopause",
+    icon: "wb_sunny",
+    color: "bg-orange-50",
+    textColor: "text-orange-800",
+  },
+
+  PM: {
+    key: "PM",
+    titel: "Postmenopause – Nach den Wechseljahren",
+    untertitel: "Stabiles Hormonniveau, langfristige Gesundheit im Fokus",
+    beschreibung:
+      "Deine Antworten passen zum Postmenopause-Profil – du bist seit mehr als 12 Monaten ohne Periode. Der hormonelle Sturm hat sich gelegt: Östrogen und Progesteron sind auf einem stabilen, niedrigeren Niveau. Akute Symptome wie Hitzewallungen nehmen oft ab, aber die langfristigen Folgen des Östrogenmangels – für Knochen, Herz-Kreislauf und Schleimhäute – rücken in den Fokus. Diese Phase bietet die Chance für gezielte Prävention und eine fundierte Entscheidung über Hormontherapie.",
+    signale: [
+      "Mehr als 12 Monate ohne Periode – stabiler Postmenopause-Status",
+      "Anhaltende Östrogenmangel-Symptome (Trockenheit, Energieflauten) bleiben möglich",
+      "Langzeitrisiken für Knochen (Osteoporose) und Herz-Kreislauf nehmen zu",
+      "HRT-Entscheidung in den ersten 10 Jahren nach Menopause besonders relevant",
+    ],
+    bluttests: [
+      { wert: "Östradiol (E2, Basislinie)", warum: "Ausgangswert für HRT-Entscheidung und Symptomkorrelation" },
+      { wert: "FSH", warum: "Bestätigt Postmenopause-Status (typisch: FSH >40 mIU/ml)" },
+      { wert: "Calcium & Vitamin D (25-OH)", warum: "Knochenstoffwechsel – Zielwert Vitamin D >40 ng/ml" },
+      { wert: "Cholesterin, HDL, LDL", warum: "Östrogenmangel verschlechtert kardiovaskuläres Risikoprofil" },
+      { wert: "TSH", warum: "Schilddrüse prüfen – Fehlfunktionen häufig in der Postmenopause" },
+    ],
+    naechsteSchritte: [
+      "Knochendichte messen (DXA-Scan): Goldstandard für Osteoporose-Früherkennung",
+      "Kardiovaskuläre Risikofaktoren besprechen: Cholesterin, Blutdruck, Gewicht",
+      "HRT-Entscheidung fundiert treffen: Nutzen für Knochen, Herz und Lebensqualität in ersten 10 Jahren am höchsten",
+      "Vitamin D + Calcium täglich: Basis für Knochen- und Immungesundheit",
+    ],
+    conditionSlug: "menopause",
+    icon: "nights_stay",
+    color: "bg-yellow-50",
+    textColor: "text-yellow-800",
+  },
+
+  // ─── Hashimoto / Schilddrüse ───────────────────────────────────────────────
   H: {
     key: "H",
     titel: "Schilddrüse & Hashimoto-Muster",
     untertitel: "Deine Symptome passen zu einem Schilddrüsen-Profil",
     beschreibung:
-      "Deine Antworten zeigen ein Symptommuster, das stark mit Schilddrüsenfunktionsstörungen – insbesondere Hashimoto Thyreoiditis – übereinstimmt. Hashimoto ist die häufigste Autoimmunerkrankung in Deutschland und betrifft überwiegend Frauen. Das Tückische: TSH kann jahrelang im Normbereich bleiben, während TPO-Antikörper schon erhöht sind und Symptome verursachen. Viele Frauen warten 5–10 Jahre auf eine Diagnose. Die gute Nachricht: Mit der richtigen Einstellung und Lebensstilmaßnahmen lässt sich die Lebensqualität deutlich verbessern.",
+      "Deine Antworten zeigen ein Symptommuster, das stark mit Schilddrüsenfunktionsstörungen – insbesondere Hashimoto Thyreoiditis – übereinstimmt. Hashimoto ist die häufigste Autoimmunerkrankung in Deutschland und betrifft überwiegend Frauen. Das Tückische: TSH kann jahrelang im Normbereich bleiben, während TPO-Antikörper schon erhöht sind und Symptome verursachen. Viele Frauen warten 5–10 Jahre auf eine Diagnose. Mit der richtigen Einstellung und Lebensstilmaßnahmen lässt sich die Lebensqualität deutlich verbessern.",
     signale: [
       "Kälteempfindlichkeit und ständiges Frieren als klassisches Hypothyreose-Zeichen",
       "Diffuser Haarausfall als Folge gestörter Schilddrüsenhormon-Wirkung auf Haarfollikel",
@@ -109,12 +176,13 @@ export const PROFILE_DEFINITIONS: Record<ProfileKey, HormonProfil> = {
     textColor: "text-blue-800",
   },
 
+  // ─── Stresshormon / HPA-Achse ─────────────────────────────────────────────
   C: {
     key: "C",
     titel: "Stresshormon-Dysbalance (HPA-Achse)",
     untertitel: "Dein Nervensystem zeigt Zeichen chronischer Überbelastung",
     beschreibung:
-      "Deine Symptome – müde aber nicht abschalten können, innere Unruhe trotz Erschöpfung, Einschlafprobleme – sind klassische Zeichen einer gestörten HPA-Achse (Hypothalamus-Hypophysen-Nebennieren). Chronischer Stress führt zu dauerhaft erhöhtem Cortisol, das die Produktion von Progesteron, Östrogen und Schilddrüsenhormonen blockiert. Dieser sogenannte 'Pregnenolon-Steal' erklärt, warum anhaltender Stress zu einem hormonellen Dominoeffekt führt. Die Forschung zeigt: Der Körper priorisiert Überlebensstress vor Reproduktionshormonen – ein evolutionärer Mechanismus mit modernen Nebenwirkungen.",
+      "Deine Symptome – müde aber nicht abschalten können, innere Unruhe trotz Erschöpfung, Einschlafprobleme – sind klassische Zeichen einer gestörten HPA-Achse (Hypothalamus-Hypophysen-Nebennieren). Chronischer Stress führt zu dauerhaft erhöhtem Cortisol, das die Produktion von Progesteron, Östrogen und Schilddrüsenhormonen blockiert. Dieser sogenannte 'Pregnenolon-Steal' erklärt, warum anhaltender Stress zu einem hormonellen Dominoeffekt führt. Der Körper priorisiert Überlebensstress vor Reproduktionshormonen – ein evolutionärer Mechanismus mit modernen Nebenwirkungen.",
     signale: [
       "Tired-but-wired: Klassisches Zeichen eines dysregulierten Cortisol-Tagesrhythmus",
       "Einschlafprobleme trotz Erschöpfung: Cortisol sollte abends niedrig sein – ist es nicht",
@@ -140,6 +208,7 @@ export const PROFILE_DEFINITIONS: Record<ProfileKey, HormonProfil> = {
     textColor: "text-violet-800",
   },
 
+  // ─── Östrogendominanz / Progesteronmangel ─────────────────────────────────
   E: {
     key: "E",
     titel: "Östrogendominanz & Progesteronmangel",
@@ -172,85 +241,186 @@ export const PROFILE_DEFINITIONS: Record<ProfileKey, HormonProfil> = {
   },
 };
 
+// ─── P sub-profile determination ─────────────────────────────────────────────
+// Q6 option indices: 0 = "kürzer/unregelmäßig", 2 = ">12 months no period"
+function getPSubProfile(
+  ageGroup: string,
+  q6OptionIndex: number | null
+): { profile: "PP" | "M" | "PM"; poiWarning: boolean } {
+  const is12MonthsNoPeriod = q6OptionIndex === 2;
+  const isIrregular = q6OptionIndex === 0;
+
+  if (is12MonthsNoPeriod) {
+    if (ageGroup === "thirties") {
+      return { profile: "PP", poiWarning: true }; // POI in under-35s
+    }
+    return { profile: "PM", poiWarning: false };
+  }
+
+  if (isIrregular) {
+    return ageGroup === "early_peri"
+      ? { profile: "PP", poiWarning: false }
+      : { profile: "M", poiWarning: false };
+  }
+
+  // Fallback by age
+  if (ageGroup === "early_peri") return { profile: "PP", poiWarning: false };
+  if (ageGroup === "post") return { profile: "PM", poiWarning: false };
+  return { profile: "M", poiWarning: false }; // peri or unknown → Menopause
+}
+
 export interface QuizResult {
   primary: HormonProfil;
   secondary: HormonProfil | null;
-  scores: Record<ProfileKey, number>;
-  rawScores: Record<ProfileKey, number>; // before age modifier
+  /** Raw P/H/C/E scores (after age multiplier on P) — used for bar chart */
+  scores: RawScores;
+  rawScores: RawScores;
   ageGroup: string;
-  /** 0–100, wie eindeutig das Ergebnis ist */
+  /** 0–100, Klarheit des Ergebnisses */
   klarheit: number;
-  /** true wenn kein relevantes Signal erkannt wurde (topScore < 5) */
+  /** true wenn kein klares Muster erkennbar (topScore < 5) */
   noPattern: boolean;
-  /** true wenn Signal schwach ist – weichere Sprache verwenden (topScore < 10) */
+  /** true wenn Signal schwach ist (topScore < 10) */
   lowScore: boolean;
+  /** Mögliche vorzeitige Ovarialinsuffizienz (Alter 25–34 + keine Periode) */
+  poiWarning: boolean;
+  /** Hashimoto + Wechseljahres-Überlappung erkannt */
+  hpOverlap: boolean;
 }
 
 export function berechneErgebnis(answers: QuizAnswer[]): QuizResult {
-  const totals: Record<ProfileKey, number> = { P: 0, H: 0, C: 0, E: 0 };
+  const totals: RawScores = { P: 0, H: 0, C: 0, E: 0 };
 
-  // ─── 1. Sum scores from all answers ────────────────────────────────────────
-  for (const answer of answers) {
-    const question = QUIZ_QUESTIONS.find((q) => q.id === answer.questionId);
-    if (!question) continue;
+  // ─── 1. Q4 (multi-select) — process separately with 6-pt cap ─────────────
+  const q4Answer = answers.find((a) => a.questionId === 4);
+  const q4Question = QUIZ_QUESTIONS.find((q) => q.id === 4);
+  if (q4Answer && q4Question) {
+    const indices = Array.isArray(q4Answer.selectedOption)
+      ? q4Answer.selectedOption
+      : [q4Answer.selectedOption];
 
-    // Normalize: single answer → [index], multi-select → array of indices
-    const selectedIndices = Array.isArray(answer.selectedOption)
-      ? answer.selectedOption
-      : [answer.selectedOption];
+    const q4Raw: RawScores = { P: 0, H: 0, C: 0, E: 0 };
+    for (const idx of indices) {
+      const opt = q4Question.options[idx];
+      if (!opt?.scores) continue;
+      q4Raw.P += opt.scores.P;
+      q4Raw.H += opt.scores.H;
+      q4Raw.C += opt.scores.C;
+      q4Raw.E += opt.scores.E;
+    }
 
-    for (const idx of selectedIndices) {
-      const option = question.options[idx];
-      if (!option?.scores) continue;
-      // Skip age question scores (all zero, handled by multiplier below)
-      totals.P += option.scores.P;
-      totals.H += option.scores.H;
-      totals.C += option.scores.C;
-      totals.E += option.scores.E;
+    const q4Total = q4Raw.P + q4Raw.H + q4Raw.C + q4Raw.E;
+    if (q4Total > Q4_TOTAL_CAP) {
+      const scale = Q4_TOTAL_CAP / q4Total;
+      totals.P += Math.round(q4Raw.P * scale);
+      totals.H += Math.round(q4Raw.H * scale);
+      totals.C += Math.round(q4Raw.C * scale);
+      totals.E += Math.round(q4Raw.E * scale);
+    } else {
+      totals.P += q4Raw.P;
+      totals.H += q4Raw.H;
+      totals.C += q4Raw.C;
+      totals.E += q4Raw.E;
     }
   }
 
-  // ─── 2. Determine age group and apply P multiplier ─────────────────────────
+  // ─── 2. Q2, Q3, Q5, Q6 — normal accumulation ─────────────────────────────
+  for (const answer of answers) {
+    if (answer.questionId === 1 || answer.questionId === 4) continue;
+
+    const question = QUIZ_QUESTIONS.find((q) => q.id === answer.questionId);
+    if (!question) continue;
+
+    const indices = Array.isArray(answer.selectedOption)
+      ? answer.selectedOption
+      : [answer.selectedOption];
+
+    for (const idx of indices) {
+      const opt = question.options[idx];
+      if (!opt?.scores) continue;
+      totals.P += opt.scores.P;
+      totals.H += opt.scores.H;
+      totals.C += opt.scores.C;
+      totals.E += opt.scores.E;
+    }
+  }
+
+  // ─── 3. Age multiplier on P ───────────────────────────────────────────────
   const ageAnswer = answers.find((a) => a.questionId === 1);
   const ageQuestion = QUIZ_QUESTIONS.find((q) => q.id === 1);
-  let ageGroup = "peri"; // default: no suppression
+  let ageGroup = "peri";
   let pMultiplier = 1.0;
 
   if (ageAnswer && ageQuestion) {
     const idx = Array.isArray(ageAnswer.selectedOption)
       ? ageAnswer.selectedOption[0]
       : ageAnswer.selectedOption;
-    const ageOption = ageQuestion.options[idx];
-    if (ageOption?.ageGroup) {
-      ageGroup = ageOption.ageGroup;
+    const ageOpt = ageQuestion.options[idx];
+    if (ageOpt?.ageGroup) {
+      ageGroup = ageOpt.ageGroup;
       pMultiplier = AGE_P_MULTIPLIERS[ageGroup] ?? 1.0;
     }
   }
 
-  const rawScores = { ...totals };
+  const rawScores: RawScores = { ...totals };
   totals.P = Math.round(totals.P * pMultiplier);
 
-  // ─── 3. Rank profiles ──────────────────────────────────────────────────────
-  const entries = Object.entries(totals) as [ProfileKey, number][];
-  entries.sort((a, b) => b[1] - a[1]);
+  // ─── 4. Sort profiles with tiebreaker ────────────────────────────────────
+  const entries = (Object.entries(totals) as [RawProfileKey, number][]).sort((a, b) => {
+    if (b[1] !== a[1]) return b[1] - a[1];
+    return TIEBREAKER_ORDER.indexOf(a[0]) - TIEBREAKER_ORDER.indexOf(b[0]);
+  });
 
-  const [topKey, topScore] = entries[0];
-  const [secondKey, secondScore] = entries[1];
+  const [topRawKey, topScore] = entries[0];
+  const [secondRawKey, secondScore] = entries[1];
 
-  const primary = PROFILE_DEFINITIONS[topKey];
-  // Show secondary profile only if it reaches at least 50 % of primary AND has min 4 pts
-  const secondary =
-    secondScore >= 4 && secondScore >= topScore * 0.5
-      ? PROFILE_DEFINITIONS[secondKey]
-      : null;
+  // ─── 5. Resolve P → sub-profile (PP / M / PM) ───────────────────────────
+  const q6Answer = answers.find((a) => a.questionId === 6);
+  const q6OptionIndex = q6Answer
+    ? Array.isArray(q6Answer.selectedOption)
+      ? q6Answer.selectedOption[0]
+      : q6Answer.selectedOption
+    : null;
 
-  // klarheit: topScore / 20 (5 symptom questions × max 4 pts each)
-  // Multi-select can exceed 20 in rare cases → capped at 100
-  const maxPossible = 20;
-  const klarheit = Math.min(100, Math.round((topScore / maxPossible) * 100));
+  const { profile: pSubProfile, poiWarning: directPoiWarning } = getPSubProfile(ageGroup, q6OptionIndex);
 
+  function resolveProfile(rawKey: RawProfileKey): HormonProfil {
+    return rawKey === "P" ? PROFILE_DEFINITIONS[pSubProfile] : PROFILE_DEFINITIONS[rawKey];
+  }
+
+  const primary = resolveProfile(topRawKey);
+
+  // Secondary: show if score >= 35% of primary and > 0
+  const showSecondary = secondScore > 0 && secondScore >= topScore * 0.35;
+  const secondary = showSecondary ? resolveProfile(secondRawKey) : null;
+
+  // ─── 6. Special flags ─────────────────────────────────────────────────────
+  const primaryIsPFamily = ["PP", "M", "PM"].includes(primary.key);
+  const secondaryIsPFamily = secondary ? ["PP", "M", "PM"].includes(secondary.key) : false;
+  const hpOverlap =
+    (primaryIsPFamily && secondary?.key === "H") ||
+    (primary.key === "H" && secondaryIsPFamily);
+
+  // POI also triggers if P is secondary and meets the thirties + no-period criteria
+  const poiFromSecondary =
+    ageGroup === "thirties" && q6OptionIndex === 2 && secondaryIsPFamily;
+  const poiWarning = directPoiWarning || poiFromSecondary;
+
+  // ─── 7. Klarheit & result type ────────────────────────────────────────────
+  const klarheit = Math.min(100, Math.round((topScore / 18) * 100));
   const noPattern = topScore < 5;
   const lowScore = topScore < 10;
 
-  return { primary, secondary, scores: totals, rawScores, ageGroup, klarheit, noPattern, lowScore };
+  return {
+    primary,
+    secondary,
+    scores: totals,
+    rawScores,
+    ageGroup,
+    klarheit,
+    noPattern,
+    lowScore,
+    poiWarning,
+    hpOverlap,
+  };
 }

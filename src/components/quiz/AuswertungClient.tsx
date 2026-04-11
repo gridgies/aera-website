@@ -42,6 +42,31 @@ function ScoreBalken({
   );
 }
 
+// Score bar: uses raw P/H/C/E keys (P represents all peri/meno/post combined)
+const SCORE_BAR_LABELS: Record<string, string> = {
+  P: "Wechseljahre",
+  H: "Schilddrüse & Hashimoto",
+  C: "Stress & HPA-Achse",
+  E: "Östrogendominanz",
+};
+
+const SCORE_BAR_COLORS: Record<string, string> = {
+  P: "bg-amber-400",
+  H: "bg-blue-400",
+  C: "bg-violet-400",
+  E: "bg-rose-400",
+};
+
+// Display label for primary/secondary profile links
+const PROFILE_DISPLAY_LABELS: Record<string, string> = {
+  PP: "Perimenopause",
+  M: "Wechseljahre",
+  PM: "Postmenopause",
+  H: "Schilddrüse & Hashimoto",
+  C: "Stress & HPA-Achse",
+  E: "Östrogendominanz",
+};
+
 export function AuswertungClient() {
   const [result, setResult] = useState<QuizResult | null>(null);
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
@@ -71,7 +96,6 @@ export function AuswertungClient() {
     );
   }
 
-  // Kein Quiz ausgefüllt → zum Check weiterleiten
   if (!result) {
     return (
       <div className="max-w-xl mx-auto px-6 pt-40 pb-32 text-center">
@@ -79,7 +103,7 @@ export function AuswertungClient() {
           Noch kein Symptom-Check durchgeführt
         </h1>
         <p className="text-on-surface-variant font-body mb-8">
-          Beantworte zuerst die 5 Fragen, damit wir eine persönliche Auswertung für dich erstellen können.
+          Beantworte zuerst die 6 Fragen, damit wir eine persönliche Auswertung für dich erstellen können.
         </p>
         <Link
           href="/check"
@@ -91,24 +115,9 @@ export function AuswertungClient() {
     );
   }
 
-  const { primary, secondary, scores, klarheit, noPattern, lowScore } = result;
-  const maxScore = Math.max(...Object.values(scores));
+  const { primary, secondary, scores, klarheit, noPattern, lowScore, poiWarning, hpOverlap } = result;
 
-  const profileColors: Record<string, string> = {
-    P: "bg-amber-400",
-    H: "bg-blue-400",
-    C: "bg-violet-400",
-    E: "bg-rose-400",
-  };
-
-  const profileLabels: Record<string, string> = {
-    P: "Perimenopause",
-    H: "Schilddrüse & Hashimoto",
-    C: "Stress & HPA-Achse",
-    E: "Östrogendominanz",
-  };
-
-  // No pattern: all-zero or near-zero answers → reassuring result, no diagnosis
+  // ─── noPattern: no clear hormonal signal ──────────────────────────────────
   if (noPattern) {
     return (
       <div className="min-h-screen">
@@ -118,10 +127,10 @@ export function AuswertungClient() {
               Deine persönliche Auswertung
             </span>
             <h1 className="text-3xl md:text-4xl font-headline font-bold leading-tight mb-4 text-teal-800">
-              Kein auffälliges hormonelles Muster
+              Kein eindeutiges Muster erkennbar
             </h1>
             <p className="text-lg font-body leading-relaxed max-w-2xl text-teal-800 opacity-80">
-              Deine Antworten zeigen kein klares Signal für eine hormonelle Dysbalance – das ist eine gute Nachricht.
+              Deine Antworten deuten auf kein klares hormonelles Muster hin — das ist eigentlich eine gute Nachricht! Dein Körper scheint aktuell in Balance zu sein.
             </p>
           </div>
         </section>
@@ -154,6 +163,9 @@ export function AuswertungClient() {
             </ul>
           </div>
         </section>
+
+        {/* Email signup even for noPattern — be first when Aera launches */}
+        <ResultEmailCapture result={result} answers={answers} />
 
         <section className="px-6 max-w-4xl mx-auto pb-16">
           <h2 className="text-xl font-headline font-bold text-on-surface mb-6">Zur Information</h2>
@@ -199,7 +211,7 @@ export function AuswertungClient() {
           {/* Klarheits-Indikator */}
           <div className="mt-8 flex items-center gap-4">
             <div className="flex-shrink-0">
-              <div className={`relative w-16 h-16`}>
+              <div className="relative w-16 h-16">
                 <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="42" fill="transparent" stroke="currentColor" strokeWidth="10" className="opacity-20" />
                   <circle
@@ -251,8 +263,23 @@ export function AuswertungClient() {
         </section>
       )}
 
+      {/* POI warning — prominent medical notice */}
+      {poiWarning && (
+        <section className="px-6 max-w-4xl mx-auto pb-8">
+          <div className="bg-amber-50 rounded-2xl p-6 border border-amber-200 flex gap-4 items-start">
+            <span className="material-symbols-outlined text-amber-700 font-extralight flex-shrink-0 mt-0.5">warning</span>
+            <div>
+              <p className="text-sm font-bold text-amber-900 mb-1">Hinweis: Mögliche vorzeitige Wechseljahre (POI)</p>
+              <p className="text-sm text-amber-800 font-body leading-relaxed">
+                Bei ausbleibender Periode unter 35 Jahren empfehlen wir eine ärztliche Abklärung auf vorzeitige Wechseljahre (POI — Premature Ovarian Insufficiency). Dies betrifft etwa 1 % der Frauen und ist gut behandelbar, wenn früh erkannt.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* What this means + Signals */}
       <section className="px-6 max-w-4xl mx-auto pb-16 grid md:grid-cols-2 gap-8">
-        {/* Hauptprofil: Beschreibung */}
         <div className="bg-surface-container-low rounded-3xl p-8">
           <div className="flex items-center gap-3 mb-6">
             <span className={`material-symbols-outlined text-2xl font-extralight ${primary.textColor}`}>
@@ -265,10 +292,9 @@ export function AuswertungClient() {
           </p>
         </div>
 
-        {/* Signale aus den Antworten */}
         <div className="bg-surface-container-low rounded-3xl p-8">
           <h2 className="text-xl font-headline font-bold text-on-surface mb-6">
-            Signale aus deinen Antworten
+            Typische Signale dieses Profils
           </h2>
           <ul className="space-y-3">
             {primary.signale.map((signal) => (
@@ -283,7 +309,7 @@ export function AuswertungClient() {
         </div>
       </section>
 
-      {/* Empfohlene Bluttests */}
+      {/* Blood tests */}
       <section className="px-6 max-w-4xl mx-auto pb-16">
         <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-10 border border-outline-variant/10">
           <div className="flex items-center gap-3 mb-2">
@@ -313,7 +339,7 @@ export function AuswertungClient() {
         </div>
       </section>
 
-      {/* Nächste Schritte */}
+      {/* Next steps */}
       <section className="px-6 max-w-4xl mx-auto pb-16">
         <h2 className="text-2xl font-headline font-bold text-on-surface mb-6">Nächste Schritte</h2>
         <div className="space-y-4">
@@ -328,38 +354,38 @@ export function AuswertungClient() {
         </div>
       </section>
 
-      {/* Hormon-Profil Übersicht */}
+      {/* Score overview */}
       <section className="px-6 max-w-4xl mx-auto pb-16">
         <div className="bg-surface-container-low rounded-3xl p-8">
           <h2 className="text-xl font-headline font-bold text-on-surface mb-2">Dein vollständiges Profil</h2>
           <p className="text-xs text-on-surface-variant font-body mb-8">
-            Alle vier Hormon-Dimensionen im Überblick – ein Wert über 50% deutet auf ein relevantes Muster hin.
+            Alle vier Hormon-Dimensionen im Überblick – ein Wert über 50 % deutet auf ein relevantes Muster hin.
           </p>
           <div className="space-y-5">
             {(Object.keys(scores) as Array<keyof typeof scores>).map((key) => (
               <ScoreBalken
                 key={key}
-                label={profileLabels[key]}
+                label={SCORE_BAR_LABELS[key]}
                 score={scores[key]}
-                maxScore={20}
-                color={profileColors[key]}
+                maxScore={18}
+                color={SCORE_BAR_COLORS[key]}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Sekundär-Profil */}
+      {/* Secondary profile */}
       {secondary && (
         <section className="px-6 max-w-4xl mx-auto pb-16">
           <div className={`rounded-3xl p-8 ${secondary.color}`}>
-            <ProfilBadge label="Sekundäres Signal" color="bg-white/30" textColor={secondary.textColor} />
+            <ProfilBadge label="Möglicherweise auch relevant" color="bg-white/30" textColor={secondary.textColor} />
             <h2 className={`text-xl font-headline font-bold mt-3 mb-3 ${secondary.textColor}`}>
               {secondary.titel}
             </h2>
             <p className={`text-sm font-body leading-relaxed mb-6 ${secondary.textColor} opacity-80`}>
-              Neben deinem Hauptprofil zeigen deine Antworten auch Hinweise auf {secondary.untertitel.toLowerCase()}.
-              Das ist häufig – mehrere Hormonsysteme beeinflussen sich gegenseitig.
+              Deine Antworten zeigen auch Hinweise auf {secondary.untertitel.toLowerCase()}.
+              Mehrere Hormonsysteme beeinflussen sich gegenseitig – ein zweites Profil ist häufig.
             </p>
             <div className="grid sm:grid-cols-2 gap-3">
               {secondary.signale.slice(0, 2).map((signal) => (
@@ -380,7 +406,22 @@ export function AuswertungClient() {
         </section>
       )}
 
-      {/* Mehr lesen */}
+      {/* H + P overlap notice */}
+      {hpOverlap && (
+        <section className="px-6 max-w-4xl mx-auto pb-16">
+          <div className="bg-surface-container rounded-2xl p-6 border border-outline-variant/20 flex gap-4 items-start">
+            <span className="material-symbols-outlined text-primary font-extralight flex-shrink-0 mt-0.5">hub</span>
+            <div>
+              <p className="text-sm font-bold text-on-surface mb-1">Hashimoto & Wechseljahre – eine häufige Kombination</p>
+              <p className="text-sm text-on-surface-variant font-body leading-relaxed">
+                Bei bekannter Schilddrüsenerkrankung können sich Symptome mit hormonellen Übergangssymptomen überlappen. Beide Bereiche beeinflussen Energie, Stimmung und Stoffwechsel. Eine ganzheitliche Betrachtung – und die Testung beider Hormonsysteme – ist besonders wichtig.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related content */}
       <section className="px-6 max-w-4xl mx-auto pb-16">
         <h2 className="text-xl font-headline font-bold text-on-surface mb-6">Passende Inhalte für dich</h2>
         <div className="grid sm:grid-cols-3 gap-4">
@@ -390,7 +431,7 @@ export function AuswertungClient() {
           >
             <span className="material-symbols-outlined text-primary font-extralight text-xl mb-3 block">menu_book</span>
             <p className="font-bold text-sm text-on-surface group-hover:text-primary transition-colors mb-1">
-              Ratgeber: {profileLabels[primary.key]}
+              Ratgeber: {PROFILE_DISPLAY_LABELS[primary.key]}
             </p>
             <p className="text-xs text-on-surface-variant font-body">Hintergründe, Symptome und Behandlung</p>
           </Link>
