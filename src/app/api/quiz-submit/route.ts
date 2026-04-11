@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { QUIZ_QUESTIONS } from "@/lib/constants";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface QuizSubmitBody {
@@ -15,138 +16,176 @@ interface QuizSubmitBody {
   };
 }
 
+// ─── Brand colors (from tailwind.config.ts) ───────────────────────────────────
+const BRAND = {
+  primary: "#6f5b53",
+  primaryContainer: "#f8ddd2",
+  background: "#fbf9f4",
+  surfaceLow: "#f5f4ee",
+  surface: "#efeee8",
+  onSurface: "#31332e",
+  onSurfaceVariant: "#5e605a",
+  outlineVariant: "#b2b2ab",
+  onPrimary: "#fff7f5",
+};
+
+// Per-profile accent colors (hero section only)
+const PROFILE_ACCENT: Record<string, { bg: string; border: string; text: string; light: string }> = {
+  P: { bg: "#92400e", border: "#d97706", text: "#ffffff", light: "#fffbeb" },
+  H: { bg: "#1e40af", border: "#2563eb", text: "#ffffff", light: "#eff6ff" },
+  C: { bg: "#5b21b6", border: "#7c3aed", text: "#ffffff", light: "#f5f3ff" },
+  E: { bg: "#9f1239", border: "#e11d48", text: "#ffffff", light: "#fff1f2" },
+};
+
+// ─── Derive signals from the user's actual selected answers ──────────────────
+function buildSignalsFromAnswers(answers: QuizSubmitBody["answers"]): string[] {
+  const signals: string[] = [];
+
+  for (const answer of answers) {
+    if (answer.questionId === 1) continue; // skip age question — not a symptom
+    const question = QUIZ_QUESTIONS.find((q) => q.id === answer.questionId);
+    if (!question) continue;
+
+    const indices = Array.isArray(answer.selectedOption)
+      ? answer.selectedOption
+      : [answer.selectedOption];
+
+    for (const idx of indices) {
+      const option = question.options[idx];
+      if (!option) continue;
+      // Only include options that actually carry symptom scores (neutral / "none" options have all-zero scores)
+      const hasScore = Object.values(option.scores).some((v) => v > 0);
+      if (hasScore) {
+        signals.push(`${option.label} – ${option.description}`);
+      }
+    }
+  }
+
+  return signals;
+}
+
+// Per-profile blood tests and next steps (static, curated medical content)
+const PROFILE_CONTENT: Record<string, {
+  bluttests: { wert: string; warum: string }[];
+  naechsteSchritte: string[];
+  conditionUrl: string;
+}> = {
+  P: {
+    bluttests: [
+      { wert: "FSH (follikelstimulierend)", warum: "Wichtigster Perimenopause-Marker – steigt bei nachlassender Eierstockfunktion" },
+      { wert: "Östradiol (E2)", warum: "Zeigt den aktuellen Östrogenstatus; schwankt stark in der Perimenopause" },
+      { wert: "AMH (Anti-Müller-Hormon)", warum: "Misst die Eierstockreserve" },
+      { wert: "TSH, fT3, fT4", warum: "Schilddrüse ausschließen – viele Symptome überschneiden sich" },
+      { wert: "Ferritin & Vitamin D", warum: "Häufige Mangelzustände, die Beschwerden verstärken" },
+    ],
+    naechsteSchritte: [
+      "Gynäkologin ansprechen – explizit nach FSH, Östradiol und AMH fragen",
+      "Symptomtagebuch führen: Wann treten Hitzewallungen auf? Zusammenhang mit Zyklus?",
+      "Hormontherapie (HRT) besprechen: Aktuelle Leitlinien (DGGG 2020) sehen HRT als sicher und wirksam",
+      "Pflanzliche Alternativen prüfen: Traubsilberkerze und Rotklee-Isoflavone haben die stärkste Evidenz",
+    ],
+    conditionUrl: "https://www.aerahealth.de/menopause",
+  },
+  H: {
+    bluttests: [
+      { wert: "TSH", warum: "Erstes Screening – allein aber nicht ausreichend" },
+      { wert: "fT3 & fT4", warum: "Die aktiven Hormone; TSH kann normal sein, obwohl fT3 zu niedrig ist" },
+      { wert: "TPO-Antikörper", warum: "Entscheidender Hashimoto-Marker; bei 90 % der Betroffenen erhöht" },
+      { wert: "Ferritin", warum: "Eisenspeicher unter 70 µg/l verstärkt Müdigkeit und Haarausfall erheblich" },
+      { wert: "Vitamin D (25-OH)", warum: "Mangel verstärkt Autoimmunaktivität; Zielwert >40 ng/ml" },
+    ],
+    naechsteSchritte: [
+      "Beim Arzt explizit TPO-Antikörper anfragen – TSH allein schließt Hashimoto nicht aus",
+      "Selen 200 µg täglich: Metaanalysen zeigen signifikante Senkung der TPO-Antikörper",
+      "Vitamin D optimieren: Zielwert 40–60 ng/ml",
+      "Glutenfreier Selbstversuch für 3 Monate erwägen",
+    ],
+    conditionUrl: "https://www.aerahealth.de/hashimoto",
+  },
+  C: {
+    bluttests: [
+      { wert: "Cortisol-Tagesprofil (Speichel, 4 Punkte)", warum: "Zeigt den Tagesrhythmus – aussagekräftiger als ein Bluttest" },
+      { wert: "DHEA-S", warum: "Gegen-Hormon zu Cortisol; sinkt bei chronischem Stress" },
+      { wert: "Nüchterninsulin & HbA1c", warum: "Cortisol erhöht Blutzucker; Insulinresistenz ist häufige Folge" },
+      { wert: "Progesteron (Tag 19–22)", warum: "Pregnenolon-Steal reduziert Progesteronproduktion unter Stress" },
+      { wert: "Magnesium (intrazellulär)", warum: "Cortisol erschöpft Magnesiumspeicher; Mangel verstärkt Angst" },
+    ],
+    naechsteSchritte: [
+      "Cortisol-Tagesprofil durchführen: Morgens, mittags, abends, nachts (Speicheltest, z.B. Cerascreen)",
+      "Magnesiumglycinat abends: 300–400 mg fördert GABA und entspannt das Nervensystem",
+      "Ashwagandha: Adaptogen mit stärkster Cortisol-senkender Evidenz",
+      "Schlafzeit auf 22–23 Uhr vorziehen: Nebennieren erholen sich hauptsächlich zwischen 22 und 2 Uhr",
+    ],
+    conditionUrl: "https://www.aerahealth.de/hormone",
+  },
+  E: {
+    bluttests: [
+      { wert: "Progesteron (Tag 19–22 des Zyklus)", warum: "Muss in der Lutealphase gemessen werden; Zielwert >10 ng/ml" },
+      { wert: "Östradiol (E2, Tag 3–5)", warum: "Basismessung zu Zyklus-Beginn für Vergleich mit Lutealphase" },
+      { wert: "LH & FSH", warum: "Verhältnis gibt Hinweis auf Eierstockreserve und Zyklusqualität" },
+      { wert: "Testosteron & DHEA-S", warum: "Bei hormoneller Akne: Androgenüberschuss ausschließen" },
+      { wert: "Schilddrüse (TSH, fT3, TPO)", warum: "Hashimoto stört Progesteronproduktion und Zykluslänge" },
+    ],
+    naechsteSchritte: [
+      "Zyklusprotokoll führen: Symptome täglich notieren, um Muster zu erkennen",
+      "Mönchspfeffer (Vitex agnus-castus): Metaanalysen zeigen Wirksamkeit bei PMS und Progesteronmangel",
+      "Gynäkologin fragen: Bioidentisches Progesteron (Utrogest) – verschreibungspflichtig, sehr wirksam",
+      "Lebergesundheit unterstützen: Die Leber baut Östrogen ab – weniger Alkohol, mehr Kreuzblütler",
+    ],
+    conditionUrl: "https://www.aerahealth.de/hormone",
+  },
+};
+
 // ─── Email HTML template ──────────────────────────────────────────────────────
 function buildEmailHtml(body: QuizSubmitBody): string {
-  const { result } = body;
+  const { result, answers } = body;
 
-  const profileColors: Record<string, string> = {
-    P: "#d97706", // amber
-    H: "#2563eb", // blue
-    C: "#7c3aed", // violet
-    E: "#e11d48", // rose
-  };
-
-  const profileContent: Record<string, {
-    signale: string[];
-    bluttests: { wert: string; warum: string }[];
-    naechsteSchritte: string[];
-    conditionUrl: string;
-  }> = {
-    P: {
-      signale: [
-        "Vasomotorische Symptome (Hitzewallungen, Nachtschweiß) deuten auf Östrogenabfall hin",
-        "Schlafstörungen durch Temperaturregulations-Veränderungen im Hypothalamus",
-        "Zyklusveränderungen als frühes Zeichen nachlassender Ovarialfunktion",
-      ],
-      bluttests: [
-        { wert: "FSH", warum: "Wichtigster Perimenopause-Marker" },
-        { wert: "Östradiol (E2)", warum: "Aktueller Östrogenstatus" },
-        { wert: "TSH, fT3, fT4", warum: "Schilddrüse ausschließen" },
-        { wert: "AMH", warum: "Eierstockreserve messen" },
-        { wert: "Ferritin & Vitamin D", warum: "Häufige Mangelzustände" },
-      ],
-      naechsteSchritte: [
-        "Gynäkologin ansprechen – nach FSH, Östradiol und AMH fragen",
-        "Symptomtagebuch führen: Wann treten Hitzewallungen auf?",
-        "Hormontherapie (HRT) mit Ärztin besprechen",
-        "Traubsilberkerze / Rotklee-Isoflavone als pflanzliche Alternativen prüfen",
-      ],
-      conditionUrl: "https://www.aerahealth.de/menopause",
-    },
-    H: {
-      signale: [
-        "Kälteempfindlichkeit und ständiges Frieren als klassisches Hypothyreose-Zeichen",
-        "Diffuser Haarausfall als Folge gestörter Schilddrüsenhormon-Wirkung",
-        "Erschöpfung, die durch Schlaf nicht besser wird",
-        "Trockene Haut durch reduzierte Talgdrüsenaktivität",
-      ],
-      bluttests: [
-        { wert: "TSH", warum: "Erstes Screening" },
-        { wert: "fT3 & fT4", warum: "Aktive Schilddrüsenhormone" },
-        { wert: "TPO-Antikörper", warum: "Hashimoto-Marker" },
-        { wert: "Ferritin", warum: "Eisenspeicher bei Erschöpfung" },
-        { wert: "Vitamin D & Selen", warum: "Autoimmunaktivität reduzieren" },
-      ],
-      naechsteSchritte: [
-        "Beim Arzt explizit TPO-Antikörper anfragen",
-        "Selen 200 µg täglich (Metaanalysen belegt)",
-        "Vitamin D Zielwert 40–60 ng/ml",
-        "Glutenfreier Selbstversuch für 3 Monate erwägen",
-      ],
-      conditionUrl: "https://www.aerahealth.de/hashimoto",
-    },
-    C: {
-      signale: [
-        "Tired-but-wired: Dysregulierter Cortisol-Tagesrhythmus",
-        "Einschlafprobleme trotz Erschöpfung",
-        "Innere Unruhe und Herzrasen",
-      ],
-      bluttests: [
-        { wert: "Cortisol-Tagesprofil (Speichel)", warum: "Tagesrhythmus messen" },
-        { wert: "DHEA-S", warum: "Resilienzmarker" },
-        { wert: "Nüchterninsulin & HbA1c", warum: "Insulinresistenz ausschließen" },
-        { wert: "Progesteron", warum: "Pregnenolon-Steal erkennen" },
-      ],
-      naechsteSchritte: [
-        "Cortisol-Tagesprofil durchführen (Speicheltest)",
-        "Magnesiumglycinat abends: 300–400 mg",
-        "Ashwagandha (Cortisol-senkende Evidenz)",
-        "Schlafzeit auf 22–23 Uhr vorziehen",
-      ],
-      conditionUrl: "https://www.aerahealth.de/hormone",
-    },
-    E: {
-      signale: [
-        "Zyklusabhängige Beschwerden",
-        "Brustspannen und Wassereinlagerungen",
-        "Stimmungsabstürze vor der Periode",
-      ],
-      bluttests: [
-        { wert: "Progesteron (Tag 19–22)", warum: "Lutealphase messen" },
-        { wert: "Östradiol (E2, Tag 3–5)", warum: "Basismessung" },
-        { wert: "LH & FSH", warum: "Zyklusqualität prüfen" },
-        { wert: "Schilddrüse (TSH, fT3, TPO)", warum: "Hashimoto stört Progesteron" },
-      ],
-      naechsteSchritte: [
-        "Zyklusprotokoll führen: Symptome täglich notieren",
-        "Mönchspfeffer (Vitex) bei PMS",
-        "Bioidentisches Progesteron mit Ärztin besprechen",
-        "Lebergesundheit unterstützen: weniger Alkohol, Kreuzblütler",
-      ],
-      conditionUrl: "https://www.aerahealth.de/hormone",
-    },
-  };
-
-  const color = profileColors[result.primaryKey] ?? "#6366f1";
-  const content = profileContent[result.primaryKey] ?? profileContent.H;
+  const accent = PROFILE_ACCENT[result.primaryKey] ?? PROFILE_ACCENT.H;
+  const content = PROFILE_CONTENT[result.primaryKey] ?? PROFILE_CONTENT.H;
 
   const klarheitText =
     result.klarheit >= 60
       ? "Starkes Signal"
       : result.klarheit >= 40
       ? "Klares Muster"
-      : "Gemischtes Bild";
+      : "Erstes Orientierungsbild";
+
+  // Signals derived from user's actual selected answers
+  const signals = buildSignalsFromAnswers(answers);
 
   const testRows = content.bluttests
     .map(
       (t) =>
-        `<tr><td style="padding:8px 12px;font-weight:600;color:#1f2937;border-bottom:1px solid #f3f4f6;">${t.wert}</td><td style="padding:8px 12px;color:#6b7280;border-bottom:1px solid #f3f4f6;">${t.warum}</td></tr>`
+        `<tr>
+          <td style="padding:10px 14px;font-weight:600;font-size:13px;color:${BRAND.onSurface};border-bottom:1px solid ${BRAND.outlineVariant};">${t.wert}</td>
+          <td style="padding:10px 14px;font-size:13px;color:${BRAND.onSurfaceVariant};border-bottom:1px solid ${BRAND.outlineVariant};">${t.warum}</td>
+        </tr>`
     )
     .join("");
 
   const stepRows = content.naechsteSchritte
     .map(
       (s, i) =>
-        `<tr><td style="padding:8px 0;vertical-align:top;width:28px;"><span style="display:inline-block;width:22px;height:22px;background:${color};color:white;border-radius:50%;text-align:center;line-height:22px;font-size:12px;font-weight:700;">${i + 1}</span></td><td style="padding:8px 0 8px 10px;color:#374151;font-size:14px;line-height:1.5;">${s}</td></tr>`
+        `<tr>
+          <td style="padding:10px 0;vertical-align:top;width:32px;">
+            <span style="display:inline-block;width:24px;height:24px;background:${BRAND.primary};color:${BRAND.onPrimary};border-radius:50%;text-align:center;line-height:24px;font-size:11px;font-weight:700;">${i + 1}</span>
+          </td>
+          <td style="padding:10px 0 10px 10px;color:${BRAND.onSurfaceVariant};font-size:13px;line-height:1.6;">${s}</td>
+        </tr>`
     )
     .join("");
 
-  const signaleRows = content.signale
-    .map(
-      (s) =>
-        `<li style="margin-bottom:8px;color:#374151;font-size:14px;line-height:1.5;">✓ ${s}</li>`
-    )
-    .join("");
+  const signalRows =
+    signals.length > 0
+      ? signals
+          .map(
+            (s) =>
+              `<li style="margin-bottom:10px;padding:12px 14px;background:${BRAND.background};border-radius:8px;color:${BRAND.onSurfaceVariant};font-size:13px;line-height:1.5;list-style:none;">
+                <span style="color:${BRAND.primary};font-weight:700;margin-right:6px;">✓</span>${s}
+              </li>`
+          )
+          .join("")
+      : `<li style="margin-bottom:0;color:${BRAND.onSurfaceVariant};font-size:13px;list-style:none;">Keine spezifischen Symptome angegeben.</li>`;
 
   return `<!DOCTYPE html>
 <html lang="de">
@@ -155,39 +194,42 @@ function buildEmailHtml(body: QuizSubmitBody): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dein Aera Symptom-Check: ${result.primaryTitel}</title>
 </head>
-<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;padding:32px 16px;">
+<body style="margin:0;padding:0;background:${BRAND.background};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.background};padding:32px 16px;">
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
 
         <!-- Header -->
-        <tr><td style="background:white;border-radius:16px 16px 0 0;padding:32px 40px 24px;border-bottom:1px solid #f3f4f6;">
-          <p style="margin:0;font-size:22px;font-weight:700;color:#1f2937;letter-spacing:-0.5px;">Aera Health</p>
-          <p style="margin:4px 0 0;font-size:13px;color:#9ca3af;">Dein persönlicher Symptom-Check</p>
+        <tr><td style="background:${BRAND.primary};border-radius:16px 16px 0 0;padding:28px 40px;">
+          <p style="margin:0;font-size:20px;font-weight:700;color:${BRAND.onPrimary};letter-spacing:-0.3px;">Aera Health</p>
+          <p style="margin:4px 0 0;font-size:12px;color:${BRAND.onPrimary};opacity:0.7;letter-spacing:0.05em;">Dein persönlicher Symptom-Check</p>
         </td></tr>
 
         <!-- Hero -->
-        <tr><td style="background:${color}12;padding:32px 40px;border-left:4px solid ${color};">
-          <p style="margin:0 0 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:${color};opacity:.7;">Dein Hormonprofil</p>
-          <h1 style="margin:0 0 12px;font-size:26px;font-weight:700;color:${color};line-height:1.2;">${result.primaryTitel}</h1>
-          <p style="margin:0;font-size:14px;color:${color};opacity:.8;">${klarheitText} · Übereinstimmung: ${result.klarheit}%</p>
-          ${result.lowScore ? `<p style="margin:12px 0 0;font-size:13px;color:#6b7280;background:white;padding:10px 14px;border-radius:8px;">Dein Signal ist schwach – diese Auswertung ist eine erste Orientierung. Bitte besprich deine Symptome mit einer Ärztin.</p>` : ""}
+        <tr><td style="background:${accent.light};padding:36px 40px;border-left:4px solid ${accent.border};">
+          <p style="margin:0 0 6px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:${accent.border};">Dein Hormonprofil</p>
+          <h1 style="margin:0 0 10px;font-size:24px;font-weight:700;color:${accent.bg};line-height:1.25;">${result.primaryTitel}</h1>
+          <p style="margin:0;font-size:13px;color:${accent.bg};opacity:0.8;">${klarheitText} · Übereinstimmung: ${result.klarheit}%</p>
+          ${result.lowScore
+            ? `<p style="margin:14px 0 0;font-size:12px;color:${BRAND.onSurfaceVariant};background:white;padding:10px 14px;border-radius:8px;line-height:1.5;">Dein Signal ist schwach – diese Auswertung ist eine erste Orientierung. Bitte besprich deine Symptome mit einer Ärztin.</p>`
+            : ""}
         </td></tr>
 
-        <!-- Signals -->
+        <!-- Signals from your answers -->
         <tr><td style="background:white;padding:32px 40px;">
-          <h2 style="margin:0 0 16px;font-size:16px;font-weight:700;color:#1f2937;">Signale aus deinen Antworten</h2>
-          <ul style="margin:0;padding:0;list-style:none;">${signaleRows}</ul>
+          <h2 style="margin:0 0 6px;font-size:15px;font-weight:700;color:${BRAND.onSurface};">Signale aus deinen Antworten</h2>
+          <p style="margin:0 0 16px;font-size:12px;color:${BRAND.onSurfaceVariant};">Diese Symptome hast du selbst angegeben.</p>
+          <ul style="margin:0;padding:0;">${signalRows}</ul>
         </td></tr>
 
         <!-- Blood tests -->
-        <tr><td style="background:#f9fafb;padding:32px 40px;">
-          <h2 style="margin:0 0 8px;font-size:16px;font-weight:700;color:#1f2937;">Empfohlene Bluttests</h2>
-          <p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Zeige diese Liste bei deinem nächsten Arzttermin.</p>
-          <table width="100%" cellpadding="0" cellspacing="0" style="background:white;border-radius:12px;overflow:hidden;">
+        <tr><td style="background:${BRAND.surfaceLow};padding:32px 40px;">
+          <h2 style="margin:0 0 6px;font-size:15px;font-weight:700;color:${BRAND.onSurface};">Empfohlene Bluttests</h2>
+          <p style="margin:0 0 16px;font-size:12px;color:${BRAND.onSurfaceVariant};">Zeige diese Liste bei deinem nächsten Arzttermin.</p>
+          <table width="100%" cellpadding="0" cellspacing="0" style="background:white;border-radius:10px;overflow:hidden;border:1px solid ${BRAND.outlineVariant};">
             <thead><tr>
-              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#9ca3af;border-bottom:2px solid #f3f4f6;">Wert</th>
-              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#9ca3af;border-bottom:2px solid #f3f4f6;">Warum</th>
+              <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:${BRAND.onSurfaceVariant};border-bottom:1px solid ${BRAND.outlineVariant};background:${BRAND.surface};">Wert</th>
+              <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:${BRAND.onSurfaceVariant};border-bottom:1px solid ${BRAND.outlineVariant};background:${BRAND.surface};">Warum</th>
             </tr></thead>
             <tbody>${testRows}</tbody>
           </table>
@@ -195,23 +237,27 @@ function buildEmailHtml(body: QuizSubmitBody): string {
 
         <!-- Next steps -->
         <tr><td style="background:white;padding:32px 40px;">
-          <h2 style="margin:0 0 16px;font-size:16px;font-weight:700;color:#1f2937;">Nächste Schritte</h2>
+          <h2 style="margin:0 0 6px;font-size:15px;font-weight:700;color:${BRAND.onSurface};">Nächste Schritte</h2>
+          <p style="margin:0 0 16px;font-size:12px;color:${BRAND.onSurfaceVariant};">Konkrete Empfehlungen basierend auf deinem Profil.</p>
           <table width="100%" cellpadding="0" cellspacing="0">${stepRows}</table>
         </td></tr>
 
         <!-- CTA -->
-        <tr><td style="background:${color};padding:32px 40px;text-align:center;border-radius:0 0 0 0;">
-          <p style="margin:0 0 16px;font-size:18px;font-weight:700;color:white;">Mehr erfahren auf aerahealth.de</p>
-          <a href="${content.conditionUrl}" style="display:inline-block;background:white;color:${color};padding:12px 28px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;">Ratgeber lesen →</a>
+        <tr><td style="background:${BRAND.primaryContainer};padding:32px 40px;text-align:center;">
+          <p style="margin:0 0 6px;font-size:16px;font-weight:700;color:${BRAND.primary};">Mehr erfahren auf aerahealth.de</p>
+          <p style="margin:0 0 20px;font-size:13px;color:${BRAND.onSurfaceVariant};">Ratgeber, Experteninfos und alles zu deinem Hormonstatus.</p>
+          <a href="${content.conditionUrl}" style="display:inline-block;background:${BRAND.primary};color:${BRAND.onPrimary};padding:13px 30px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:0.03em;">Ratgeber lesen →</a>
         </td></tr>
 
-        <!-- Footer -->
-        <tr><td style="background:#f3f4f6;padding:24px 40px;border-radius:0 0 16px 16px;text-align:center;">
-          <p style="margin:0 0 8px;font-size:12px;color:#9ca3af;">
-            Diese Auswertung ersetzt keine ärztliche Diagnose. Sie dient als erste Orientierung.
+        <!-- Disclaimer + Footer -->
+        <tr><td style="background:${BRAND.surface};padding:24px 40px;border-radius:0 0 16px 16px;text-align:center;">
+          <p style="margin:0 0 8px;font-size:11px;color:${BRAND.onSurfaceVariant};line-height:1.6;">
+            Diese Auswertung ersetzt keine ärztliche Diagnose. Sie dient als erste Orientierung und Gesprächsgrundlage.
           </p>
-          <p style="margin:0;font-size:11px;color:#d1d5db;">
-            Aera Health · <a href="https://www.aerahealth.de/datenschutz" style="color:#9ca3af;">Datenschutz</a> · <a href="https://www.aerahealth.de/impressum" style="color:#9ca3af;">Impressum</a>
+          <p style="margin:0;font-size:11px;color:${BRAND.outlineVariant};">
+            Aera Health ·
+            <a href="https://www.aerahealth.de/datenschutz" style="color:${BRAND.onSurfaceVariant};text-decoration:none;">Datenschutz</a> ·
+            <a href="https://www.aerahealth.de/impressum" style="color:${BRAND.onSurfaceVariant};text-decoration:none;">Impressum</a>
           </p>
         </td></tr>
 
@@ -279,7 +325,6 @@ export async function POST(req: NextRequest) {
       console.error("quiz-submit errors:", errors);
     }
 
-    // Always return 200 to the client — partial failures are logged server-side
     return NextResponse.json({ ok: true });
   } catch (e) {
     console.error("quiz-submit fatal:", e);
