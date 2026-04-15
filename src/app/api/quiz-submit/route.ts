@@ -34,9 +34,11 @@ const PROFILE_ACCENT: Record<string, { bg: string; border: string; text: string;
   PP: { bg: "#92400e", border: "#d97706", text: "#ffffff", light: "#fffbeb" }, // amber — perimenopause
   M:  { bg: "#9a3412", border: "#ea580c", text: "#ffffff", light: "#fff7ed" }, // orange — menopause
   PM: { bg: "#854d0e", border: "#ca8a04", text: "#ffffff", light: "#fefce8" }, // yellow — postmenopause
-  H:  { bg: "#1e40af", border: "#2563eb", text: "#ffffff", light: "#eff6ff" },
-  C:  { bg: "#5b21b6", border: "#7c3aed", text: "#ffffff", light: "#f5f3ff" },
-  E:  { bg: "#9f1239", border: "#e11d48", text: "#ffffff", light: "#fff1f2" },
+  H:  { bg: "#1e40af", border: "#2563eb", text: "#ffffff", light: "#eff6ff" }, // blue — hashimoto
+  C:  { bg: "#5b21b6", border: "#7c3aed", text: "#ffffff", light: "#f5f3ff" }, // violet — cortisol
+  E:  { bg: "#9f1239", border: "#e11d48", text: "#ffffff", light: "#fff1f2" }, // rose — estrogen
+  A:  { bg: "#0f5e57", border: "#0d9488", text: "#ffffff", light: "#f0fdfa" }, // teal — PCOS/androgen
+  Fe: { bg: "#991b1b", border: "#dc2626", text: "#ffffff", light: "#fef2f2" }, // red — iron deficiency
 };
 
 // ─── Derive signals from the user's actual selected answers ──────────────────
@@ -173,18 +175,100 @@ const PROFILE_CONTENT: Record<string, {
       { wert: "Progesteron (Tag 19–22 des Zyklus)", warum: "Muss in der Lutealphase gemessen werden; Zielwert >10 ng/ml" },
       { wert: "Östradiol (E2, Tag 3–5)", warum: "Basismessung zu Zyklus-Beginn für Vergleich mit Lutealphase" },
       { wert: "LH & FSH", warum: "Verhältnis gibt Hinweis auf Eierstockreserve und Zyklusqualität" },
-      { wert: "Testosteron & DHEA-S", warum: "Bei hormoneller Akne: Androgenüberschuss ausschließen" },
+      { wert: "Testosteron & DHEA-S", warum: "Androgenüberschuss als Differentialdiagnose ausschließen" },
       { wert: "Schilddrüse (TSH, fT3, TPO)", warum: "Hashimoto stört Progesteronproduktion und Zykluslänge" },
     ],
     naechsteSchritte: [
-      "Zyklusprotokoll führen: Symptome täglich notieren, um Muster zu erkennen",
+      "Zyklusprotokoll führen: Symptome täglich notieren, um das Muster der Lutealphase zu erkennen",
       "Mönchspfeffer (Vitex agnus-castus): Metaanalysen zeigen Wirksamkeit bei PMS und Progesteronmangel",
       "Gynäkologin fragen: Bioidentisches Progesteron (Utrogest) – verschreibungspflichtig, sehr wirksam",
       "Lebergesundheit unterstützen: Die Leber baut Östrogen ab – weniger Alkohol, mehr Kreuzblütler",
     ],
     conditionUrl: "https://www.aerahealth.de/hormone",
   },
+  A: {
+    bluttests: [
+      { wert: "Testosteron (gesamt + frei) & SHBG", warum: "Freies Testosteron ist der entscheidende Androgenmarker" },
+      { wert: "LH:FSH-Verhältnis", warum: "Erhöhtes LH:FSH (>2:1) ist ein klassisches PCOS-Muster" },
+      { wert: "AMH (Anti-Müller-Hormon)", warum: "Bei PCOS oft deutlich erhöht (>5 ng/ml)" },
+      { wert: "Nüchterninsulin & HbA1c", warum: "Insulinresistenz liegt bei ca. 70 % aller PCOS-Betroffenen vor" },
+      { wert: "DHEA-S", warum: "Nebennieren-Androgen; wichtig zur Differenzierung der Androgenquelle" },
+    ],
+    naechsteSchritte: [
+      "Gynäkologin mit PCOS-Erfahrung aufsuchen und die Rotterdam-Kriterien ansprechen",
+      "Myo-Inositol (4 g/d) + D-Chiro-Inositol (400 mg/d): Stärkste nicht-medikamentöse Evidenz für PCOS (Unfer et al. 2017)",
+      "Insulinsensitivität optimieren: Proteinreiches Frühstück, keine schnellen Kohlenhydrate morgens",
+      "Spearmint-Tee 2× täglich: Randomisierte Studie zeigt Reduktion freier Androgene (Grant 2010)",
+    ],
+    conditionUrl: "https://www.aerahealth.de/hormone",
+  },
+  Fe: {
+    bluttests: [
+      { wert: "Ferritin", warum: "Der entscheidende Marker – nicht nur Hämoglobin! Zielwert >50 µg/l, bei Haarausfall >70 µg/l" },
+      { wert: "Hämoglobin & Hämatokrit", warum: "Für die Schweregrad-Einschätzung; kann bei Ferritinmangel noch normal sein" },
+      { wert: "Serum-Eisen & Transferrinsättigung", warum: "Bei Ferritin <20 µg/l zusätzlich messen" },
+      { wert: "Vitamin B12 & Folsäure", warum: "Häufige Begleitmängel; verstärken Erschöpfung" },
+      { wert: "TSH", warum: "Schilddrüsenunterfunktion und Eisenmangel treten häufig gemeinsam auf" },
+    ],
+    naechsteSchritte: [
+      "Ferritin explizit anfragen – sag deiner Ärztin: Zielwert >50 µg/l, nicht nur Normbereich",
+      "Eiseninfusion erwägen: Bei Ferritin <20 µg/l oder schlechter oraler Verträglichkeit deutlich effektiver",
+      "Orales Eisen: Eisen-Bisglycinat bevorzugen (nicht Eisensulfat) – bessere Verträglichkeit",
+      "Ursache klären: Starke Blutungen? Vegane Ernährung? Resorptionsstörung?",
+    ],
+    conditionUrl: "https://www.aerahealth.de/hormone",
+  },
 };
+
+// ─── Plain-text version ───────────────────────────────────────────────────────
+// Required alongside HTML to avoid spam filters. Mirrors the HTML structure.
+function buildEmailText(body: QuizSubmitBody): string {
+  const { result, answers } = body;
+  const content = PROFILE_CONTENT[result.primaryKey] ?? PROFILE_CONTENT.H;
+  const signals = buildSignalsFromAnswers(answers);
+
+  const klarheitText =
+    result.klarheit >= 60 ? "Starkes Signal" : result.klarheit >= 40 ? "Klares Muster" : "Erstes Orientierungsbild";
+
+  const signalLines = signals.length > 0
+    ? signals.map((s) => `  ✓ ${s}`).join("\n")
+    : "  Keine spezifischen Symptome angegeben.";
+
+  const testLines = content.bluttests
+    .map((t) => `  • ${t.wert}: ${t.warum}`)
+    .join("\n");
+
+  const stepLines = content.naechsteSchritte
+    .map((s, i) => `  ${i + 1}. ${s}`)
+    .join("\n");
+
+  return `Aera Health – Dein persönlicher Symptom-Check
+==============================================
+
+DEIN HORMONPROFIL: ${result.primaryTitel}
+${klarheitText} · Übereinstimmung: ${result.klarheit}%
+
+DEINE ANGABEN
+${signalLines}
+
+EMPFOHLENE BLUTTESTS
+Zeige diese Liste bei deinem nächsten Arzttermin:
+${testLines}
+
+NÄCHSTE SCHRITTE
+${stepLines}
+
+Mehr erfahren: ${content.conditionUrl}
+
+──────────────────────────────────────────────
+Diese Auswertung ersetzt keine ärztliche Diagnose.
+Sie dient als erste Orientierung und Gesprächsgrundlage.
+
+Aera Health · aerahealth.de
+Datenschutz: https://www.aerahealth.de/datenschutz
+Impressum: https://www.aerahealth.de/impressum
+`;
+}
 
 // ─── Email HTML template ──────────────────────────────────────────────────────
 function buildEmailHtml(body: QuizSubmitBody): string {
@@ -361,9 +445,16 @@ export async function POST(req: NextRequest) {
         const resend = new Resend(process.env.RESEND_API_KEY);
         const { error } = await resend.emails.send({
           from: "Aera Health <check@aerahealth.de>",
+          replyTo: "hello@aerahealth.de",
           to: body.email,
           subject: `Dein Aera Check: ${body.result.primaryTitel}`,
           html: buildEmailHtml(body),
+          text: buildEmailText(body),
+          headers: {
+            // Allows one-click unsubscribe — required by Gmail/Yahoo for bulk senders
+            "List-Unsubscribe": "<mailto:hello@aerahealth.de?subject=unsubscribe>",
+            "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+          },
         });
         if (error) errors.push(`Resend: ${error.message}`);
       } catch (e) {
