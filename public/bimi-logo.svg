@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BIMI Logo — Aera Health
+  Format: SVG Tiny PS (Portable/Secure) — BIMI compliant
+  Requirements met:
+    - Square viewBox (500 × 500)
+    - Solid opaque background (no transparency)
+    - No external references, scripts, or foreign objects
+    - System serif font only
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 500"
+     width="500"
+     height="500"
+     role="img"
+     aria-label="Aera Health">
+
+  <!-- Solid background — required by BIMI spec, no transparency allowed -->
+  <rect width="500" height="500" fill="#6f5b53"/>
+
+  <!-- Subtle inner circle for visual depth — purely decorative -->
+  <circle cx="250" cy="250" r="220" fill="#7d6a62"/>
+
+  <!-- "Ae" monogram — matches favicon -->
+  <text
+    x="250"
+    y="310"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="220"
+    font-weight="400"
+    text-anchor="middle"
+    fill="#fff7f5"
+    letter-spacing="-4">Ae</text>
+
+</svg>
