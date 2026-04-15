@@ -42,12 +42,13 @@ function ScoreBalken({
   );
 }
 
-// Score bar: uses raw P/H/C/E keys (P represents all peri/meno/post combined)
 const SCORE_BAR_LABELS: Record<string, string> = {
   P: "Wechseljahre",
   H: "Schilddrüse & Hashimoto",
   C: "Stress & HPA-Achse",
   E: "Östrogendominanz",
+  A: "PCOS & Androgen",
+  Fe: "Eisenmangel",
 };
 
 const SCORE_BAR_COLORS: Record<string, string> = {
@@ -55,9 +56,10 @@ const SCORE_BAR_COLORS: Record<string, string> = {
   H: "bg-blue-400",
   C: "bg-violet-400",
   E: "bg-rose-400",
+  A: "bg-teal-400",
+  Fe: "bg-red-400",
 };
 
-// Display label for primary/secondary profile links
 const PROFILE_DISPLAY_LABELS: Record<string, string> = {
   PP: "Perimenopause",
   M: "Wechseljahre",
@@ -65,6 +67,8 @@ const PROFILE_DISPLAY_LABELS: Record<string, string> = {
   H: "Schilddrüse & Hashimoto",
   C: "Stress & HPA-Achse",
   E: "Östrogendominanz",
+  A: "PCOS & Androgen",
+  Fe: "Eisenmangel",
 };
 
 export function AuswertungClient() {
@@ -103,7 +107,7 @@ export function AuswertungClient() {
           Noch kein Symptom-Check durchgeführt
         </h1>
         <p className="text-on-surface-variant font-body mb-8">
-          Beantworte zuerst die 6 Fragen, damit wir eine persönliche Auswertung für dich erstellen können.
+          Beantworte zuerst die 8 Fragen, damit wir eine persönliche Auswertung für dich erstellen können.
         </p>
         <Link
           href="/check"
@@ -115,7 +119,7 @@ export function AuswertungClient() {
     );
   }
 
-  const { primary, secondary, scores, klarheit, noPattern, lowScore, poiWarning, hpOverlap } = result;
+  const { primary, secondary, scores, klarheit, noPattern, lowScore, poiWarning, hpOverlap, endoFlag } = result;
 
   // ─── noPattern: no clear hormonal signal ──────────────────────────────────
   if (noPattern) {
@@ -142,7 +146,7 @@ export function AuswertungClient() {
               <h2 className="text-xl font-headline font-bold text-on-surface">Was das bedeutet</h2>
             </div>
             <p className="text-sm text-on-surface-variant font-body leading-relaxed">
-              Basierend auf deinen Antworten gibt es aktuell keine starken Hinweise auf Perimenopause, Hashimoto, eine Stresshormon-Dysbalance oder Östrogendominanz. Das bedeutet nicht, dass du keine Beschwerden haben kannst – aber die klassischen Symptommuster dieser Erkrankungen treten in deinen Antworten nicht deutlich hervor.
+              Basierend auf deinen Antworten gibt es aktuell keine starken Hinweise auf Perimenopause, Hashimoto, Stresshormon-Dysbalance, Östrogendominanz, PCOS oder Eisenmangel. Das bedeutet nicht, dass du keine Beschwerden haben kannst – aber die klassischen Symptommuster dieser Erkrankungen treten in deinen Antworten nicht deutlich hervor.
             </p>
           </div>
           <div className="bg-surface-container-low rounded-3xl p-8">
@@ -150,7 +154,7 @@ export function AuswertungClient() {
             <ul className="space-y-3">
               {[
                 "Falls du trotzdem Beschwerden hast, die dich belasten, besprich diese mit deiner Ärztin oder deinem Arzt.",
-                "Hormonelle Veränderungen entwickeln sich manchmal langsam. Ein jährlicher Check (TSH, Hormonstatus) kann sinnvoll sein.",
+                "Hormonelle Veränderungen entwickeln sich manchmal langsam. Ein jährlicher Check (TSH, Hormonstatus, Ferritin) kann sinnvoll sein.",
                 "Du kannst den Check jederzeit wiederholen, wenn sich deine Symptome verändern.",
               ].map((text) => (
                 <li key={text} className="flex gap-3 text-sm text-on-surface-variant font-body">
@@ -164,7 +168,6 @@ export function AuswertungClient() {
           </div>
         </section>
 
-        {/* Email signup even for noPattern — be first when Aera launches */}
         <ResultEmailCapture result={result} answers={answers} />
 
         <section className="px-6 max-w-4xl mx-auto pb-16">
@@ -190,6 +193,9 @@ export function AuswertungClient() {
       </div>
     );
   }
+
+  // Dynamic max for score bars — at least 22, scales if any score exceeds that
+  const maxProfileScore = Math.max(22, ...Object.values(scores));
 
   return (
     <div className="min-h-screen">
@@ -263,7 +269,7 @@ export function AuswertungClient() {
         </section>
       )}
 
-      {/* POI warning — prominent medical notice */}
+      {/* POI warning */}
       {poiWarning && (
         <section className="px-6 max-w-4xl mx-auto pb-8">
           <div className="bg-amber-50 rounded-2xl p-6 border border-amber-200 flex gap-4 items-start">
@@ -272,6 +278,21 @@ export function AuswertungClient() {
               <p className="text-sm font-bold text-amber-900 mb-1">Hinweis: Mögliche vorzeitige Wechseljahre (POI)</p>
               <p className="text-sm text-amber-800 font-body leading-relaxed">
                 Bei ausbleibender Periode unter 35 Jahren empfehlen wir eine ärztliche Abklärung auf vorzeitige Wechseljahre (POI — Premature Ovarian Insufficiency). Dies betrifft etwa 1 % der Frauen und ist gut behandelbar, wenn früh erkannt.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Endometriosis flag */}
+      {endoFlag && (
+        <section className="px-6 max-w-4xl mx-auto pb-8">
+          <div className="bg-orange-50 rounded-2xl p-6 border border-orange-200 flex gap-4 items-start">
+            <span className="material-symbols-outlined text-orange-700 font-extralight flex-shrink-0 mt-0.5">emergency</span>
+            <div>
+              <p className="text-sm font-bold text-orange-900 mb-1">Schmerzmuster erkannt – Endometriose ausschließen</p>
+              <p className="text-sm text-orange-800 font-body leading-relaxed">
+                Deine Antworten zeigen ein Schmerz- oder Blutungsmuster, das mit Endometriose vereinbar ist. Endometriose betrifft ca. 10 % der Frauen und dauert im Schnitt 7–10 Jahre bis zur Diagnose – weil Schmerzen oft als „normal" abgetan werden. Bitte lass einen transvaginalen Ultraschall durchführen und sprich deine Ärztin direkt auf Endometriose an.
               </p>
             </div>
           </div>
@@ -357,9 +378,9 @@ export function AuswertungClient() {
       {/* Score overview */}
       <section className="px-6 max-w-4xl mx-auto pb-16">
         <div className="bg-surface-container-low rounded-3xl p-8">
-          <h2 className="text-xl font-headline font-bold text-on-surface mb-2">Dein vollständiges Profil</h2>
+          <h2 className="text-xl font-headline font-bold text-on-surface mb-2">Dein vollständiges Hormonprofil</h2>
           <p className="text-xs text-on-surface-variant font-body mb-8">
-            Alle vier Hormon-Dimensionen im Überblick – ein Wert über 50 % deutet auf ein relevantes Muster hin.
+            Alle sechs Hormon-Dimensionen im Überblick – ein Wert über 50 % deutet auf ein relevantes Muster hin.
           </p>
           <div className="space-y-5">
             {(Object.keys(scores) as Array<keyof typeof scores>).map((key) => (
@@ -367,7 +388,7 @@ export function AuswertungClient() {
                 key={key}
                 label={SCORE_BAR_LABELS[key]}
                 score={scores[key]}
-                maxScore={18}
+                maxScore={maxProfileScore}
                 color={SCORE_BAR_COLORS[key]}
               />
             ))}

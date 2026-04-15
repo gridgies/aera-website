@@ -1,8 +1,10 @@
 export interface QuizScores {
-  P: number; // Perimenopause / Wechseljahre
-  H: number; // Hashimoto / Schilddrüse
-  C: number; // Cortisol / HPA-Achse
-  E: number; // Östrogendominanz / Progesteronmangel
+  P: number;  // Perimenopause / Wechseljahre
+  H: number;  // Hashimoto / Schilddrüse
+  C: number;  // Cortisol / HPA-Achse
+  E: number;  // Östrogendominanz / Progesteronmangel
+  A: number;  // Androgen-Überschuss / PCOS
+  Fe: number; // Eisenmangel
 }
 
 export interface QuizOption {
@@ -14,6 +16,8 @@ export interface QuizOption {
   ageGroup?: "young" | "thirties" | "early_peri" | "peri" | "post";
   /** If true, selecting this deselects all others (e.g. "Keines davon") */
   exclusive?: boolean;
+  /** Endometriosis signal strength — accumulated separately from profile scores */
+  endoSignal?: number;
 }
 
 export interface QuizQuestion {
