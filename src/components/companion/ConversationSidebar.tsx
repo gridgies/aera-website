@@ -59,10 +59,7 @@ export function ConversationSidebar({
   const content = (
     <div className="flex flex-col h-full" style={{ backgroundColor: "#e8e6df" }}>
       {/* Header */}
-      <div className="px-4 pt-5 pb-4 flex items-center justify-between">
-        <Link href="/" className="font-headline text-lg font-bold text-primary">
-          Aera
-        </Link>
+      <div className="px-4 pt-5 pb-3 flex items-center justify-end">
         <button
           onClick={onNew}
           className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors"

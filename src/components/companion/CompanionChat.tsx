@@ -45,7 +45,7 @@ function ChatPane({
   hormoneProfile: string | null;
   onTitleGenerated: (title: string) => void;
 }) {
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const hasTitleRef = useRef(initialMessages.length > 0);
 
   const { messages, sendMessage, status } = useChat({
@@ -60,9 +60,13 @@ function ChatPane({
 
   const isStreaming = status === "streaming" || status === "submitted";
 
-  // Auto-scroll to bottom
+  // Scroll the container to the bottom (avoids scrollIntoView overshooting the page)
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const el = scrollContainerRef.current;
+    if (!el) return;
+    requestAnimationFrame(() => {
+      el.scrollTop = el.scrollHeight;
+    });
   }, [messages, isStreaming]);
 
   // Generate title after first user message
@@ -104,7 +108,7 @@ function ChatPane({
   return (
     <div className="flex flex-col h-full">
       {/* Messages area */}
-      <div className="flex-1 overflow-y-auto py-6">
+      <div ref={scrollContainerRef} className="flex-1 overflow-y-auto pt-8 pb-6">
         <div className="max-w-3xl mx-auto px-4 md:px-8">
           {showWelcome ? (
             <WelcomeScreen hormoneProfile={hormoneProfile} onChipClick={handleChipClick} />
@@ -120,7 +124,6 @@ function ChatPane({
               {isStreaming && <TypingIndicator />}
             </>
           )}
-          <div ref={messagesEndRef} />
         </div>
       </div>
 
@@ -176,14 +179,100 @@ function WelcomeScreen({
   );
 }
 
-// Main exported component
+// ─── Profile greeting ────────────────────────────────────────────────────────
+
+const PROFILE_SUMMARIES: Record<string, { titel: string; summary: string; labor: string }> = {
+  PP: {
+    titel: "PMS & Progesteron-Mangel",
+    summary:
+      "Dein Muster deutet auf ein Ungleichgewicht in der zweiten Zyklushälfte hin: relativer Progesteron-Mangel im Verhältnis zu Östrogen. Das erklärt PMS-typische Beschwerden wie Reizbarkeit, Schlafprobleme, Brustspannen und Stimmungstiefen in den Tagen vor der Periode.",
+    labor: "Progesteron (21. Zyklustag), Östradiol, FSH",
+  },
+  M: {
+    titel: "Menopausales Hormonmuster",
+    summary:
+      "Dein Profil zeigt die klassischen Zeichen der Menopause: dauerhaft niedrige Östrogen- und Progesteronspiegel nach dem Ausbleiben der Periode. Das ist ein natürlicher Übergang – und trotzdem gibt es viele Wege, die Lebensqualität gezielt zu verbessern.",
+    labor: "FSH, LH, Östradiol, TSH, Ferritin",
+  },
+  PM: {
+    titel: "Perimenopausales Hormonmuster",
+    summary:
+      "Dein Körper befindet sich im Übergang: Die Hormonspiegel schwanken unregelmäßig, bevor die Menopause eintritt. Diese Phase kann Jahre dauern und erklärt viele scheinbar widersprüchliche Beschwerden – von Hitzewallungen bis zu Stimmungsschwankungen.",
+    labor: "FSH, LH, Östradiol (Zyklusmitte), AMH",
+  },
+  H: {
+    titel: "Schilddrüsendysfunktion / Hashimoto-Verdacht",
+    summary:
+      "Deine Beschwerden – wahrscheinlich Erschöpfung, Kältegefühl, Haarausfall und/oder Gewichtszunahme – passen zu einer Schilddrüsenunterfunktion, die häufig durch die Autoimmunerkrankung Hashimoto verursacht wird. Sie ist bei Frauen sehr häufig und wird oft erst spät erkannt.",
+    labor: "TSH, fT3, fT4, Anti-TPO, Anti-Thyreoglobulin",
+  },
+  C: {
+    titel: "Cortisol-Dysregulation / Stressachse",
+    summary:
+      "Dein Muster zeigt Zeichen einer überlasteten Stressachse (HPA-Achse). Chronisch erhöhtes Cortisol greift direkt in die Produktion von Sexualhormonen ein, stört den Schlaf und verstärkt die Erschöpfung – eine messbare hormonelle Verschiebung, keine Frage der Willenskraft.",
+    labor: "Cortisol (nüchtern morgens), DHEA-S, ggf. Tagesprofil im Speichel",
+  },
+  E: {
+    titel: "Östrogen-Dominanz",
+    summary:
+      "Im Verhältnis zu Progesteron ist dein Östrogenspiegel erhöht – oder Progesteron ist zu niedrig, um den Gegenpol zu bilden. Typische Zeichen sind starke Perioden, Wassereinlagerungen, Brustspannen und Stimmungsschwankungen in der Zyklushälfte.",
+    labor: "Östradiol, Progesteron, Prolaktin, ggf. Schilddrüsenwerte",
+  },
+  A: {
+    titel: "Androgen-Überschuss / PCOS-Muster",
+    summary:
+      "Dein Muster passt zu erhöhten Androgenwerten – den sogenannten \"männlichen\" Hormonen, die auch Frauen in kleinen Mengen brauchen. Bei Überschuss entstehen oft Akne, Haarausfall am Kopf, vermehrter Körperhaarwuchs oder unregelmäßige Zyklen. PCOS ist die häufigste hormonelle Erkrankung bei Frauen im reproduktiven Alter.",
+    labor: "Testosteron (gesamt & frei), DHEA-S, LH/FSH-Quotient, Insulin nüchtern",
+  },
+  Fe: {
+    titel: "Eisenmangel / Ferritin-Erschöpfung",
+    summary:
+      "Deine Beschwerden passen zu einem Eisenmangel – besonders wenn Ferritin (der Eisenspeicher) niedrig ist, auch wenn der Hämoglobinwert noch normal erscheint. Typische Zeichen: bleierne Müdigkeit, Haarausfall, Konzentrationsprobleme und Kältegefühl.",
+    labor: "Ferritin, Hämoglobin, MCV, Transferrinsättigung, Vitamin B12",
+  },
+};
+
+const PROFILE_LABELS_SHORT: Record<string, string> = {
+  PP: "PMS / Progesteron",
+  M:  "Menopause",
+  PM: "Perimenopause",
+  H:  "Hashimoto",
+  C:  "Cortisol / Stress",
+  E:  "Östrogen-Dominanz",
+  A:  "Androgene / PCOS",
+  Fe: "Eisenmangel",
+};
+
+function buildProfileGreeting(
+  vorname: string | null,
+  hormoneProfile: string | null,
+  secondaryProfile: string | null,
+): string {
+  const name = vorname ? `${vorname}` : null;
+  const greeting = name ? `Hallo ${name}!` : "Hallo!";
+  const key = hormoneProfile ?? "M";
+  const p = PROFILE_SUMMARIES[key] ?? PROFILE_SUMMARIES.M;
+
+  let text = `${greeting}\n\nHier ist deine persönliche Auswertung auf Basis deines Fragebogens:\n\n**${p.titel}**\n\n${p.summary}`;
+
+  if (secondaryProfile && secondaryProfile !== hormoneProfile && PROFILE_SUMMARIES[secondaryProfile]) {
+    const secLabel = PROFILE_LABELS_SHORT[secondaryProfile] ?? secondaryProfile;
+    text += `\n\nErgänzend zeigt dein Profil auch Hinweise auf **${secLabel}**.`;
+  }
+
+  text += `\n\n**Empfohlene Laborwerte als erster Schritt:**\n${p.labor}\n\nIch bin hier, um all deine Fragen zu beantworten – zu Blutwerten, Symptomen, Ernährung oder nächsten Schritten. Womit möchtest du anfangen?`;
+
+  return text;
+}
+
+// ─── Main exported component ─────────────────────────────────────────────────
 export function CompanionChat({ hormoneProfile, secondaryProfile, vorname, ageGroup }: Props) {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [initialMessages, setInitialMessages] = useState<UIMessage[]>([]);
   const [loadingConvs, setLoadingConvs] = useState(true);
   const [loadingMessages, setLoadingMessages] = useState(false);
-  const supabase = getSupabaseBrowser();
+  const supabase = useRef(getSupabaseBrowser()).current;
 
   // Load conversations list
   const loadConversations = useCallback(async () => {
@@ -225,10 +314,19 @@ export function CompanionChat({ hormoneProfile, secondaryProfile, vorname, ageGr
     if (!res.ok) return;
     const data = await res.json();
     const newConv: Conversation = data.conversation;
+
+    // Seed a greeting message based on the user's hormone profile
+    const greeting = buildProfileGreeting(vorname, hormoneProfile, secondaryProfile);
+    const { data: msgData } = await supabase
+      .from("messages")
+      .insert({ conversation_id: newConv.id, role: "assistant", content: greeting })
+      .select("id, role, content")
+      .single();
+
     setConversations((prev) => [newConv, ...prev]);
     setActiveId(newConv.id);
-    setInitialMessages([]);
-  }, []);
+    setInitialMessages(msgData ? toUIMessages([msgData]) : []);
+  }, [vorname, hormoneProfile, secondaryProfile, supabase]);
 
   const handleTitleGenerated = useCallback((id: string, title: string) => {
     setConversations((prev) =>
