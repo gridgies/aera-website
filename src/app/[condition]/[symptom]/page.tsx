@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${symptom.name} bei ${condition.topicName}: Ursachen & Hilfe`;
   const description = `${symptom.name} bei ${condition.topicName}: ${symptom.metaDescription}`;
   const url = `/${conditionSlug}/${symptomSlug}`;
+  const ogImage = `/og?title=${encodeURIComponent(`${symptom.name} bei ${condition.topicName}`)}&subtitle=${encodeURIComponent(symptom.metaDescription.slice(0, 120))}`;
 
   return {
     title,
@@ -42,6 +43,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `${BASE_URL}${url}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
     },
   };
 }

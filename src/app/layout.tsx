@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.aerahealth.de"),
   alternates: {
     canonical: "/",
-    languages: { "de-DE": "/" },
+    languages: { "de-DE": "/", "x-default": "/" },
   },
   openGraph: {
     title: "Aera Health | Frauengesundheit: Hormone, Wechseljahre & Hashimoto",
@@ -63,12 +63,23 @@ export const metadata: Metadata = {
     locale: "de_DE",
     type: "website",
     url: "https://www.aerahealth.de",
+    images: [
+      {
+        url: `/og?title=${encodeURIComponent("Aera Health")}&subtitle=${encodeURIComponent("Frauengesundheit: Hormone, Wechseljahre & Hashimoto")}`,
+        width: 1200,
+        height: 630,
+        alt: "Aera Health – Frauengesundheit",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Aera Health | Frauengesundheit",
     description:
       "Verstehe deine Hormone, Wechseljahre und hormonelle Balance. Wissenschaftlich fundiert.",
+    images: [
+      `/og?title=${encodeURIComponent("Aera Health")}&subtitle=${encodeURIComponent("Frauengesundheit: Hormone, Wechseljahre & Hashimoto")}`,
+    ],
   },
   robots: {
     index: true,

@@ -35,14 +35,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const condition = CONDITIONS_DATA[conditionSlug];
   if (!condition) return {};
 
+  const title = condition.metaTitle ?? `${condition.topicName}: Symptome, Ursachen & Behandlung`;
+  const ogImage = `/og?title=${encodeURIComponent(condition.topicName)}&subtitle=${encodeURIComponent(condition.metaDescription.slice(0, 120))}`;
+
   return {
-    title: condition.metaTitle ?? `${condition.topicName}: Symptome, Ursachen & Behandlung`,
+    title,
     description: condition.metaDescription,
     alternates: { canonical: `/${conditionSlug}` },
     openGraph: {
-      title: condition.metaTitle ?? `${condition.topicName}: Symptome, Ursachen & Behandlung`,
+      title,
       description: condition.metaDescription,
       url: `${BASE_URL}/${conditionSlug}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: condition.topicName }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: condition.metaDescription,
+      images: [ogImage],
     },
   };
 }

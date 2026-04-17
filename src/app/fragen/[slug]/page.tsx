@@ -20,6 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const frage = FRAGEN_DATA[slug];
   if (!frage) return {};
 
+  const ogImage = `/og?title=${encodeURIComponent(frage.question.slice(0, 70))}&subtitle=${encodeURIComponent(frage.metaDescription.slice(0, 120))}`;
+
   return {
     title: frage.metaTitle,
     description: frage.metaDescription,
@@ -28,6 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: frage.metaTitle,
       description: frage.metaDescription,
       url: `${BASE_URL}/fragen/${slug}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: frage.question }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: frage.metaTitle,
+      description: frage.metaDescription,
+      images: [ogImage],
     },
   };
 }
