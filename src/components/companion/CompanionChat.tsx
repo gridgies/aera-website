@@ -10,6 +10,9 @@ import { InputBar } from "./InputBar";
 
 interface Props {
   hormoneProfile: string | null;
+  secondaryProfile: string | null;
+  vorname: string | null;
+  ageGroup: string | null;
 }
 
 function getSupabaseBrowser() {
@@ -101,22 +104,24 @@ function ChatPane({
   return (
     <div className="flex flex-col h-full">
       {/* Messages area */}
-      <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6">
-        {showWelcome ? (
-          <WelcomeScreen hormoneProfile={hormoneProfile} onChipClick={handleChipClick} />
-        ) : (
-          <>
-            {messages.map((msg) => (
-              <MessageBubble
-                key={msg.id}
-                message={msg}
-                onChipClick={handleChipClick}
-              />
-            ))}
-            {isStreaming && <TypingIndicator />}
-          </>
-        )}
-        <div ref={messagesEndRef} />
+      <div className="flex-1 overflow-y-auto py-6">
+        <div className="max-w-3xl mx-auto px-4 md:px-8">
+          {showWelcome ? (
+            <WelcomeScreen hormoneProfile={hormoneProfile} onChipClick={handleChipClick} />
+          ) : (
+            <>
+              {messages.map((msg) => (
+                <MessageBubble
+                  key={msg.id}
+                  message={msg}
+                  onChipClick={handleChipClick}
+                />
+              ))}
+              {isStreaming && <TypingIndicator />}
+            </>
+          )}
+          <div ref={messagesEndRef} />
+        </div>
       </div>
 
       <InputBar onSend={handleSend} disabled={isStreaming} />
@@ -172,7 +177,7 @@ function WelcomeScreen({
 }
 
 // Main exported component
-export function CompanionChat({ hormoneProfile }: Props) {
+export function CompanionChat({ hormoneProfile, secondaryProfile, vorname, ageGroup }: Props) {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [initialMessages, setInitialMessages] = useState<UIMessage[]>([]);
@@ -248,6 +253,7 @@ export function CompanionChat({ hormoneProfile }: Props) {
         onNew={createNewConversation}
         onSignOut={handleSignOut}
         isLoading={loadingConvs}
+        userProfile={{ vorname, ageGroup, hormoneProfile, secondaryProfile }}
       />
 
       <main className="flex-1 flex flex-col min-w-0 h-full">

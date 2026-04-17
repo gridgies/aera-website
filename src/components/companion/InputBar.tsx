@@ -36,9 +36,10 @@ export function InputBar({ onSend, disabled, placeholder = "Schreib Aera eine Na
 
   return (
     <div
-      className="px-4 py-3 border-t border-outline-variant/20"
+      className="border-t border-outline-variant/20 px-4 py-3"
       style={{ backgroundColor: "#edecea" }}
     >
+      <div className="max-w-3xl mx-auto">
       <div
         className="flex items-end gap-3 bg-surface rounded-2xl px-4 py-3 shadow-sm border border-outline-variant/20"
       >
@@ -70,6 +71,7 @@ export function InputBar({ onSend, disabled, placeholder = "Schreib Aera eine Na
       <p className="text-center text-xs text-on-surface-variant/50 font-body mt-2">
         Aera ersetzt keine ärztliche Beratung.
       </p>
+      </div>
     </div>
   );
 }

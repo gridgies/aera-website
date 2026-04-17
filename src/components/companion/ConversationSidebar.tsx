@@ -9,6 +9,32 @@ export interface Conversation {
   updated_at: string;
 }
 
+const AGE_LABELS: Record<string, string> = {
+  young:      "15–24 Jahre",
+  thirties:   "25–34 Jahre",
+  early_peri: "35–44 Jahre",
+  peri:       "45–54 Jahre",
+  post:       "55+ Jahre",
+};
+
+const PROFILE_LABELS: Record<string, string> = {
+  PP: "PMS / Progesteron",
+  M:  "Menopause",
+  PM: "Perimenopause",
+  H:  "Hashimoto",
+  C:  "Cortisol / Stress",
+  E:  "Östrogen-Dominanz",
+  A:  "Androgene / PCOS",
+  Fe: "Eisenmangel",
+};
+
+interface UserProfile {
+  vorname: string | null;
+  ageGroup: string | null;
+  hormoneProfile: string | null;
+  secondaryProfile: string | null;
+}
+
 interface Props {
   conversations: Conversation[];
   activeId: string | null;
@@ -16,6 +42,7 @@ interface Props {
   onNew: () => void;
   onSignOut: () => void;
   isLoading?: boolean;
+  userProfile?: UserProfile;
 }
 
 export function ConversationSidebar({
@@ -25,6 +52,7 @@ export function ConversationSidebar({
   onNew,
   onSignOut,
   isLoading,
+  userProfile,
 }: Props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -45,6 +73,49 @@ export function ConversationSidebar({
           </span>
         </button>
       </div>
+
+      {/* Profile card */}
+      {userProfile && (userProfile.hormoneProfile || userProfile.ageGroup) && (
+        <div className="mx-3 mb-3 px-3 py-3 rounded-2xl bg-primary/8 border border-primary/15">
+          {userProfile.vorname && (
+            <p className="text-sm font-semibold text-on-surface font-body mb-2">
+              {userProfile.vorname}
+            </p>
+          )}
+          <div className="flex flex-col gap-1">
+            {userProfile.hormoneProfile && (
+              <div className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-primary" style={{ fontSize: "14px" }}>
+                  biotech
+                </span>
+                <span className="text-xs text-on-surface-variant font-body">
+                  {PROFILE_LABELS[userProfile.hormoneProfile] ?? userProfile.hormoneProfile}
+                </span>
+              </div>
+            )}
+            {userProfile.secondaryProfile && userProfile.secondaryProfile !== userProfile.hormoneProfile && (
+              <div className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-primary/60" style={{ fontSize: "14px" }}>
+                  add_circle
+                </span>
+                <span className="text-xs text-on-surface-variant/80 font-body">
+                  {PROFILE_LABELS[userProfile.secondaryProfile] ?? userProfile.secondaryProfile}
+                </span>
+              </div>
+            )}
+            {userProfile.ageGroup && (
+              <div className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-primary/60" style={{ fontSize: "14px" }}>
+                  calendar_today
+                </span>
+                <span className="text-xs text-on-surface-variant/80 font-body">
+                  {AGE_LABELS[userProfile.ageGroup] ?? userProfile.ageGroup}
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Section label */}
       <p className="px-4 pb-2 text-xs font-semibold uppercase tracking-widest text-on-surface-variant/60 font-body">

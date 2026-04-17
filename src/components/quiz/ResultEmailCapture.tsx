@@ -244,6 +244,13 @@ function CompanionSignup({ result, answers }: Props) {
         <p className="text-center text-xs text-on-surface-variant font-body">
           Kostenlos · Keine Kreditkarte · Jederzeit kündbar
         </p>
+
+        <p className="text-center text-xs text-on-surface-variant/60 font-body pt-1">
+          Bereits ein Konto?{" "}
+          <a href="/login?redirect=/companion" className="text-primary hover:underline font-semibold">
+            Anmelden →
+          </a>
+        </p>
       </form>
     </div>
   );

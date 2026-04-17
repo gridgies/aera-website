@@ -59,12 +59,17 @@ export function Navbar() {
           {/* Desktop CTA / Companion link */}
           {isSignedIn ? (
             <Link href="/companion" className="btn-primary hidden md:inline-block">
-              Companion öffnen
+              aera:companion
             </Link>
           ) : (
-            <Link href="/check" className="btn-primary hidden md:inline-block">
-              Jetzt starten
-            </Link>
+            <>
+              <Link href="/login" className="hidden md:inline-block text-sm font-semibold font-body text-on-surface-variant hover:text-primary transition-colors">
+                Anmelden
+              </Link>
+              <Link href="/check" className="btn-primary hidden md:inline-block">
+                Jetzt starten
+              </Link>
+            </>
           )}
 
           {/* Mobile hamburger */}

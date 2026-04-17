@@ -14,14 +14,19 @@ export default async function CompanionPage() {
 
   if (!user) redirect("/login?redirect=/companion");
 
-  // Load user's hormone profile for personalised welcome screen
+  // Load user profile for personalised welcome screen and sidebar card
   const { data: profile } = await supabase
     .from("profiles")
-    .select("hormone_profile")
+    .select("hormone_profile, secondary_profile, vorname, age_group")
     .eq("id", user.id)
     .single();
 
   return (
-    <CompanionChat hormoneProfile={profile?.hormone_profile ?? null} />
+    <CompanionChat
+      hormoneProfile={profile?.hormone_profile ?? null}
+      secondaryProfile={profile?.secondary_profile ?? null}
+      vorname={profile?.vorname ?? null}
+      ageGroup={profile?.age_group ?? null}
+    />
   );
 }
