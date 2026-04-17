@@ -58,7 +58,10 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           {/* Desktop CTA / Companion link */}
           {isSignedIn ? (
-            <Link href="/companion" className="btn-primary hidden md:inline-block">
+            <Link
+              href="/companion"
+              className="hidden md:inline-block px-6 py-2.5 rounded-full border border-primary text-primary text-sm font-bold uppercase tracking-widest hover:bg-primary/8 transition-all"
+            >
               aera:companion
             </Link>
           ) : (

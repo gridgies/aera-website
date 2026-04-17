@@ -62,12 +62,6 @@ export default function HomePage() {
                 href="/check"
                 className="bg-primary text-on-primary px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest shadow-xl shadow-primary/20 hover:shadow-2xl transition-all active:scale-95 text-center"
               >
-                Frühen Zugang sichern
-              </Link>
-              <Link
-                href="/check"
-                className="bg-transparent text-primary px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest border border-primary/20 hover:bg-surface-container transition-all active:scale-95 text-center"
-              >
                 2-Min. Check starten
               </Link>
             </div>
