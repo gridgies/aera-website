@@ -107,7 +107,7 @@ export function AuswertungClient() {
           Noch kein Symptom-Check durchgeführt
         </h1>
         <p className="text-on-surface-variant font-body mb-8">
-          Beantworte zuerst die 8 Fragen, damit wir eine persönliche Auswertung für dich erstellen können.
+          Beantworte zuerst die 7 Fragen, damit wir eine persönliche Auswertung für dich erstellen können.
         </p>
         <Link
           href="/check"

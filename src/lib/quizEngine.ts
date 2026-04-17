@@ -9,8 +9,9 @@
  * - Androgen-Überschuss/PCOS (A): Rotterdam-Kriterien (ESHRE/ASRM), Teede et al. 2018
  * - Eisenmangel (Fe): WHO-Ferritin-Schwellenwerte, Camaschella NEJM 2015
  *
+ * v3.1: Merged Q4+Q5 → single multi-select Q4; 7-question structure.
  * v3.0: Added PCOS (A) and Iron deficiency (Fe) profiles; endometriosis flag;
- * 8-question structure; age multipliers extended to A; Q5 multi-select cap raised to 8.
+ * 8-question structure; age multipliers extended to A; multi-select cap raised to 8.
  */
 
 import { QuizAnswer } from "@/types";
@@ -44,8 +45,8 @@ const AGE_A_MULTIPLIERS: Record<string, number> = {
 // Tiebreaker: H > P > A > C > Fe > E (medical specificity / urgency)
 const TIEBREAKER_ORDER: RawProfileKey[] = ["H", "P", "A", "C", "Fe", "E"];
 
-// Q5 multi-select: cap total contribution across all profiles
-const Q5_TOTAL_CAP = 8;
+// Q4 multi-select: cap total contribution across all profiles
+const Q4_TOTAL_CAP = 8;
 
 export interface HormonProfil {
   key: ProfileKey;
@@ -375,48 +376,48 @@ export interface QuizResult {
 export function berechneErgebnis(answers: QuizAnswer[]): QuizResult {
   const totals: RawScores = { P: 0, H: 0, C: 0, E: 0, A: 0, Fe: 0 };
 
-  // ─── 1. Q5 (multi-select) — process separately with 8-pt cap ─────────────
-  const q5Answer = answers.find((a) => a.questionId === 5);
-  const q5Question = QUIZ_QUESTIONS.find((q) => q.id === 5);
-  if (q5Answer && q5Question) {
-    const indices = Array.isArray(q5Answer.selectedOption)
-      ? q5Answer.selectedOption
-      : [q5Answer.selectedOption];
+  // ─── 1. Q4 (multi-select) — process separately with 8-pt cap ─────────────
+  const q4Answer = answers.find((a) => a.questionId === 4);
+  const q4Question = QUIZ_QUESTIONS.find((q) => q.id === 4);
+  if (q4Answer && q4Question) {
+    const indices = Array.isArray(q4Answer.selectedOption)
+      ? q4Answer.selectedOption
+      : [q4Answer.selectedOption];
 
-    const q5Raw: RawScores = { P: 0, H: 0, C: 0, E: 0, A: 0, Fe: 0 };
+    const q4Raw: RawScores = { P: 0, H: 0, C: 0, E: 0, A: 0, Fe: 0 };
     for (const idx of indices) {
-      const opt = q5Question.options[idx];
+      const opt = q4Question.options[idx];
       if (!opt?.scores) continue;
-      q5Raw.P += opt.scores.P;
-      q5Raw.H += opt.scores.H;
-      q5Raw.C += opt.scores.C;
-      q5Raw.E += opt.scores.E;
-      q5Raw.A += opt.scores.A;
-      q5Raw.Fe += opt.scores.Fe;
+      q4Raw.P += opt.scores.P;
+      q4Raw.H += opt.scores.H;
+      q4Raw.C += opt.scores.C;
+      q4Raw.E += opt.scores.E;
+      q4Raw.A += opt.scores.A;
+      q4Raw.Fe += opt.scores.Fe;
     }
 
-    const q5Total = q5Raw.P + q5Raw.H + q5Raw.C + q5Raw.E + q5Raw.A + q5Raw.Fe;
-    if (q5Total > Q5_TOTAL_CAP) {
-      const scale = Q5_TOTAL_CAP / q5Total;
-      totals.P += Math.round(q5Raw.P * scale);
-      totals.H += Math.round(q5Raw.H * scale);
-      totals.C += Math.round(q5Raw.C * scale);
-      totals.E += Math.round(q5Raw.E * scale);
-      totals.A += Math.round(q5Raw.A * scale);
-      totals.Fe += Math.round(q5Raw.Fe * scale);
+    const q4Total = q4Raw.P + q4Raw.H + q4Raw.C + q4Raw.E + q4Raw.A + q4Raw.Fe;
+    if (q4Total > Q4_TOTAL_CAP) {
+      const scale = Q4_TOTAL_CAP / q4Total;
+      totals.P += Math.round(q4Raw.P * scale);
+      totals.H += Math.round(q4Raw.H * scale);
+      totals.C += Math.round(q4Raw.C * scale);
+      totals.E += Math.round(q4Raw.E * scale);
+      totals.A += Math.round(q4Raw.A * scale);
+      totals.Fe += Math.round(q4Raw.Fe * scale);
     } else {
-      totals.P += q5Raw.P;
-      totals.H += q5Raw.H;
-      totals.C += q5Raw.C;
-      totals.E += q5Raw.E;
-      totals.A += q5Raw.A;
-      totals.Fe += q5Raw.Fe;
+      totals.P += q4Raw.P;
+      totals.H += q4Raw.H;
+      totals.C += q4Raw.C;
+      totals.E += q4Raw.E;
+      totals.A += q4Raw.A;
+      totals.Fe += q4Raw.Fe;
     }
   }
 
-  // ─── 2. All other questions — normal accumulation (skip Q1 and Q5) ────────
+  // ─── 2. All other questions — normal accumulation (skip Q1 and Q4) ────────
   for (const answer of answers) {
-    if (answer.questionId === 1 || answer.questionId === 5) continue;
+    if (answer.questionId === 1 || answer.questionId === 4) continue;
 
     const question = QUIZ_QUESTIONS.find((q) => q.id === answer.questionId);
     if (!question) continue;

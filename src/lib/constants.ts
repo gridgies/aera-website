@@ -144,11 +144,14 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
 
-  // ─── Q4: Stärkstes Symptom ───────────────────────────────────────────────────
+  // ─── Q4: Körpersignale (multi-select) ────────────────────────────────────────
+  // Merged from old Q4 + Q5 — combines strongest-symptom signals with detailed
+  // body observations. Processed separately in the engine with an 8-point cap.
   {
     id: 4,
-    question: "Was belastet dich aktuell am stärksten?",
-    subtitle: "Wähle das Symptom, das deinen Alltag am meisten einschränkt.",
+    question: "Welche dieser Körpersignale kennst du?",
+    subtitle: "Mehrfachauswahl möglich – wähle alles, was auf dich zutrifft.",
+    multiSelect: true,
     options: [
       {
         icon: "thermostat",
@@ -157,45 +160,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
         scores: { P: 4, H: 0, C: 0, E: 0, A: 0, Fe: 0 },
       },
       {
-        icon: "battery_low",
-        label: "Tiefe Erschöpfung – Schlafen hilft nicht",
-        description: "Ich bin nach dem Aufwachen bereits erschöpft. Kein Schlaf macht mich wirklich erholt.",
-        scores: { P: 1, H: 2, C: 1, E: 0, A: 0, Fe: 2 },
-      },
-      {
-        icon: "ac_unit",
-        label: "Haarausfall, Kälteempfindlichkeit oder trockene Haut",
-        description: "Ich verliere deutlich mehr Haare, friere ständig oder meine Haut ist ausgetrocknet.",
-        scores: { P: 0, H: 4, C: 0, E: 0, A: 0, Fe: 1 },
-      },
-      {
         icon: "sentiment_worried",
         label: "Stimmungsabstürze, Angst oder innere Unruhe",
-        description: "Ich bin emotional instabil, reizbar oder angespannt – oft ohne klaren Auslöser.",
+        description: "Emotional instabil, reizbar oder angespannt – oft ohne klaren Auslöser.",
         scores: { P: 0, H: 0, C: 2, E: 2, A: 0, Fe: 0 },
       },
-      {
-        icon: "face_retouching_natural",
-        label: "Akne (Kinn/Kiefer), Gewichtszunahme am Bauch oder Körperbehaarung",
-        description: "Unreine Haut im Kinn-/Kieferbereich, Bauchfett trotz normaler Ernährung oder unerwünschter Haarwuchs.",
-        scores: { P: 0, H: 0, C: 0, E: 1, A: 4, Fe: 0 },
-      },
-      {
-        icon: "sentiment_satisfied",
-        label: "Keine starken Beschwerden",
-        description: "Ich fühle mich aktuell gut oder habe nur gelegentliche, leichte Symptome.",
-        scores: { P: 0, H: 0, C: 0, E: 0, A: 0, Fe: 0 },
-      },
-    ],
-  },
-
-  // ─── Q5: Körpersignale (multi-select) ────────────────────────────────────────
-  {
-    id: 5,
-    question: "Was beobachtest du an deinem Körper?",
-    subtitle: "Mehrfachauswahl möglich – körperliche Signale treten oft zusammen auf.",
-    multiSelect: true,
-    options: [
       {
         icon: "ac_unit",
         label: "Ständig frieren / Kälteempfindlichkeit",
@@ -222,15 +191,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       },
       {
         icon: "face_retouching_natural",
-        label: "Akne am Kinn oder Kiefer",
-        description: "Unreine Haut vor allem im Kinn- und Kieferbereich – oft zyklisch.",
-        scores: { P: 0, H: 0, C: 0, E: 1, A: 2, Fe: 0 },
-      },
-      {
-        icon: "accessibility",
-        label: "Vermehrter Haarwuchs im Gesicht oder am Körper",
-        description: "Ich bemerke unerwünschten Haarwuchs im Gesicht, an der Brust oder am Bauch.",
-        scores: { P: 0, H: 0, C: 0, E: 0, A: 3, Fe: 0 },
+        label: "Akne am Kinn/Kiefer oder unerwünschter Haarwuchs",
+        description: "Unreine Haut im Kinn-/Kieferbereich oder Haarwuchs im Gesicht, an der Brust oder am Bauch.",
+        scores: { P: 0, H: 0, C: 0, E: 1, A: 3, Fe: 0 },
       },
       {
         icon: "favorite",
@@ -248,9 +211,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
 
-  // ─── Q6: Schlaf ──────────────────────────────────────────────────────────────
+  // ─── Q5: Schlaf (was Q6) ─────────────────────────────────────────────────────
   {
-    id: 6,
+    id: 5,
     question: "Wie schläfst du?",
     subtitle: "Schlafmuster spiegeln den Hormonhaushalt direkt wider.",
     options: [
@@ -287,9 +250,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
 
-  // ─── Q7: Energiemuster ────────────────────────────────────────────────────────
+  // ─── Q6: Energiemuster (was Q7) ──────────────────────────────────────────────
   {
-    id: 7,
+    id: 6,
     question: "Wie würdest du deine Energie beschreiben?",
     subtitle: "Das Energiemuster über den Tag verrät viel über das hormonelle Gleichgewicht.",
     options: [
@@ -326,9 +289,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
 
-  // ─── Q8: Kontext ─────────────────────────────────────────────────────────────
+  // ─── Q7: Kontext (was Q8) ────────────────────────────────────────────────────
   {
-    id: 8,
+    id: 7,
     question: "Was hat dich zu diesem Check geführt?",
     subtitle: "Dein Kontext hilft uns, dein Ergebnis richtig einzuordnen.",
     options: [
