@@ -55,7 +55,7 @@ export function ResultEmailCapture({ result, answers }: Props) {
 
   if (state === "success") {
     return (
-      <section className="px-6 max-w-4xl mx-auto pb-16">
+      <section className="px-6 max-w-4xl mx-auto pb-16 space-y-4">
         <div className="bg-surface-container-low rounded-3xl p-8 md:p-10 text-center">
           <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <span className="material-symbols-outlined text-primary text-3xl">mark_email_read</span>
@@ -67,6 +67,46 @@ export function ResultEmailCapture({ result, answers }: Props) {
             Wir haben dir deine persönliche Auswertung per E-Mail geschickt.
             Schau auch im Spam-Ordner nach, falls sie nicht sofort auftaucht.
           </p>
+        </div>
+
+        {/* Companion upsell */}
+        <div className="bg-primary/5 border border-primary/20 rounded-3xl p-8 md:p-10">
+          <div className="flex items-start gap-4 mb-5">
+            <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <span className="material-symbols-outlined text-primary">psychology</span>
+            </div>
+            <div>
+              <h3 className="text-xl font-headline font-bold text-on-surface mb-1">
+                Geh tiefer mit Aera Companion
+              </h3>
+              <p className="text-on-surface-variant font-body text-sm leading-relaxed">
+                Deine persönliche KI-Begleiterin kennt dein Hormonprofil und beantwortet
+                deine Fragen zu Blutwerten, Symptomen und nächsten Schritten – jederzeit.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {[
+              { icon: "chat", text: "Persönlicher Chat" },
+              { icon: "science", text: "Blutwerte verstehen" },
+              { icon: "calendar_month", text: "Zyklusbegleitung" },
+              { icon: "lock", text: "Privat & sicher" },
+            ].map((item) => (
+              <span
+                key={item.text}
+                className="inline-flex items-center gap-1.5 bg-primary/8 text-primary px-3 py-1.5 rounded-full text-xs font-semibold"
+              >
+                <span className="material-symbols-outlined text-sm">{item.icon}</span>
+                {item.text}
+              </span>
+            ))}
+          </div>
+          <a
+            href="/login"
+            className="inline-block w-full text-center bg-primary text-on-primary py-4 rounded-xl font-bold text-base hover:opacity-90 active:scale-[0.99] transition-all"
+          >
+            Companion kostenlos testen →
+          </a>
         </div>
       </section>
     );

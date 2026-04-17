@@ -4,10 +4,21 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/lib/constants";
+import { getSupabaseBrowser } from "@/lib/supabase";
 
 export function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    const supabase = getSupabaseBrowser();
+    supabase.auth.getUser().then(({ data: { user } }) => setIsSignedIn(!!user));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsSignedIn(!!session?.user);
+    });
+    return () => subscription.unsubscribe();
+  }, []);
 
   // Close menu on route change
   useEffect(() => {
@@ -45,10 +56,16 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Desktop CTA */}
-          <Link href="/check" className="btn-primary hidden md:inline-block">
-            Jetzt starten
-          </Link>
+          {/* Desktop CTA / Companion link */}
+          {isSignedIn ? (
+            <Link href="/companion" className="btn-primary hidden md:inline-block">
+              Companion öffnen
+            </Link>
+          ) : (
+            <Link href="/check" className="btn-primary hidden md:inline-block">
+              Jetzt starten
+            </Link>
+          )}
 
           {/* Mobile hamburger */}
           <button

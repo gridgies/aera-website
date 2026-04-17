@@ -1,4 +1,16 @@
 import { createClient } from "@supabase/supabase-js";
+import { createBrowserClient } from "@supabase/ssr";
+
+/**
+ * Browser-side Supabase client (anon key, cookie-based session for auth).
+ * Use in Client Components.
+ */
+export function getSupabaseBrowser() {
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+}
 
 // Lazy factory — wird erst aufgerufen wenn eine API Route tatsächlich läuft (nicht beim Build)
 export function getSupabaseAdmin() {
