@@ -23,7 +23,11 @@ export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState(
+    searchParams.get("error") === "verification_failed"
+      ? "Der Bestätigungslink ist ungültig oder abgelaufen. Bitte registriere dich erneut."
+      : ""
+  );
   const [consent, setConsent] = useState(false);
 
   const supabase = getSupabase();
@@ -42,7 +46,13 @@ export default function LoginForm() {
     setErrorMsg("");
 
     if (mode === "signup") {
-      const { error } = await supabase.auth.signUp({ email, password });
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: `${window.location.origin}/auth/confirm?next=${encodeURIComponent(redirect)}`,
+        },
+      });
       if (error) {
         setState("error");
         setErrorMsg(error.message);

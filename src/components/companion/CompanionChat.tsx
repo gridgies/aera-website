@@ -348,7 +348,6 @@ export function CompanionChat({ hormoneProfile, secondaryProfile, vorname, ageGr
         conversations={conversations}
         activeId={activeId}
         onSelect={selectConversation}
-        onNew={createNewConversation}
         onSignOut={handleSignOut}
         isLoading={loadingConvs}
         userProfile={{ vorname, ageGroup, hormoneProfile, secondaryProfile }}
