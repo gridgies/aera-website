@@ -4,7 +4,9 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, UIMessage } from "ai";
 import { createBrowserClient } from "@supabase/ssr";
-import { ConversationSidebar, Conversation } from "./ConversationSidebar";
+import { ConversationSidebar, NAV_ITEMS, NavKey } from "./ConversationSidebar";
+
+type Conversation = { id: string; title: string; updated_at: string };
 import { MessageBubble, TypingIndicator } from "./MessageBubble";
 import { InputBar } from "./InputBar";
 
@@ -265,8 +267,30 @@ function buildProfileGreeting(
   return text;
 }
 
+// ─── Coming soon placeholder ─────────────────────────────────────────────────
+
+function ComingSoonScreen({ section }: { section: { label: string; icon: string } }) {
+  return (
+    <div className="flex-1 flex flex-col items-center justify-center text-center px-8">
+      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+        <span className="material-symbols-outlined text-primary" style={{ fontSize: "28px" }}>
+          {section.icon}
+        </span>
+      </div>
+      <h2 className="text-xl font-headline font-bold text-on-surface mb-2">
+        {section.label}
+      </h2>
+      <p className="text-sm text-on-surface-variant font-body max-w-xs leading-relaxed">
+        Dieser Bereich ist noch in Entwicklung. Wir arbeiten daran –
+        du wirst benachrichtigt, sobald er verfügbar ist.
+      </p>
+    </div>
+  );
+}
+
 // ─── Main exported component ─────────────────────────────────────────────────
 export function CompanionChat({ hormoneProfile, secondaryProfile, vorname, ageGroup }: Props) {
+  const [activeNav, setActiveNav] = useState<NavKey>("companion");
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [initialMessages, setInitialMessages] = useState<UIMessage[]>([]);
@@ -345,16 +369,16 @@ export function CompanionChat({ hormoneProfile, secondaryProfile, vorname, ageGr
       style={{ backgroundColor: "#edecea" }}
     >
       <ConversationSidebar
-        conversations={conversations}
-        activeId={activeId}
-        onSelect={selectConversation}
+        activeNav={activeNav}
+        onNavChange={setActiveNav}
         onSignOut={handleSignOut}
-        isLoading={loadingConvs}
         userProfile={{ vorname, ageGroup, hormoneProfile, secondaryProfile }}
       />
 
       <main className="flex-1 flex flex-col min-w-0 h-full">
-        {loadingMessages ? (
+        {activeNav !== "companion" ? (
+          <ComingSoonScreen section={NAV_ITEMS.find((i) => i.key === activeNav)!} />
+        ) : loadingMessages ? (
           <div className="flex-1 flex items-center justify-center">
             <span className="w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
           </div>
