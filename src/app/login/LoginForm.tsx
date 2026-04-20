@@ -235,8 +235,10 @@ export default function LoginForm() {
                 Ich akzeptiere die{" "}
                 <Link href="/agb" className="text-primary underline" target="_blank">AGB</Link>{" "}
                 und{" "}
-                <Link href="/datenschutz" className="text-primary underline" target="_blank">Datenschutzerklärung</Link>.
-                Meine Daten werden zur Personalisierung des Companion verwendet.
+                <Link href="/datenschutz" className="text-primary underline" target="_blank">Datenschutzerklärung</Link>{" "}
+                und stimme ausdrücklich zu, dass meine <strong>Gesundheitsdaten</strong> (Hormonprofil,
+                Symptome) zur KI-gestützten Begleitung verarbeitet und dafür an{" "}
+                <strong>Anthropic (USA)</strong> übermittelt werden.
               </span>
             </label>
           )}

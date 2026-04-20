@@ -12,7 +12,7 @@ export default function AGBPage() {
           Allgemeine Geschäftsbedingungen
         </h1>
         <p className="text-on-surface-variant font-body mb-16 text-sm uppercase tracking-widest">
-          Stand: Januar 2025
+          Stand: April 2026
         </p>
 
         <div className="space-y-12 font-body text-on-surface leading-relaxed">
@@ -43,14 +43,14 @@ export default function AGBPage() {
             <h2 className="text-xl font-headline font-bold text-primary mb-4">2. Leistungsbeschreibung</h2>
             <p className="text-sm text-on-surface-variant leading-relaxed">
               Aera ist eine digitale Gesundheitsplattform, die Informationen, Tools und Empfehlungen
-              zur Unterstützung von Frauengesundheit bereitstellt. Der Dienst befindet sich aktuell
-              in einer Vorstart-Phase (Pre-Launch). Derzeit bieten wir:
+              zur Unterstützung von Frauengesundheit bereitstellt. Derzeit bieten wir:
             </p>
             <ul className="mt-4 space-y-2 text-sm text-on-surface-variant ml-4">
               {[
-                "Die Möglichkeit zur Eintragung in eine Warteliste für frühen Zugang",
-                "Einen Gesundheitsfragebogen zur Selbsteinschätzung",
+                "Einen Gesundheitsfragebogen zur Selbsteinschätzung (Hormonprofil-Check)",
+                "Den Aera Companion – eine KI-gestützte Begleiterin für Hormongesundheit",
                 "Informationsmaterialien rund um Frauengesundheit",
+                "Die Möglichkeit zur Eintragung in eine Warteliste für weitere Funktionen",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="material-symbols-outlined text-sm text-primary mt-0.5 shrink-0">chevron_right</span>
@@ -70,32 +70,63 @@ export default function AGBPage() {
             <div className="bg-secondary-container rounded-2xl p-6 text-on-secondary-container text-sm leading-relaxed">
               Aera ist ausdrücklich <strong>kein Medizinprodukt</strong> und ersetzt{" "}
               <strong>keine ärztliche Beratung</strong>, Diagnose oder Behandlung. Die
-              bereitgestellten Informationen dienen ausschließlich allgemeinen
-              Informationszwecken. Bei gesundheitlichen Beschwerden wende dich bitte stets an
-              eine qualifizierte Ärztin oder einen Arzt. Im Notfall: Ruf den Notruf{" "}
-              <strong>112</strong> an.
+              bereitgestellten Informationen – einschließlich der vom Aera Companion generierten
+              Antworten – dienen ausschließlich allgemeinen Informationszwecken. Bei
+              gesundheitlichen Beschwerden wende dich bitte stets an eine qualifizierte Ärztin
+              oder einen Arzt. Im Notfall: Ruf den Notruf <strong>112</strong> an.
             </div>
           </section>
 
           <section>
             <h2 className="text-xl font-headline font-bold text-primary mb-4">
-              4. Registrierung & Warteliste
+              4. Aera Companion – KI-gestützte Begleiterin
+            </h2>
+            <div className="space-y-4 text-sm text-on-surface-variant">
+              <p>
+                Der Aera Companion ist eine KI-gestützte Gesprächsfunktion, die auf dem
+                Sprachmodell Claude von Anthropic PBC (USA) basiert. Für die Nutzung ist ein
+                Konto und die Zustimmung zur Verarbeitung deiner Gesundheitsdaten erforderlich.
+              </p>
+              <div className="space-y-2">
+                <p className="font-medium text-on-surface">Wichtige Hinweise zur KI-Nutzung:</p>
+                <ul className="space-y-2 ml-4">
+                  {[
+                    "Der Companion generiert Antworten automatisch – diese können Fehler enthalten und ersetzen keine Fachberatung.",
+                    "KI-Sprachmodelle können plausibel klingende, aber ungenaue Informationen ausgeben (sog. Halluzinationen). Überprüfe medizinische Angaben stets mit einer Ärztin oder einem Arzt.",
+                    "Dein Hormonprofil und deine Nachrichten werden zur Antwortgenerierung an Anthropic übermittelt (Details in der Datenschutzerklärung).",
+                    "Teile keine hochsensiblen Daten (z.B. Versicherungsnummern, vollständige Medikamentenlisten) im Chat.",
+                    "Der Companion ist nicht für Notfälle geeignet. Bei akuten Beschwerden: Arzt oder Notruf 112.",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="material-symbols-outlined text-sm text-primary mt-0.5 shrink-0">info</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-headline font-bold text-primary mb-4">
+              5. Registrierung & Konto
             </h2>
             <p className="text-sm text-on-surface-variant">
-              Für die Eintragung in unsere Warteliste gibst du deine E-Mail-Adresse an. Du
-              bestätigst, dass die angegebene E-Mail-Adresse dir gehört und du mindestens 16 Jahre
-              alt bist. Deine Daten werden gemäß unserer Datenschutzerklärung verarbeitet. Du
-              kannst deine Eintragung jederzeit widerrufen, indem du uns unter{" "}
+              Für den Aera Companion benötigst du ein Konto. Du bestätigst, dass die angegebene
+              E-Mail-Adresse dir gehört und du mindestens 16 Jahre alt bist. Mit der Registrierung
+              stimmst du der Verarbeitung deiner Gesundheitsdaten (Hormonprofil, Hinweismerkmale)
+              durch Aera und die in der Datenschutzerklärung genannten Dienstleister ausdrücklich zu.
+              Du kannst dein Konto und alle gespeicherten Daten jederzeit durch eine E-Mail an{" "}
               <a href={`mailto:${LEGAL.email}`} className="text-primary hover:underline underline-offset-4">
                 {LEGAL.email}
               </a>{" "}
-              kontaktierst.
+              löschen lassen.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-headline font-bold text-primary mb-4">
-              5. Nutzungsrechte & geistiges Eigentum
+              6. Nutzungsrechte & geistiges Eigentum
             </h2>
             <p className="text-sm text-on-surface-variant">
               Alle auf der Website enthaltenen Inhalte (Texte, Grafiken, Logo, Design) sind
@@ -108,7 +139,7 @@ export default function AGBPage() {
 
           <section>
             <h2 className="text-xl font-headline font-bold text-primary mb-4">
-              6. Verfügbarkeit des Dienstes
+              7. Verfügbarkeit des Dienstes
             </h2>
             <p className="text-sm text-on-surface-variant">
               Wir bemühen uns um eine hohe Verfügbarkeit des Dienstes, können diese jedoch nicht
@@ -120,7 +151,7 @@ export default function AGBPage() {
 
           <section>
             <h2 className="text-xl font-headline font-bold text-primary mb-4">
-              7. Haftungsbeschränkung
+              8. Haftungsbeschränkung
             </h2>
             <p className="text-sm text-on-surface-variant">
               Wir haften unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder
@@ -132,7 +163,7 @@ export default function AGBPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-headline font-bold text-primary mb-4">8. Datenschutz</h2>
+            <h2 className="text-xl font-headline font-bold text-primary mb-4">9. Datenschutz</h2>
             <p className="text-sm text-on-surface-variant">
               Die Verarbeitung deiner personenbezogenen Daten richtet sich nach unserer{" "}
               <a href="/datenschutz" className="text-primary hover:underline underline-offset-4">
@@ -143,7 +174,7 @@ export default function AGBPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-headline font-bold text-primary mb-4">9. Änderungen der AGB</h2>
+            <h2 className="text-xl font-headline font-bold text-primary mb-4">10. Änderungen der AGB</h2>
             <p className="text-sm text-on-surface-variant">
               Wir behalten uns vor, diese AGB mit Wirkung für die Zukunft zu ändern. Über
               wesentliche Änderungen wirst du per E-Mail informiert, sofern du deine E-Mail-Adresse
@@ -154,7 +185,7 @@ export default function AGBPage() {
 
           <section>
             <h2 className="text-xl font-headline font-bold text-primary mb-4">
-              10. Anwendbares Recht & Gerichtsstand
+              11. Anwendbares Recht & Gerichtsstand
             </h2>
             <p className="text-sm text-on-surface-variant">
               Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Ist der Nutzer Kaufmann,
@@ -172,7 +203,7 @@ export default function AGBPage() {
           </section>
 
           <p className="text-xs text-on-surface-variant/50 pt-8 border-t border-outline-variant/10">
-            Stand: Januar 2025 · Anbieter: {LEGAL.name}, {LEGAL.street}, {LEGAL.zip} {LEGAL.city}
+            Stand: April 2026 · Anbieter: {LEGAL.name}, {LEGAL.street}, {LEGAL.zip} {LEGAL.city}
           </p>
         </div>
       </div>

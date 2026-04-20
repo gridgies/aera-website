@@ -210,10 +210,14 @@ function CompanionSignup({ result, answers }: Props) {
             </div>
           </div>
           <span className="text-xs text-on-surface-variant font-body leading-relaxed">
-            Ich stimme zu, dass Aera Health meine Angaben, mein Hormonprofil und meine
-            Gesprächsverläufe speichert und mich per E-Mail informiert.{" "}
+            Ich stimme ausdrücklich zu, dass Aera Health meine{" "}
+            <strong>Gesundheitsdaten</strong> (Hormonprofil, Symptom-Scores, Hinweise auf POI/Endometriose)
+            sowie meine Gesprächsverläufe speichert und zur KI-gestützten Begleitung verarbeitet.
+            Meine Nachrichten und mein Profil werden dabei an{" "}
+            <strong>Anthropic (USA)</strong> zur Antwortgenerierung übermittelt.
+            Ich kann meine Einwilligung jederzeit widerrufen (Kontolöschung).{" "}
             <a href="/datenschutz" className="text-primary underline hover:opacity-70" target="_blank">
-              Datenschutz
+              Datenschutzerklärung
             </a>
           </span>
         </label>
