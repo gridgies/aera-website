@@ -20,9 +20,24 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
+    question: "Was ist ein normaler TSH-Wert bei Frauen?",
+    answer:
+      "Der laborübliche TSH-Normalbereich für Frauen liegt bei 0,4–4,0 mU/L (je nach Labor auch bis 4,5 mU/L). Wichtig: 'normal' im Labor bedeutet nicht automatisch 'optimal'. Viele Frauen mit Hashimoto oder Schilddrüsenunterfunktionssymptomen fühlen sich erst bei TSH 1,0–2,5 mU/L wirklich beschwerdefrei. Alter, Schwangerschaft und Grunderkrankungen beeinflussen den Zielwert erheblich.",
+  },
+  {
     question: "Welcher TSH-Wert ist bei Frauen ab 50 normal?",
     answer:
       "Bei Frauen ab 50 gilt ein TSH von 0,4–4,5 mU/L als laborüblicher Referenzbereich. In den Wechseljahren kann TSH leicht schwanken. Viele Spezialistinnen empfehlen für symptomatische Frauen einen Zielwert von 1,0–2,5 mU/L. Bei Müdigkeit oder Gewichtszunahme trotz 'normalem' TSH sollten fT3, fT4 und Anti-TPO bestimmt werden.",
+  },
+  {
+    question: "Welcher TSH-Wert gilt für Frauen mit 60 Jahren als normal?",
+    answer:
+      "Mit 60 Jahren und älter ist ein TSH bis 6,0 mU/L laborüblich noch im Referenzbereich, da TSH physiologisch mit dem Alter leicht ansteigt. Das bedeutet jedoch nicht, dass höhere Werte bei Beschwerden ignoriert werden sollten. Bei Frauen ab 60 mit Müdigkeit, Kälteempfindlichkeit oder Gewichtszunahme sollte TSH zusammen mit fT3 und fT4 bewertet werden – der Zielbereich für symptomatische Frauen liegt auch im Alter bei 1,0–3,0 mU/L.",
+  },
+  {
+    question: "Was bedeutet TSH-Referenzbereich in Deutschland 2025/2026?",
+    answer:
+      "In Deutschland gilt gemäß AWMF-Leitlinie (060-002) der TSH-Referenzbereich von 0,4–4,0 mU/L als Standardwert für Erwachsene. Dieser Wert ist seit Jahren unverändert – trotz wissenschaftlicher Diskussion, ob die obere Grenze auf 2,5 mU/L gesenkt werden sollte. Viele deutsche Endokrinologinnen behandeln symptomatische Patientinnen bereits ab TSH 2,5–3,0 mU/L.",
   },
   {
     question: "Kann der TSH-Wert normal sein, obwohl ich Symptome habe?",
@@ -30,14 +45,24 @@ const faqs = [
       "Ja. Ein TSH im Normalbereich schließt eine Schilddrüsenstörung nicht aus. Erstens kann eine T4-zu-T3-Konversionsstörung vorliegen (fT3 niedrig trotz normalem fT4 und TSH). Zweitens gilt ein TSH von z. B. 3,5 mU/L laborüblich als normal, ist aber für viele Frauen mit Hashimoto bereits zu hoch. Immer auch fT3, fT4 und Antikörper messen lassen.",
   },
   {
-    question: "Wie oft sollte ich meine Schilddrüsenwerte kontrollieren lassen?",
-    answer:
-      "Bei bekannter Schilddrüsenerkrankung oder Hashimoto: alle 6–12 Monate. Nach Dosisanpassung von L-Thyroxin: 6–8 Wochen später. In der Schwangerschaft: alle 4–6 Wochen je nach Trimester. Bei bisher unauffälligem Befund ohne Symptome: jährlich.",
-  },
-  {
     question: "Was bedeutet ein TSH-Wert von 3,5 mU/L?",
     answer:
       "Ein TSH von 3,5 mU/L liegt innerhalb des Labornormalbereichs (0,4–4,0 mU/L). Ohne Beschwerden ist das für viele Frauen unproblematisch. Bei gleichzeitigen Hashimoto-Symptomen (Müdigkeit, Frieren, Verstopfung) kann schon dieser Wert eine subklinische Hypothyreose anzeigen. fT3, fT4 und Anti-TPO bestimmen lassen und ggf. einen Therapieversuch mit L-Thyroxin besprechen.",
+  },
+  {
+    question: "Was bedeutet ein zu niedriger TSH-Wert?",
+    answer:
+      "Ein TSH unter 0,4 mU/L deutet auf eine Überfunktion (Hyperthyreose) oder eine Überdosierung von L-Thyroxin hin. Die Hypophyse schüttet weniger TSH aus, weil bereits zu viel Schilddrüsenhormon im Blut ist. Symptome: Herzrasen, Zittern, Schlafstörungen, Gewichtsverlust, Schwitzen. Ursachen: M. Basedow, autonome Adenome, zu hohe L-Thyroxin-Dosis.",
+  },
+  {
+    question: "Was bedeutet ein zu hoher TSH-Wert?",
+    answer:
+      "Ein TSH über 4,0 mU/L (je nach Labor bis 4,5 mU/L) weist auf eine Schilddrüsenunterfunktion hin. Die Hypophyse treibt die Schilddrüse stärker an, weil zu wenig Hormon produziert wird. Werte über 10 mU/L gelten als manifeste Hypothyreose. Typische Symptome: Müdigkeit, Frieren, Gewichtszunahme, Verstopfung, Haarausfall, trockene Haut. Ursache ist häufig Hashimoto.",
+  },
+  {
+    question: "Wie oft sollte ich meine Schilddrüsenwerte kontrollieren lassen?",
+    answer:
+      "Bei bekannter Schilddrüsenerkrankung oder Hashimoto: alle 6–12 Monate. Nach Dosisanpassung von L-Thyroxin: 6–8 Wochen später. In der Schwangerschaft: alle 4–6 Wochen je nach Trimester. Bei bisher unauffälligem Befund ohne Symptome: jährlich.",
   },
   {
     question: "Welcher TSH-Wert gilt in der Schwangerschaft als zu hoch?",
@@ -271,6 +296,33 @@ export default function TshWertTabellePage() {
             </div>
           </section>
 
+          {/* TSH value interpretation */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-headline font-bold text-primary mb-4">
+              TSH-Wert interpretieren: Was bedeuten konkrete Zahlen?
+            </h2>
+            <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-6">
+              Viele Frauen fragen sich, was ein spezifischer TSH-Wert in ihrem Befund bedeutet. Diese Übersicht erklärt die häufigsten Werte im Kontext.
+            </p>
+            <div className="space-y-3">
+              {[
+                { wert: "< 0,1 mU/L", label: "Stark erniedrigt", farbe: "error", bedeutung: "Manifeste Überfunktion oder deutliche L-Thyroxin-Überdosierung – sofort mit Ärztin besprechen." },
+                { wert: "0,1–0,4 mU/L", label: "Leicht erniedrigt", farbe: "tertiary", bedeutung: "Latente Hyperthyreose oder Überdosierung. FT3/fT4 bestimmen, Dosis ggf. anpassen." },
+                { wert: "0,4–1,0 mU/L", label: "Niedrig-normal", farbe: "primary", bedeutung: "Für die meisten Frauen gut. Bei Hashimoto oft der optimale Bereich." },
+                { wert: "1,0–2,5 mU/L", label: "Optimal", farbe: "primary", bedeutung: "Idealer Zielbereich für die meisten Frauen, insbesondere mit Hashimoto oder Schilddrüsenunterfunktion." },
+                { wert: "2,5–4,0 mU/L", label: "Laborüblich normal", farbe: "tertiary", bedeutung: "Laborüblich unauffällig, aber bei Symptomen (Müdigkeit, Frieren) lohnt ein Therapieversuch." },
+                { wert: "4,0–10,0 mU/L", label: "Erhöht", farbe: "error", bedeutung: "Subklinische bis manifeste Hypothyreose. L-Thyroxin-Therapie meist indiziert." },
+                { wert: "> 10,0 mU/L", label: "Stark erhöht", farbe: "error", bedeutung: "Manifeste Hypothyreose – L-Thyroxin-Therapie dringend erforderlich." },
+              ].map((row) => (
+                <div key={row.wert} className="flex items-start gap-4 bg-surface-container-low rounded-xl p-4">
+                  <div className="shrink-0 text-sm font-bold font-body text-on-surface w-32">{row.wert}</div>
+                  <div className={`shrink-0 text-xs font-semibold px-2 py-1 rounded-full bg-${row.farbe}/10 text-${row.farbe} w-28 text-center`}>{row.label}</div>
+                  <div className="text-sm text-on-surface-variant font-body">{row.bedeutung}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Full values table */}
           <section className="mb-16">
             <h2 className="text-3xl font-headline font-bold text-primary mb-4">
@@ -329,6 +381,8 @@ export default function TshWertTabellePage() {
                 { href: "/hashimoto", label: "Hashimoto Thyreoiditis", icon: "emergency" },
                 { href: "/schilddruese/werte", label: "Alle Schilddrüsenwerte erklärt", icon: "table_chart" },
                 { href: "/fragen/hashimoto-blutwerte-verstehen", label: "Hashimoto Blutwerte verstehen", icon: "science" },
+                { href: "/hashimoto/trockene-haut", label: "Trockene Haut & Ellenbogen bei Hashimoto", icon: "dermatology" },
+                { href: "/schilddruese/muedigkeit", label: "Müdigkeit durch Schilddrüse", icon: "bedtime" },
                 { href: "/fragen/kann-hashimoto-geheilt-werden", label: "Kann Hashimoto geheilt werden?", icon: "help" },
                 { href: "/fragen/selen-hashimoto-dosierung", label: "Selen bei Hashimoto: Dosierung", icon: "nutrition" },
               ].map((link) => (

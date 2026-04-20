@@ -18,13 +18,13 @@ export const CONDITIONS_DATA: Record<string, Condition> = {
     name: "Menopause",
     nameLong: "Menopause & Perimenopause",
     topicName: "Menopause",
-    metaTitle: "Wechseljahre & Menopause: Symptome erkennen & natürlich behandeln",
+    metaTitle: "Wechseljahre Symptome: 34 Anzeichen erkennen & was wirklich hilft (2026)",
     ctaQuestion: "Leidest du unter Menopause-Symptomen?",
     aliases: ["Wechseljahre", "Klimakterium", "Perimenopause", "Postmenopause"],
     description:
       "Die Menopause bezeichnet den natürlichen hormonellen Übergang im Leben einer Frau, bei dem die Eierstöcke die Östrogenproduktion reduzieren und die Menstruation endet.",
     metaDescription:
-      "Alles über Menopause & Wechseljahre: Symptome, Phasen, Behandlung und natürliche Hilfe bei Perimenopause. Medizinisch fundiert für Frauen in Deutschland.",
+      "Hitzewallungen, Schlafstörungen, Stimmungsschwankungen: Erkenne alle Wechseljahre-Symptome und welche Behandlungen wirklich helfen. Mit Hormontests & Perimenopause-Ratgeber.",
     symptoms: [
       "hitzewallungen",
       "schlafstoerungen",

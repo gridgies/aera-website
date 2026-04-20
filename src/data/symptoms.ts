@@ -833,9 +833,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
     description:
       "Trockene, schuppige Haut und Juckreiz können hormonelle Ursachen haben – insbesondere eine Schilddrüsenunterfunktion oder der Östrogenabfall in den Wechseljahren.",
     metaDescription:
-      "Trockene Haut durch Hormone: Schilddrüsenunterfunktion (Hashimoto) und Wechseljahre als häufige Ursachen. Diagnose und Behandlung.",
+      "Trockene Haut & trockene Ellenbogen durch Hormone: Schilddrüsenunterfunktion (Hashimoto) und Wechseljahre als häufige Ursachen. Diagnose, Tests & was wirklich hilft.",
     causes: [
       "Schilddrüsenunterfunktion – T3-Mangel reduziert Talgdrüsenaktivität und Hauterneuerungsrate",
+      "Trockene, raue Ellenbogen – klassisches Frühzeichen der Hypothyreose durch verlangsamte Keratinisierung",
       "Östrogenabfall – Östrogen fördert Kollagenproduktion und Hautfeuchtigkeit",
       "Vitamin-D- und Omega-3-Mangel beeinträchtigen die Hautbarriere",
       "Dehydration durch zu wenig Flüssigkeit",
@@ -852,6 +853,8 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
     conditionIntros: {
       schilddruese:
         "Trockene Haut ist eines der am häufigsten genannten Symptome bei Schilddrüsenunterfunktion (Hypothyreose) und oft ein Frühzeichen der Erkrankung. Schilddrüsenhormone steuern die Talgdrüsenaktivität, die Keratinisierungsrate der Haut und die Durchblutung peripherer Gefäße. Fällt T3 ab, produziert die Haut weniger Talg und Feuchtigkeit, die Zellerneuerung verlangsamt sich – die Haut wird rau, schuppig und juckend. Charakteristisch für Hypothyreose-bedingte Hauttrockenheit ist die Kombination mit Kältegefühl, geschwollenem Gesicht und brüchigen Nägeln.",
+      hashimoto:
+        "Trockene Haut – besonders an Ellenbogen, Unterschenkeln und Händen – gehört zu den häufigsten Frühzeichen von Hashimoto. Die Autoimmunerkrankung führt über T3-Mangel zu einer verlangsamten Hauterneuerungsrate: Alte Hornzellen werden nicht schnell genug abgestoßen, die Haut verdickt sich und fühlt sich rau und schuppig an. Besonders die Ellenbogen sind charakteristisch betroffen, da dort die Haut ohnehin wenig Talgdrüsen hat und die Durchblutung gering ist. Wenn trockene, raue Ellenbogen mit Müdigkeit, Frieren oder Gewichtszunahme kombiniert auftreten, sollte eine Schilddrüsenuntersuchung (TSH, fT3, Anti-TPO) erfolgen.",
     },
     whenToSeeDoctor:
       "Bei extremer Hauttrockenheit, starkem Juckreiz, Hautrötungen oder wenn die Haut trotz guter Pflege sehr rau bleibt. Schilddrüsenwerte überprüfen, wenn Hauttrockenheit mit Müdigkeit, Frieren oder Gewichtszunahme kombiniert auftritt.",
@@ -883,6 +886,11 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
         question: "Kann Juckreiz ohne sichtbare Hautveränderungen hormonell bedingt sein?",
         answer:
           "Ja. Sensorischer Juckreiz ohne Ausschlag (Pruritus sine materia) ist ein bekanntes Symptom der Hypothyreose und des Östrogenabfalls. Der Mechanismus ist komplex: Nervenenden in der Haut reagieren empfindlicher bei Hautatrophie und Trockenheit, ohne dass es zu sichtbaren Veränderungen kommt. Schilddrüse und Hormone abklären.",
+      },
+      {
+        question: "Was bedeuten trockene Ellenbogen in Zusammenhang mit der Schilddrüse?",
+        answer:
+          "Trockene, raue oder schuppige Ellenbogen sind ein klassisches Frühzeichen der Schilddrüsenunterfunktion (Hypothyreose) und Hashimoto. Die Ellenbogen haben besonders wenig Talgdrüsen und sind mechanisch beansprucht – bei verlangsamter Hauterneuerungsrate durch T3-Mangel verdickt sich die Hornschicht sichtbar. Wenn die Ellenbogen trotz guter Pflege dauerhaft rau bleiben und gleichzeitig Müdigkeit, Frieren oder Gewichtszunahme auftreten, sollte der TSH-Wert bestimmt werden.",
       },
     ],
   },
