@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestätige deine E-Mail-Adresse</title>
+</head>
+<body style="margin:0;padding:0;background-color:#fbf9f4;font-family:'Helvetica Neue',Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#fbf9f4;">
+    <tr>
+      <td align="center" style="padding:40px 20px;">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color:#6f5b53;padding:40px 40px 32px;text-align:center;">
+              <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:bold;color:#fff7f5;letter-spacing:-0.5px;">Aera</h1>
+              <p style="margin:8px 0 0;font-size:13px;color:#f8ddd2;letter-spacing:1px;text-transform:uppercase;">Hormongesundheit verstehen</p>
+            </td>
+          </tr>
+
+          <!-- Icon circle -->
+          <tr>
+            <td align="center" style="padding:40px 40px 0;">
+              <div style="width:64px;height:64px;background-color:#f8ddd2;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:64px;">
+                <span style="font-size:26px;display:block;margin-top:2px;">✉</span>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Body text -->
+          <tr>
+            <td style="padding:28px 48px 32px;text-align:center;">
+              <h2 style="margin:0 0 16px;font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:bold;color:#31332e;">Bestätige deine E-Mail-Adresse</h2>
+              <p style="margin:0 0 32px;font-size:15px;line-height:1.75;color:#5e605a;">
+                Willkommen bei Aera! Klick auf den Button, um dein Konto zu aktivieren und Zugang zu deiner persönlichen Begleiterin für Hormongesundheit zu erhalten. Der Link funktioniert nur einmal.
+              </p>
+
+              <!-- CTA Button -->
+              <a href="{{ .ConfirmationURL }}"
+                 style="display:inline-block;background-color:#6f5b53;color:#ffffff;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;font-weight:600;padding:16px 44px;border-radius:50px;letter-spacing:0.3px;">
+                E-Mail bestätigen &rarr;
+              </a>
+            </td>
+          </tr>
+
+          <!-- Divider + fallback link -->
+          <tr>
+            <td style="padding:0 48px 32px;">
+              <hr style="border:none;border-top:1px solid #efeee8;margin:0 0 24px;">
+              <p style="margin:0 0 8px;font-size:13px;color:#7a7b75;text-align:center;">Falls der Button nicht funktioniert, kopiere diesen Link in deinen Browser:</p>
+              <p style="margin:0;text-align:center;word-break:break-all;">
+                <a href="{{ .ConfirmationURL }}" style="font-size:12px;color:#6f5b53;text-decoration:underline;">{{ .ConfirmationURL }}</a>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Expiry note -->
+          <tr>
+            <td style="padding:0 48px 36px;text-align:center;">
+              <p style="margin:0;font-size:13px;color:#7a7b75;">Dieser Link ist 24 Stunden gültig.</p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color:#efeee8;padding:24px 40px;text-align:center;border-top:1px solid #e3e3db;">
+              <p style="margin:0 0 8px;font-size:12px;color:#7a7b75;line-height:1.7;">
+                Du erhältst diese E-Mail, weil jemand ein Konto mit dieser Adresse bei<br>
+                <a href="https://aerahealth.de" style="color:#6f5b53;text-decoration:none;">aerahealth.de</a> erstellt hat.<br>
+                Wenn das nicht du warst, kannst du diese E-Mail ignorieren.
+              </p>
+              <p style="margin:16px 0 0;font-size:12px;color:#7a7b75;">
+                &copy; 2026 Aera Health &nbsp;&middot;&nbsp;
+                <a href="https://aerahealth.de/datenschutz" style="color:#6f5b53;text-decoration:none;">Datenschutz</a>
+                &nbsp;&middot;&nbsp;
+                <a href="https://aerahealth.de/impressum" style="color:#6f5b53;text-decoration:none;">Impressum</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

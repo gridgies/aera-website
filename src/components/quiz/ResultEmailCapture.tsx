@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createBrowserClient } from "@supabase/ssr";
 import { QuizAnswer } from "@/types";
@@ -359,9 +359,97 @@ function EmailOnlyForm({ result, answers }: Props) {
   );
 }
 
+// ─── Logged-in profile save ───────────────────────────────────────────────────
+function LoggedInProfileSave({ result, answers }: Props) {
+  const router = useRouter();
+  const [state, setState] = useState<FormState>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSave = async () => {
+    setState("loading");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/companion/profile-save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          profile: {
+            primaryKey:   result.primary.key,
+            secondaryKey: result.secondary?.key ?? null,
+            endoFlag:     result.endoFlag,
+            poiWarning:   result.poiWarning,
+            hpOverlap:    result.hpOverlap,
+            scores:       result.scores,
+            answers,
+            ageGroup:     result.ageGroup,
+            klarheit:     result.klarheit,
+          },
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error ?? "Fehler beim Speichern");
+      }
+      router.push("/companion");
+    } catch (err) {
+      setState("error");
+      setErrorMsg(err instanceof Error ? err.message : "Ein Fehler ist aufgetreten.");
+    }
+  };
+
+  return (
+    <div className="bg-primary/5 border border-primary/20 rounded-3xl p-8 md:p-10 text-center">
+      <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <span className="material-symbols-outlined text-primary">psychology</span>
+      </div>
+      <h2 className="text-xl font-headline font-bold text-on-surface mb-2">
+        Profil speichern & zum Companion
+      </h2>
+      <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-6">
+        Dein Hormonprofil wird gespeichert. Deine Begleiterin kennt dann deine Werte und
+        kann dir persönlich antworten.
+      </p>
+      {errorMsg && <p className="text-sm text-error font-body mb-4">{errorMsg}</p>}
+      <button
+        onClick={handleSave}
+        disabled={state === "loading"}
+        className="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {state === "loading" ? (
+          <span className="flex items-center justify-center gap-2">
+            <span className="w-4 h-4 border-2 border-on-primary/30 border-t-on-primary rounded-full animate-spin" />
+            Wird gespeichert…
+          </span>
+        ) : (
+          "Zum Companion →"
+        )}
+      </button>
+    </div>
+  );
+}
+
 // ─── Main exported component ──────────────────────────────────────────────────
 export function ResultEmailCapture({ result, answers }: Props) {
   const [mode, setMode] = useState<Mode>("companion");
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const supabase = getSupabase();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setIsLoggedIn(!!user);
+    });
+  }, []);
+
+  // While checking auth, render nothing to avoid flash
+  if (isLoggedIn === null) return null;
+
+  if (isLoggedIn) {
+    return (
+      <section className="px-6 max-w-4xl mx-auto pb-16">
+        <LoggedInProfileSave result={result} answers={answers} />
+      </section>
+    );
+  }
 
   return (
     <section className="px-6 max-w-4xl mx-auto pb-16 space-y-4">

@@ -15,7 +15,7 @@ export default function LoginForm() {
   const [mode, setMode] = useState<Mode>("signup");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [state, setState] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [state, setState] = useState<"idle" | "loading" | "success" | "error" | "duplicate" | "reset-sent">("idle");
   const [errorMsg, setErrorMsg] = useState(
     searchParams.get("error") === "verification_failed"
       ? "Der Bestätigungslink ist ungültig oder abgelaufen. Bitte registriere dich erneut."
@@ -54,8 +54,12 @@ export default function LoginForm() {
         },
       });
       if (error) {
-        setState("error");
-        setErrorMsg(error.message);
+        if (error.message.toLowerCase().includes("already registered") || error.message.toLowerCase().includes("already exists")) {
+          setState("duplicate");
+        } else {
+          setState("error");
+          setErrorMsg(error.message);
+        }
       } else {
         setState("success");
       }
@@ -69,6 +73,65 @@ export default function LoginForm() {
       }
     }
   };
+
+  const handleForgotPassword = async () => {
+    await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/auth/confirm?next=/companion`,
+    });
+    setState("reset-sent");
+  };
+
+  if (state === "duplicate") {
+    return (
+      <div className="min-h-screen flex items-center justify-center px-6" style={{ backgroundColor: "#fbf9f4" }}>
+        <div className="max-w-md w-full text-center">
+          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="material-symbols-outlined text-primary text-3xl">person</span>
+          </div>
+          <h1 className="text-2xl font-headline font-bold text-on-surface mb-3">
+            Du hast bereits ein Konto
+          </h1>
+          <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-8">
+            Die E-Mail-Adresse <strong>{email}</strong> ist bereits bei Aera registriert.
+            Melde dich einfach an oder setze dein Passwort zurück.
+          </p>
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={() => { setMode("login"); setState("idle"); setErrorMsg(""); }}
+              className="w-full bg-primary text-on-primary py-3.5 rounded-xl font-bold text-sm font-body hover:opacity-90 transition-all"
+            >
+              Jetzt anmelden →
+            </button>
+            <button
+              onClick={handleForgotPassword}
+              className="w-full border border-outline-variant text-on-surface-variant py-3.5 rounded-xl font-semibold text-sm font-body hover:border-primary hover:text-primary transition-all"
+            >
+              Passwort vergessen?
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (state === "reset-sent") {
+    return (
+      <div className="min-h-screen flex items-center justify-center px-6" style={{ backgroundColor: "#fbf9f4" }}>
+        <div className="max-w-md w-full text-center">
+          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="material-symbols-outlined text-primary text-3xl">lock_reset</span>
+          </div>
+          <h1 className="text-2xl font-headline font-bold text-on-surface mb-3">
+            E-Mail gesendet
+          </h1>
+          <p className="text-on-surface-variant font-body text-sm leading-relaxed">
+            Wir haben dir einen Link zum Zurücksetzen deines Passworts an <strong>{email}</strong> geschickt.
+            Schau in dein Postfach (und ggf. den Spam-Ordner).
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   if (state === "success") {
     return (

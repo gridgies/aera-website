@@ -21,6 +21,9 @@ export default async function CompanionPage() {
     .eq("id", user.id)
     .single();
 
+  // First-time users who haven't completed the questionnaire go to /check
+  if (!profile?.hormone_profile) redirect("/check?from=companion");
+
   return (
     <CompanionChat
       hormoneProfile={profile?.hormone_profile ?? null}
