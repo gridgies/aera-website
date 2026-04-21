@@ -1089,6 +1089,667 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
       },
     ],
   },
+  "hashimoto-oder-anämie": {
+    slug: "hashimoto-oder-anämie",
+    conditionASlug: "hashimoto",
+    conditionBSlug: "hormone",
+    conditionAName: "Hashimoto",
+    conditionBName: "Eisenmangel-Anämie",
+    title: "Hashimoto oder Eisenmangel? Wenn Erschöpfung den falschen Namen bekommt",
+    metaTitle: "Hashimoto oder Eisenmangel? Symptome unterscheiden & richtig testen",
+    metaDescription:
+      "Müdigkeit, Haarausfall, Konzentrationsprobleme – Hashimoto und Eisenmangel-Anämie haben fast identische Symptome. Welcher Bluttest entscheidet und was die Ursache wirklich ist.",
+    intro:
+      "Müdigkeit trotz ausreichend Schlaf, Haarausfall, blasse Haut, Konzentrationsprobleme – diese Symptome sind sowohl typisch für Hashimoto Thyreoiditis als auch für Eisenmangel-Anämie. Besonders tückisch: Beide Erkrankungen treten bei Frauen häufig gleichzeitig auf. Ein erhöhter TSH allein klärt das Problem nicht vollständig – ein vollständiges Blutbild inklusive Ferritin ist immer notwendig.",
+    confusionNote:
+      "Hashimoto und Eisenmangel haben nahezu identische Symptome und können sich gegenseitig verstärken. Eine Hypothyreose verschlechtert die Eisenabsorption im Darm, Eisenmangel wiederum hemmt die Umwandlung von T4 in das aktive T3. Frauen, die trotz L-Thyroxin-Therapie weiterhin erschöpft sind, haben häufig einen übersehenen Eisenmangel.",
+    sharedSymptoms: ["muedigkeit", "haarausfall", "konzentrationsprobleme", "antriebslosigkeit"],
+    conditionAOnlySymptoms: ["frieren", "gewichtszunahme", "verstopfung", "trockene-haut"],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Charakteristisches Symptom",
+        a: "Kälteintoleranz, Verstopfung, Gewichtszunahme, verlangsamter Puls",
+        b: "Blässe, brüchige Nägel, Mundwinkelrhagaden, Schwindel bei Belastung",
+      },
+      {
+        aspect: "Haarausfall-Charakter",
+        a: "Diffuser Haarausfall über gesamten Kopf, oft auch Augenbrauen",
+        b: "Diffuser Haarausfall, Haar dünn und spröde, wächst langsamer nach",
+      },
+      {
+        aspect: "Müdigkeitsqualität",
+        a: "Bleierne, konstante Erschöpfung; Verlangsamung aller Abläufe",
+        b: "Erschöpfung bei Belastung (Belastungsdyspnoe), Herzrasen bei Anstrengung",
+      },
+      {
+        aspect: "Diagnose",
+        a: "TSH erhöht, Anti-TPO positiv, Schilddrüsen-Ultraschall auffällig",
+        b: "Ferritin erniedrigt (<30 µg/l), Hämoglobin erniedrigt, MCV klein",
+      },
+      {
+        aspect: "Therapie",
+        a: "L-Thyroxin, selenreiche Ernährung, Stressreduktion",
+        b: "Eisenpräparate (oral oder IV), Ernährungsanpassung, Ursachensuche",
+      },
+    ],
+    labTests: [
+      {
+        test: "TSH + Anti-TPO",
+        a: "TSH erhöht, Anti-TPO oft positiv – sichert Hashimoto-Diagnose",
+        b: "Normal – kein Schilddrüsenproblem",
+      },
+      {
+        test: "Ferritin",
+        a: "Häufig erniedrigt (<70 µg/l) – verschlechtert Symptome zusätzlich",
+        b: "Erniedrigt (<30 µg/l) – Hauptkriterium für Eisenmangel",
+      },
+      {
+        test: "Hämoglobin (Hb)",
+        a: "Normal (Hashimoto verursacht keine Anämie direkt)",
+        b: "Erniedrigt (<12 g/dl bei Frauen) – bei manifester Anämie",
+      },
+      {
+        test: "MCV (mittleres Zellvolumen)",
+        a: "Normal",
+        b: "Erniedrigt – typisch für Eisenmangel-Anämie",
+      },
+      {
+        test: "Transferrinsättigung",
+        a: "Normal",
+        b: "Erniedrigt (<20 %) – zeigt unzureichendes Eisenangebot",
+      },
+    ],
+    howToDifferentiate:
+      "Beide Erkrankungen müssen gleichzeitig ausgeschlossen werden. Das Mindestlabor: TSH, Anti-TPO-Antikörper, Ferritin, Blutbild mit MCV. Wer Hashimoto hat und trotz L-Thyroxin weiterhin erschöpft ist, sollte unbedingt Ferritin messen lassen – Werte unter 70 µg/l beeinträchtigen die Schilddrüsenfunktion und die Eisenversorgung der Zellen auch ohne klinische Anämie.",
+    faqs: [
+      {
+        question: "Kann Hashimoto einen Eisenmangel verursachen?",
+        answer:
+          "Ja, indirekt. Schilddrüsenunterfunktion verlangsamt die Magensäureproduktion und reduziert die Darmmotilität, was die Eisenabsorption verschlechtert. Außerdem haben viele Frauen mit Hashimoto eine gleichzeitige Zöliakie (Gluten-Unverträglichkeit), die die Eisenaufnahme zusätzlich hemmt.",
+      },
+      {
+        question: "Was kommt zuerst – Schilddrüse oder Eisen testen?",
+        answer:
+          "Am besten beides gleichzeitig: TSH, fT4, Anti-TPO und Ferritin im gleichen Blutbefund. So spart man Zeit und verpasst nichts. Beide Erkrankungen zusammen zu haben, ist häufiger als isolierte Fälle.",
+      },
+      {
+        question: "Ab welchem Ferritinwert sollte man supplementieren?",
+        answer:
+          "Ferritin unter 30 µg/l gilt als Eisenmangel. Bei Symptomen wie Haarausfall und Erschöpfung empfehlen viele Experten Supplementierung bis Ferritin 70–100 µg/l. Bei Hashimoto sollte Ferritin mindestens über 70 µg/l liegen, da Eisen für die T4-zu-T3-Konversion benötigt wird.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Beard JL",
+        year: 2003,
+        title: "Iron deficiency alters brain development and functioning",
+        journal: "Journal of Nutrition",
+      },
+      {
+        authors: "Zimmermann MB, Köhrle J",
+        year: 2002,
+        title: "The impact of iron and selenium deficiencies on iodine and thyroid metabolism",
+        journal: "Thyroid",
+      },
+      {
+        authors: "Deutsche Gesellschaft für Endokrinologie",
+        year: 2021,
+        title: "Leitlinie Diagnostik und Therapie der Hypothyreose",
+        journal: "AWMF Register Nr. 060-002",
+      },
+    ],
+  },
+
+  "pcos-oder-hashimoto": {
+    slug: "pcos-oder-hashimoto",
+    conditionASlug: "hormone",
+    conditionBSlug: "hashimoto",
+    conditionAName: "PCOS",
+    conditionBName: "Hashimoto",
+    title: "PCOS oder Hashimoto? Wenn Hormonprobleme sich ähneln",
+    metaTitle: "PCOS oder Hashimoto? Symptome, Unterschiede & Diagnose erklärt",
+    metaDescription:
+      "Zyklusprobleme, Haarausfall, Gewichtszunahme – PCOS und Hashimoto haben ähnliche Symptome. Wie du sie unterscheidest, warum sie gemeinsam auftreten und welche Tests helfen.",
+    intro:
+      "Unregelmäßige Periode, Haarausfall, Gewichtsprobleme, Stimmungsschwankungen – diese Symptome können sowohl auf PCOS (Polyzystisches Ovarsyndrom) als auch auf Hashimoto Thyreoiditis hinweisen. Beide Erkrankungen betreffen junge Frauen überproportional häufig und treten erschreckend oft gleichzeitig auf: Studien zeigen, dass bis zu 27 % der Frauen mit PCOS auch eine Schilddrüsenerkrankung haben.",
+    confusionNote:
+      "PCOS und Hashimoto sind beide hormonelle Erkrankungen, die den Zyklus, das Gewicht und die Stimmung beeinflussen. Der entscheidende Unterschied: PCOS ist primär eine Ovulationsstörung durch Androgenüberschuss, Hashimoto eine Autoimmunerkrankung der Schilddrüse. Aber Hashimoto kann PCOS-ähnliche Symptome auslösen, weil Schilddrüsenhormone direkt die Ovarialfunktion beeinflussen.",
+    sharedSymptoms: ["haarausfall", "gewichtszunahme", "muedigkeit", "stimmungsschwankungen", "akne"],
+    conditionAOnlySymptoms: ["pms"],
+    conditionBOnlySymptoms: ["frieren", "verstopfung", "trockene-haut"],
+    keyDifferences: [
+      {
+        aspect: "Zyklusveränderungen",
+        a: "Oligomenorrhoe (selten) oder Amenorrhoe; unregelmäßige oder ausbleibende Ovulation",
+        b: "Kann Zyklusveränderungen verursachen, aber anders: Hashimoto verlängert Zyklen durch Schilddrüsenhormonmangel",
+      },
+      {
+        aspect: "Androgene",
+        a: "Erhöhtes freies Testosteron oder DHEA-S; Hirsutismus (Gesichtsbehaarung, Bauchbehaarung)",
+        b: "Androgene normal; kein Hirsutismus",
+      },
+      {
+        aspect: "Charakteristisches Symptom",
+        a: "Vermehrte Körperbehaarung, Akne, Zysten in den Eierstöcken",
+        b: "Kälteintoleranz, Verstopfung, verlangsamter Puls, Gewichtszunahme trotz Diät",
+      },
+      {
+        aspect: "Insulinresistenz",
+        a: "In 70 % der Fälle – zentrales Merkmal von PCOS",
+        b: "Selten direkt – aber Hypothyreose kann Insulinsensitivität verschlechtern",
+      },
+      {
+        aspect: "Diagnose",
+        a: "Rotterdam-Kriterien: 2 von 3: Oligo-Anovulation, Hyperandrogenismus, polyzystische Ovarien im Ultraschall",
+        b: "TSH erhöht oder Anti-TPO positiv + Ultraschall der Schilddrüse",
+      },
+    ],
+    labTests: [
+      {
+        test: "TSH + Anti-TPO",
+        a: "Normal – kein Hinweis auf Schilddrüsenproblem",
+        b: "TSH erhöht; Anti-TPO positiv – beweisend für Hashimoto",
+      },
+      {
+        test: "Freies Testosteron + DHEA-S",
+        a: "Erhöht – zentrales Diagnosekriterium für PCOS",
+        b: "Normal",
+      },
+      {
+        test: "LH/FSH-Quotient",
+        a: "Erhöht (> 2:1) – typisch für PCOS",
+        b: "Normal",
+      },
+      {
+        test: "Insulin (nüchtern) + Glukose",
+        a: "Häufig erhöht; HOMA-IR-Index > 2,0 zeigt Insulinresistenz",
+        b: "Normal",
+      },
+      {
+        test: "Ultraschall Ovarien",
+        a: "Polyzystische Ovarien: > 12 Follikel je Seite, erhöhtes Ovarvolumen",
+        b: "Ovarien normal; Schilddrüse inhomogen, echoarm",
+      },
+    ],
+    howToDifferentiate:
+      "Der wichtigste Unterschied im Alltag: Hirsutismus (vermehrte Körperbehaarung, besonders Gesicht und Bauch) spricht klar für PCOS. Kälteintoleranz und Verstopfung sprechen klar für Hypothyreose. Beide Erkrankungen treten häufig gemeinsam auf – das vollständige Labor sollte immer TSH, Anti-TPO, freies Testosteron, DHEA-S, Insulin und FSH/LH umfassen.",
+    faqs: [
+      {
+        question: "Kann Hashimoto PCOS auslösen oder verschlimmern?",
+        answer:
+          "Ja. Schilddrüsenhormone sind direkt an der Regulation des Menstruationszyklus beteiligt. Eine Hypothyreose kann polyzystische Veränderungen der Eierstöcke verursachen, die PCOS ähneln. Bei vielen Frauen verschwinden PCOS-ähnliche Befunde nach erfolgreicher Hashimoto-Behandlung.",
+      },
+      {
+        question: "Welche Untersuchung sollte ich als erstes machen lassen?",
+        answer:
+          "Blut: TSH, Anti-TPO, freies Testosteron, DHEA-S, LH, FSH, Nüchterninsulin und Blutzucker. Ultraschall: Schilddrüse und Ovarien. Am besten alles in einer Abklärung – so spart man Zeit und schließt beide Erkrankungen gleichzeitig aus oder ein.",
+      },
+      {
+        question: "Warum dauert die PCOS-Diagnose so lange?",
+        answer:
+          "Weil die Symptome unspezifisch sind und PCOS kein einheitliches Erscheinungsbild hat. Manche Frauen sind schlank ohne Akne aber mit Zyklusstörung; andere haben Hirsutismus und Akne aber einen regelmäßigen Zyklus. Und viele Ärzte testen PCOS und Schilddrüse nicht gleichzeitig – obwohl sie häufig koexistieren.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Janssen OE et al.",
+        year: 2004,
+        title: "High prevalence of autoimmune thyroiditis in patients with polycystic ovary syndrome",
+        journal: "European Journal of Endocrinology",
+      },
+      {
+        authors: "Garber JR et al.",
+        year: 2012,
+        title: "Clinical practice guidelines for hypothyroidism in adults",
+        journal: "Thyroid",
+      },
+      {
+        authors: "Teede HJ et al.",
+        year: 2018,
+        title: "Recommendations from the international evidence-based guideline for the assessment and management of PCOS",
+        journal: "Human Reproduction",
+      },
+    ],
+  },
+
+  "wechseljahre-oder-angststoerung": {
+    slug: "wechseljahre-oder-angststoerung",
+    conditionASlug: "menopause",
+    conditionBSlug: "hormone",
+    conditionAName: "Perimenopause",
+    conditionBName: "Angststörung",
+    title: "Perimenopause oder Angststörung? Wenn Hormone Panik auslösen",
+    metaTitle: "Perimenopause oder Angststörung? Symptome & Unterschied erklärt",
+    metaDescription:
+      "Herzrasen, Panikattacken, innere Unruhe – Perimenopause oder Angststörung? Wie hormonelle Veränderungen Angstsymptome auslösen und wann psychiatrische Hilfe nötig ist.",
+    intro:
+      "Herzrasen ohne erkennbaren Auslöser. Plötzliche Panik. Innere Unruhe und das Gefühl, die Kontrolle zu verlieren. Diese Symptome können sowohl auf eine Angststörung als auch auf perimenopausale Hormonschwankungen hinweisen. Viele Frauen werden mit Anxiolytika oder Antidepressiva behandelt, wenn die eigentliche Ursache ein fallender Östrogenspiegel ist. Und umgekehrt: Frauen, bei denen eine echte Angststörung vorliegt, bekommen manchmal Hormontests statt psychiatrischer Hilfe.",
+    confusionNote:
+      "Östrogen reguliert die Aktivität von Serotonin, GABA und Noradrenalin – alle drei Neurotransmitter sind direkt an der Angstregulation beteiligt. Wenn Östrogen sinkt und schwankt, sinkt der Serotoninspiegel, die GABA-Aktivität nimmt ab und die Amygdala wird reaktiver. Das Ergebnis: Reizbarkeit, Panikattacken, Schlafstörungen – physiologisch identisch mit einer Angststörung. Der Unterschied liegt in der Ursache, nicht im Symptomerleben.",
+    sharedSymptoms: ["herzrasen", "panikattacken", "schlafstoerungen", "reizbarkeit", "stimmungsschwankungen"],
+    conditionAOnlySymptoms: ["hitzewallungen", "nachtschweiss", "scheidentrockenheit"],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Auslöser",
+        a: "Hormonelle Schwankungen, oft schlafbezogen oder zyklisch",
+        b: "Situativ oder generalisiert, nicht hormonell korreliert",
+      },
+      {
+        aspect: "Körperliche Begleitsymptome",
+        a: "Hitzewallungen, Nachtschweiß, Scheidentrockenheit, Zyklusveränderungen",
+        b: "Muskelverspannung, Hyperventilation, Zittern – ohne Hitzewallungen",
+      },
+      {
+        aspect: "Zeitliches Muster",
+        a: "Oft nachts oder in der Lutealphase; verbunden mit Hormonschwankungen",
+        b: "Anhaltend, situationsgebunden oder als Generalisierte Angststörung täglich",
+      },
+      {
+        aspect: "Alter beim Auftreten",
+        a: "Neu auftretend in der Perimenopause (40–55), keine psychiatrische Vorgeschichte",
+        b: "Oft früher auftretend; häufig bekannte psychiatrische Vorgeschichte",
+      },
+      {
+        aspect: "Ansprechen auf Hormontherapie",
+        a: "Oft deutliche Besserung innerhalb von Wochen nach Östrogengabe",
+        b: "Keine oder geringe Besserung unter HRT; spricht auf Anxiolytika/Psychotherapie an",
+      },
+    ],
+    labTests: [
+      {
+        test: "FSH + Östradiol",
+        a: "FSH erhöht, Östradiol schwankend/erniedrigt – bestätigt Perimenopause",
+        b: "Normal für Alter – kein hormoneller Auslöser",
+      },
+      {
+        test: "TSH + fT3 + Anti-TPO",
+        a: "Normal oder auffällig (Hashimoto als Ko-Erkrankung möglich)",
+        b: "Normal (Schilddrüse als Ursache ausschließen)",
+      },
+      {
+        test: "Cortisol (Tagesprofil)",
+        a: "Kann erhöht sein durch Schlafstörungen und Stress",
+        b: "Oft chronisch erhöht – Angststörung dysreguliert die HPA-Achse",
+      },
+      {
+        test: "EKG",
+        a: "Normal – Herzrasen ist vazomotorisch, kein kardialer Befund",
+        b: "Normal – Herzrasen bei Panikattacken ist funktionell",
+      },
+    ],
+    howToDifferentiate:
+      "Entscheidende Fragen: Gibt es Hitzewallungen oder Nachtschweiß? Diese treten bei Angststörungen nicht auf. Sind die Angstsymptome neu ab 40–50 ohne frühere psychiatrische Geschichte? Stark für Perimenopause. Bessern sich die Symptome stark nach der Periode oder nach dem Einsetzen? Hormonell. Ein FSH-Test und Östradioltesting geben oft schnelle Klarheit. Bei Suizidgedanken oder starker Einschränkung: sofort psychiatrische Abklärung.",
+    faqs: [
+      {
+        question: "Können Hitzewallungen Panikattacken auslösen?",
+        answer:
+          "Ja – und das ist häufiger als angenommen. Eine Hitzewallung verursacht plötzliches Herzrasen, Schwitzen und Benommenheit – das aktiviert das Angstsystem, was zu einer Panikattacke eskalieren kann. Viele Frauen entwickeln in der Perimenopause erstmals Panikattacken, obwohl keine Angststörung vorliegt. Die Behandlung der Hitzewallungen beseitigt oft auch die Panikattacken.",
+      },
+      {
+        question: "Hilft eine Hormontherapie gegen Angst in den Wechseljahren?",
+        answer:
+          "Ja, oft. Transdermal appliziertes Östrogen hat in mehreren Studien Angst- und Paniksymptome in der Perimenopause deutlich reduziert. Bioidentisches Progesteron (Utrogest) hat zudem anxiolytische Wirkung über GABA-Rezeptoren. Die Wirkung tritt meist innerhalb von 4–8 Wochen ein.",
+      },
+      {
+        question: "Wann brauche ich zusätzlich eine Psychotherapie?",
+        answer:
+          "Wenn die Angst trotz optimierter Hormontherapie anhält, wenn es vermeidungsbedingte Verhaltensmuster gibt (z.B. keine öffentlichen Plätze mehr), wenn Suizidgedanken bestehen oder wenn die Lebensqualität trotz Behandlung stark eingeschränkt ist. Kognitiv-behaviorale Therapie (KVT) ist auch bei hormonal bedingter Angst sehr wirksam.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Bäckström T et al.",
+        year: 2011,
+        title: "The role of hormones and hormonal treatments in premenstrual syndrome",
+        journal: "CNS Drugs",
+      },
+      {
+        authors: "Schmidt PJ et al.",
+        year: 2015,
+        title: "Estrogen replacement in perimenopause-related depression",
+        journal: "Journal of Clinical Psychiatry",
+      },
+      {
+        authors: "DGGG – Deutsche Gesellschaft für Gynäkologie und Geburtshilfe",
+        year: 2020,
+        title: "S3-Leitlinie Peri- und Postmenopause – Diagnostik und Interventionen",
+        journal: "AWMF Register Nr. 015-062",
+      },
+    ],
+  },
+
+  "schilddruese-oder-eisenmangel": {
+    slug: "schilddruese-oder-eisenmangel",
+    conditionASlug: "schilddruese",
+    conditionBSlug: "hormone",
+    conditionAName: "Schilddrüsenunterfunktion",
+    conditionBName: "Eisenmangel",
+    title: "Schilddrüsenunterfunktion oder Eisenmangel? Symptome unterscheiden",
+    metaTitle: "Schilddrüse oder Eisenmangel? Müdigkeit, Haarausfall & die richtige Diagnose",
+    metaDescription:
+      "Schilddrüsenunterfunktion und Eisenmangel haben fast identische Symptome. Welcher Bluttest entscheidet, warum beides oft zusammen auftritt und was wirklich hilft.",
+    intro:
+      "Chronische Erschöpfung, Haarausfall, Konzentrationsprobleme, blasse Haut – wer mit diesen Beschwerden zum Arzt geht, bekommt häufig eine Diagnose: Eisenmangel oder Schilddrüsenunterfunktion. Aber oft ist es beides. Denn beide Erkrankungen sind nicht nur symptomatisch ähnlich – sie bedingen einander: Eisenmangel hemmt die Schilddrüsenhormon-Synthese, Hypothyreose verschlechtert die Eisenabsorption.",
+    confusionNote:
+      "Eisen ist ein essentieller Kofaktor für die Thyreoperoxidase – das Enzym, das Schilddrüsenhormone synthetisiert. Eisenmangel führt direkt zu einer verminderten Schilddrüsenhormonproduktion und hemmt die Umwandlung von T4 in das aktive T3. Gleichzeitig verlangsamt eine Schilddrüsenunterfunktion die Magensäureproduktion, was die Eisenabsorption reduziert. Ein echter Teufelskreis.",
+    sharedSymptoms: ["muedigkeit", "haarausfall", "konzentrationsprobleme", "antriebslosigkeit"],
+    conditionAOnlySymptoms: ["frieren", "verstopfung", "gewichtszunahme"],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Körpertemperatur",
+        a: "Kälteintoleranz – ständiges Frieren auch bei normaler Raumtemperatur",
+        b: "Keine Kälteintoleranz – aber Blässe und blasse Schleimhäute",
+      },
+      {
+        aspect: "Herzfrequenz",
+        a: "Eher langsam (Bradykardie möglich)",
+        b: "Eher schnell bei Belastung; Herzrasen bei Treppensteigen",
+      },
+      {
+        aspect: "Fingernägel",
+        a: "Brüchig, langsam wachsend",
+        b: "Brüchig mit Längsriefen; Koilonychie (löffelförmige Nägel) möglich",
+      },
+      {
+        aspect: "Laborparameter",
+        a: "TSH erhöht; fT4 erniedrigt; Anti-TPO positiv bei Hashimoto",
+        b: "Ferritin erniedrigt (<30 µg/l); Hb erniedrigt; MCV klein",
+      },
+      {
+        aspect: "Diagnose-Priorität",
+        a: "TSH als Screening-Parameter ausreichend",
+        b: "Ferritin (nicht nur Hb!) – Eisenmangel ohne Anämie wird oft übersehen",
+      },
+    ],
+    labTests: [
+      {
+        test: "TSH",
+        a: "Erhöht (> 4,0 mU/L bei manifester Hypothyreose)",
+        b: "Normal",
+      },
+      {
+        test: "Ferritin",
+        a: "Häufig erniedrigt als Ko-Befund; beeinflusst Schilddrüsenfunktion",
+        b: "Erniedrigt (< 30 µg/l) – Hauptdiagnosekriterium",
+      },
+      {
+        test: "Hämoglobin (Hb)",
+        a: "Normal",
+        b: "Erniedrigt (< 12 g/dl bei Frauen) bei manifester Anämie",
+      },
+      {
+        test: "fT3 (freies T3)",
+        a: "Erniedrigt bei Hypothyreose oder T4→T3-Konversionsstörung",
+        b: "Kann erniedrigt sein – Eisenmangel hemmt T4→T3-Konversion",
+      },
+      {
+        test: "Anti-TPO-Antikörper",
+        a: "Positiv bei Hashimoto als Ursache",
+        b: "Normal",
+      },
+    ],
+    howToDifferentiate:
+      "Wichtigste Regel: Immer beides testen. TSH allein reicht nicht – Ferritin muss explizit angefordert werden, da es nicht zum Standardblutbild gehört. Ferritin unter 70 µg/l beeinträchtigt die Schilddrüsenfunktion auch ohne Anämie. Wer Hashimoto und Eisenmangel gleichzeitig hat, sollte wissen: Eisensubstitution muss mindestens 4 Stunden von L-Thyroxin getrennt eingenommen werden, da Eisen die Schilddrüsenhormon-Absorption hemmt.",
+    faqs: [
+      {
+        question: "Kann Eisenmangel TSH-Werte verfälschen?",
+        answer:
+          "Ja. Schwerer Eisenmangel kann zu einem leicht erhöhten TSH führen, der bei normaler Eisenversorgung wieder sinkt. Bei TSH-Werten im Grenzbereich (2,5–4,0 mU/L) mit gleichzeitigem Eisenmangel: erst Eisen substituieren, dann TSH kontrollieren.",
+      },
+      {
+        question: "Warum reicht Hämoglobin als Eisenparameter nicht aus?",
+        answer:
+          "Hb sinkt erst spät – wenn die Eisenspeicher bereits stark erschöpft sind. Ferritin spiegelt die Eisenspeicher wider und sinkt viel früher. Viele Frauen haben bei niedrig-normalem Hb bereits ein Ferritin unter 30 µg/l und leiden unter erheblichen Symptomen. Deshalb: immer Ferritin und Hb zusammen bestimmen.",
+      },
+      {
+        question: "Was muss ich bei der Einnahme von Eisen und L-Thyroxin beachten?",
+        answer:
+          "Eisenpräparate hemmen die Aufnahme von Levothyroxin erheblich. Mindestabstand: 4 Stunden. Empfehlung: L-Thyroxin nüchtern morgens nehmen, Eisen mittags oder abends. TSH-Kontrolle 6–8 Wochen nach Beginn der Eisentherapie, da sich der TSH-Wert verschieben kann.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Zimmermann MB, Köhrle J",
+        year: 2002,
+        title: "The impact of iron and selenium deficiencies on iodine and thyroid metabolism",
+        journal: "Thyroid",
+      },
+      {
+        authors: "Beard JL",
+        year: 2003,
+        title: "Iron deficiency alters brain development and functioning",
+        journal: "Journal of Nutrition",
+      },
+      {
+        authors: "Garber JR et al.",
+        year: 2012,
+        title: "Clinical practice guidelines for hypothyroidism in adults",
+        journal: "Thyroid",
+      },
+    ],
+  },
+
+  "menopause-oder-diabetes": {
+    slug: "menopause-oder-diabetes",
+    conditionASlug: "menopause",
+    conditionBSlug: "hormone",
+    conditionAName: "Menopause",
+    conditionBName: "Typ-2-Diabetes / Insulinresistenz",
+    title: "Menopause oder Diabetes? Wenn Blutzucker und Hormone sich verwirren",
+    metaTitle: "Menopause oder Diabetes? Gewichtszunahme, Erschöpfung & Blutzucker erklärt",
+    metaDescription:
+      "Gewichtszunahme, Erschöpfung, Heißhunger – Menopause und Insulinresistenz haben viele gemeinsame Symptome. Warum Wechseljahre Diabetes-Risiko erhöhen und was dagegen hilft.",
+    intro:
+      "Viele Frauen bemerken in den Wechseljahren eine unerwartete Gewichtszunahme besonders am Bauch, Energieschwankungen nach dem Essen, Heißhunger und Schlafprobleme. Was nach klassischen Wechseljahresbeschwerden klingt, kann teilweise auf eine Insulinresistenz hinweisen – oder beides gleichzeitig sein. Die Menopause erhöht das Risiko für Typ-2-Diabetes erheblich.",
+    confusionNote:
+      "Östrogen schützt vor Insulinresistenz: Es verbessert die Glukoseaufnahme in den Zellen und senkt die Insulinausschüttung. Wenn Östrogen in der Menopause fällt, verschlechtert sich die Insulinsensitivität – das Risiko für metabolisches Syndrom und Typ-2-Diabetes steigt. Gleichzeitig verändert sich das Körperfett von peripher (Hüften, Oberschenkel) zu viszeral (Bauchraum), was die Insulinresistenz weiter verschlechtert.",
+    sharedSymptoms: ["muedigkeit", "gewichtszunahme", "schlafstoerungen", "konzentrationsprobleme", "stimmungsschwankungen"],
+    conditionAOnlySymptoms: ["hitzewallungen", "nachtschweiss", "scheidentrockenheit"],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Art der Gewichtszunahme",
+        a: "Gesamtgewicht steigt; besonders Bauchfett (Östrogenmangel verändert Fettverteilung)",
+        b: "Viszerales Bauchfett dominant; 'Apfelform' auch ohne Gewichtszunahme möglich",
+      },
+      {
+        aspect: "Charakteristische Symptome",
+        a: "Hitzewallungen, Nachtschweiß, Scheidentrockenheit, Zyklusveränderungen",
+        b: "Heißhunger 1–2 Stunden nach dem Essen, extreme Erschöpfung nach Kohlenhydraten, häufiges Wasserlassen",
+      },
+      {
+        aspect: "Blutzuckerreaktion",
+        a: "Kann Blutzuckerschwankungen verstärken, ist aber nicht die Ursache",
+        b: "Nüchtern-Blutzucker erhöht (> 5,6 mmol/l); pathologischer oraler Glukosetoleranztest",
+      },
+      {
+        aspect: "Diagnose",
+        a: "FSH erhöht, Östradiol erniedrigt – klinische Diagnose",
+        b: "HbA1c erhöht (> 5,7 %), Nüchterninsulin erhöht, HOMA-IR > 2,0",
+      },
+    ],
+    labTests: [
+      {
+        test: "FSH + Östradiol",
+        a: "FSH erhöht; Östradiol erniedrigt – bestätigt Perimenopause/Menopause",
+        b: "Normal (Diabetes ist unabhängig von Menopause)",
+      },
+      {
+        test: "HbA1c (Langzeit-Blutzucker)",
+        a: "Normal (<5,7 %) – Menopause verursacht keinen Diabetes direkt",
+        b: "Erhöht: 5,7–6,4 % = Prädiabetes; > 6,5 % = Diabetes",
+      },
+      {
+        test: "Nüchtern-Insulin",
+        a: "Normal – Menopause beeinflusst Insulin indirekt",
+        b: "Erhöht – Zeichen von Insulinresistenz",
+      },
+      {
+        test: "HOMA-IR (Insulinresistenz-Index)",
+        a: "Normal oder leicht erhöht durch Menopause",
+        b: "Erhöht (> 2,0) bei Insulinresistenz; > 2,5 bei starker Resistenz",
+      },
+      {
+        test: "Triglyzeride + HDL",
+        a: "Können sich in der Menopause verschlechtern (ungünstigeres Lipidprofil)",
+        b: "Triglyzeride erhöht, HDL erniedrigt – klassisches metabolisches Syndrom",
+      },
+    ],
+    howToDifferentiate:
+      "Beide Erkrankungen können und treten häufig gleichzeitig auf. Ein vollständiges Stoffwechsel-Screening ist ab der Perimenopause sinnvoll: FSH, Östradiol, HbA1c, Nüchterninsulin, Triglyzeride, HDL. Hitzewallungen und Nachtschweiß sprechen klar für die Menopause. Heißhunger 1–2 Stunden nach dem Essen, starke Erschöpfung nach Kohlenhydraten und Bauchfett trotz relativ normalem Gewicht sprechen für Insulinresistenz.",
+    faqs: [
+      {
+        question: "Erhöhen die Wechseljahre das Diabetesrisiko?",
+        answer:
+          "Ja, deutlich. Das Risiko für Typ-2-Diabetes verdoppelt sich in der Menopause. Östrogen verbessert die Insulinsensitivität – sein Wegfall erhöht die Insulinresistenz. Hormontherapie (HRT) kann das Diabetesrisiko in der Perimenopause nachweislich senken.",
+      },
+      {
+        question: "Hilft eine Hormontherapie gegen Insulinresistenz?",
+        answer:
+          "Ja, transdermal appliziertes Östrogen verbessert die Insulinsensitivität und kann den HbA1c leicht senken. Die Wahl des Gestagens spielt eine Rolle: Bioidentisches Progesteron (Utrogest) ist metabolisch neutraler als synthetische Gestagene.",
+      },
+      {
+        question: "Wie erkenne ich eine Insulinresistenz?",
+        answer:
+          "Typische Zeichen: Bauchfett, das trotz Diät bleibt; Energieabfall 1–2 Stunden nach Kohlenhydratmahlzeiten; Heißhunger; Schlafprobleme. Diagnose: Nüchterninsulin + Nüchternglukose (HOMA-IR-Berechnung) und HbA1c. Ein OGTT (oraler Glukosetoleranztest) bei Verdacht auf Prädiabetes.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Carr MC",
+        year: 2003,
+        title: "The emergence of the metabolic syndrome with menopause",
+        journal: "Journal of Clinical Endocrinology & Metabolism",
+      },
+      {
+        authors: "Mauvais-Jarvis F et al.",
+        year: 2013,
+        title: "The role of estrogens in control of energy balance and glucose homeostasis",
+        journal: "Endocrine Reviews",
+      },
+      {
+        authors: "DGGG – Deutsche Gesellschaft für Gynäkologie und Geburtshilfe",
+        year: 2020,
+        title: "S3-Leitlinie Peri- und Postmenopause – Diagnostik und Interventionen",
+        journal: "AWMF Register Nr. 015-062",
+      },
+    ],
+  },
+
+  "hashimoto-oder-fibromyalgie": {
+    slug: "hashimoto-oder-fibromyalgie",
+    conditionASlug: "hashimoto",
+    conditionBSlug: "hormone",
+    conditionAName: "Hashimoto",
+    conditionBName: "Fibromyalgie",
+    title: "Hashimoto oder Fibromyalgie? Wenn Schmerz und Erschöpfung verwirren",
+    metaTitle: "Hashimoto oder Fibromyalgie? Symptome, Unterschiede & Diagnose",
+    metaDescription:
+      "Muskelschmerzen, Erschöpfung, Konzentrationsprobleme, Schlafstörungen – Hashimoto und Fibromyalgie sind kaum zu unterscheiden. Welche Tests helfen und warum beide oft gleichzeitig auftreten.",
+    intro:
+      "Diffuse Muskelschmerzen, chronische Erschöpfung, Brain Fog, Schlafstörungen und Stimmungsschwankungen – diese Beschwerden passen auf Fibromyalgie. Sie passen auch auf Hashimoto Thyreoiditis. Die Ähnlichkeit ist so groß, dass viele Frauen jahrelang mit Fibromyalgie leben, bevor jemand die Schilddrüse untersucht. Und viele Frauen mit Hashimoto haben aufgrund persistierender Symptome trotz L-Thyroxin-Therapie eine weitere Fibromyalgie-Diagnose bekommen.",
+    confusionNote:
+      "Fibromyalgie und Hashimoto überlappen sich nicht nur symptomatisch – die Prävalenz von Schilddrüsenerkrankungen bei Fibromyalgie-Patientinnen ist 4-fach erhöht. Hypothyreose kann fibromyalgie-ähnliche Muskelschmerzen, Gelenkentzündungen und chronische Erschöpfung verursachen. Bei einigen Patientinnen verschwindet die 'Fibromyalgie' vollständig nach erfolgreicher Schilddrüsenbehandlung.",
+    sharedSymptoms: ["muedigkeit", "schlafstoerungen", "konzentrationsprobleme", "stimmungsschwankungen", "gelenkschmerzen", "antriebslosigkeit"],
+    conditionAOnlySymptoms: ["frieren", "gewichtszunahme", "haarausfall"],
+    conditionBOnlySymptoms: [],
+    keyDifferences: [
+      {
+        aspect: "Schmerzcharakter",
+        a: "Muskelschmerzen eher diffus, begleitet von Steifheit; Gelenkschwellung möglich",
+        b: "Druckschmerzhafte Triggerpunkte an spezifischen Körperstellen; Ganzkörperschmerz",
+      },
+      {
+        aspect: "Blutbefund",
+        a: "TSH erhöht; Anti-TPO-Antikörper positiv; messbare Laborauffälligkeiten",
+        b: "Labor unauffällig – Fibromyalgie ist eine klinische Diagnose ohne Labormarker",
+      },
+      {
+        aspect: "Kalte Empfindlichkeit",
+        a: "Typisch – Kälteintoleranz auch bei normaler Raumtemperatur",
+        b: "Kälteempfindlichkeit möglich, aber kein konstantes Merkmal",
+      },
+      {
+        aspect: "Ansprechen auf Behandlung",
+        a: "Deutliche Besserung nach korrekter L-Thyroxin-Dosierung",
+        b: "Kein Ansprechen auf Schilddrüsentherapie; Behandlung multidisziplinär",
+      },
+      {
+        aspect: "Diagnoseweg",
+        a: "TSH + Anti-TPO + Ultraschall – objektive Diagnose möglich",
+        b: "Ausschlussdiagnose: andere Erkrankungen müssen ausgeschlossen werden",
+      },
+    ],
+    labTests: [
+      {
+        test: "TSH + fT3 + fT4",
+        a: "TSH erhöht; fT3/fT4 erniedrigt – bestätigt Hypothyreose",
+        b: "Normal – Fibromyalgie hat keine Schilddrüsenauffälligkeiten",
+      },
+      {
+        test: "Anti-TPO + Anti-Tg",
+        a: "Positiv – beweisend für Hashimoto",
+        b: "Normal",
+      },
+      {
+        test: "CK (Kreatinkinase)",
+        a: "Kann bei schwerer Hypothyreose leicht erhöht sein (Muskelabbau)",
+        b: "Normal oder leicht erhöht",
+      },
+      {
+        test: "CRP + BSG (Entzündungsmarker)",
+        a: "Kann leicht erhöht bei Hashimoto-Schüben",
+        b: "Normal – keine systemische Entzündung bei Fibromyalgie",
+      },
+      {
+        test: "Vitamin D",
+        a: "Häufig erniedrigt – verschlechtert Muskelschmerzen",
+        b: "Häufig erniedrigt – bekannter Verstärker von Fibromyalgie-Schmerzen",
+      },
+    ],
+    howToDifferentiate:
+      "Die goldene Regel: Vor jeder Fibromyalgie-Diagnose muss die Schilddrüse vollständig abgeklärt werden (TSH, fT3, fT4, Anti-TPO). Wenn Hashimoto behandelt wird und Schmerzen und Erschöpfung verschwinden, war die 'Fibromyalgie' eine Fehldiagnose. Wenn Symptome trotz optimierter Schilddrüsenwerte (TSH 0,5–2,0 mU/L) fortbestehen, dann Fibromyalgie als Ko-Erkrankung in Betracht ziehen. Auch Vitamin D und Ferritin messen – Mängel verstärken beide Erkrankungen.",
+    faqs: [
+      {
+        question: "Kann Hypothyreose Fibromyalgie vortäuschen?",
+        answer:
+          "Ja. Unbehandelte oder schlecht behandelte Hypothyreose kann diffuse Muskelschmerzen, Gelenkschwellung, chronische Erschöpfung und Brain Fog verursachen – identisch mit Fibromyalgie. Bei manchen Patientinnen verschwinden alle Fibromyalgie-Symptome nach Optimierung der Schilddrüsentherapie.",
+      },
+      {
+        question: "Kann ich Hashimoto und Fibromyalgie gleichzeitig haben?",
+        answer:
+          "Ja. Studien zeigen eine 4-fach erhöhte Fibromyalgie-Prävalenz bei Frauen mit Schilddrüsenerkrankungen. Beide können gleichzeitig vorliegen – dann muss beides behandelt werden. Fibromyalgie-spezifische Behandlung (Bewegungstherapie, KVT, ggf. Amitriptylin) ergänzt die Schilddrüsentherapie.",
+      },
+      {
+        question: "Welcher Vitamin-D-Spiegel ist bei diesen Erkrankungen optimal?",
+        answer:
+          "Für Schilddrüsen- und Muskelgesundheit empfehlen viele Experten 25-OH-Vitamin D > 50 ng/ml (125 nmol/l). Werte unter 20 ng/ml erhöhen das Hashimoto-Risiko und verschlimmern Muskelschmerzen erheblich. Supplementierung: 2000–4000 IU täglich, individuelle Anpassung nach Blutspiegel.",
+      },
+    ],
+    sources: [
+      {
+        authors: "Pamuk ON et al.",
+        year: 2007,
+        title: "Fibromyalgia in patients with thyroid autoimmunity",
+        journal: "Clinical Rheumatology",
+      },
+      {
+        authors: "Caturegli P, De Remigis A, Rose NR",
+        year: 2014,
+        title: "Hashimoto thyroiditis: clinical and diagnostic criteria",
+        journal: "Autoimmunity Reviews",
+      },
+      {
+        authors: "Wolfe F et al.",
+        year: 2010,
+        title: "The American College of Rheumatology preliminary diagnostic criteria for fibromyalgia",
+        journal: "Arthritis Care & Research",
+      },
+    ],
+  },
 };
 
 export const VERGLEICHE_LIST = Object.values(VERGLEICHE_DATA);

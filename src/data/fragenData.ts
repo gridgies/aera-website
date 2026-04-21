@@ -2357,6 +2357,191 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       },
     ],
   },
+
+  "hashimoto-ernaehrung-was-vermeiden": {
+    slug: "hashimoto-ernaehrung-was-vermeiden",
+    question: "Was sollte man bei Hashimoto nicht essen?",
+    metaTitle: "Hashimoto Ernährung: Was vermeiden? Die wichtigsten Regeln",
+    metaDescription:
+      "Hashimoto und Ernährung: Gluten, Soja, Jod, Milch – was wirklich vermieden werden sollte und was Mythos ist. Evidenzbasierte Ernährungsempfehlungen bei Hashimoto.",
+    answer:
+      "Bei Hashimoto wird häufig glutenfreie Ernährung empfohlen, besonders wenn gleichzeitig Zöliakie oder Glutensensitivität vorliegt. Soja in großen Mengen, rohes Kreuzblütergemüse (Kohl, Brokkoli) und übermäßig Jod können die Schilddrüsenfunktion beeinflussen. Nicht belegt und oft übertrieben ist ein vollständiges Verbot dieser Lebensmittel ohne individuelle Unverträglichkeit.",
+    content: {
+      sections: [
+        {
+          heading: "Gluten: Für wen ist glutenfreie Ernährung sinnvoll?",
+          text:
+            "Bei gleichzeitiger Zöliakie ist glutenfreie Ernährung notwendig – die Kombination Hashimoto + Zöliakie ist überproportional häufig (ca. 5–7 % der Hashimoto-Patientinnen haben Zöliakie). Für Frauen ohne Zöliakie oder Glutensensitivität ist die Evidenz für Glutenverzicht schwächer. Einige Studien zeigen sinkende Anti-TPO-Antikörper unter glutenfreier Ernährung, andere nicht. Empfehlung: Zöliakie-Screening (Anti-tTG-Antikörper) vor einem Glutenverzicht.",
+        },
+        {
+          heading: "Jod: Zu viel schadet, zu wenig auch",
+          text:
+            "Exzessives Jod kann Hashimoto-Schübe auslösen, da Jod die Autoimmunreaktion verstärken kann. Übermäßige Jodaufnahme durch Algen, Meeresfrüchte in großen Mengen oder hochdosierte Jodpräparate (> 300 µg/Tag) sollte vermieden werden. Normale jodreiche Lebensmittel (Meeresfisch, jodiertes Salz) in moderaten Mengen sind unbedenklich. Jodmangel ist ebenfalls schädlich – es geht um Balance, nicht um vollständigen Verzicht.",
+        },
+        {
+          heading: "Selen: Das wichtigste Spurenelement bei Hashimoto",
+          text:
+            "Selen ist kein Lebensmittel zum Vermeiden, sondern zum Erhöhen. Die Thyreoperoxidase ist ein selenhaltiges Enzym. Selensubstitution (200 µg täglich) senkt in Studien Anti-TPO-Antikörper und verbessert das Wohlbefinden. Selenreiche Lebensmittel: Paranüsse (1–2 pro Tag = ~200 µg Selen), Seefisch, Eier, Fleisch.",
+        },
+        {
+          heading: "Kreuzblütergemüse und Soja: Realitätscheck",
+          text:
+            "Rohe Kreuzblütergemüse (Brokkoli, Kohl, Blumenkohl, Rosenkohl) enthalten Goitrogene, die die Jodaufnahme hemmen. Beim Garen werden diese größtenteils inaktiviert. Empfehlung: nicht roh und in Massen essen, aber kein vollständiges Verbot. Soja enthält ebenfalls Goitrogene – große Mengen Sojaprodukte können die L-Thyroxin-Absorption hemmen. Mindestabstand Soja zu Levothyroxin: 4 Stunden.",
+        },
+        {
+          heading: "Anti-entzündliche Ernährung: Was wirklich hilft",
+          text:
+            "Besser belegt als einzelne Verbote ist eine insgesamt entzündungshemmende Ernährung: reich an Omega-3-Fettsäuren (Lachs, Leinsamen), Antioxidantien (bunte Gemüse, Beeren), Ballaststoffe (Hülsenfrüchte, Vollkorn wenn kein Gluten-Problem). Wenig ultraverarbeitete Lebensmittel, wenig Zucker, wenig Alkohol. Diese Grundsätze sind deutlich evidenzbasierter als strikte Einzelverbote.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "hashimoto-diagnosieren-welche-blutwerte",
+      "welche-hormone-testen-lassen",
+    ],
+    relatedConditions: ["hashimoto", "schilddruese"],
+    faqs: [
+      {
+        question: "Muss ich bei Hashimoto kein Gluten mehr essen?",
+        answer:
+          "Nicht zwingend – aber es lohnt sich, zuerst Zöliakie auszuschließen (Anti-tTG-Antikörper im Blut). Bei positiver Zöliakie: glutenfrei notwendig. Bei negativem Test und ohne Glutensensitivität: kein striktes Verbot, aber ein Selbstexperiment von 6–8 Wochen glutenfrei kann aufschlussreich sein.",
+      },
+      {
+        question: "Wie viel Selen sollte man bei Hashimoto supplementieren?",
+        answer:
+          "Die meisten Studien zeigen Vorteile bei 200 µg Selen täglich – als Natriumselenit oder Selenomethionin. Nicht überdosieren: Ab 400 µg täglich droht Selentoxizität (Haarausfall, Nagelveränderungen). 1–2 Paranüsse pro Tag liefern natürlich ~100–200 µg Selen.",
+      },
+      {
+        question: "Kann Ernährung Hashimoto heilen?",
+        answer:
+          "Nein – die Autoimmunreaktion kann durch Ernährung nicht vollständig gestoppt werden. Aber eine anti-entzündliche Ernährung mit ausreichend Selen, Vitamin D und Omega-3-Fettsäuren kann die Antikörperlast senken, Symptome lindern und das allgemeine Wohlbefinden verbessern. Ernährung als Ergänzung – nicht als Ersatz – zur medizinischen Behandlung.",
+      },
+    ],
+  },
+
+  "perimenopause-ab-welchem-alter": {
+    slug: "perimenopause-ab-welchem-alter",
+    question: "Ab welchem Alter beginnt die Perimenopause?",
+    metaTitle: "Ab welchem Alter beginnt die Perimenopause? Erste Anzeichen & Diagnose",
+    metaDescription:
+      "Perimenopause mit 40, 45 oder früher? Wann beginnen die Wechseljahre wirklich und welche ersten Anzeichen sind typisch? Mit Erklärvideo zu FSH-Werten.",
+    answer:
+      "Die Perimenopause beginnt im Durchschnitt mit 47 Jahren, kann aber schon ab 35–40 einsetzen. Typische erste Anzeichen: Zyklusveränderungen (Perioden werden kürzer, länger oder unregelmäßiger), erste Hitzewallungen, verstärkte prämenstruelle Symptome und Schlafveränderungen. FSH > 10 IU/L an Tag 2–5 des Zyklus kann ein früher Hinweis sein.",
+    content: {
+      sections: [
+        {
+          heading: "Was ist Perimenopause und wann beginnt sie?",
+          text:
+            "Perimenopause bedeutet 'um die Menopause herum' – die Übergangsphase, in der die Eierstöcke die Hormonproduktion schrittweise reduzieren. Nach der STRAW+10-Klassifikation beginnt die Perimenopause mit ersten Zyklusveränderungen (> 7 Tage Abweichung von der normalen Zykluslänge). Der Durchschnitt: 47 Jahre. Aber: bei 10 % der Frauen beginnt sie vor 45 Jahren ('frühe Perimenopause'), bei manchen sogar vor 40 ('prämature Ovarialinsuffizienz', POI).",
+        },
+        {
+          heading: "Erste Anzeichen: Was sich ändert",
+          text:
+            "Die frühesten Anzeichen sind oft subtil: Der Zyklus verändert sich (kürzer, länger oder unregelmäßiger). PMS-Symptome verschlimmern sich. Schlafqualität nimmt ab – nicht durch Hitzewallungen, sondern durch hormonelle Schlafstrukturveränderungen. Stimmungsschwankungen nehmen zu, besonders in der Lutealphase. Erste leichte Hitzewallungen oder 'innere Hitze' nachts. Viele Frauen bemerken diese Veränderungen erst rückblickend.",
+        },
+        {
+          heading: "Perimenopause mit 40: Ist das normal?",
+          text:
+            "Ja – Perimenopause mit 40 ist nicht ungewöhnlich. Besonders Frauen, die früh ihre erste Periode hatten, rauchen oder bestimmte Autoimmunerkrankungen (Hashimoto) haben, können früher in die Perimenopause eintreten. Wichtig: Mit 40 ist eine Schwangerschaft weiterhin möglich, da trotz unregelmäßiger Zyklen noch Ovulationen stattfinden können.",
+        },
+        {
+          heading: "Diagnosemöglichkeiten: Wann ist es Perimenopause?",
+          text:
+            "Es gibt keinen einzelnen Test, der 'Perimenopause Ja oder Nein' anzeigt. FSH > 10–12 IU/L an Tag 2–5 des Zyklus kann ein früher Hinweis sein. AMH (Anti-Müller-Hormon) zeigt die verbleibende Ovarialreserve – bei niedrigem AMH nähert sich das Ovar dem Ende seiner Funktion. Östradiol kann in der Perimenopause zunächst erhöht sein (reaktiv) und erst später sinken. Klinisch entscheidend: Zyklusveränderungen + Symptome.",
+        },
+        {
+          heading: "Perimenopause vs. Menopause vs. Postmenopause",
+          text:
+            "Perimenopause: Übergangsphase mit hormonellen Schwankungen und ersten Symptomen. Menopause: Zeitpunkt der letzten Menstruation (rückblickend nach 12 Monaten ohne Periode festgestellt). Postmenopause: alles danach – lebenslang. Die durchschnittliche Menopause in Deutschland liegt bei 51–52 Jahren. Die Perimenopause dauert im Schnitt 4–10 Jahre.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "wie-lange-dauern-wechseljahre",
+      "wann-beginnen-die-wechseljahre",
+      "welche-hormone-testen-lassen",
+    ],
+    relatedConditions: ["menopause", "hormone"],
+    faqs: [
+      {
+        question: "Kann man mit 40 schon in den Wechseljahren sein?",
+        answer:
+          "Ja. Perimenopause beginnt bei ca. 10 % der Frauen vor 45 Jahren. Mit 40 in der Perimenopause zu sein, ist ungewöhnlich, aber nicht selten. Bei Beginn vor 40 Jahren spricht man von prämturer Ovarialinsuffizienz (POI) – das sollte endokrinologisch abgeklärt werden, da es Auswirkungen auf Knochen, Herzgesundheit und ggf. Kinderwunsch hat.",
+      },
+      {
+        question: "Wie unterscheide ich Perimenopause von PMS?",
+        answer:
+          "PMS tritt regelmäßig in der Lutealphase auf und verschwindet mit der Periode. Perimenopausale Beschwerden sind unregelmäßiger, korrelieren mit Hormonschwankungen (nicht nur Lutealphase) und gehen oft mit Zyklusveränderungen einher. Hitzewallungen und Nachtschweiß sind fast ausschließlich perimenopausale Zeichen.",
+      },
+      {
+        question: "Was tun, wenn der Arzt sagt, 'Du bist zu jung für Wechseljahre'?",
+        answer:
+          "Auf einer vollständigen Hormondiagnostik bestehen: FSH an Tag 2–5, Östradiol, AMH. Wenn FSH > 10 und AMH erniedrigt, ist perimenopausale Aktivität wahrscheinlich. Bei starken Symptomen einen Gynäkologen mit Menopause-Schwerpunkt oder einen Endokrinologen aufsuchen. Menopause-Gesellschaft Deutschland bietet Ärzteverzeichnisse an.",
+      },
+    ],
+  },
+
+  "hitzewallungen-was-hilft-sofort-detail": {
+    slug: "hitzewallungen-was-hilft-sofort-detail",
+    question: "Was hilft sofort gegen Hitzewallungen?",
+    metaTitle: "Hitzewallungen: Was hilft sofort? 8 bewährte Methoden",
+    metaDescription:
+      "Hitzewallungen in den Wechseljahren: Was hilft sofort und langfristig? Von Kleidung über Atemtechniken bis Hormontherapie – evidenzbasierte Tipps.",
+    answer:
+      "Sofort bei einer Hitzewallung: tief und langsam atmen (4 Sekunden ein, 4 Sekunden aus), kühles Handgelenk unter fließendes Wasser, Kleidung in Schichten. Langfristig: leichte, atmungsaktive Kleidung, kühles Schlafzimmer (16–18°C), Alkohol und Koffein reduzieren, bei starken Hitzewallungen Hormontherapie oder pflanzliche Alternativen.",
+    content: {
+      sections: [
+        {
+          heading: "Sofortmaßnahmen während einer Hitzewallung",
+          text:
+            "Wenn eine Hitzewallung beginnt: Ruhig und langsam atmen – tiefes Atmen aktiviert den Parasympathikus und kann die Intensität reduzieren. Kleidung lockern, frische Luft suchen. Handgelenke oder Nacken mit kaltem Wasser kühlen – dort verliert der Körper schnell Wärme. Fächer oder kleines Sprühfläschchen mit Wasser immer dabeihaben. Diese Maßnahmen lindern die akute Hitzewallung innerhalb von 1–3 Minuten.",
+        },
+        {
+          heading: "Lebensstil: Was Hitzewallungen auslöst und wie man es vermeidet",
+          text:
+            "Bekannte Trigger: Alkohol (besonders Rotwein), Koffein, scharfe Speisen, Stress, enge/synthetische Kleidung, heiße Getränke, erhitzende Situationen. Schlafzimmer auf 16–18°C kühlen – Nachtschweiß wird deutlich reduziert. Atmungsaktive Kleidung (Leinen, Bambusstoff) schafft Reserven für den Temperaturanstieg. Leichte Mahlzeiten abends reduzieren nächtliche Wärmeproduktion.",
+        },
+        {
+          heading: "Pflanzliche Alternativen: Was die Evidenz zeigt",
+          text:
+            "Traubensilberkerze (Cimicifuga): am besten studiertes pflanzliches Mittel – reduziert Hitzewallungen in kontrollierten Studien um 30–50 %. Rotklee-Isoflavone: ähnliche Wirkung, besonders bei früher Perimenopause. Salbei: traditionell eingesetzt, kleine Studien positiv. Wichtig: Pflanzliche Mittel brauchen 4–8 Wochen bis zur vollen Wirkung.",
+        },
+        {
+          heading: "Hormontherapie: Die wirksamste Option",
+          text:
+            "Östrogen-Therapie ist die wirksamste Behandlung gegen Hitzewallungen (Reduktion um 70–80 %). Transdermale Anwendung (Gel, Pflaster) gilt als sicherer als orale Präparate. Die neue Empfehlung vieler Fachgesellschaften: HRT bei gesunden Frauen unter 60 Jahren in den ersten 10 Jahren nach der Menopause hat ein günstiges Nutzen-Risiko-Verhältnis. Die Entscheidung sollte individuell mit der Gynäkologin getroffen werden.",
+        },
+        {
+          heading: "Nicht-hormonelle medikamentöse Optionen",
+          text:
+            "Für Frauen, bei denen Hormone nicht möglich sind: SSRI/SNRI (z.B. Venlafaxin, Escitalopram) reduzieren Hitzewallungen um 40–60 %. Gabapentin (abends): wirksam bei Nachtschweiß. Oxybutynin: neuere Option mit guter Evidenz. Fezolinetant (Veoza): neuer NK3-Antagonist – EU-Zulassung 2024, non-hormonal, sehr wirksam.",
+        },
+      ],
+    },
+    relatedQuestions: [
+      "wie-lange-dauern-wechseljahre",
+      "wann-beginnen-die-wechseljahre",
+      "perimenopause-ab-welchem-alter",
+    ],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Wie lange dauern Hitzewallungen in den Wechseljahren?",
+        answer:
+          "Durchschnittlich 7,4 Jahre laut der SWAN-Studie. Frauen, die früher (in der Perimenopause) mit Hitzewallungen beginnen, erleben sie oft länger. Bei manchen Frauen dauern Hitzewallungen in der Postmenopause noch 10–15 Jahre an. Ohne Behandlung klingen sie bei den meisten Frauen irgendwann ab – aber das kann lange dauern.",
+      },
+      {
+        question: "Sind Hitzewallungen nachts schlimmer?",
+        answer:
+          "Oft ja. Nachts sind die hormonellen Schwankungen besonders ausgeprägt, der Körper hat weniger Möglichkeiten, die Temperatur zu regulieren, und man ist liegend (schlechtere Wärmeabgabe). Nachtschweiß (nächtliche Hitzewallungen) ist für viele Frauen das belastendste Symptom, weil er den Schlaf stark stört.",
+      },
+      {
+        question: "Was ist Fezolinetant und wie wirkt es?",
+        answer:
+          "Fezolinetant (Handelsname Veoza) ist ein NK3-Rezeptor-Antagonist – das erste nicht-hormonelle verschreibungspflichtige Medikament speziell für Hitzewallungen, seit 2024 in der EU zugelassen. Es blockiert Neurokinin-3, einen Neurotransmitter der Hypothalamus-Temperaturregulation, ohne Hormone zu beeinflussen. Wirksamkeit ähnlich wie niedrig dosierte SSRI.",
+      },
+    ],
+  },
 };
 
 export const FRAGEN_LIST = Object.values(FRAGEN_DATA);
