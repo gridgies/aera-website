@@ -116,8 +116,8 @@ function CompanionSignup({ result, answers }: Props) {
             </span>
           </div>
           <p className="text-on-surface-variant font-body text-sm leading-relaxed">
-            Deine KI-Begleiterin kennt dein Hormonprofil und beantwortet deine Fragen
-            zu Blutwerten, Symptomen und nächsten Schritten – jederzeit, kostenlos.
+            Trag dich auf die Warteliste ein – wir schalten deinen Zugang frei, sobald
+            wir Kapazitäten haben, und schicken dir dann eine E-Mail.
           </p>
         </div>
       </div>
@@ -246,12 +246,12 @@ function CompanionSignup({ result, answers }: Props) {
               Konto wird erstellt…
             </span>
           ) : (
-            "Companion freischalten →"
+            "Auf Warteliste eintragen →"
           )}
         </button>
 
         <p className="text-center text-xs text-on-surface-variant font-body">
-          Kostenlos · Keine Kreditkarte · Jederzeit kündbar
+          Kostenlos · Kein Abo · Du wirst per E-Mail benachrichtigt
         </p>
 
         <p className="text-center text-xs text-on-surface-variant/60 font-body pt-1">
@@ -420,8 +420,8 @@ function LoggedInProfileSave({ result, answers }: Props) {
         </span>
       </div>
       <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-6">
-        Dein Hormonprofil wird gespeichert. Deine Begleiterin kennt dann deine Werte und
-        kann dir persönlich antworten.
+        Dein Hormonprofil wird gespeichert. Sobald dein Zugang freigeschaltet ist,
+        kennt deine Begleiterin deine Werte und antwortet individuell.
       </p>
       {errorMsg && <p className="text-sm text-error font-body mb-4">{errorMsg}</p>}
       <button

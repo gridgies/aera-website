@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { getSupabaseServer } from "@/lib/supabase-server";
 import { CompanionChat } from "@/components/companion/CompanionChat";
+import { WaitlistScreen } from "@/components/companion/WaitlistScreen";
 
 export const metadata = {
   title: "Aera Companion (Beta)",
@@ -17,12 +18,17 @@ export default async function CompanionPage() {
   // Load user profile for personalised welcome screen and sidebar card
   const { data: profile } = await supabase
     .from("profiles")
-    .select("hormone_profile, secondary_profile, vorname, age_group")
+    .select("hormone_profile, secondary_profile, vorname, age_group, approved")
     .eq("id", user.id)
     .single();
 
   // First-time users who haven't completed the questionnaire go to /check
   if (!profile?.hormone_profile) redirect("/check?from=companion");
+
+  // Users on the waitlist see a holding page instead of the companion
+  if (!profile?.approved) {
+    return <WaitlistScreen vorname={profile?.vorname ?? null} />;
+  }
 
   return (
     <CompanionChat

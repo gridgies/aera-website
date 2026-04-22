@@ -66,12 +66,16 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Load user's hormone profile for system prompt
+  // Load user's hormone profile + approval status
   const { data: profile } = await supabase
     .from("profiles")
-    .select("hormone_profile, endo_flag, poi_warning, quiz_scores, age_group")
+    .select("hormone_profile, endo_flag, poi_warning, quiz_scores, age_group, approved")
     .eq("id", user.id)
     .single();
+
+  if (!profile?.approved) {
+    return NextResponse.json({ error: "waitlisted", message: "Du bist auf der Warteliste. Wir benachrichtigen dich per E-Mail, sobald dein Zugang freigeschaltet ist." }, { status: 403 });
+  }
 
   const systemPrompt = buildSystemPrompt(profile ?? {
     hormone_profile: null,

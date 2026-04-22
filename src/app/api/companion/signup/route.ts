@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
+import { buildWaitlistEmailHtml, buildWaitlistEmailText } from "@/lib/emails";
 
 /**
  * POST /api/companion/signup
  * Creates a Supabase auth user (auto-confirmed) and writes quiz profile data.
- * Companion signup flow — bypasses email confirmation for immediate access.
+ * Users land on the waitlist (approved = false) until manually approved.
  */
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -16,7 +17,7 @@ export async function POST(request: NextRequest) {
 
   const supabase = getSupabaseAdmin();
 
-  // Create user with admin API — email_confirm: true skips confirmation email
+  // Create user with admin API — email_confirm: true skips Supabase confirmation email
   const { data: authData, error: authError } = await supabase.auth.admin.createUser({
     email,
     password,
@@ -25,7 +26,6 @@ export async function POST(request: NextRequest) {
   });
 
   if (authError) {
-    // Return user-facing German error message
     const msg = authError.message.includes("already registered")
       ? "Diese E-Mail-Adresse ist bereits registriert."
       : authError.message;
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
   const userId = authData.user.id;
 
-  // Upsert profile row with quiz data
+  // Upsert profile — approved = false (waitlisted)
   const { error: profileError } = await supabase
     .from("profiles")
     .upsert({
@@ -50,12 +50,30 @@ export async function POST(request: NextRequest) {
       quiz_answers:       profile.answers ?? null,
       age_group:          profile.ageGroup ?? null,
       klarheit:           profile.klarheit ?? null,
+      approved:           false,
+      waitlisted_at:      new Date().toISOString(),
     });
 
   if (profileError) {
-    // Don't fail the whole signup — profile write is best-effort
     console.error("Profile upsert error:", profileError.message);
   }
 
-  return NextResponse.json({ userId }, { status: 201 });
+  // Send waitlist confirmation email
+  if (process.env.RESEND_API_KEY) {
+    try {
+      const { Resend } = await import("resend");
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: "Aera Health <check@aerahealth.de>",
+        to: email,
+        subject: "Du bist auf der Warteliste für aera:companion Beta!",
+        html: buildWaitlistEmailHtml(vorname),
+        text: buildWaitlistEmailText(vorname),
+      });
+    } catch (emailErr) {
+      console.error("Waitlist email error:", emailErr);
+    }
+  }
+
+  return NextResponse.json({ userId, waitlisted: true }, { status: 201 });
 }
