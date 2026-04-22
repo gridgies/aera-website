@@ -50,8 +50,8 @@ export function WaitlistScreen({ vorname }: { vorname: string | null }) {
 
         <p className="text-xs text-on-surface-variant font-body mt-6">
           Fragen? Schreib uns an{" "}
-          <a href="mailto:hallo@aerahealth.de" className="underline" style={{ color: "#6f5b53" }}>
-            hallo@aerahealth.de
+          <a href="mailto:hello@aerahealth.de" className="underline" style={{ color: "#6f5b53" }}>
+            hello@aerahealth.de
           </a>
         </p>
       </div>
