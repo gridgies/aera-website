@@ -104,6 +104,7 @@ export async function POST(request: NextRequest) {
     system: systemPrompt,
     messages: await convertToModelMessages(recentMessages),
     maxOutputTokens: MAX_TOKENS_PER_RESPONSE,
+    temperature: 0,
     onFinish: async ({ text }) => {
       // Persist assistant reply after stream completes
       await supabase.from("messages").insert({
