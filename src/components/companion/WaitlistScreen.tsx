@@ -41,7 +41,7 @@ export function WaitlistScreen({ vorname }: { vorname: string | null }) {
         </div>
 
         <Link
-          href="/"
+          href="/themen"
           className="inline-block font-bold text-sm py-3.5 px-8 rounded-full text-on-primary transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#6f5b53" }}
         >
