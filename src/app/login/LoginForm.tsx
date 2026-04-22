@@ -162,7 +162,7 @@ export default function LoginForm() {
           </Link>
           <p className="text-on-surface-variant font-body text-sm mt-2">
             {mode === "signup"
-              ? "Erstelle dein Konto für Aera Companion"
+              ? "Erstelle dein Konto für Aera Companion (Beta)"
               : "Willkommen zurück"}
           </p>
         </div>

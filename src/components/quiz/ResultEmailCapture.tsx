@@ -107,9 +107,14 @@ function CompanionSignup({ result, answers }: Props) {
           <span className="material-symbols-outlined text-primary">psychology</span>
         </div>
         <div>
-          <h2 className="text-xl font-headline font-bold text-on-surface mb-1">
-            Companion freischalten
-          </h2>
+          <div className="flex items-center gap-2 mb-1">
+            <h2 className="text-xl font-headline font-bold text-on-surface">
+              Companion freischalten
+            </h2>
+            <span className="text-[10px] font-bold uppercase tracking-wide bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full">
+              Beta
+            </span>
+          </div>
           <p className="text-on-surface-variant font-body text-sm leading-relaxed">
             Deine KI-Begleiterin kennt dein Hormonprofil und beantwortet deine Fragen
             zu Blutwerten, Symptomen und nächsten Schritten – jederzeit, kostenlos.
@@ -406,9 +411,14 @@ function LoggedInProfileSave({ result, answers }: Props) {
       <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
         <span className="material-symbols-outlined text-primary">psychology</span>
       </div>
-      <h2 className="text-xl font-headline font-bold text-on-surface mb-2">
-        Profil speichern & zum Companion
-      </h2>
+      <div className="flex items-center justify-center gap-2 mb-2">
+        <h2 className="text-xl font-headline font-bold text-on-surface">
+          Profil speichern & zum Companion
+        </h2>
+        <span className="text-[10px] font-bold uppercase tracking-wide bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full">
+          Beta
+        </span>
+      </div>
       <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-6">
         Dein Hormonprofil wird gespeichert. Deine Begleiterin kennt dann deine Werte und
         kann dir persönlich antworten.
@@ -467,7 +477,7 @@ export function ResultEmailCapture({ result, answers }: Props) {
               : "border-outline-variant text-on-surface-variant hover:border-primary/40"
           }`}
         >
-          Companion freischalten
+          Companion freischalten (Beta)
         </button>
         <button
           onClick={() => setMode("email-only")}

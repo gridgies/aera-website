@@ -6,6 +6,7 @@ import { buildSystemPrompt } from "@/lib/companionPrompt";
 const MAX_MESSAGES_PER_CONVERSATION = 30;
 const MAX_HISTORY_SENT_TO_AI = 6;
 const MAX_TOKENS_PER_RESPONSE = 600;
+const BETA_USER_MESSAGE_LIMIT = 5;
 
 export async function POST(request: NextRequest) {
   const supabase = await getSupabaseServer();
@@ -32,7 +33,27 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Conversation not found" }, { status: 404 });
   }
 
-  // Check message cap
+  // Beta limit: max 5 user messages total across all conversations
+  const { data: userConvs } = await supabase
+    .from("conversations")
+    .select("id")
+    .eq("user_id", user.id);
+  const convIds = userConvs?.map((c) => c.id) ?? [];
+  if (convIds.length > 0) {
+    const { count: totalUserMessages } = await supabase
+      .from("messages")
+      .select("id", { count: "exact", head: true })
+      .in("conversation_id", convIds)
+      .eq("role", "user");
+    if ((totalUserMessages ?? 0) >= BETA_USER_MESSAGE_LIMIT) {
+      return NextResponse.json(
+        { error: "beta_limit_reached", message: "Du hast das Beta-Limit von 5 Nachrichten erreicht. Wir melden uns, sobald wir mehr Kapazität freischalten." },
+        { status: 429 }
+      );
+    }
+  }
+
+  // Check per-conversation message cap
   const { count } = await supabase
     .from("messages")
     .select("id", { count: "exact", head: true })

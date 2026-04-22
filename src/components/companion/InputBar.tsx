@@ -6,9 +6,10 @@ interface Props {
   onSend: (text: string) => void;
   disabled?: boolean;
   placeholder?: string;
+  limitReached?: boolean;
 }
 
-export function InputBar({ onSend, disabled, placeholder = "Schreib Aera eine Nachricht…" }: Props) {
+export function InputBar({ onSend, disabled, placeholder = "Schreib Aera eine Nachricht…", limitReached }: Props) {
   const [value, setValue] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -33,6 +34,24 @@ export function InputBar({ onSend, disabled, placeholder = "Schreib Aera eine Na
       handleSubmit();
     }
   };
+
+  if (limitReached) {
+    return (
+      <div
+        className="border-t border-outline-variant/20 px-4 py-4"
+        style={{ backgroundColor: "#edecea" }}
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-sm font-semibold text-on-surface font-body mb-1">
+            Beta-Limit erreicht
+          </p>
+          <p className="text-xs text-on-surface-variant font-body leading-relaxed">
+            Du hast deine 5 Beta-Nachrichten aufgebraucht. Wir melden uns, sobald wir mehr Kapazität freischalten – danke für dein Verständnis!
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div

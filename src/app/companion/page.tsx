@@ -3,7 +3,7 @@ import { getSupabaseServer } from "@/lib/supabase-server";
 import { CompanionChat } from "@/components/companion/CompanionChat";
 
 export const metadata = {
-  title: "Aera Companion",
+  title: "Aera Companion (Beta)",
   description: "Deine persönliche KI-Begleiterin für Hormongesundheit",
   robots: { index: false },
 };

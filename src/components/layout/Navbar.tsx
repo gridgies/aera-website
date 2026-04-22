@@ -60,9 +60,12 @@ export function Navbar() {
           {isSignedIn ? (
             <Link
               href="/companion"
-              className="hidden md:inline-block px-6 py-2.5 rounded-full border border-primary text-primary text-sm font-bold uppercase tracking-widest hover:bg-primary/8 transition-all"
+              className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-primary text-primary text-sm font-bold uppercase tracking-widest hover:bg-primary/8 transition-all"
             >
               aera:companion
+              <span className="text-[10px] font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded-full normal-case tracking-wide">
+                Beta
+              </span>
             </Link>
           ) : (
             <>

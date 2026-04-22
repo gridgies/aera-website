@@ -50,6 +50,8 @@ function ChatPane({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const hasTitleRef = useRef(initialMessages.length > 0);
 
+  const [betaLimitReached, setBetaLimitReached] = useState(false);
+
   const { messages, sendMessage, status } = useChat({
     messages: initialMessages,
     transport: new DefaultChatTransport({
@@ -58,6 +60,11 @@ function ChatPane({
         body: { messages, conversationId },
       }),
     }),
+    onError: (err) => {
+      if (err.message.includes("429") || err.message.includes("beta_limit_reached") || err.message.includes("Limit")) {
+        setBetaLimitReached(true);
+      }
+    },
   });
 
   const isStreaming = status === "streaming" || status === "submitted";
@@ -129,7 +136,7 @@ function ChatPane({
         </div>
       </div>
 
-      <InputBar onSend={handleSend} disabled={isStreaming} />
+      <InputBar onSend={handleSend} disabled={isStreaming} limitReached={betaLimitReached} />
     </div>
   );
 }
@@ -159,9 +166,12 @@ function WelcomeScreen({
       <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
         <span className="font-headline text-2xl font-bold text-primary">Ae</span>
       </div>
-      <h2 className="text-xl font-headline font-bold text-on-surface mb-2">
+      <h2 className="text-xl font-headline font-bold text-on-surface mb-1">
         Willkommen bei Aera
       </h2>
+      <span className="inline-block text-xs font-bold uppercase tracking-widest bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full mb-3">
+        Beta
+      </span>
       <p className="text-sm text-on-surface-variant font-body max-w-xs leading-relaxed mb-8">
         Deine persönliche Begleiterin für Hormongesundheit.
         Frag mich alles – ich erkläre Zusammenhänge, Blutwerte und nächste Schritte.
