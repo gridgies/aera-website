@@ -2542,6 +2542,298 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       },
     ],
   },
+
+  "pcos-symptome-erkennen": {
+    slug: "pcos-symptome-erkennen",
+    question: "Woran erkenne ich PCOS? Die 5 häufigsten Symptome",
+    metaTitle: "PCOS Symptome erkennen: Polyzystisches Ovarialsyndrom – Anzeichen & Diagnose",
+    metaDescription: "PCOS erkennen: Unregelmäßiger Zyklus, Akne, Haarausfall, Gewichtszunahme und erhöhte Androgene – die 5 Hauptsymptome und wie die Diagnose gestellt wird.",
+    answer: "PCOS wird über die Rotterdam-Kriterien diagnostiziert: mindestens 2 von 3 Merkmalen müssen zutreffen – unregelmäßiger Zyklus, erhöhte Androgene (Blut oder klinisch) und polyzystische Ovarien im Ultraschall.",
+    content: {
+      sections: [
+        {
+          heading: "Was ist PCOS?",
+          text: "Das Polyzystische Ovarialsyndrom (PCOS) ist die häufigste hormonelle Störung bei Frauen im reproduktiven Alter – schätzungsweise 5–15 % aller Frauen sind betroffen. Der Name ist irreführend: 'polyzystisch' bedeutet nicht, dass viele Zysten vorhanden sein müssen. Vielmehr handelt es sich um unreife Follikel, die sich ansammeln, weil der Eisprung ausbleibt. PCOS ist kein einheitliches Krankheitsbild, sondern ein Syndrom mit verschiedenen Ausprägungen.",
+        },
+        {
+          heading: "Die 5 häufigsten PCOS-Symptome",
+          text: "**1. Unregelmäßiger oder ausbleibender Zyklus:** Wenn Eisprünge ausbleiben oder sehr unregelmäßig stattfinden, wird der Zyklus unberechenbar. Manche Frauen haben nur 6–8 Perioden pro Jahr.\n\n**2. Zeichen von Androgenüberschuss:** Akne im Kinn-/Kieferbereich, Haarausfall am Scheitel (wie bei Männern) und/oder Hirsutismus (unerwünschte Körperbehaarung im Gesicht, Bauch, Brust).\n\n**3. Gewichtszunahme und Schwierigkeit abzunehmen:** Besonders Bauchfett – oft durch Insulinresistenz verursacht.\n\n**4. Müdigkeit und Brain Fog:** Durch Insulinresistenz und gestörten Energiestoffwechsel.\n\n**5. Stimmungsschwankungen:** Hormondysbalancen und oft begleitende Insulinschwankungen belasten das Nervensystem.",
+        },
+        {
+          heading: "Wie wird PCOS diagnostiziert?",
+          text: "Die Diagnose erfolgt nach den Rotterdam-Kriterien (2003): mindestens 2 von 3 Merkmalen müssen vorliegen: (1) Oligo- oder Anovulation (seltene/ausbleibende Eisprünge), (2) klinische oder biochemische Zeichen von Hyperandrogenismus und (3) polyzystisches Ovar-Morphologie im Ultraschall. Relevante Blutwerte: LH/FSH-Verhältnis, freies Testosteron, SHBG, DHEA-S, Nüchterninsulin, HbA1c, AMH.",
+        },
+        {
+          heading: "Gibt es PCOS ohne alle typischen Symptome?",
+          text: "Ja – es gibt 4 PCOS-Phänotypen, die unterschiedliche Kombinationen der Kriterien erfüllen. Sogenannte 'schlanke PCOS' (lean PCOS) betrifft Frauen mit normalem BMI – hier ist die Insulinresistenz oft schwerer zu erkennen, aber dennoch vorhanden. Auch ohne Akne oder Hirsutismus kann PCOS vorliegen, wenn Zyklus und Hormonspiegel betroffen sind.",
+        },
+      ],
+    },
+    relatedQuestions: ["welche-hormone-testen-lassen", "insulin-resistenz-symptome", "oestrogendominanz-symptome"],
+    relatedConditions: ["pcos", "hormone"],
+    faqs: [
+      {
+        question: "Kann man PCOS selbst feststellen?",
+        answer: "Nicht sicher – PCOS erfordert eine ärztliche Diagnose mit Ultraschall und Blutbild. Selbsttest-Apps können Zyklusunregelmäßigkeiten dokumentieren, aber keine Diagnose stellen. Wenn du mindestens 2 der Hauptsymptome erkennst, ist ein Gynäkologenbesuch sinnvoll.",
+      },
+      {
+        question: "Kann PCOS verschwinden?",
+        answer: "PCOS verschwindet nicht, aber die Symptome können durch Lebensstilanpassungen stark verbessert werden. Gewichtsreduktion von nur 5–10 % kann bei übergewichtigen Frauen den Zyklus regulieren und Androgene senken. Nach der Menopause verlieren sich viele PCOS-Symptome, da sich der Hormonstatus generell verändert.",
+      },
+      {
+        question: "Haben Frauen mit PCOS Probleme schwanger zu werden?",
+        answer: "PCOS ist eine häufige Ursache für Fertilitätsprobleme, aber keine Unfruchtbarkeit per se. Da der Eisprung unregelmäßig stattfindet, kann die natürliche Konzeption erschwert sein. Ovulationsinduktion (z. B. mit Letrozol oder Clomifen) ist sehr effektiv. Viele Frauen mit PCOS werden ohne Intervention schwanger.",
+      },
+    ],
+  },
+
+  "pcos-ernaehrung-tipps": {
+    slug: "pcos-ernaehrung-tipps",
+    question: "Welche Ernährung hilft bei PCOS?",
+    metaTitle: "PCOS Ernährung: Was essen & meiden bei Polyzystischem Ovarialsyndrom",
+    metaDescription: "PCOS Ernährung: Low-GI-Kost, Inositol und entzündungshemmende Lebensmittel helfen gegen Insulinresistenz. Was bei PCOS wirklich funktioniert.",
+    answer: "Bei PCOS ist eine Low-GI-Ernährung (niedriger glykämischer Index) am wirkungsvollsten: Sie senkt den Insulinspiegel, reduziert Androgene und kann den Zyklus regulieren.",
+    content: {
+      sections: [
+        {
+          heading: "Warum spielt Ernährung bei PCOS so eine große Rolle?",
+          text: "Insulinresistenz ist bei 70–80 % der Frauen mit PCOS vorhanden – auch bei schlanken. Erhöhter Insulinspiegel stimuliert die Eierstöcke zur Androgenproduktion und hemmt gleichzeitig SHBG (das Protein, das Testosteron bindet), was freies Testosteron erhöht. Jede Mahlzeit, die den Insulinspiegel stark ansteigen lässt, verschlimmert diesen Kreislauf. Deshalb ist die Ernährung bei PCOS kein Lifestyle-Thema, sondern eine direkte hormonelle Intervention.",
+        },
+        {
+          heading: "Was hilft: Low-GI und entzündungshemmend",
+          text: "**Empfohlene Lebensmittel:** Gemüse (alle Arten), Hülsenfrüchte (Linsen, Kichererbsen), Beeren, Nüsse, Samen, fettarmer Fisch (Omega-3), Avocado, Olivenöl, Vollkornprodukte in Maßen.\n\n**Meiden oder reduzieren:** Zucker und zuckerhaltige Getränke, Weißmehlprodukte, verarbeitete Kohlenhydrate, Alkohol, Milchprodukte (bei manchen Frauen erhöhen sie IGF-1).\n\n**Mahlzeitenstruktur:** Protein und Ballaststoffe bei jeder Mahlzeit essen, um Insulinspitzen zu dämpfen. Snacking zwischen den Mahlzeiten möglichst reduzieren.",
+        },
+        {
+          heading: "Inositol: Das PCOS-Supplement mit der besten Evidenz",
+          text: "Myo-Inositol und D-Chiro-Inositol (idealerweise im Verhältnis 40:1) verbessern die Insulinsensitivität und können bei PCOS Eisprünge auslösen, Androgene senken und Zyklen regulieren. Mehrere randomisierte Studien zeigen Wirksamkeit vergleichbar mit Metformin – bei deutlich besserem Nebenwirkungsprofil. Typische Dosierung: 2 g Myo-Inositol + 50 mg D-Chiro-Inositol, zweimal täglich.",
+        },
+      ],
+    },
+    relatedQuestions: ["pcos-symptome-erkennen", "insulin-resistenz-symptome", "welche-hormone-testen-lassen"],
+    relatedConditions: ["pcos", "hormone"],
+    faqs: [
+      {
+        question: "Kann Ernährung allein PCOS heilen?",
+        answer: "PCOS kann durch Ernährung nicht geheilt, aber erheblich verbessert werden. Bei manchen Frauen normalisiert sich der Zyklus allein durch eine Low-GI-Ernährung und Gewichtsabnahme. Ernährung ist bei PCOS eine der wirkungsvollsten Maßnahmen überhaupt – wirkungsvoller als bei vielen anderen Hormonstörungen.",
+      },
+      {
+        question: "Ist eine Low-Carb-Diät bei PCOS sinnvoll?",
+        answer: "Low-Carb kann bei PCOS sehr wirksam sein, weil es Insulinspiegel stark senkt. Studien zeigen Verbesserungen bei Zyklusregularität und Androgenwerten. Extreme Ketose ist nicht für alle geeignet – moderate Low-GI-Ernährung ist nachhaltiger und ebenso effektiv.",
+      },
+    ],
+  },
+
+  "zyklusunregelmaessigkeiten-ursachen": {
+    slug: "zyklusunregelmaessigkeiten-ursachen",
+    question: "Ursachen für unregelmäßigen Zyklus bei Frauen",
+    metaTitle: "Unregelmäßiger Zyklus: Ursachen, Hormonstörungen & wann zum Arzt",
+    metaDescription: "Zyklusunregelmäßigkeiten: PCOS, Perimenopause, Stress und Schilddrüse als häufigste Ursachen. Welche Blutwerte helfen und wann ein Arztbesuch nötig ist.",
+    answer: "Ein unregelmäßiger Zyklus (kürzer als 21 oder länger als 35 Tage) kann auf PCOS, Perimenopause, Schilddrüsenstörungen, Stress oder Untergewicht hinweisen.",
+    content: {
+      sections: [
+        {
+          heading: "Was gilt als unregelmäßiger Zyklus?",
+          text: "Ein normaler Zyklus dauert 21–35 Tage, mit einer Variation von maximal 7–9 Tagen von Zyklus zu Zyklus. Alles, was außerhalb dieses Rahmens liegt oder stark schwankt, gilt als Oligomenorrhoe (seltene Menstruation) oder Amenorrhoe (Ausbleiben der Menstruation über 3+ Monate).",
+        },
+        {
+          heading: "Die 5 häufigsten Ursachen",
+          text: "**1. PCOS:** Häufigste Ursache bei Frauen unter 35. Eisprünge bleiben aus oder sind sehr unregelmäßig.\n\n**2. Perimenopause:** Ab etwa 40 Jahren beginnen Zyklen unregelmäßiger zu werden, lange bevor Hitzewallungen auftreten. Ein veränderter Zyklus ist oft das erste Zeichen.\n\n**3. Schilddrüsenstörungen:** Sowohl Über- als auch Unterfunktion können den Zyklus destabilisieren.\n\n**4. Chronischer Stress:** Erhöhtes Cortisol hemmt GnRH (Gonadotropin-Releasing-Hormon) und kann den Eisprung verzögern oder verhindern.\n\n**5. Starker Gewichtsverlust / Untergewicht / intensive Sport:** Hypothalamische Amenorrhoe bei sehr niedrigem Körperfettanteil.",
+        },
+        {
+          heading: "Welche Blutwerte helfen bei der Ursachensuche?",
+          text: "TSH + fT3 (Schilddrüse), LH + FSH (Tag 3–5 des Zyklus), Östradiol (E2), Progesteron (Tag 19–22), freies Testosteron + DHEA-S + SHBG (Androgene bei PCOS-Verdacht), AMH (Eierstockreserve / Perimenopause), Prolaktin (Prolaktinom ausschließen). Diese Werte decken die meisten hormonellen Ursachen ab.",
+        },
+      ],
+    },
+    relatedQuestions: ["pcos-symptome-erkennen", "perimenopause-ab-welchem-alter", "welche-hormone-testen-lassen"],
+    relatedConditions: ["pcos", "menopause", "hormone"],
+    faqs: [
+      {
+        question: "Ist ein unregelmäßiger Zyklus gefährlich?",
+        answer: "Ein unregelmäßiger Zyklus ist selten direkt gefährlich, weist aber auf eine hormonelle Dysbalance hin, die abgeklärt werden sollte. Bei langfristiger Amenorrhoe ohne Behandlung kann Östrogenmangel das Risiko für Knochenschwund und Herz-Kreislauf-Erkrankungen erhöhen.",
+      },
+      {
+        question: "Kann Stress allein den Zyklus stoppen?",
+        answer: "Ja – bei sehr starkem oder chronischem Stress kann der Hypothalamus die GnRH-Ausschüttung unterdrücken und so den Eisprung verhindern. Das ist die sogenannte hypothalamische Amenorrhoe. Sie ist reversibel, wenn die Stressursache behandelt wird.",
+      },
+    ],
+  },
+
+  "wechseljahre-oder-schwanger": {
+    slug: "wechseljahre-oder-schwanger",
+    question: "Wechseljahre oder schwanger? Wie man es unterscheidet",
+    metaTitle: "Wechseljahre oder schwanger? Symptome unterscheiden & testen",
+    metaDescription: "Ausbleibende Periode, Müdigkeit, Stimmungsschwankungen – Wechseljahre und frühe Schwangerschaft können sich sehr ähneln. So unterscheidest du sie sicher.",
+    answer: "Ein Schwangerschaftstest ist auch in der Perimenopause zuverlässig. Typische Unterschiede: Hitzewallungen und Scheidentrockenheit sprechen für Perimenopause, Übelkeit morgens und Brustspannen eher für Schwangerschaft.",
+    content: {
+      sections: [
+        {
+          heading: "Warum ähneln sich die Symptome so stark?",
+          text: "Sowohl Perimenopause als auch frühe Schwangerschaft werden durch starke hormonelle Veränderungen ausgelöst. In beiden Fällen schwanken Östrogen und Progesteron deutlich – die Symptome überlappen erheblich: Müdigkeit, Stimmungsschwankungen, Schlafprobleme, ausbleibende Periode, Brustspannen und Gewichtsveränderungen können in beiden Situationen auftreten.",
+        },
+        {
+          heading: "Wie erkenne ich den Unterschied?",
+          text: "**Eher Perimenopause:** Hitzewallungen, Nachtschweiß, Scheidentrockenheit, Gedächtnislücken, sehr unregelmäßiger Zyklus seit längerem, Alter über 45.\n\n**Eher Schwangerschaft:** Übelkeit (besonders morgens), Brustspannen mit Größenzunahme, plötzliche Aversionen gegenüber Gerüchen, positiver Schwangerschaftstest.\n\n**Der sicherste Weg:** Ein Schwangerschaftstest – er ist auch in der Perimenopause zuverlässig und zeigt innerhalb von Tagen nach Ausbleiben der Periode ein Ergebnis. Wer weder Perimenopause noch Schwangerschaft ausschließen kann: Arzttermin für FSH + hCG-Bluttest.",
+        },
+      ],
+    },
+    relatedQuestions: ["perimenopause-ab-welchem-alter", "was-sind-die-ersten-anzeichen-der-wechseljahre", "fsh-wert-wechseljahre"],
+    relatedConditions: ["menopause"],
+    faqs: [
+      {
+        question: "Kann man in den Wechseljahren noch schwanger werden?",
+        answer: "Ja – bis zur Menopause (12 Monate ohne Periode) ist eine Schwangerschaft möglich. Auch wenn Eisprünge seltener werden, sind sie nicht ausgeschlossen. Eine Verhütung ist daher bis zur bestätigten Menopause nötig, wenn keine Schwangerschaft gewünscht wird.",
+      },
+      {
+        question: "Wie zuverlässig ist ein Schwangerschaftstest in der Perimenopause?",
+        answer: "Sehr zuverlässig. Schwangerschaftstests messen hCG (humanes Choriongonadotropin), das ausschließlich bei Schwangerschaft produziert wird. Perimenopausale Hormonschwankungen beeinflussen das Ergebnis nicht.",
+      },
+    ],
+  },
+
+  "hashimoto-remission-moeglich": {
+    slug: "hashimoto-remission-moeglich",
+    question: "Kann Hashimoto in Remission gehen?",
+    metaTitle: "Hashimoto Remission: Ist eine Heilung möglich? Was die Forschung sagt",
+    metaDescription: "Hashimoto Remission: Antikörper können sinken, Schilddrüsenfunktion sich stabilisieren. Was dafür nötig ist und was 'Heilung' bei Hashimoto wirklich bedeutet.",
+    answer: "Hashimoto kann nicht geheilt werden, aber eine Remission ist möglich: Antikörper (Anti-TPO) können auf normale Werte sinken und die Schilddrüsenfunktion sich stabilisieren. Ernährung, Selen und Stressreduktion spielen eine nachgewiesene Rolle.",
+    content: {
+      sections: [
+        {
+          heading: "Was bedeutet Remission bei Hashimoto?",
+          text: "Bei Hashimoto Remission sinken die Antikörperwerte (Anti-TPO, Anti-TG) auf Normwerte und die Schilddrüse produziert ausreichend Hormone ohne oder mit deutlich reduzierter Medikamentendosis. Die Autoimmunreaktion ist gedämpft, nicht verschwunden – ein Schub kann durch Trigger wie starken Stress, Infektionen oder Jodüberschuss jederzeit wieder ausgelöst werden.",
+        },
+        {
+          heading: "Was fördert eine Remission?",
+          text: "**Selen (200 µg täglich):** Selen ist das am besten belegte Supplement bei Hashimoto. Mehrere randomisierte Studien zeigen signifikante Reduktion der Anti-TPO-Antikörper (30–40 %) und Verbesserung der Schilddrüsengewebsmorphologie. Behandlungsdauer: mindestens 6–12 Monate.\n\n**Glutenfreie Ernährung:** Nicht für alle evidenzbasiert, aber bei gleichzeitiger Zöliakie (10–15× häufiger bei Hashimoto) essenziell. Viele Frauen berichten von deutlicher Symptomverbesserung auch ohne Zöliakiediagnose.\n\n**Stressreduktion:** Cortisol supprimiert das Immungleichgewicht und kann Schübe triggern. Achtsamkeit, Yoga und guter Schlaf haben messbare Auswirkungen auf Entzündungsmarker.\n\n**Vitamin-D-Optimierung:** Vitamin-D-Mangel ist eng mit Autoimmunerkrankungen assoziiert. Zielwert: 40–60 ng/ml (100–150 nmol/l).",
+        },
+        {
+          heading: "Was bedeutet 'Normwert' bei Antikörpern?",
+          text: "Anti-TPO-Antikörper unter 35 IU/ml gelten als normal. Bei Hashimoto sind sie oft 200–2.000 IU/ml oder höher. Eine Remission bedeutet nicht zwingend Null-Antikörper, sondern Werte im normalen oder niedrigen Bereich mit stabiler Schilddrüsenfunktion.",
+        },
+      ],
+    },
+    relatedQuestions: ["selen-hashimoto-dosierung", "hashimoto-ernaehrung-was-essen", "hashimoto-blutwerte-verstehen"],
+    relatedConditions: ["hashimoto"],
+    faqs: [
+      {
+        question: "Wie lange dauert es bis zur Hashimoto-Remission?",
+        answer: "Mit konsequenter Behandlung (Selen, Vitamin D, optimiertes Levothyroxin, stressreduzierter Lebensstil) können Antikörper innerhalb von 6–18 Monaten deutlich sinken. Vollständige Remission mit Normwerten ist möglich, aber nicht garantiert.",
+      },
+      {
+        question: "Muss ich dann keine Schilddrüsenmedikamente mehr nehmen?",
+        answer: "Nicht automatisch. Wenn die Schilddrüse bereits beschädigt ist und nicht mehr ausreichend produziert, bleibt eine Substitution nötig. Bei früher Diagnose und niedrigen Antikörpern ist eine Remission ohne dauerhaften Medikamentenbedarf realistischer.",
+      },
+    ],
+  },
+
+  "schilddruese-schwangerschaft": {
+    slug: "schilddruese-schwangerschaft",
+    question: "Schilddrüse und Schwangerschaft: Was Frauen wissen müssen",
+    metaTitle: "Schilddrüse in der Schwangerschaft: Werte, Hashimoto & Risiken",
+    metaDescription: "Schilddrüsenwerte in der Schwangerschaft: TSH-Zielwert, Hashimoto-Risiken und warum Levothyroxin-Dosierung angepasst werden muss.",
+    answer: "In der Schwangerschaft steigt der Schilddrüsenhormonbedarf um 30–50 %. TSH-Zielwert ist <2,5 mIU/L im ersten Trimester. Frauen mit Hashimoto haben ein erhöhtes Fehlgeburtsrisiko – ärztliche Kontrolle ist essenziell.",
+    content: {
+      sections: [
+        {
+          heading: "Warum ist die Schilddrüse in der Schwangerschaft so wichtig?",
+          text: "Schilddrüsenhormone sind für die Hirnentwicklung des Kindes in den ersten 12 Wochen essenziell – in dieser Phase hat das Kind noch keine eigene Schilddrüse und ist vollständig auf die mütterlichen T3/T4-Spiegel angewiesen. Eine unbehandelte Hypothyreose in der Frühschwangerschaft kann die kognitive Entwicklung des Kindes beeinträchtigen.",
+        },
+        {
+          heading: "TSH-Zielwerte in der Schwangerschaft",
+          text: "Die deutschen DGGG-Leitlinien empfehlen: 1. Trimester: TSH < 2,5 mIU/L; 2. Trimester: TSH < 3,0 mIU/L; 3. Trimester: TSH < 3,5 mIU/L. Bei Frauen mit Hashimoto ist der Zielwert oft noch enger – Abstimmung mit der behandelnden Ärztin ist wichtig.",
+        },
+        {
+          heading: "Hashimoto in der Schwangerschaft",
+          text: "Frauen mit positivem Anti-TPO vor der Schwangerschaft haben ein 2–4-fach erhöhtes Risiko für Fehlgeburten und ein erhöhtes Risiko für postpartale Thyreoiditis. Levothyroxin-Dosis muss meist um 25–50 % erhöht werden – idealerweise bereits beim Kinderwunsch, nicht erst nach Feststellung der Schwangerschaft. Selen (200 µg täglich) kann laut Studien die Antikörper senken und die Schwangerschaftsprognose verbessern.",
+        },
+      ],
+    },
+    relatedQuestions: ["hashimoto-schwangerschaft", "schilddruesenwerte-verstehen", "selen-hashimoto-dosierung"],
+    relatedConditions: ["hashimoto", "schilddruese"],
+    faqs: [
+      {
+        question: "Muss ich meine Schilddrüsenmedikamente in der Schwangerschaft anpassen?",
+        answer: "Meist ja – der Hormonbedarf steigt um 30–50 %. Die meisten Gynäkologen empfehlen, die Levothyroxin-Dosis direkt bei Schwangerschaftsbestätigung zu erhöhen. TSH-Kontrolle alle 4 Wochen im ersten Trimester ist Standard.",
+      },
+      {
+        question: "Ist Hashimoto ein Hinderungsgrund für eine Schwangerschaft?",
+        answer: "Nein – mit guter Einstellung ist eine normale Schwangerschaft möglich. Wichtig: TSH im Zielbereich vor der Konzeption, engmaschige Kontrollen während der Schwangerschaft und Selen-Supplementierung bei erhöhten Antikörpern.",
+      },
+    ],
+  },
+
+  "hormonstorung-selbst-feststellen": {
+    slug: "hormonstorung-selbst-feststellen",
+    question: "Wie erkenne ich eine Hormonstörung? Erste Anzeichen",
+    metaTitle: "Hormonstörung erkennen: Symptome, Selbsttest & wann zum Arzt",
+    metaDescription: "Hormonstörung Anzeichen: Müdigkeit, Gewichtszunahme, Zyklusveränderungen und Stimmungsschwankungen. Welche Symptome auf eine Dysbalance hinweisen und welche Tests helfen.",
+    answer: "Typische erste Anzeichen einer Hormonstörung sind anhaltende Müdigkeit trotz Schlaf, Gewichtsveränderungen ohne Ernährungsänderung, Zyklusveränderungen und Stimmungsschwankungen.",
+    content: {
+      sections: [
+        {
+          heading: "Typische Warnzeichen einer Hormonstörung",
+          text: "Hormone regulieren so viele Körperfunktionen, dass Dysbalancen sich sehr unterschiedlich äußern können. Die häufigsten Anzeichen: anhaltende Müdigkeit trotz ausreichend Schlaf, Gewichtszunahme ohne Ernährungsänderung oder Unfähigkeit abzunehmen, Zyklusveränderungen (unregelmäßig, sehr stark oder sehr schwach), Haarausfall diffus über den ganzen Kopf, Stimmungsschwankungen, Reizbarkeit oder depressive Verstimmung, Hitzewallungen oder Kälteempfindlichkeit, Akne im Erwachsenenalter besonders im Kinnbereich.",
+        },
+        {
+          heading: "Welche Hormone werden untersucht?",
+          text: "**Schilddrüse:** TSH, fT3, fT4, Anti-TPO. **Sexualhormone:** Östradiol, Progesteron (zyklusabhängig messen!), FSH, LH. **Androgene:** freies Testosteron, DHEA-S, SHBG. **Stoffwechsel:** Nüchterninsulin, HbA1c, Ferritin. **Allgemein:** Vitamin D, Magnesium. Ein gutes Hormonpanel umfasst nicht nur TSH und Östrogen, sondern berücksichtigt den kompletten Kontext.",
+        },
+        {
+          heading: "Wann zum Arzt?",
+          text: "Wenn Symptome länger als 4–6 Wochen anhalten und deinen Alltag beeinträchtigen, ist eine ärztliche Abklärung sinnvoll. Gynäkologin, Endokrinologin oder Internistin sind geeignete Anlaufstellen. Bring am besten ein Symptomtagebuch mit: wann, wie stark, ob zyklusabhängig.",
+        },
+      ],
+    },
+    relatedQuestions: ["welche-hormone-testen-lassen", "hormontest-kosten", "welche-blutwerte-bei-muedigkeit"],
+    relatedConditions: ["hormone", "menopause", "hashimoto"],
+    faqs: [
+      {
+        question: "Gibt es einen zuverlässigen Hormontest für zu Hause?",
+        answer: "Speichelhormon- und Heimbluttests (z.B. über cerascreen, imaware) sind für Östradiol, Progesteron, Testosteron und Cortisol verfügbar und geben erste Hinweise. Sie sind jedoch weniger standardisiert als Labortests und sollten durch ärztliche Auswertung ergänzt werden. TSH-Heimtests sind zuverlässiger, da TSH stabiler ist.",
+      },
+      {
+        question: "Kann ich eine Hormonstörung ohne Arzt behandeln?",
+        answer: "Lebensstilanpassungen (Schlaf, Ernährung, Stressreduktion) und gut belegte Supplemente (Vitamin D, Magnesium, Selen bei Hashimoto) können Symptome verbessern. Hormonersatztherapie und verschreibungspflichtige Medikamente erfordern jedoch ärztliche Verschreibung. Selbstbehandlung ohne Diagnose birgt das Risiko, die eigentliche Ursache zu übersehen.",
+      },
+    ],
+  },
+
+  "eisenmangel-hormone-zusammenhang": {
+    slug: "eisenmangel-hormone-zusammenhang",
+    question: "Eisenmangel und Hormone: Welcher Zusammenhang besteht?",
+    metaTitle: "Eisenmangel und Hormone: Wie Ferritinmangel Müdigkeit, Haarausfall & Zyklus beeinflusst",
+    metaDescription: "Eisenmangel und Hormone: Ferritinmangel kann Haarausfall, Müdigkeit, Zyklusprobleme und Schilddrüsenfehlfunktion verstärken. Was ein 'normaler' Ferritin-Wert wirklich bedeutet.",
+    answer: "Eisenmangel und Hormonstörungen verstärken sich gegenseitig: Starke Periodenblutungen (z.B. bei Östrogendominanz) verursachen Eisenmangel, der wiederum die Schilddrüsenfunktion und den Energiestoffwechsel beeinträchtigt.",
+    content: {
+      sections: [
+        {
+          heading: "Warum ist Eisen für Hormone so wichtig?",
+          text: "Eisen ist nicht nur für rote Blutkörperchen wichtig, sondern direkt an der Hormonproduktion beteiligt: Eisen ist Cofaktor der Schilddrüsenperoxidase (TPO) – dem Enzym, das T4 aus Jod und Tyrosin synthetisiert. Eisenmangel verlangsamt die Schilddrüsenhormonsynthese und kann eine Schilddrüsenunterfunktion verursachen oder verschlimmern – selbst wenn die Schilddrüse strukturell gesund ist.",
+        },
+        {
+          heading: "Das Problem mit 'normalen' Ferritin-Werten",
+          text: "Die meisten Labore markieren Ferritin ab 12–15 µg/l als 'normal' – das entspricht dem Mindestlevel, um keine schwere Anämie zu haben. Für Schilddrüsenfunktion, Haarwachstum und Energiestoffwechsel sind jedoch Werte von 70–100 µg/l nötig. Frauen mit Ferritin 30–40 µg/l sind nach Laborsicht 'normal', haben aber faktisch einen funktionellen Eisenmangel mit realen Symptomen: Haarausfall, Müdigkeit, Konzentrationsprobleme.",
+        },
+        {
+          heading: "Hormoneller Kreislauf bei Eisenmangel",
+          text: "Östrogenüberschuss (Östrogendominanz) führt zu starken, langen Periodenblutungen → viel Blutverlust → Eisenmangel → verlangsamte Schilddrüsenhormonproduktion → verlangsamter Stoffwechsel, mehr Gewichtszunahme → mehr Östrogendominanz (Fettgewebe produziert Östrogen). Dieser Kreislauf erklärt, warum viele Frauen mit Östrogendominanz gleichzeitig Eisenmangel und Schilddrüsenprobleme haben.",
+        },
+      ],
+    },
+    relatedQuestions: ["ferritin-mangel-symptome", "haarausfall-frau-hormone", "welche-blutwerte-bei-muedigkeit"],
+    relatedConditions: ["hormone", "hashimoto", "schilddruese"],
+    faqs: [
+      {
+        question: "Wie hoch sollte Ferritin bei Frauen sein?",
+        answer: "Laborwerte markieren ab 12–15 µg/l als 'normal'. Für optimale Funktion – Haare, Energie, Schilddrüse – sollte Ferritin bei Frauen mindestens 70 µg/l, besser 80–100 µg/l betragen. Viele Frauen fühlen sich erst bei Werten über 80 µg/l wirklich gut.",
+      },
+      {
+        question: "Kann Eisenmangel Schilddrüsenprobleme verursachen?",
+        answer: "Ja – Eisen ist essenziell für die Schilddrüsenperoxidase, die Schilddrüsenhormone produziert. Schwerer Eisenmangel kann die T4-Synthese einschränken und einen latenten Hypothyreose-Zustand erzeugen. Gleichzeitig kann Hypothyreose die Eisenaufnahme im Darm reduzieren – ein Teufelskreis.",
+      },
+    ],
+  },
 };
 
 export const FRAGEN_LIST = Object.values(FRAGEN_DATA);

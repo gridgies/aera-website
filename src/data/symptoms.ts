@@ -250,7 +250,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Schlaf priorisieren – Schlafmangel erhöht Ghrelin (Hungerhormon) und Insulinresistenz",
       "Stressmanagement zur Cortisolsenkung",
     ],
-    relatedConditions: ["menopause", "hashimoto", "schilddruese", "hormone"],
+    conditionIntros: {
+      pcos: "Gewichtszunahme – besonders im Bauchbereich – ist bei PCOS eng mit Insulinresistenz verknüpft: Erhöhter Insulinspiegel fördert Fetteinlagerung und hemmt gleichzeitig den Fettabbau. Dieser Kreislauf ist unabhängig von der Kalorienzufuhr und erklärt, warum Frauen mit PCOS trotz Diät kaum abnehmen. Zusätzlich erhöht die typische Androgen-Konstellation bei PCOS das viszerale Bauchfett weiter. Insulinsensitizer (u.a. Metformin, Inositol) können diesen Mechanismus unterbrechen.",
+    },
+    relatedConditions: ["menopause", "hashimoto", "schilddruese", "hormone", "pcos"],
     faqs: [
       {
         question: "Warum nehme ich in den Wechseljahren zu?",
@@ -308,7 +311,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Selen 200 µg täglich bei Hashimoto (senkt Antikörper, unterstützt T4→T3-Konversion)",
       "Sanfte Haarpflege: kein übermäßiges Föhnen, kein Hitzestress",
     ],
-    relatedConditions: ["hashimoto", "menopause", "schilddruese", "hormone"],
+    conditionIntros: {
+      pcos: "Bei PCOS ist Haarausfall ein Zeichen von Androgenüberschuss: Erhöhtes freies Testosteron und DHT wirken auf Haarfollikel am Scheitel und den Schläfen – das Muster ähnelt der männlichen Glatze (androgenetische Alopezie bei Frauen). Gleichzeitig kann paradoxerweise Hirsutismus (verstärkte Körperbehaarung) auftreten, da Gesichtshaarfollikel sensibler auf Androgene reagieren als Kopfhaarfollikel. Wichtig: SHBG (Sexualhormonbindendes Globulin) messen – bei PCOS oft erniedrigt, was freies Testosteron erhöht.",
+    },
+    relatedConditions: ["hashimoto", "menopause", "schilddruese", "hormone", "pcos"],
     faqs: [
       {
         question: "Welche Blutwerte bei Haarausfall testen lassen?",
@@ -851,6 +857,8 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       { test: "Omega-3-Index (optional)", relevance: "EPA/DHA-Mangel beeinträchtigt die Hautlipidbarriere messbar" },
     ],
     conditionIntros: {
+      menopause:
+        "Trockene Haut in den Wechseljahren ist eine direkte Folge des Östrogenabfalls: Östrogen hält die Kollagen- und Hyaluronsäureproduktion aufrecht, die der Haut ihre Elastizität und Feuchtigkeit geben. Frauen verlieren in den ersten fünf Jahren nach der Menopause bis zu 30 % ihres Hautkollagens. Die Haut wird dünner, trockener und empfindlicher – klassische Zeichen sind Spannungsgefühl, Juckreiz und feine Fältchen. Systemische Hormontherapie kann die Hautgesundheit nachweislich verbessern; lokal helfen hyaluronsäurehaltige Feuchtigkeitspflege und Ceramid-Produkte.",
       schilddruese:
         "Trockene Haut ist eines der am häufigsten genannten Symptome bei Schilddrüsenunterfunktion (Hypothyreose) und oft ein Frühzeichen der Erkrankung. Schilddrüsenhormone steuern die Talgdrüsenaktivität, die Keratinisierungsrate der Haut und die Durchblutung peripherer Gefäße. Fällt T3 ab, produziert die Haut weniger Talg und Feuchtigkeit, die Zellerneuerung verlangsamt sich – die Haut wird rau, schuppig und juckend. Charakteristisch für Hypothyreose-bedingte Hauttrockenheit ist die Kombination mit Kältegefühl, geschwollenem Gesicht und brüchigen Nägeln.",
       hashimoto:
@@ -865,7 +873,7 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Vitamin D auf 40–60 ng/ml optimieren",
       "Schilddrüsenwerte und Östrogenstatus abklären lassen",
     ],
-    relatedConditions: ["hashimoto", "menopause"],
+    relatedConditions: ["hashimoto", "menopause", "schilddruese"],
     faqs: [
       {
         question: "Kann Hashimoto trockene Haut verursachen?",
@@ -927,7 +935,10 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       "Stressmanagement: Cortisol erhöht Androgenproduktion in den Nebennieren",
       "Hormonpanel testen lassen, bevor mit Topika behandelt wird",
     ],
-    relatedConditions: ["hormone"],
+    conditionIntros: {
+      pcos: "Akne ist bei PCOS eines der häufigsten und belastendsten Symptome. Der Grund: PCOS-bedingte erhöhte Androgenspiegel (Testosteron, DHEA-S) überstimulieren Talgdrüsen und führen zu tiefen, entzündlichen Akneknötchen im Kinn- und Kieferbereich. Hinzu kommt Insulinresistenz – erhöhter Insulinspiegel stimuliert IGF-1, das die Talgdrüsenaktivität weiter ankurbelt. Deshalb verbessert sich PCOS-Akne oft deutlich durch eine Low-GI-Ernährung und Inositol, die den Insulinspiegel senken.",
+    },
+    relatedConditions: ["hormone", "pcos"],
     faqs: [
       {
         question: "Was ist hormonelle Akne und woran erkenne ich sie?",
@@ -1494,8 +1505,9 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
       {
         question: "Hilft Beckenbodentraining wirklich gegen Blasenschwäche?",
         answer:
-          "Ja – Beckenbodentraining ist die am besten belegte nicht-hormonelle Therapie der Belastungsinkontinenz (Urinverlust beim Husten, Niesen, Sport). Bei konsequentem Training (täglich, 3 Monate) ist die Erfolgsrate vergleichbar mit Medikamenten. Physiotherapeutisch angeleitetes Beckenbodenkraining ist effektiver als selbst durchgeführtes.",
+          "Ja – Beckenbodentraining ist die am besten belegte nicht-hormonelle Therapie der Belastungsinkontinenz (Urinverlust beim Husten, Niesen, Sport). Bei konsequentem Training (täglich, 3 Monate) ist die Erfolgsrate vergleichbar mit Medikamenten. Physiotherapeutisch angeleitetes Beckenbodentraining ist effektiver als selbst durchgeführtes.",
       },
     ],
   },
+
 };
