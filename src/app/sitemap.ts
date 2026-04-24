@@ -18,6 +18,7 @@ const DATES = {
   comparison:  new Date("2025-02-01"),
   agePage:     new Date("2025-02-01"),
   trust:       new Date("2025-01-15"),
+  artikel:     new Date("2026-04-24"),
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -101,6 +102,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: DATES.guide,
       changeFrequency: "monthly",
       priority: 0.85,
+    },
+    // Tiefenratgeber: neue Themenartikel (April 2026)
+    {
+      url: `${BASE_URL}/themen/darm-und-hormone`,
+      lastModified: DATES.artikel,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/themen/hormonersatztherapie-2026`,
+      lastModified: DATES.artikel,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/themen/glp1-pcos-wechseljahre`,
+      lastModified: DATES.artikel,
+      changeFrequency: "monthly",
+      priority: 0.80,
     },
   ];
 
