@@ -2799,6 +2799,438 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
     ],
   },
 
+  "pcos-was-ist-das": {
+    slug: "pcos-was-ist-das",
+    question: "Was ist PCOS und wie erkennt man es?",
+    metaTitle: "Was ist PCOS? Polyzystisches Ovarialsyndrom einfach erklärt",
+    metaDescription: "PCOS (Polyzystisches Ovarialsyndrom) einfach erklärt: Was es ist, wie es erkannt wird, und was Frauen mit PCOS tun können.",
+    answer: "PCOS (Polyzystisches Ovarialsyndrom) ist die häufigste hormonelle Störung bei Frauen im gebärfähigen Alter. Es ist gekennzeichnet durch erhöhte Androgene, unregelmäßige oder ausbleibende Eisprünge und oft veränderte Eierstöcke. Schätzungsweise 5–15 % aller Frauen sind betroffen.",
+    content: {
+      sections: [
+        {
+          heading: "Was ist das Polyzystische Ovarialsyndrom?",
+          text: "PCOS ist eine komplexe hormonell-metabolische Erkrankung. Der Name ist etwas irreführend: Nicht alle Frauen mit PCOS haben wirklich 'Zysten' – die 'polyzystischen Ovarien' sind eigentlich viele kleine, unreife Follikel. Das zentrale Problem ist ein gestörter Hormonhaushalt: erhöhte Androgene (männliche Hormone wie Testosteron), Insulinresistenz und gestörte Eizellreifung.",
+        },
+        {
+          heading: "Typische PCOS-Symptome",
+          text: "Die häufigsten Symptome sind: unregelmäßige oder ausbleibende Periode (Oligomenorrhoe), Haarausfall an Kopf und Körperbehaarung (Hirsutismus), Akne, Übergewicht oder Schwierigkeiten beim Abnehmen, Müdigkeit und Antriebslosigkeit sowie Schwierigkeiten bei der Empfängnis. Nicht jede Frau mit PCOS hat alle Symptome – das Syndrom ist sehr heterogen.",
+        },
+        {
+          heading: "Wie wird PCOS diagnostiziert?",
+          text: "Die Diagnose erfolgt nach den Rotterdam-Kriterien: Mindestens 2 von 3 müssen erfüllt sein: (1) Unregelmäßige oder ausbleibende Ovulation, (2) Erhöhte Androgene (klinisch oder im Blut), (3) Polyzystische Ovarien im Ultraschall. Wichtig: Andere Ursachen (Schilddrüse, Prolaktin, Nebennierenstörungen) müssen ausgeschlossen werden.",
+        },
+      ],
+    },
+    relatedQuestions: ["pcos-behandlung-optionen", "pcos-schwangerschaft", "pcos-inositol", "pcos-ernaehrung-tipps"],
+    relatedConditions: ["pcos", "hormone"],
+    faqs: [
+      {
+        question: "Ist PCOS eine ernste Erkrankung?",
+        answer: "PCOS ist eine chronische Erkrankung mit langfristigen Gesundheitsrisiken: erhöhtes Risiko für Typ-2-Diabetes (4-fach), Herz-Kreislauf-Erkrankungen, Endometriumkarzinom (bei ausbleibender Periode) und Depressionen. Mit der richtigen Behandlung – Lebensstil, ggf. Medikamente – können die meisten Langzeitrisiken erheblich reduziert werden.",
+      },
+      {
+        question: "Ab welchem Alter kann PCOS auftreten?",
+        answer: "PCOS tritt meist in der Pubertät oder im frühen Erwachsenenalter (16–30 Jahre) zum ersten Mal auf. Es kann aber auch erst später erkannt werden – viele Frauen erhalten die Diagnose erst, wenn sie schwanger werden möchten und dabei Schwierigkeiten haben.",
+      },
+    ],
+  },
+
+  "pcos-behandlung-optionen": {
+    slug: "pcos-behandlung-optionen",
+    question: "Welche Behandlungsmöglichkeiten gibt es bei PCOS?",
+    metaTitle: "PCOS Behandlung: Was wirklich hilft bei Polyzystischem Ovarialsyndrom",
+    metaDescription: "PCOS behandeln: Von Ernährung und Sport über Inositol bis Metformin und Pille – welche Behandlungsoptionen bei PCOS wissenschaftlich belegt sind.",
+    answer: "PCOS-Behandlung zielt auf Insulinresistenz, Androgen-Überschuss und Zyklusregulierung. Effektive Ansätze: Ernährungsumstellung (kohlenhydratarm/mediterran), regelmäßiger Sport, Inositol-Supplementierung, Metformin, und bei Kinderwunsch Ovulationsauslösung. Die Therapie wird individuell angepasst.",
+    content: {
+      sections: [
+        {
+          heading: "Lebensstil als Basis: Ernährung und Sport",
+          text: "Bei übergewichtigen PCOS-Patientinnen kann bereits ein Gewichtsverlust von 5–10 % die Insulinsensitivität deutlich verbessern und Zyklen regularisieren. Eine kohlenhydratarme oder mediterrane Ernährung reduziert Insulinresistenz am effektivsten. Ausdauer- und Krafttraining verbessern die Insulinsensitivität unabhängig vom Gewichtsverlust. Das macht Ernährung und Sport zur Basis jeder PCOS-Behandlung – ergänzend zu medikamentösen Optionen.",
+        },
+        {
+          heading: "Inositol: Die natürliche Option",
+          text: "Myo-Inositol (4 g täglich) und die Kombination mit D-Chiro-Inositol (40:1 Ratio) haben in klinischen Studien gezeigt, dass sie die Insulinsensitivität verbessern, Androgenspiegel senken, Zyklen regularisieren und Fruchtbarkeit bei PCOS steigern. Inositol gilt als die am besten belegte nicht-verschreibungspflichtige Option und wird von vielen europäischen Gynäkologengesellschaften empfohlen.",
+        },
+        {
+          heading: "Medikamentöse Optionen",
+          text: "Metformin (off-label, aber weit verbreitet) verbessert Insulinsensitivität direkt. Die Pille kann Zyklen regularisieren und Androgenüberschuss reduzieren, behandelt aber nicht die Ursache. Bei Kinderwunsch: Clomifen oder Letrozol zur Ovulationsauslösung. Spironolacton (antiandrogen) bei Hirsutismus und Akne. Die Wahl hängt vom Behandlungsziel ab.",
+        },
+      ],
+    },
+    relatedQuestions: ["pcos-was-ist-das", "pcos-inositol", "pcos-schwangerschaft", "pcos-ernaehrung-tipps"],
+    relatedConditions: ["pcos", "hormone"],
+    faqs: [
+      {
+        question: "Kann PCOS ohne Medikamente behandelt werden?",
+        answer: "Ja – für viele Frauen mit PCOS ist Lebensstilmedizin hochwirksam: kohlenhydratarme Ernährung, regelmäßiger Sport und Inositol-Supplementierung können Zyklen regularisieren, Androgene senken und Insulinsensitivität verbessern. Bei starken Symptomen oder Kinderwunsch sind Medikamente (Metformin, Pille, Letrozol) oft sinnvoll als Ergänzung.",
+      },
+      {
+        question: "Ist PCOS heilbar?",
+        answer: "PCOS ist nicht 'heilbar' im traditionellen Sinne – es ist eine chronische Erkrankung. Aber mit der richtigen Behandlung können die meisten Frauen ihre Symptome erheblich reduzieren, den Zyklus regularisieren und langfristige Gesundheitsrisiken minimieren. Viele Frauen erleben nach Lebensstiländerungen eine vollständige Symptomfreiheit.",
+      },
+    ],
+  },
+
+  "pcos-schwangerschaft": {
+    slug: "pcos-schwangerschaft",
+    question: "Kann man mit PCOS schwanger werden?",
+    metaTitle: "PCOS und Schwangerschaft: Können Frauen mit PCOS schwanger werden?",
+    metaDescription: "PCOS und Kinderwunsch: Ja, Frauen mit PCOS können schwanger werden. Welche Behandlungen helfen und worauf beim PCOS-Kinderwunsch geachtet werden sollte.",
+    answer: "Ja – die meisten Frauen mit PCOS können schwanger werden, brauchen aber manchmal Unterstützung. PCOS ist die häufigste, aber auch gut behandelbare Ursache von Unfruchtbarkeit durch fehlende Ovulation. Mit Lebensstiländerungen, Inositol oder medikamentöser Ovulationsauslösung (Letrozol, Clomifen) werden Schwangerschaften bei PCOS häufig möglich.",
+    content: {
+      sections: [
+        {
+          heading: "Warum ist Schwangerschaft bei PCOS manchmal schwieriger?",
+          text: "PCOS verursacht anovulatorische Zyklen – die Eizellreifung wird durch Insulinresistenz und erhöhte Androgene gestört. Ohne Eisprung keine Befruchtung. Unregelmäßige oder ausbleibende Perioden machen das Timing des Eisprungs schwierig. Das bedeutet aber nicht Unfruchtbarkeit – viele PCOS-Patientinnen haben Zyklen mit sporadischem Eisprung.",
+        },
+        {
+          heading: "Natürliche Maßnahmen zur Verbesserung der Fruchtbarkeit",
+          text: "Gewichtsreduktion von 5–10 % bei Übergewicht kann Zyklen regularisieren und spontanen Eisprung auslösen. Myo-Inositol (4 g täglich) verbessert nachweislich die Eizellqualität und Ovulationsrate. Mediterrane Ernährung und regelmäßiger Sport verbessern die Insulinsensitivität. Chronischen Stress reduzieren – Cortisol hemmt GnRH und damit die Ovulation.",
+        },
+        {
+          heading: "Medizinische Ovulationsauslösung",
+          text: "Letrozol (Aromatasehemmer, off-label) ist derzeit die erste Wahl zur Ovulationsauslösung bei PCOS – es ist Clomifen in Studien überlegen. Clomifen (Clomifen-Citrat) ist eine ältere Option, immer noch weit verbreitet. Bei Versagen dieser Optionen: Gonadotropin-Injektionen oder IVF als letzte Eskalationsstufe. Mit diesen Behandlungen werden 70–80 % der PCOS-Patientinnen innerhalb von 6 Zyklen schwanger.",
+        },
+      ],
+    },
+    relatedQuestions: ["pcos-was-ist-das", "pcos-behandlung-optionen", "pcos-inositol"],
+    relatedConditions: ["pcos", "hormone"],
+    faqs: [
+      {
+        question: "Wie lange dauert es bei PCOS schwanger zu werden?",
+        answer: "Das ist sehr individuell. Mit Ovulationsauslösung werden 70–80 % der PCOS-Patientinnen innerhalb von 6 Behandlungszyklen schwanger. Frauen mit PCOS, die spontan ovulieren, können spontan schwanger werden – es kann nur länger dauern. Eine frühzeitige gynäkologische Beratung ist bei PCOS und Kinderwunsch empfehlenswert.",
+      },
+      {
+        question: "Welche Risiken gibt es in der PCOS-Schwangerschaft?",
+        answer: "PCOS erhöht das Risiko für Schwangerschaftsdiabetes (GDM), Präeklampsie und Frühgeburt. Diese Risiken sind manageable mit engmaschiger ärztlicher Betreuung. Nach der Schwangerschaft können sich PCOS-Symptome manchmal verbessern – manche Frauen berichten über regularisiertere Zyklen nach der Geburt.",
+      },
+    ],
+  },
+
+  "pcos-inositol": {
+    slug: "pcos-inositol",
+    question: "Hilft Inositol bei PCOS?",
+    metaTitle: "Inositol bei PCOS: Dosierung, Wirkung und was die Studien zeigen",
+    metaDescription: "Inositol bei PCOS: Wie Myo-Inositol und D-Chiro-Inositol bei PCOS wirken, welche Dosierung sinnvoll ist und was klinische Studien zeigen.",
+    answer: "Ja – Myo-Inositol (4 g täglich) ist die am besten belegte natürliche Behandlung bei PCOS. Mehrere Meta-Analysen zeigen: Inositol verbessert Insulinsensitivität, senkt Androgene, regularisiert den Zyklus und verbessert die Eizellqualität. Es ist eine effektive und gut verträgliche Option für Frauen mit PCOS.",
+    content: {
+      sections: [
+        {
+          heading: "Was ist Inositol und wie wirkt es bei PCOS?",
+          text: "Inositol ist ein vitaminähnlicher Stoff, der als Second-Messenger für Insulinsignale wirkt. Bei PCOS besteht oft ein Defizit an Myo-Inositol in den Ovarien und eine gestörte Umwandlung von Myo-Inositol zu D-Chiro-Inositol. Diese Störung beeinträchtigt die Insulinsignalübertragung in den Eierstöcken und fördert Androgenproduktion. Inositol-Supplementierung korrigiert diesen Defekt direkt.",
+        },
+        {
+          heading: "Welche Dosierung ist sinnvoll?",
+          text: "Am besten belegt: Myo-Inositol 4 g täglich allein oder in Kombination mit D-Chiro-Inositol im 40:1-Verhältnis (entspricht der physiologischen Ratio im Körper). Einige Studien zeigen die Kombination als überlegen. Dosierung aufteilen auf 2 g morgens + 2 g abends, immer mit dem Essen. Wirkung tritt frühestens nach 3 Monaten ein – Geduld ist wichtig.",
+        },
+        {
+          heading: "Was zeigen die Studien?",
+          text: "Eine 2020 veröffentlichte Meta-Analyse (30 RCTs, 3000+ Patientinnen) zeigte: Inositol verbessert signifikant Menstruationsfrequenz, Testosteron, LH/FSH-Quotient und Nüchterninsulin bei PCOS. Die Europäische Gesellschaft für Humane Reproduktion (ESHRE) erwähnt Inositol in ihren PCOS-Leitlinien als Option. Keine schwerwiegenden Nebenwirkungen bekannt.",
+        },
+      ],
+    },
+    relatedQuestions: ["pcos-was-ist-das", "pcos-behandlung-optionen", "pcos-schwangerschaft", "pcos-ernaehrung-tipps"],
+    relatedConditions: ["pcos", "hormone"],
+    faqs: [
+      {
+        question: "Wie lange muss ich Inositol bei PCOS nehmen?",
+        answer: "Erste Ergebnisse (Zyklusveränderungen, Laborbefunde) zeigen sich nach 3–6 Monaten. Bei anhaltendem Nutzen kann Inositol langfristig eingenommen werden – es ist sicher und ohne bekannte Langzeitrisiken. Viele Frauen nehmen es so lange wie nötig, basierend auf Symptomkontrolle und Laborwerten.",
+      },
+      {
+        question: "Ist Inositol oder Metformin besser bei PCOS?",
+        answer: "Vergleichsstudien zeigen ähnliche Effekte auf Insulinsensitivität und Androgene. Inositol hat weniger Nebenwirkungen (Metformin verursacht häufig Magen-Darm-Beschwerden). Inositol ist rezeptfrei und gilt als natürlicher. Metformin ist verschreibungspflichtig und besser untersucht bei schwerer Insulinresistenz. Manche Frauen profitieren von der Kombination. Die Entscheidung sollte mit der Ärztin getroffen werden.",
+      },
+    ],
+  },
+
+  "wechseljahre-mit-40": {
+    slug: "wechseljahre-mit-40",
+    question: "Wechseljahre mit 40: Was passiert und was tun?",
+    metaTitle: "Wechseljahre mit 40: Frühe Perimenopause erkennen und verstehen",
+    metaDescription: "Wechseljahre mit 40: Frühe Perimenopause, erste Symptome, Ursachen und was Frauen mit 40 bei Wechseljahresbeschwerden tun können.",
+    answer: "Wechseljahre mit 40 sind möglich und nicht selten – etwa 10–15 % der Frauen erleben erste Perimenopause-Symptome bereits mit 40–44 Jahren. Dies nennt sich frühe Perimenopause und ist von vorzeitiger Menopause (POI, vor 40) zu unterscheiden. Erste Zeichen: Zyklusveränderungen, Schlafstörungen, Stimmungsschwankungen.",
+    content: {
+      sections: [
+        {
+          heading: "Frühe Perimenopause vs. vorzeitige Menopause",
+          text: "Frühe Perimenopause (Beginn mit 40–44 Jahren) ist ein normaler biologischer Prozess – am frühen Ende der Normalverteilung. Vorzeitige Menopause (POI = Premature Ovarian Insufficiency, vor 40 Jahren) ist medizinisch anders zu bewerten und erfordert besondere Behandlung. Wechseljahre mit 40 sind also häufig normale frühe Perimenopause, keine Erkrankung.",
+        },
+        {
+          heading: "Erste Symptome der Perimenopause mit 40",
+          text: "Erste Anzeichen sind oft: kürzere Zyklen (unter 25 Tage), veränderte Periodenblutungen, verstärkte PMS-Symptome, Schlafstörungen (besonders Einschlafprobleme), Stimmungsschwankungen und Angst, erste Hitzewallungen (seltener mit 40 als mit 50) und reduzierte Belastbarkeit. Viele Frauen wissen nicht, dass das Wechseljahressymptome sein können.",
+        },
+        {
+          heading: "Was sollte ich mit 40 tun?",
+          text: "Gynäkologin aufsuchen, FSH und Östradiol messen lassen (am Tag 3–5 des Zyklus), Schilddrüse checken (TSH), Vitamin D bestimmen. Wenn Perimenopause bestätigt: frühzeitig über Hormonstrategie nachdenken – frühe HRT-Einleitung schützt Knochen, Herz und Gehirn langfristig am besten. Lebensstil: Krafttraining, ausreichend Protein, Alkohol reduzieren.",
+        },
+      ],
+    },
+    relatedQuestions: ["wann-beginnen-die-wechseljahre", "was-sind-die-ersten-anzeichen-der-wechseljahre", "fruehere-wechseljahre-ursachen", "perimenopause-ab-welchem-alter"],
+    relatedConditions: ["menopause", "hormone"],
+    faqs: [
+      {
+        question: "Sind Wechseljahre mit 40 normal?",
+        answer: "Erste Perimenopause-Symptome mit 40–44 Jahren betreffen etwa 10–15 % der Frauen und gelten als frühe, aber normale Perimenopause. Das ist anders als vorzeitige Menopause (POI, vor 40 Jahren), die medizinisch abgeklärt und behandelt werden sollte. Mit 40 erste Anzeichen zu haben ist häufiger als oft gedacht.",
+      },
+      {
+        question: "Wie kann ich wissen, ob ich mit 40 in den Wechseljahren bin?",
+        answer: "Typische Zeichen: Zyklusveränderungen, verstärkte PMS, Schlafstörungen, Stimmungsschwankungen. Labordiagnostik: FSH (am Tag 3–5 des Zyklus) und Östradiol bestimmen. Wichtig: FSH schwankt stark in der Perimenopause – ein einzelner Wert reicht nicht. AMH-Messung gibt stabilere Auskunft über die Eierstockreserve.",
+      },
+    ],
+  },
+
+  "perimenopause-unregelmaessige-blutungen": {
+    slug: "perimenopause-unregelmaessige-blutungen",
+    question: "Unregelmäßige Blutungen in der Perimenopause: Was ist normal?",
+    metaTitle: "Perimenopause Blutungen: Wann sind unregelmäßige Blutungen normal?",
+    metaDescription: "Unregelmäßige Blutungen in der Perimenopause: Was ist normal, was muss abgeklärt werden? Starke, häufige oder ausbleibende Blutungen erklärt.",
+    answer: "Unregelmäßige Blutungen sind das typischste Symptom der Perimenopause. Kürzere Zyklen, gelegentliches Auslassen, stärkere oder schwächere Blutungen – all das ist perimenopausale Normalität. Abklärung nötig bei: sehr starken Blutungen, Blutungen nach Sex, Zwischenblutungen oder Blutungen nach 12 Monaten ohne Periode.",
+    content: {
+      sections: [
+        {
+          heading: "Was verändert sich bei den Blutungen in der Perimenopause?",
+          text: "In der frühen Perimenopause werden Zyklen kürzer (24–26 Tage), Blutungen können stärker werden. Später werden Zyklen länger und unregelmäßiger – Abstände von 35, 60, 90+ Tagen. Blutungen können schwächer oder sehr stark werden. Gelegentliches Auslassen einer Periode ist normal. Diese Veränderungen sind durch anovulatorische Zyklen bedingt: ohne Eisprung kein Progesteron, ohne Progesteron kommt es zu übermäßigem Gebärmutterschleimhautaufbau.",
+        },
+        {
+          heading: "Wann muss abgeklärt werden?",
+          text: "Immer abklären: Blutungen nach bestätigter Menopause (12 Monate ohne Periode), Zwischenblutungen (Blutungen zwischen den Perioden), Blutungen nach dem Sex, sehr starke Blutungen (Pad/Tampon stündlich wechseln). Diese Symptome können auf Polypen, Myome, Endometriose oder seltener Gebärmutterschleimhautveränderungen hinweisen – eine gynäkologische Abklärung ist dann dringend nötig.",
+        },
+        {
+          heading: "Was hilft bei starken perimenopausalen Blutungen?",
+          text: "Progesterontherapie (Gestagen, Mirena IUD oder mikronisiertes Progesteron) ist oft die wirksamste Therapie – sie reguliert den Gebärmutterschleimhaut-Aufbau. Hormontherapie (HRT) mit Östrogen und Progesteron regularisiert Blutungen in vielen Fällen. Nicht-hormonell: Tranexamsäure bei akut starken Blutungen, NSAIDs (Ibuprofen) reduzieren Blutungsstärke.",
+        },
+      ],
+    },
+    relatedQuestions: ["wann-beginnen-die-wechseljahre", "was-sind-die-ersten-anzeichen-der-wechseljahre", "pms-oder-perimenopause-unterschied", "wechseljahre-mit-40"],
+    relatedConditions: ["menopause", "hormone"],
+    faqs: [
+      {
+        question: "Wie oft sind Blutungen in der Perimenopause normal?",
+        answer: "In der frühen Perimenopause können Blutungen noch monatlich auftreten, aber kürzer oder länger als üblich sein. Später sind Abstände von 35–90 Tagen typisch. Kein starres Muster ist zu erwarten – das ist das Kennzeichen der Perimenopause. Mehr als 12 Tage Blutung pro Zyklus oder stündlicher Pad-Wechsel sind nicht mehr normal.",
+      },
+      {
+        question: "Kann Progesteronmangel starke Blutungen verursachen?",
+        answer: "Ja – das ist die häufigste Ursache starker Perimenopause-Blutungen. Ohne Eisprung (anovulatorischer Zyklus) kein Progesteron. Ohne Progesteron wächst die Gebärmutterschleimhaut unkontrolliert unter Östrogen-Einfluss und wird dann als starke Blutung abgestoßen. Progesterontherapie – orale Einnahme oder Mirena IUD – ist die Lösung.",
+      },
+    ],
+  },
+
+  "herzrasen-wechseljahre": {
+    slug: "herzrasen-wechseljahre",
+    question: "Herzrasen in den Wechseljahren: Was steckt dahinter?",
+    metaTitle: "Herzrasen Wechseljahre: Warum Herzklopfen in der Menopause entsteht",
+    metaDescription: "Herzrasen in den Wechseljahren: Wie Östrogenabfall Herzrhythmusstörungen und Herzklopfen verursacht – wann harmlos, wann abklären?",
+    answer: "Herzrasen und Herzklopfen (Palpitationen) sind häufige perimenopausale Symptome. Ursache ist der Östrogenabfall: Östrogen reguliert das autonome Nervensystem und die Herzrate direkt. Plötzliches Herzrasen, oft begleitet von Hitzewallungen, ist meist harmlos – sollte aber bei häufigem Auftreten kardiologisch abgeklärt werden.",
+    content: {
+      sections: [
+        {
+          heading: "Warum verursachen Wechseljahre Herzrasen?",
+          text: "Östrogen wirkt regulierend auf das autonome Nervensystem, das Herzrate und Blutdruck kontrolliert. Wenn der Östrogenspiegel fällt oder stark schwankt, verliert das autonome Nervensystem diese Regulierung teilweise. Das Ergebnis: plötzliche Herzrasen-Episoden (Palpitationen), oft in Zusammenhang mit Hitzewallungen. Der Mechanismus ähnelt einer kurzen Aktivierung des sympathischen Nervensystems.",
+        },
+        {
+          heading: "Schilddrüse immer ausschließen",
+          text: "Herzrasen ist auch ein klassisches Symptom der Schilddrüsenüberfunktion (Hyperthyreose). Bevor perimenopausales Herzrasen angenommen wird, sollte TSH, fT3 und fT4 gemessen werden. Eine Hyperthyreose ist häufig und gut behandelbar. Auch Schilddrüsenknoten mit autonomer Funktion (heiße Knoten) können Herzrasen verursachen.",
+        },
+        {
+          heading: "Wann ist Herzrasen gefährlich?",
+          text: "Gelegentliches Herzrasen bei Hitzewallungen ist meist harmlos. Abklärung nötig bei: Herzrasen über 30 Minuten, Herzrasen mit Schwindel oder Ohnmacht, unregelmäßigem Herzschlag (Vorhofflimmern), Brustschmerzen, Atemnot oder bekannter Herzerkrankung. EKG und Langzeit-EKG können harmlose Palpitationen von behandlungsbedürftigen Rhythmusstörungen unterscheiden.",
+        },
+      ],
+    },
+    relatedQuestions: ["hitzewallungen-was-hilft-sofort", "wann-beginnen-die-wechseljahre", "schilddruesenunterfunktion-symptome-frau"],
+    relatedConditions: ["menopause", "schilddruese", "hashimoto"],
+    faqs: [
+      {
+        question: "Ist Herzrasen in den Wechseljahren gefährlich?",
+        answer: "Meist nicht – perimenopausales Herzrasen ist harmlos und durch den Östrogenabfall bedingt. Aber: Immer TSH messen (Schilddrüse ausschließen), und bei häufigem, langem oder unregelmäßigem Herzrasen ein EKG machen lassen. Vorhofflimmern kommt nach der Menopause häufiger vor und muss erkannt und behandelt werden.",
+      },
+      {
+        question: "Was kann ich gegen Herzrasen in den Wechseljahren tun?",
+        answer: "Hitzewallungen behandeln reduziert auch Herzrasen. Koffein und Alkohol sind klassische Auslöser – reduzieren. Atemübungen (4-7-8, Vagus-Stimulation) beruhigen das autonome Nervensystem. Magnesium (400 mg täglich) unterstützt die Herzrhythmus-Stabilität. Bei häufigem Herzrasen: Ärztin aufsuchen, TSH und EKG machen lassen.",
+      },
+    ],
+  },
+
+  "magnesium-wechseljahre": {
+    slug: "magnesium-wechseljahre",
+    question: "Hilft Magnesium bei Wechseljahresbeschwerden?",
+    metaTitle: "Magnesium Wechseljahre: Welche Beschwerden Magnesium lindert",
+    metaDescription: "Magnesium bei Wechseljahren: Wie Magnesium bei Schlafstörungen, Hitzewallungen, Herzrasen und Stimmungsschwankungen in der Menopause hilft.",
+    answer: "Ja – Magnesium ist eines der sinnvollsten Supplemente in den Wechseljahren. Studien zeigen Wirkung bei: Schlafstörungen, Stimmungsschwankungen, Herzrasen, Muskelkrämpfen, Knochenerhalt und Hitzewallungen. Viele Frauen sind suboptimal mit Magnesium versorgt – besonders in der Menopause steigt der Bedarf.",
+    content: {
+      sections: [
+        {
+          heading: "Warum ist Magnesium in den Wechseljahren wichtig?",
+          text: "Östrogen fördert die Magnesiumaufnahme in die Zellen. Wenn Östrogen fällt, verändert sich der Magnesiumstoffwechsel: Magnesium verschiebt sich aus dem intrazellulären in den extrazellulären Raum und wird stärker ausgeschieden. Gleichzeitig ist Magnesium an über 300 Enzymreaktionen beteiligt – darunter Stresshormon-Regulierung, Schlaf-Neurotransmitter (GABA) und Knochen-Mineralisierung. In der Menopause steigt der Bedarf, während die Versorgung oft schlechter wird.",
+        },
+        {
+          heading: "Für welche Wechseljahres-Symptome hilft Magnesium?",
+          text: "Schlaf: Magnesium aktiviert GABA-Rezeptoren und unterstützt Melatonin-Synthese – bei Einschlafproblemen gut belegt. Herzrasen: Magnesium stabilisiert die elektrische Herzaktivität. Stimmung/Angst: Magnesium wirkt anxiolytisch über GABA und NMDA-Glutamat. Knochen: Magnesium ist essenziell für Kalzium-Einbau in Knochen. Hitzewallungen: eine kleine Studie zeigte Reduktion der Hitzewallung-Frequenz mit Magnesiumoxid.",
+        },
+        {
+          heading: "Welche Form und Dosierung?",
+          text: "Empfohlene Dosis: 300–400 mg täglich (elementares Magnesium), abends eingenommen für Schlafeffekt. Beste Formen: Magnesiumglycinat (sehr gut verträglich, gut aufgenommen), Magnesiumcitrat (gut absorbiert, leicht abführend), Magnesiummalat (gut für Energie und Muskelkraft). Magnesiumoxid schlecht absorbiert – günstig, aber wenig effektiv. Übliche Nebenwirkung bei zu hoher Dosis: weicher Stuhlgang.",
+        },
+      ],
+    },
+    relatedQuestions: ["wechseljahre-beschwerden-lindern", "besser-schlafen-wechseljahre", "wechseljahre-natuerlich-behandeln"],
+    relatedConditions: ["menopause", "hormone", "hashimoto"],
+    faqs: [
+      {
+        question: "Wie viel Magnesium sollte ich in den Wechseljahren nehmen?",
+        answer: "Die empfohlene Tagesdosis für Frauen beträgt 300–310 mg elementares Magnesium. In den Wechseljahren sind 350–400 mg sinnvoll. Abends einnehmen für den Schlafeffekt. Am besten als Magnesiumglycinat oder Magnesiumcitrat – deutlich besser bioverfügbar als das günstige Magnesiumoxid.",
+      },
+      {
+        question: "Wann spüre ich eine Wirkung von Magnesium?",
+        answer: "Erste Verbesserungen bei Schlaf und Muskelkrämpfen oft nach 2–4 Wochen. Volle Wirkung nach 6–8 Wochen regelmäßiger Einnahme. Magnesium-Effekte auf Stimmung und Herzrasen brauchen manchmal 8–12 Wochen. Wichtig: regelmäßig einnehmen, kein Einmaleffekt.",
+      },
+    ],
+  },
+
+  "schilddruesenunterfunktion-behandlung": {
+    slug: "schilddruesenunterfunktion-behandlung",
+    question: "Wie wird Schilddrüsenunterfunktion behandelt?",
+    metaTitle: "Schilddrüsenunterfunktion behandeln: Levothyroxin, Dosierung und Alternativen",
+    metaDescription: "Schilddrüsenunterfunktion Behandlung: Levothyroxin (T4), Kombinationstherapie (T4+T3), Dosierung, optimale TSH-Werte und natürliche Unterstützung.",
+    answer: "Schilddrüsenunterfunktion wird standardmäßig mit Levothyroxin (T4) behandelt. Die Dosis wird individuell angepasst, bis der TSH-Wert im Zielbereich liegt. Bei anhaltenden Symptomen trotz normalem TSH kann eine T4+T3-Kombinationstherapie sinnvoll sein. Selen und eine schilddrüsenfreundliche Ernährung unterstützen die Behandlung.",
+    content: {
+      sections: [
+        {
+          heading: "Levothyroxin: Die Standardbehandlung",
+          text: "Levothyroxin (T4, z.B. Euthyrox, L-Thyroxin) ist das am häufigsten verschriebene Medikament in Deutschland. Es wird täglich morgens auf nüchternen Magen eingenommen – 30–60 Minuten vor dem Frühstück, da Nahrung die Aufnahme stark reduziert. Auch Kalzium, Eisen und Kaffee blockieren die Aufnahme. Die Anfangsdosis ist niedrig (25–50 µg) und wird alle 6–8 Wochen angepasst, bis TSH im Zielbereich liegt.",
+        },
+        {
+          heading: "Was ist der optimale TSH-Zielwert?",
+          text: "Der Laborreferenzbereich für TSH liegt bei 0,4–4,0 mIU/l. Für symptomatische Patientinnen ist das oft zu breit: Viele fühlen sich erst bei TSH 0,5–2,0 wirklich gut. Bei Hashimoto-Patientinnen empfehlen manche Endokrinologen einen TSH-Zielwert von 0,5–1,5. Auch fT3 sollte geprüft werden – manche Frauen konvertieren T4 schlecht zu T3 und benötigen eine Kombinationstherapie.",
+        },
+        {
+          heading: "T4+T3-Kombinationstherapie",
+          text: "Etwa 10–15 % der Hypothyreose-Patientinnen fühlen sich trotz gut eingestelltem TSH nicht gut – Fatigue, Brain Fog, Depression bleiben. Bei diesen Frauen kann eine Kombination aus T4 (Levothyroxin) und T3 (Liothyronin) oder die Verwendung von natürlichem Schilddrüsenextrakt (NDT, z.B. Armour Thyroid) hilfreich sein. In Deutschland ist T3 verschreibungspflichtig; Gespräch mit Endokrinologin sinnvoll.",
+        },
+      ],
+    },
+    relatedQuestions: ["schilddruesenwerte-verstehen", "hashimoto-blutwerte-verstehen", "tsh-wert-normal-trotzdem-symptome", "selen-hashimoto-dosierung"],
+    relatedConditions: ["schilddruese", "hashimoto"],
+    faqs: [
+      {
+        question: "Muss ich Levothyroxin lebenslang nehmen?",
+        answer: "Bei Hashimoto-Hypothyreose und permanenter Schilddrüsenunterfunktion ja – die zugrundeliegende Autoimmunschädigung ist nicht reversibel. Bei subklinischer Hypothyreose ohne Hashimoto kann in manchen Fällen eine Beobachtung ohne Medikamente sinnvoll sein. Die Entscheidung hängt von TSH-Höhe, Symptomen, Schwangerschaftswunsch und Ursache ab.",
+      },
+      {
+        question: "Warum fühle ich mich trotz Levothyroxin nicht gut?",
+        answer: "Häufige Gründe: TSH noch nicht optimal eingestellt (zu hoch, selten zu niedrig), schlechte T4-zu-T3-Konversion (fT3 prüfen!), Einnahme-Fehler (Kaffee/Kalzium blockieren Aufnahme), Nährstoffmängel (Selen, Eisen, Vitamin D), oder andere Ursachen der Beschwerden (Perimenopause, Anämie). Mit Endokrinologin sprechen und vollständiges Panel checken.",
+      },
+    ],
+  },
+
+  "hormone-ab-40-veraenderungen": {
+    slug: "hormone-ab-40-veraenderungen",
+    question: "Wie verändern sich die Hormone ab 40?",
+    metaTitle: "Hormone ab 40: Was sich im Hormonhaushalt von Frauen verändert",
+    metaDescription: "Hormone ab 40: Welche Hormone sich nach dem 40. Lebensjahr bei Frauen verändern – Progesteron, Östrogen, Cortisol, Schilddrüse und was das bedeutet.",
+    answer: "Ab 40 beginnen die ersten hormonellen Veränderungen der Perimenopause: Progesteron fällt als erstes, Östrogen schwankt stärker und sinkt langsam, Testosteron nimmt ab, Cortisol wird schwerer reguliert. Diese Veränderungen beginnen oft 5–10 Jahre vor der Menopause und erklären viele Beschwerden in der 'besten Jahre'-Phase.",
+    content: {
+      sections: [
+        {
+          heading: "Progesteron: Das erste Hormon, das fällt",
+          text: "Progesteron ist oft das erste Hormon, das ab 40 merklich sinkt. Es fällt, weil anovulatorische Zyklen (Zyklen ohne Eisprung) häufiger werden – und ohne Eisprung kein Progesteron. Die Konsequenz: Schlafstörungen (Progesteron wirkt sedierend), Stimmungsschwankungen, Angst, PMS wird schlimmer, Zyklen werden kürzer oder unregelmäßig. All das kann auftreten, bevor auch nur ein Östrogenwert abweicht.",
+        },
+        {
+          heading: "Östrogen: Schwankungen vor dem Abfall",
+          text: "Östrogen sinkt in der Perimenopause nicht linear – es schwankt zunächst stark, mit Phasen sehr hoher und sehr niedriger Werte. Das erklärt viele perimenopausale Symptome: Starke Blutungen (hohes Östrogen), Hitzewallungen (plötzlicher Abfall), PMS-Verschlimmerung und Brustzartheit. Erst in der späten Perimenopause und nach der Menopause fällt Östrogen dauerhaft ab.",
+        },
+        {
+          heading: "Cortisol, Testosteron und Schilddrüse ab 40",
+          text: "Cortisol wird ab 40 schlechter reguliert: Die Fähigkeit, nach Stresssituationen schnell herunterzuregulieren, nimmt ab. Testosteron sinkt langsam (von Peak mit ca. 25 Jahren) und beeinflusst Libido, Energie und Muskelkraft. Die Schilddrüse bleibt meist stabil – aber da Hashimoto-Erstdiagnosen häufig in der Perimenopause fallen (und umgekehrt), lohnt sich TSH-Kontrolle. AMH (Anti-Müller-Hormon) fällt stetig und ist ein stabiler Marker der Eierstockreserve.",
+        },
+      ],
+    },
+    relatedQuestions: ["wann-beginnen-die-wechseljahre", "was-sind-die-ersten-anzeichen-der-wechseljahre", "welche-hormone-testen-lassen", "perimenopause-ab-welchem-alter"],
+    relatedConditions: ["menopause", "hormone"],
+    faqs: [
+      {
+        question: "Welche Hormonwerte sollte ich ab 40 checken lassen?",
+        answer: "Sinnvolles Panel ab 40 mit Hormonsymptomen: FSH + Östradiol + Progesteron (Tag 19–22 des Zyklus), TSH (Schilddrüse), AMH (Eierstockreserve), Vitamin D, Ferritin. Optional: freies Testosteron, SHBG, Cortisol (Speichel-Tagesprofil). Den TSH besonders prüfen – Hashimoto tritt bei Frauen zwischen 40–55 besonders häufig auf.",
+      },
+      {
+        question: "Ab welchem Alter sollte ich meinen Hormonstatus prüfen lassen?",
+        answer: "Bei Symptomen (Schlafstörungen, Stimmungsschwankungen, Zyklusveränderungen, unerklärliche Müdigkeit): sofort prüfen lassen, egal welches Alter. Präventiv: Basischeck ab 40–42 Jahren sinnvoll. Einen TSH sollte jede Frau ab 40 kennen. Vitamin D und Ferritin ebenfalls – beide sind häufig mangelhaft und beeinflussen stark das Wohlbefinden.",
+      },
+    ],
+  },
+
+  "oestrogen-mangel-testen": {
+    slug: "oestrogen-mangel-testen",
+    question: "Wie teste ich Östrogenmangl? Welche Werte sind aussagekräftig?",
+    metaTitle: "Östrogenmangel testen: Welche Blutwerte aussagekräftig sind",
+    metaDescription: "Östrogenmangel testen: Welche Blutwerte (Östradiol, FSH, AMH) aussagekräftig sind, wann gemessen wird und was die Werte bedeuten.",
+    answer: "Östrogenmangel wird durch Östradiol (E2) im Blut gemessen, immer in Kombination mit FSH und idealerweise AMH. Wichtig: Messzeit im Zyklus beachten – Tag 3–5 oder in der Mitte des Zyklus gibt unterschiedliche Werte. In der Perimenopause schwanken die Werte stark, ein einzelner Wert ist wenig aussagekräftig.",
+    content: {
+      sections: [
+        {
+          heading: "Die wichtigsten Östrogen-Laborwerte",
+          text: "Östradiol (E2): das wichtigste Östrogen im reproduktiven Alter. Werte stark zyklus- und phasenabhängig: Follikelphase (Tag 3–5): 20–150 pg/ml, Ovulation: 150–750 pg/ml, Postmenopause: unter 20 pg/ml. FSH (follikelstimulierend): steigt an, wenn Eierstöcke weniger Östrogen produzieren. FSH über 25 IU/L am Tag 3–5 kann Perimenopause anzeigen – aber schwankt stark. AMH (Anti-Müller-Hormon): stabiler Marker der Eierstockreserve, unabhängig vom Zyklustag messbar.",
+        },
+        {
+          heading: "Wann und wie messen lassen?",
+          text: "Für Basis-Screening: FSH + Östradiol am Tag 3–5 des Zyklus (Follikelphase). AMH kann zu jedem Zeitpunkt gemessen werden – wichtig für Perimenopause-Abklärung. In der Perimenopause: Werte variieren stark von Zyklus zu Zyklus – ein einzelner Wert sagt wenig. Mehrere Messungen im Abstand von Wochen geben ein besseres Bild. Bei ausbleibender Periode: Messung zu beliebiger Zeit.",
+        },
+        {
+          heading: "Grenzen der Labordiagnostik",
+          text: "Normale Laborwerte schließen Östrogenmangel-Symptome nicht aus: In der Perimenopause können Östrogenwerte normal erscheinen, aber stark schwanken – das Symptommuster ist oft aussagekräftiger als ein einzelner Wert. Speichelhormon- oder Heimbluttests (Cerascreen, imaware) sind weniger standardisiert als Labortests und sollten ärztlich ausgewertet werden.",
+        },
+      ],
+    },
+    relatedQuestions: ["welche-hormone-testen-lassen", "oestrogen-mangel-symptome", "hormontest-kosten", "wann-beginnen-die-wechseljahre"],
+    relatedConditions: ["menopause", "hormone"],
+    faqs: [
+      {
+        question: "Was ist ein normaler Östradiol-Wert für Frauen?",
+        answer: "Östradiol (E2) ist stark zyklus- und altersabhängig: In der Follikelphase (Tag 3–5) 20–150 pg/ml, um den Eisprung 150–750 pg/ml, in der Lutealphase 30–300 pg/ml. In der Postmenopause unter 20 pg/ml. In der Perimenopause schwanken die Werte stark – ein einzelner Wert ist wenig aussagekräftig.",
+      },
+      {
+        question: "Kann ich Östrogenmangel zu Hause testen?",
+        answer: "Heimbluttests für Östradiol (z.B. Cerascreen, imaware) sind verfügbar und geben erste Hinweise. Sie sind weniger standardisiert als Labortests. Kombination mit FSH und AMH ist wichtig für den Gesamtkontext. Ein normaler Heimtest schließt Östrogenmangel nicht aus – in der Perimenopause schwanken die Werte täglich.",
+      },
+    ],
+  },
+
+  "schilddruese-ernaehrung": {
+    slug: "schilddruese-ernaehrung",
+    question: "Welche Ernährung ist gut für die Schilddrüse?",
+    metaTitle: "Schilddrüse Ernährung: Was gut und was schlecht für die Schilddrüse ist",
+    metaDescription: "Schilddrüse Ernährung: Welche Nährstoffe die Schilddrüse braucht (Jod, Selen, Zink), was vermieden werden sollte und wie Ernährung bei Hashimoto hilft.",
+    answer: "Für eine gesunde Schilddrüsenfunktion sind entscheidend: ausreichend Jod (Seefisch, jodiertes Salz), Selen (100–200 µg täglich, z.B. aus 2 Paranüssen), Zink und Eisen. Bei Hashimoto: Gluten- und Milchprodukte-Reduktion probieren, Sojaprodukte morgens vermeiden.",
+    content: {
+      sections: [
+        {
+          heading: "Die wichtigsten Nährstoffe für die Schilddrüse",
+          text: "Jod: Grundbaustein der Schilddrüsenhormone T3 und T4. Quelle: Seefisch (2× wöchentlich), Meeresfrüchte, jodiertes Speisesalz. Tagesbedarf: 150–200 µg. Achtung bei Hashimoto: hohe Joddosen können den Autoimmunprozess verstärken – moderate Jodzufuhr aus natürlichen Quellen ist aber unbedenklich. Selen: essenziell für Schilddrüsenperoxidase und T4-zu-T3-Konversion. Tagesbedarf: 60–70 µg, therapeutisch bei Hashimoto: 100–200 µg täglich. 2 Paranüsse täglich liefern ca. 100 µg. Zink (Nüsse, Hülsenfrüchte, Fleisch): aktiviert Schilddrüsenhormone und unterstützt T3-Rezeptoren.",
+        },
+        {
+          heading: "Schilddrüsenbremser: Was reduzieren?",
+          text: "Goitrogene Lebensmittel (Brokkoli, Grünkohl, Rotkohl, Soja): in rohem Zustand hemmen sie die Jodaufnahme in die Schilddrüse. Durch Kochen wird der goitrogene Effekt deutlich reduziert. Bei normaler Schilddrüsenfunktion kein Problem. Bei Hypothyreose: große Mengen roher Kreuzblütler oder Soja morgens (zur gleichen Zeit wie Medikament) vermeiden. Soja: hemmt direkt die Levothyroxin-Absorption – mindestens 4 Stunden Abstand zum Schilddrüsenmedikament.",
+        },
+        {
+          heading: "Ernährung bei Hashimoto",
+          text: "Glutenfreie Ernährung: kein Pflichtprogramm ohne Zöliakie-Diagnose, aber viele Hashimoto-Patientinnen berichten über deutliche Verbesserung bei glutenfreier Kost. Ein 3-monatiger Auslassversuch ist sinnvoll. Milchfreie Ernährung: ähnliche Datenlage – probieren, ob Symptome sich bessern. Entzündungshemmende Ernährung (Omega-3, Gemüse, Olivenöl, wenig verarbeitete Lebensmittel) unterstützt die Autoimmunregulierung allgemein.",
+        },
+      ],
+    },
+    relatedQuestions: ["hashimoto-ernaehrung-was-essen", "hashimoto-ernaehrung-was-vermeiden", "selen-hashimoto-dosierung", "schilddruesenwerte-verstehen"],
+    relatedConditions: ["schilddruese", "hashimoto"],
+    faqs: [
+      {
+        question: "Darf ich bei Hashimoto Jod essen?",
+        answer: "Moderate Jodzufuhr aus natürlichen Lebensmitteln (Seefisch, jodiertes Salz) ist bei Hashimoto unbedenklich und notwendig. Hochdosierte Jodpräparate (über 300–500 µg täglich) sollten bei Hashimoto vermieden werden – sie können den Autoimmunprozess verstärken. Normale Ernährung mit jodiertem Salz und 1–2× Seefisch pro Woche ist kein Problem.",
+      },
+      {
+        question: "Hilft glutenfreie Ernährung bei Hashimoto wirklich?",
+        answer: "Studien zeigen gemischte Ergebnisse. Bei Hashimoto ohne Zöliakie gibt es keine eindeutige Evidenz, dass Glutenfreiheit Anti-TPO-Antikörper senkt. Viele Betroffene berichten aber über subjektive Verbesserungen (weniger Müdigkeit, weniger Bauchbeschwerden). Ein 3-monatiger Selbstversuch ist sinnvoll – wenn es hilft: weiter, wenn nicht: kein Zwang.",
+      },
+    ],
+  },
+
   "eisenmangel-hormone-zusammenhang": {
     slug: "eisenmangel-hormone-zusammenhang",
     question: "Eisenmangel und Hormone: Welcher Zusammenhang besteht?",

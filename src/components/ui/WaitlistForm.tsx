@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { WAITLIST_TOPICS } from "@/lib/constants";
+import { trackWaitlistSignup } from "@/lib/analytics";
 
 export function WaitlistForm() {
   const [email, setEmail] = useState("");
@@ -23,6 +24,7 @@ export function WaitlistForm() {
       const data = await res.json();
 
       if (res.status === 201) {
+        trackWaitlistSignup(topic || "general");
         setStatus("success");
         setMessage(data.message);
         setEmail("");

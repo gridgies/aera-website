@@ -1454,6 +1454,499 @@ export const SYMPTOMS_DATA: Record<string, Symptom> = {
     ],
   },
 
+  schwindel: {
+    slug: "schwindel",
+    name: "Schwindel",
+    nameFull: "Schwindel & Benommenheit durch Hormonschwankungen",
+    description:
+      "Schwindel und Benommenheit bei Frauen in der Perimenopause und bei Schilddrüsenerkrankungen sind oft hormonell bedingt – Östrogenschwankungen beeinflussen direkt das Gleichgewichtsorgan und den Blutdruck.",
+    metaDescription:
+      "Schwindel in den Wechseljahren: Warum Hormonschwankungen und Schilddrüsenerkrankungen Schwindel verursachen – Ursachen, Diagnose und was wirklich hilft.",
+    causes: [
+      "Östrogenschwankungen in der Perimenopause destabilisieren den Vestibularapparat und die Gefäßregulation",
+      "Orthostatische Hypotonie (niedriger Blutdruck beim Aufstehen) durch veränderte Gefäßreagibilität in der Menopause",
+      "Hyperthyreose: erhöhter Herzschlag und überaktives Nervensystem überfordern das Gleichgewichtssystem",
+      "Hypothyreose: verlangsamte Kreislaufreaktion und reduzierte zerebrale Durchblutung",
+      "Anämie und Eisenmangel: reduzierter Sauerstofftransport ins Gehirn",
+      "Nüchternhypoglykämie bei Insulinresistenz (häufig bei PCOS): Blutzuckereinbrüche mit Benommenheit",
+      "Dehydrierung: oft verstärkt durch nächtliches Schwitzen in der Menopause",
+    ],
+    detailedExplanation:
+      "Östrogen reguliert nicht nur Reproduktionsvorgänge – es steuert auch den Gefäßtonus, die Durchblutung des Innenohrs und das autonome Nervensystem. In der Perimenopause können stark schwankende Östrogenspiegel zu Überempfindlichkeit im Vestibularapparat führen. Das vegetative Nervensystem reagiert auf plötzliche Hormonfluktuationen mit übertriebenen vaskulären Reaktionen: Blutdruckabfall beim Aufstehen (orthostatische Hypotonie) ist in der Perimenopause deutlich häufiger als in anderen Lebensphasen.\n\nEin oft übersehener Zusammenhang: Hashimoto-Patientinnen haben ein erhöhtes Risiko für autoimmune Innenohrerkrankungen, da Autoimmunprozesse das Innenohr direkt betreffen können. Sowohl Hypo- als auch Hyperthyreose können Schwindel verursachen – über verschiedene Mechanismen. Hyperthyreose durch Herzrasen und überaktives Nervensystem; Hypothyreose durch verlangsamte kardiovaskuläre Reaktion. Schilddrüsenwerte sollten bei persistierendem Schwindel immer mitgeprüft werden.",
+    diagnosticTests: [
+      { test: "TSH, fT3, fT4", relevance: "Schilddrüsenüber- oder -unterfunktion als häufige und gut behandelbare Schwindelursache ausschließen" },
+      { test: "Blutdruckmessung im Liegen und Stehen", relevance: "Orthostatische Hypotonie erkennen – klassisch in der Perimenopause durch veränderte Gefäßregulation" },
+      { test: "Blutbild + Ferritin", relevance: "Anämie und funktioneller Eisenmangel (Ferritin <70 µg/l) als häufige Schwindelursache bei Frauen" },
+      { test: "Blutzucker nüchtern + HbA1c", relevance: "Hypoglykämie-Schwindel bei Insulinresistenz erkennen – relevant bei PCOS und Übergewicht" },
+      { test: "FSH + Östradiol", relevance: "Perimenopausalen Status und hormonelle Instabilität als Ursache bestätigen" },
+    ],
+    conditionIntros: {
+      menopause:
+        "Schwindel und Benommenheit in der Perimenopause werden oft unterschätzt. Östrogen reguliert die Gefäßreagibilität und den Innenohr-Flüssigkeitshaushalt. Wenn der Östrogenspiegel stark schwankt, können diese Systeme instabil werden – orthostatischer Schwindel beim Aufstehen, Benommenheit nach Hitzewallungen und ein allgemeines Schwindelgefühl ohne erkennbare Ursache sind typische Perimenopause-Symptome.",
+      schilddruese:
+        "Bei Schilddrüsenerkrankungen ist Schwindel ein häufiges, aber selten erkanntes Symptom. Sowohl Überfunktion als auch Unterfunktion verursachen Schwindel – über verschiedene Mechanismen. Hashimoto geht zusätzlich mit erhöhtem Risiko für autoimmune Innenohrerkrankungen einher.",
+    },
+    whenToSeeDoctor:
+      "Sofort bei starkem rotierendem Schwindel mit Übelkeit oder Erbrechen, bei Schwindel mit Hörverlust oder Tinnitus (Verdacht auf Morbus Menière), und bei neurologischen Begleitsymptomen (Taubheitsgefühl, Sehstörungen, Sprachprobleme). Bei wiederkehrendem Schwindel ohne akute Ursache: Schilddrüsenwerte, Blutbild und Hormonstatus abklären.",
+    naturalRemedies: [
+      "Langsam aufstehen gegen orthostatischen Schwindel: erst Beine über die Bettkante hängen lassen, dann ruhig aufrichten",
+      "Ausreichend Flüssigkeit (mindestens 2 l täglich) – Dehydrierung verstärkt Schwindel erheblich",
+      "Kleine, regelmäßige Mahlzeiten verhindern Blutzuckerabfälle (Schwindel durch Hypoglykämie)",
+      "Vestibulare Rehabilitationsübungen bei Lagerungsschwindel – Physiotherapeutin anleiten lassen",
+      "Ingwer (250–500 mg täglich) – moderate Evidenz gegen vestibuläre Dysregulation",
+    ],
+    relatedConditions: ["menopause", "schilddruese", "hashimoto"],
+    faqs: [
+      {
+        question: "Kann Schwindel durch die Wechseljahre entstehen?",
+        answer:
+          "Ja – perimenopausaler Schwindel ist häufig, aber wenig bekannt. Östrogen reguliert den Gefäßtonus und die Innenohr-Funktion. Wenn der Östrogenspiegel stark schwankt, reagiert das Gleichgewichtssystem mit Instabilität. Besonders orthostatischer Schwindel beim Aufstehen und Benommenheit nach Hitzewallungen sind typische perimenopausale Symptome.",
+      },
+      {
+        question: "Welche Schilddrüsenerkrankungen verursachen Schwindel?",
+        answer:
+          "Sowohl Über- als auch Unterfunktion der Schilddrüse können Schwindel verursachen. Hyperthyreose durch Herzrasen und überaktives Nervensystem; Hypothyreose durch verlangsamte kardiovaskuläre Reaktion. Bei Hashimoto besteht zusätzlich ein erhöhtes Risiko für autoimmune Innenohrerkrankungen (Morbus Menière).",
+      },
+      {
+        question: "Was hilft sofort bei Schwindel durch Hormonschwankungen?",
+        answer:
+          "Hinsetzen oder hinlegen, langsam atmen und die Episode abwarten. Kühles Wasser trinken. Beim Aufstehen langsam vorgehen (orthostatischer Schwindel). Wenn Schwindel mit Hitzewallungen zusammenfällt: kühles Tuch an den Nacken. Bei häufigen Episoden: Schilddrüsenwerte und Hormonstatus checken lassen.",
+      },
+    ],
+  },
+
+  depressionen: {
+    slug: "depressionen",
+    name: "Depressionen",
+    nameFull: "Depressionen & depressive Verstimmungen durch Hormonstörungen",
+    description:
+      "Depressionen und anhaltende depressive Verstimmungen bei Frauen in der Perimenopause und mit Schilddrüsenerkrankungen sind oft hormonell bedingt – Östrogen, Progesteron und Schilddrüsenhormone haben direkte Wirkung auf das Gehirn.",
+    metaDescription:
+      "Depressionen durch Hormone: Warum Perimenopause, Hashimoto und Hormonstörungen Depression verursachen – Ursachen, Diagnose und wirksame Behandlung.",
+    causes: [
+      "Progesteronabfall in der Perimenopause: Progesteron wirkt anxiolytisch und stimmungsaufhellend über GABA-Rezeptoren",
+      "Östrogenabfall: Östrogen reguliert Serotonin, Dopamin und Noradrenalin direkt im Gehirn",
+      "Hypothyreose (auch subklinisch): Schilddrüsenhormonmangel verlangsamt den gesamten Stoffwechsel inklusive Neurotransmitterkaskaden",
+      "Chronischer Stress und HPA-Achsen-Dysregulation: erhöhtes Cortisol hemmt Neurogenese im Hippocampus",
+      "Schlafentzug durch Hitzewallungen und Nachtschweiß: kumulative Schlafschuld verursacht depressive Symptome",
+      "Vitamin-D-Mangel: direkter Einfluss auf Serotonin-Synthese und Stimmungsregulation",
+    ],
+    detailedExplanation:
+      "Östrogen ist ein mächtiger Neurosteroid-Regulator: Es erhöht die Verfügbarkeit von Serotonin, indem es die Monoaminoxidase (MAO) hemmt, und fördert die Expression von Serotoninrezeptoren. Wenn der Östrogenspiegel in der Perimenopause fällt, verändert sich das neurochemische Gleichgewicht direkt – viele Frauen erleben ihre erste depressive Episode ausgerechnet in der Perimenopause, auch ohne frühere Vulnerabilität. Studien zeigen, dass Frauen in der perimenopausalen Transition ein 2–3-fach erhöhtes Depressionsrisiko haben im Vergleich zu prämenopausalen Frauen.\n\nHypothyreose – auch eine subklinische Form mit TSH im oberen Normalbereich – verursacht klassisch depressive Symptome: Antriebslosigkeit, emotionale Stumpfheit, Freudlosigkeit und kognitive Verlangsamung. In Studien werden bis zu 50 % der Hypothyreose-Patientinnen initial mit einer depressiven Störung fehldiagnostiziert. Vor jeder Antidepressiva-Verschreibung sollte zwingend der Schilddrüsenstatus untersucht werden.",
+    diagnosticTests: [
+      { test: "TSH (+ fT3, fT4 bei Grenzwerten)", relevance: "Hypothyreose ist eine häufige, gut behandelbare Ursache von Depression – auch subklinisch (TSH 2,5–4,5) kann depressogen wirken" },
+      { test: "FSH + Östradiol + Progesteron", relevance: "Perimenopausale Hormonverschiebungen als neurochemische Depressionsursache erkennen" },
+      { test: "Vitamin D (25-OH-D3)", relevance: "Vitamin-D-Mangel ist in Deutschland sehr häufig und hat direkte Auswirkung auf Serotonin-Synthese und Stimmung" },
+      { test: "Cortisol (Tagesprofil, Speichel oder Blut)", relevance: "Chronisch erhöhtes Cortisol hemmt Neurogenese und verursacht depressive Symptome; auch relevant bei Burn-out" },
+      { test: "Blutbild + Ferritin + B12 + Folsäure", relevance: "Nährstoffmängel als Depressionsverstärker erkennen und behandeln" },
+    ],
+    conditionIntros: {
+      menopause:
+        "Depressionen in der Perimenopause werden häufig nicht erkannt – weil sie zeitlich mit Lebensveränderungen zusammenfallen, die als 'Erklärung' herhalten. Doch der neurochemische Mechanismus ist klar: Der Östrogenabfall verändert die Serotonin- und Dopamin-Verfügbarkeit direkt. Frauen mit vorherigen PMS-Depressionen oder postpartaler Depression haben ein besonders hohes Risiko. Hormontherapie (HRT) kann in der Perimenopause antidepressiv wirken – ein Aspekt, der in der Behandlung oft zu wenig berücksichtigt wird.",
+      hashimoto:
+        "Depression ist eines der häufigsten Begleitsymptome bei Hashimoto – und wird oft nicht mit der Schilddrüse in Verbindung gebracht. Hypothyreose verursacht depressive Symptome über Verlangsamung des gesamten Neurotransmitterstoffwechsels. Besonders wichtig: Auch bei 'normalem' TSH-Wert kann eine suboptimale Schilddrüsenfunktion depressogen wirken. Viele Patientinnen berichten eine deutliche Stimmungsaufhellung, wenn TSH auf den unteren Normbereich (0,5–1,5) eingestellt wird.",
+    },
+    whenToSeeDoctor:
+      "Bei Suizidgedanken oder Hoffnungslosigkeit sofort zum Arzt oder in psychiatrische Notaufnahme. Bei depressiven Symptomen, die länger als zwei Wochen anhalten und den Alltag beeinträchtigen: Hausärztin aufsuchen. Wichtig: Schilddrüsenwerte und Hormonstatus prüfen lassen, bevor Antidepressiva verschrieben werden – hormonell bedingte Depressionen sprechen oft schlecht auf klassische Antidepressiva an.",
+    naturalRemedies: [
+      "Regelmäßiger Ausdauersport (3–4× wöchentlich 30–45 Min.) – nachgewiesene antidepressive Wirkung, vergleichbar mit Antidepressiva bei leichter bis mittelschwerer Depression",
+      "Vitamin D optimieren (Ziel 40–60 ng/ml) – besonders in den Wintermonaten relevant für die Stimmung",
+      "Omega-3-Fettsäuren (2–3 g EPA täglich) – meta-analytische Evidenz für antidepressive Wirkung",
+      "Schlafhygiene: Hitzewallungen behandeln (lokal kühlen, Raumtemperatur senken), um Schlafentzug als Depressionsverstärker zu reduzieren",
+      "Achtsamkeitsbasierte Verfahren (MBSR) – gut belegt bei depressiver Symptomatik",
+    ],
+    relatedConditions: ["menopause", "hashimoto", "hormone"],
+    faqs: [
+      {
+        question: "Können Wechseljahre eine Depression verursachen?",
+        answer:
+          "Ja – perimenopausale Depression ist medizinisch anerkannt und durch den Östrogenabfall neurochemisch erklärbar. Frauen in der perimenopausalen Transition haben ein 2–3-fach erhöhtes Depressionsrisiko. Erste depressive Episoden treten häufig gerade in der Perimenopause auf, auch bei Frauen ohne Vorgeschichte. Hormontherapie (HRT) kann in dieser Phase antidepressiv wirken.",
+      },
+      {
+        question: "Kann Hashimoto Depressionen verursachen?",
+        answer:
+          "Ja – Hypothyreose ist eine gut belegte Ursache depressiver Symptome. Schilddrüsenhormonmangel verlangsamt den gesamten Neurotransmitterstoffwechsel. Auch subklinische Hypothyreose (TSH im oberen Normalbereich) kann depressogen wirken. Vor jeder Antidepressiva-Verschreibung sollte der Schilddrüsenstatus geprüft werden.",
+      },
+      {
+        question: "Was hilft bei hormonell bedingter Depression?",
+        answer:
+          "Ursachenbehandlung ist am effektivsten: Schilddrüsenwerte optimieren (Hashimoto), Hormontherapie bei perimenopausaler Depression besprechen, Vitamin D und Omega-3 ergänzen. Regelmäßiger Sport hat antidepressive Wirkung vergleichbar mit Antidepressiva bei leichter bis mittelschwerer Depression. Antidepressiva können sinnvoll sein, helfen aber nicht bei der Hormonursache.",
+      },
+      {
+        question: "Wie unterscheide ich Depression von Stimmungsschwankungen?",
+        answer:
+          "Stimmungsschwankungen kommen und gehen – oft zyklusabhängig oder situativ. Eine Depression ist anhaltend (mindestens 2 Wochen), betrifft den gesamten Alltag und umfasst Freudlosigkeit, Antriebslosigkeit und häufig Schlafstörungen. Bei Unsicherheit: Hausärztin aufsuchen. Bei Verdacht auf hormonelle Ursache: Hormonstatus und Schilddrüse prüfen lassen.",
+      },
+    ],
+  },
+
+  angstzustaende: {
+    slug: "angstzustaende",
+    name: "Angststörungen",
+    nameFull: "Angststörungen & Angstzustände durch hormonelle Dysbalancen",
+    description:
+      "Anhaltende Angstzustände und Angststörungen bei Frauen in der Perimenopause und mit Hormonstörungen sind häufig neurochemisch bedingt – Progesteron- und Östrogenabfall wirken direkt auf die Angstzentren im Gehirn.",
+    metaDescription:
+      "Angststörungen durch Hormone: Warum Perimenopause, Progesteronmangel und Schilddrüsenstörungen Angstzustände verursachen – Ursachen und was wirklich hilft.",
+    causes: [
+      "Progesteronabfall: Progesteron wirkt über GABA-A-Rezeptoren stark anxiolytisch – sein Fehlen erzeugt Angst",
+      "Östrogenabfall destabilisiert die Amygdala (das Angstzentrum) und erhöht die Cortisol-Reaktivität",
+      "Hyperthyreose (Schilddrüsenüberfunktion): direkte Aktivierung des sympathischen Nervensystems erzeugt Angst und Unruhe",
+      "Chronisch erhöhtes Cortisol (HPA-Achsen-Dysregulation): sensibilisiert die Angstschaltkreise im Gehirn",
+      "Hypoglykämie (besonders bei Insulinresistenz/PCOS): Adrenalinstoß bei Blutzuckerabfall erzeugt panikähnliche Symptome",
+      "Schlafentzug durch perimenopausale Hitzewallungen: erhöht Amygdala-Reaktivität auf Stressoren",
+    ],
+    detailedExplanation:
+      "Progesteron ist das wichtigste natürliche Anxiolytikum bei Frauen. Es wird im Gehirn zu Allopregnanolon umgewandelt, einem neurosteroidalen Wirkstoff, der direkt an GABA-A-Rezeptoren bindet – denselben Rezeptoren, an denen Benzodiazepine (Beruhigungsmittel) wirken. Wenn Progesteron in der Perimenopause fällt – oft Jahre vor den Hitzewallungen – verlieren Frauen diesen endogenen Beruhigungseffekt. Die Folge: innere Unruhe, diffuse Angst, Überreiztheit und ein Gefühl, 'auf der Hut' zu sein, das sich nicht erklären lässt.\n\nÖstrogen wirkt ebenfalls auf die Amygdala, das emotionale Angstzentrum des Gehirns. Östrogen reguliert die Sensitivität der Stressachse (HPA-Achse) und dämpft überschießende Cortisol-Reaktionen. Wenn Östrogen fällt, wird die Amygdala reaktiver und die Stressantwort stärker. Das erklärt, warum viele Frauen in der Perimenopause plötzlich von Dingen Angst bekommen, die sie früher nicht belastet haben – zum Beispiel Fahrstuhlfahren, Menschenmengen oder das Fliegen.",
+    diagnosticTests: [
+      { test: "Progesteron (Tag 19–22 des Zyklus)", relevance: "Progesteronmangel als häufigste Ursache von perimenopausaler Angst erkennen; erster Wert, der in der Perimenopause fällt" },
+      { test: "TSH, fT3, fT4", relevance: "Schilddrüsenüberfunktion (Hyperthyreose) ist eine direkte und gut behandelbare Angstursache – muss ausgeschlossen werden" },
+      { test: "Cortisol (Tagesprofil, Speichel)", relevance: "HPA-Achsen-Dysregulation und chronisch erhöhtes Cortisol als Angstverstärker erkennen" },
+      { test: "Blutzucker nüchtern + Insulin", relevance: "Insulinresistenz verursacht Hypoglykämie-Episoden mit panikähnlichen Angstzuständen" },
+      { test: "FSH + Östradiol", relevance: "Perimenopausalen Status bestätigen; Ösrogenabfall erhöht direkt die Amygdala-Reaktivität" },
+    ],
+    conditionIntros: {
+      menopause:
+        "Anhaltende Angst und Angstzustände in der Perimenopause überraschen viele Frauen – sie kennen Hitzewallungen und Schlafstörungen als Wechseljahressymptome, aber Angst? Dabei ist der Mechanismus klar: Progesteron – das natürliche Beruhigungshormon – fällt in der frühen Perimenopause zuerst. Gleichzeitig macht Östrogenmangel die Amygdala reaktiver. Das Ergebnis: Frauen, die früher gelassen waren, erleben plötzlich diffuse Angst, Überreiztheit und das Gefühl, nicht mehr 'sie selbst' zu sein.",
+      pcos:
+        "PCOS und Angstzustände sind direkt verbunden: Frauen mit PCOS haben ein 3–4-fach erhöhtes Risiko für Angststörungen. Mehrere Mechanismen wirken zusammen: erhöhte Androgene beeinflussen Stresssysteme, Insulinresistenz verursacht Blutzuckerschwankungen mit Angst-ähnlichen Symptomen, und der emotionale Stress durch chronische Erkrankung selbst erhöht die Angstschwelle.",
+    },
+    whenToSeeDoctor:
+      "Bei Panikattacken (plötzliche intensive Angst mit körperlichen Symptomen) oder wenn Angstzustände den Alltag einschränken (Vermeidungsverhalten, soziale Isolation). Vor einer psychiatrischen Diagnose: Schilddrüsenwerte und Hormonstatus prüfen lassen – Hyperthyreose und Progesteronmangel können Angststörungen nahezu identisch imitieren.",
+    naturalRemedies: [
+      "Mikronisiertes Progesteron (bioidentisch, verschreibungspflichtig): bei perimenopautalem Progesteronmangel hochwirksam – anxiolytische Wirkung über Allopregnanolon",
+      "Atemübungen: 4-7-8-Atemtechnik (4 s einatmen, 7 s halten, 8 s ausatmen) aktiviert Parasympathikus sofort",
+      "Regelmäßiger Ausdauersport: reduziert Cortisol, erhöht GABA und Serotonin",
+      "Magnesium (400 mg abends): unterstützt GABA-Funktion und reduziert nervöse Übererregtheit",
+      "Ashwagandha (300–600 mg KSM-66-Extrakt): gut belegte Adaptogen-Wirkung auf Cortisol und Angst",
+    ],
+    relatedConditions: ["menopause", "hashimoto", "hormone", "pcos"],
+    faqs: [
+      {
+        question: "Können Wechseljahre Angstzustände verursachen?",
+        answer:
+          "Ja – perimenopausale Angststörungen sind häufig und neurochemisch gut erklärbar. Progesteron wirkt über GABA-Rezeptoren anxiolytisch; sein Abfall in der Perimenopause macht Frauen anfälliger für Angst. Gleichzeitig macht Östrogenmangel die Amygdala reaktiver. Viele Frauen erleben ihre erste Angststörung in der Perimenopause.",
+      },
+      {
+        question: "Kann die Schilddrüse Angstzustände verursachen?",
+        answer:
+          "Ja – Schilddrüsenüberfunktion (Hyperthyreose) ist eine klassische Angstursache. Zuviel Schilddrüsenhormon aktiviert direkt das sympathische Nervensystem: Herzrasen, Zittern, Schlaflosigkeit und diffuse Angst sind Leitsymptome. Vor einer psychiatrischen Angststörungsdiagnose sollte immer TSH, fT3 und fT4 geprüft werden.",
+      },
+      {
+        question: "Was unterscheidet Angstzustände von Panikattacken?",
+        answer:
+          "Angstzustände sind anhaltend, diffus und oft ohne klar erkennbaren Auslöser – ein konstantes Hintergrundgefühl von Sorge, Überreizung oder innerem Zittern. Panikattacken sind akute, intensive Episoden (5–20 Minuten) mit körperlichen Symptomen wie Herzrasen, Atemnot und Taubheitsgefühlen. Beides kann hormonell bedingt sein, tritt aber unterschiedlich auf.",
+      },
+    ],
+  },
+
+  osteoporose: {
+    slug: "osteoporose",
+    name: "Osteoporose",
+    nameFull: "Osteoporose & Knochendichteverlust durch Hormonstörungen",
+    description:
+      "Osteoporose – der schleichende Verlust von Knochendichte – ist eine der wichtigsten Langzeitfolgen der Menopause und kann durch Schilddrüsenerkrankungen beschleunigt werden. Östrogen ist das wichtigste Knochenerhaltungshormon bei Frauen.",
+    metaDescription:
+      "Osteoporose durch Wechseljahre: Warum Östrogenmangel und Schilddrüsenstörungen den Knochen schwächen – Vorbeugung, Diagnose und wirksame Behandlung.",
+    causes: [
+      "Östrogenmangel nach der Menopause: Östrogen hemmt Osteoklasten (knochenabbauende Zellen) – ohne Östrogen überwiegt der Knochenabbau",
+      "Hyperthyreose oder Überdosierung von Schilddrüsenhormonen: erhöhter Knochenstoffwechsel und beschleunigter Knochen-Turnover",
+      "Vitamin-D-Mangel: beeinträchtigt die Kalziumabsorption aus dem Darm und die Mineralisierung der Knochen",
+      "Chronisch erhöhtes Cortisol (Stress oder Kortisontherapie): hemmt Osteoblasten und fördert Knochenabbau",
+      "Calcium-Mangel durch unzureichende Zufuhr oder Malabsorption (häufig bei Hashimoto-assoziierter Glutenunverträglichkeit)",
+      "Bewegungsmangel: mechanische Belastung stimuliert Knochenaufbau – Inaktivität beschleunigt Verlust",
+      "Rauchen und übermäßiger Alkohol: beide beschleunigen den Knochenverlust direkt",
+    ],
+    detailedExplanation:
+      "Östrogen ist das wichtigste Knochenerhaltungshormon bei Frauen. Es hemmt Osteoklasten (die knochenabbauenden Zellen) und fördert gleichzeitig die Aktivität der Osteoblasten (Knochenaufbau). Wenn der Östrogenspiegel nach der Menopause fällt, verschiebt sich diese Balance dramatisch: In den ersten 5–10 Jahren nach der Menopause verlieren Frauen durchschnittlich 2–3 % Knochendichte pro Jahr. Zum Vergleich: In den premenopausalen Jahren beträgt der Verlust nur 0,5–1 % pro Jahr. Dieser beschleunigte Verlust macht die frühe Postmenopause zur kritischsten Phase für die Knochengesundheit.\n\nBei Schilddrüsenerkrankungen gibt es einen direkten Zusammenhang zwischen Schilddrüsenhormonen und Knochen: Hyperthyreose und auch eine zu hohe Substitutionsdosis von Levothyroxin erhöhen den Knochenstoffwechsel-Turnover, was zu beschleunigtem Knochenverlust führt. Studien zeigen ein erhöhtes Frakturrisiko bei postmenopausalen Frauen mit supprimiertem TSH. Hashimoto-Patientinnen sollten ihren TSH-Wert regelmäßig prüfen lassen, um eine Übersubstitution zu vermeiden.",
+    diagnosticTests: [
+      { test: "DEXA-Knochendichtemessung (alle 2–3 Jahre ab Menopause)", relevance: "Goldstandard zur Osteoporose-Diagnose; T-Score unter -2,5 = Osteoporose; -1 bis -2,5 = Osteopenie" },
+      { test: "Vitamin D (25-OH-D3)", relevance: "Zielwert 40–60 ng/ml für Knochengesundheit; Mangel direkt mit Frakturrisiko verbunden" },
+      { test: "TSH (bei Schilddrüsenerkrankung)", relevance: "Überdosierung von Schilddrüsenhormonen beschleunigt Knochenverlust; TSH sollte nicht dauerhaft supprimiert sein" },
+      { test: "Kalzium, Phosphat + Parathormon (PTH)", relevance: "Hyperparathyreoidismus als seltene, aber wichtige Osteoporose-Ursache erkennen" },
+      { test: "Knochen-Turnover-Marker (β-CrossLaps, Osteocalcin)", relevance: "Aktivität des Knochenstoffwechsels messen – relevant für Therapieentscheidung und Verlaufskontrolle" },
+    ],
+    conditionIntros: {
+      menopause:
+        "Osteoporose ist die wichtigste Langzeitkomplikation der Menopause – und beginnt schon in der Perimenopause. In den ersten 5 Jahren nach der Menopause verlieren Frauen bis zu 20 % ihrer Gesamtknochendichte. Eine Frau über 50 hat ein Lebensrisiko von etwa 40 % für eine osteoporotische Fraktur – höher als das Brustkrebsrisiko. Frühe Hormontherapie (HRT) ist die wirksamste Prävention; aber auch Vitamin D, Calcium und Krafttraining senken das Risiko erheblich.",
+      schilddruese:
+        "Schilddrüsenerkrankungen und Osteoporose sind direkt verbunden: Hyperthyreose beschleunigt den Knochenstoffwechsel, und auch eine zu hohe Substitutionsdosis von Levothyroxin erhöht das Frakturrisiko. Für Patientinnen mit Hashimoto oder anderen Schilddrüsenproblemen ist regelmäßiges TSH-Monitoring wichtig – nicht nur für Symptomkontrolle, sondern auch zum Schutz der Knochen.",
+    },
+    whenToSeeDoctor:
+      "Ab der Menopause regelmäßige DEXA-Messung besprechen (Kassenleistung bei Risikofaktoren). Bei Rückenschmerzen und kleiner Körpergröße (mögliche Wirbelkörperfrakturen). Bei positivem Familienanamnese für Osteoporose oder Hüftfraktur. Alle Frauen mit Schilddrüsenerkrankungen: regelmäßige Kontrolle, ob TSH-Spiegel noch im sicheren Bereich liegt.",
+    naturalRemedies: [
+      "Vitamin D3 + K2 (täglich 2000–4000 IU D3 + 100 µg K2 MK-7) – K2 leitet Kalzium gezielt in die Knochen",
+      "Kalziumreiche Ernährung (Milchprodukte, grünes Blattgemüse, Mandeln) – 1000–1200 mg täglich aus der Nahrung anstreben",
+      "Kraft- und Widerstandstraining: mechanische Belastung stimuliert Knochenaufbau direkt (2–3× wöchentlich)",
+      "Rauchen aufgeben: Rauchen erhöht das Osteoporoserisiko um 30–40 %",
+      "Hormontherapie (HRT) in der frühen Menopause: wirksamste Prävention – 50 % Reduktion osteoporotischer Frakturen",
+    ],
+    relatedConditions: ["menopause", "schilddruese"],
+    faqs: [
+      {
+        question: "Wann sollte ich meine Knochendichte messen lassen?",
+        answer:
+          "Die DEXA-Messung wird Frauen ab der Menopause (ca. 50–55 Jahre) oder früher bei Risikofaktoren empfohlen. Risikofaktoren sind: frühe Menopause (<45 Jahre), Schilddrüsenüberfunktion, langjährige Kortisontherapie, Nikotinkonsum, Untergewicht oder positive Familienanamnese. In Deutschland ist die DEXA-Messung bei Risikofaktoren eine Kassenleistung.",
+      },
+      {
+        question: "Hilft Hormontherapie gegen Osteoporose?",
+        answer:
+          "Ja – Hormontherapie (HRT) ist die wirksamste Prävention und Behandlung der menopausalen Osteoporose. Sie reduziert das Frakturrisiko um ca. 50 %. In der frühen Perimenopause begonnen, ist sie besonders effektiv. Die aktuellen DGGG-Leitlinien empfehlen HRT bei gesunden Frauen unter 60 Jahren ausdrücklich auch zum Knochenschutz.",
+      },
+      {
+        question: "Kann Hashimoto Osteoporose verursachen?",
+        answer:
+          "Indirekt ja – wenn Hashimoto zu Hyperthyreose oder zu einer Überdosierung von Levothyroxin führt, wird der Knochenstoffwechsel-Turnover erhöht und Knochendichte geht verloren. Außerdem ist Hashimoto mit Vitamin-D-Mangel assoziiert, der Osteoporose fördert. Hashimoto-Patientinnen sollten TSH und Vitamin D regelmäßig kontrollieren lassen.",
+      },
+    ],
+  },
+
+  zyklusveraenderungen: {
+    slug: "zyklusveraenderungen",
+    name: "Zyklusveränderungen",
+    nameFull: "Zyklusveränderungen & unregelmäßige Periode durch Hormonstörungen",
+    description:
+      "Unregelmäßige Zyklen, ausbleibende Periode oder veränderte Blutungen sind häufige Frühzeichen der Perimenopause, des PCOS und anderer hormoneller Störungen. Der Zyklus ist der 'fünfte Vitalzeichen' der weiblichen Gesundheit.",
+    metaDescription:
+      "Zyklusveränderungen bei Frauen: Warum Periode unregelmäßig wird – Perimenopause, PCOS, Schilddrüse, Stress. Ursachen, Diagnose und was Ihren Zyklus normalisiert.",
+    causes: [
+      "Perimenopause: Östrogenfluktuationen und ausbleibende Ovulationen machen den Zyklus unvorhersehbar",
+      "PCOS: Insulinresistenz stört die Follikelreifung und führt zu anovulatorischen Zyklen",
+      "Hypothyreose: Schilddrüsenhormonmangel beeinflusst direkt den Hypothalamus-Hypophysen-Ovar-Regelkreis",
+      "Hyperprolaktinämie: erhöhter Prolaktinspiegel hemmt LH/FSH und blockiert den Eisprung",
+      "Stark erhöhtes Cortisol (chronischer Stress): hemmt GnRH-Pulsatilität im Hypothalamus",
+      "Niedriges Körpergewicht oder extremer Kaloriendefizit: unterdrückt hypothalamisch den Zyklus",
+      "Erhöhte Androgene (PCOS, Nebennierenstörungen): hemmen normale Follikelreifung",
+    ],
+    detailedExplanation:
+      "Der Menstruationszyklus ist ein präzises Spiegelbild des Hormonsystems: Er wird von einem Regelkreis zwischen Hypothalamus, Hypophyse und Eierstöcken gesteuert. Wenn irgendwo in diesem System eine Störung auftritt – sei es durch PCOS, Schilddrüsenprobleme, Stress oder den Beginn der Perimenopause – reagiert der Zyklus als erstes. In der frühen Perimenopause sind kurze Zyklen (<25 Tage) das erste Zeichen, gefolgt von längeren Abständen und schließlich Ausbleiben der Periode. Starke Blutungen (Hypermenorrhoe) in der Perimenopause entstehen durch anovulatorische Zyklen mit Östrogendominanz ohne Progesteron.\n\nBei PCOS ist die zugrundeliegende Störung komplex: erhöhtes Insulin stimuliert die Ovarien zur Androgenproduktion, was die normale Follikelreifung blockiert. Statt eines dominanten Follikels pro Zyklus entstehen viele kleine, unreife Follikel – die polyzystischen Ovarien. Ohne Eisprung gibt es kein Progesteron, keine geregelte Abstoßung der Gebärmutterschleimhaut. Der Zyklus wird unregelmäßig oder bleibt ganz aus (Oligomenorrhoe/Amenorrhoe). Langfristig führt dieser Zustand zu Endometriumhyperplasie (Risiko für Gebärmutterschleimhautveränderungen) – weshalb Zyklusregulierung bei PCOS medizinisch wichtig ist.",
+    diagnosticTests: [
+      { test: "FSH + LH + Östradiol (Tag 3–5 des Zyklus)", relevance: "Perimenopausalen Status und ovariellen Reserve bestimmen; hohes FSH + niedriges Östradiol zeigt perimenopausalen Übergang" },
+      { test: "TSH + fT3 + fT4", relevance: "Schilddrüsenerkrankungen als häufige Zyklusstörer ausschließen – sowohl Hypo- als auch Hyperthyreose beeinflussen den Zyklus" },
+      { test: "LH/FSH-Quotient + freies Testosteron + DHEA-S", relevance: "PCOS-Diagnose: LH/FSH-Verhältnis >2 und erhöhte Androgene als Diagnosekriterien" },
+      { test: "Prolaktin", relevance: "Hyperprolaktinämie (erhöhtes Prolaktin durch Stress, Medikamente oder Prolaktinom) hemmt Eisprung und verursacht Zyklusstörungen" },
+      { test: "Progesteron (Tag 19–22)", relevance: "Fehlenden Eisprung erkennen – niedriges Progesteron in der Lutealphase zeigt anovulatorischen Zyklus" },
+    ],
+    conditionIntros: {
+      menopause:
+        "Zyklusveränderungen sind das erste und verlässlichste Zeichen der beginnenden Perimenopause. Die meisten Frauen erleben zunächst kürzere Zyklen (24–26 Tage), dann zunehmend unregelmäßige Abstände. Starke oder ungewöhnlich lange Blutungen in der Perimenopause sind keine Seltenheit – sie entstehen durch anovulatorische Zyklen ohne Progesteron. Wichtig: Starke Blutungen nach jahrelangen regelmäßigen Zyklen immer gynäkologisch abklären lassen.",
+      pcos:
+        "Unregelmäßige oder ausbleibende Perioden sind das häufigste Symptom des PCOS – und oft das erste Zeichen, das Frauen zum Arzt führt. Bei PCOS fehlt der regelmäßige Eisprung, weil Insulinresistenz die Androgenproduktion erhöht und die Follikelreifung blockiert. Ohne Eisprung kein Progesteron, ohne Progesteron keine geregelte Periode. Längere Zyklen (>35 Tage) oder seltene Blutungen (<8/Jahr) sind charakteristisch für PCOS.",
+      hormone:
+        "Der Zyklus ist der direkteste Spiegel des weiblichen Hormonhaushalts. Zyklusveränderungen zeigen an, dass irgendwo im Hypothalamus-Hypophysen-Ovar-Regelkreis eine Störung vorliegt. Stress, Schilddrüsenprobleme, Progesteron- oder Östrogenmangel – all das zeigt sich zuerst im Zyklus. Ein konsequentes Zyklus-Tracking (App, Temperaturmethode) hilft, Muster zu erkennen und die Ursache einzugrenzen.",
+    },
+    whenToSeeDoctor:
+      "Bei plötzlichem Ausbleiben der Periode (über 3 Monate, Schwangerschaft ausgeschlossen): Gynäkologin aufsuchen. Bei sehr starken Blutungen (Wechsel der Binde/Tampon jede Stunde): sofort abklären. Bei unregelmäßigen Zyklen mit anderen Hormonsymptomen: Hormonstatus und Schilddrüse checken. Jede Blutung nach bestätigter Menopause (12 Monate ohne Periode) muss gynäkologisch abgeklärt werden.",
+    naturalRemedies: [
+      "Zyklus-Tracking mit App (Clue, Natural Cycles) oder Temperaturmethode: Muster erkennen und Grundlage für Arztgespräch schaffen",
+      "Insulinresistenz reduzieren (bei PCOS): kohlenhydratarme Ernährung, regelmäßiger Sport, Inositol (4 g täglich) – gut belegt für Zyklusregulierung",
+      "Stressreduktion: chronischer Stress hemmt GnRH und blockiert Eisprung – Zyklusregulierung oft durch Stressmanagement möglich",
+      "Schilddrüsenwerte optimieren (Hashimoto): normalisiertes TSH normalisiert in vielen Fällen auch den Zyklus",
+      "Selen (200 µg täglich bei Hashimoto): verbessert Schilddrüsenfunktion und kann Zyklusstörungen bei Hashimoto bessern",
+    ],
+    relatedConditions: ["menopause", "hormone", "pcos"],
+    faqs: [
+      {
+        question: "Was sind die ersten Anzeichen der Perimenopause im Zyklus?",
+        answer:
+          "Die ersten Zeichen im Zyklus sind oft kürzere Abstände (Zyklus unter 25 Tage), stärkere PMS-Symptome und gelegentliches Auslassen der Periode. Später werden die Zyklen länger und unregelmäßiger. Diese Veränderungen beginnen im Durchschnitt mit 44–47 Jahren, können aber auch früher auftreten.",
+      },
+      {
+        question: "Warum kann PCOS den Zyklus unregelmäßig machen?",
+        answer:
+          "Bei PCOS blockiert erhöhtes Insulin die normale Follikelreifung in den Eierstöcken. Ohne reifen Follikel kein Eisprung, ohne Eisprung kein Progesteron. Ohne Progesteron gibt es keine geregelte Abstossung der Gebärmutterschleimhaut – der Zyklus wird unregelmäßig oder bleibt ganz aus. Insulinresistenz-Behandlung (Ernährung, Sport, Inositol, Metformin) reguliert den Zyklus bei den meisten PCOS-Patientinnen.",
+      },
+      {
+        question: "Kann die Schilddrüse Zyklusstörungen verursachen?",
+        answer:
+          "Ja – sowohl Hypo- als auch Hyperthyreose können den Menstruationszyklus stören. Hypothyreose verursacht häufig starke, lange Blutungen (Hypermenorrhoe) oder ausbleibende Periode. Hyperthyreose führt eher zu kurzen, schwachen Blutungen. Nach Schilddrüsenbehandlung normalisiert sich der Zyklus in vielen Fällen.",
+      },
+    ],
+  },
+
+  muskelschwaerche: {
+    slug: "muskelschwaerche",
+    name: "Muskelschwäche",
+    nameFull: "Muskelschwäche & Myopathie durch Schilddrüsen- und Hormonstörungen",
+    description:
+      "Muskelschwäche, Muskelsteifigkeit und rasche Erschöpfung beim Sport sind häufige, aber wenig bekannte Symptome bei Schilddrüsenunterfunktion, Hashimoto und hormonellen Dysbalancen.",
+    metaDescription:
+      "Muskelschwäche durch Hormone: Warum Schilddrüsenunterfunktion, Hashimoto und Östrogenmangel die Muskeln schwächen – Ursachen, Diagnose und was hilft.",
+    causes: [
+      "Hypothyreose: Schilddrüsenhormonmangel verlangsamt den Energiestoffwechsel in Muskelzellen direkt",
+      "Hypothyreose verursacht Glykosaminoglykan-Ablagerungen in Muskelfaszien (Myxödem-Myopathie)",
+      "Östrogenmangel in der Menopause: Östrogen wirkt direkt auf Muskelproteinsynthese und Muskelmasse",
+      "Hashimoto: systemische Autoimmun-Entzündung kann Muskeln direkt betreffen (inflammatorische Myopathie)",
+      "Cortisol-Überschuss (Stress): kataboler Effekt auf Muskelprotein – Muskelabbau bei chronischem Stress",
+      "Vitamin-D-Mangel: Vitamin-D-Rezeptoren in Muskelzellen regulieren Muskelkontraktilität und -kraft",
+      "Magnesium- und Kalziummangel: beeinflussen Muskelkontraktion und -relaxation direkt",
+    ],
+    detailedExplanation:
+      "Schilddrüsenhormone (T3, T4) sind essenziell für den Energiestoffwechsel der Muskelzellen. T3 aktiviert die Mitochondrien und die ATP-Produktion in Muskeln – bei Hypothyreose funktioniert dieser Prozess zu langsam. Die Folge: Muskeln werden rasch müde, regenerieren langsam und fühlen sich schwer und steif an. Charakteristisch für Hypothyreose-Myopathie: Die Muskelschwäche ist proximal (Oberschenkel, Schultern) betont, es gibt oft Muskelkrämpfe und erhöhte CK-Werte (Kreatinkinase) im Blut. Bei Hashimoto kann zusätzlich eine direkte autoimmune Muskelentzündung (Polymyositis) auftreten.\n\nÖstrogen wirkt direkt auf die Muskelproteinsynthese und verzögert den altersbedingten Muskelabbau (Sarkopenie). Mit der Menopause verlieren Frauen durchschnittlich 1–2 % Muskelmasse pro Jahr – mehr als Männer im gleichen Alter. Dieser Verlust betrifft besonders die schnellen Muskelfasern (Typ II), was erklärt, warum Kraft und Schnelligkeit in der Menopause deutlicher abnehmen als Ausdauer. Hormontherapie und Krafttraining sind die wirksamsten Gegenmaßnahmen.",
+    diagnosticTests: [
+      { test: "TSH, fT3, fT4", relevance: "Hypothyreose als häufigste behandelbare Ursache von Muskelschwäche und Muskelschmerzen erkennen" },
+      { test: "CK (Kreatinkinase)", relevance: "Erhöhte CK bei Hypothyreose-Myopathie – bestätigt muskuläre Beteiligung; auch relevant bei Statintherapie" },
+      { test: "Vitamin D (25-OH-D3)", relevance: "Vitamin-D-Mangel verursacht Muskelschwäche und -schmerzen direkt über Vitamin-D-Rezeptoren in Muskelfasern" },
+      { test: "Magnesium + Kalzium", relevance: "Elektrolytmangel als häufige und einfach behandelbare Ursache von Muskelkrämpfen und -schwäche" },
+      { test: "Anti-TPO + Anti-TG", relevance: "Hashimoto und mögliche autoimmune Muskelkomponente (Polymyositis-Overlap) erkennen" },
+    ],
+    conditionIntros: {
+      hashimoto:
+        "Muskelschwäche ist eines der klassischen, aber oft spät erkannten Symptome bei Hashimoto. Der Mechanismus ist zweifach: Erstens verlangsamt Hypothyreose den muskulären Energiestoffwechsel direkt. Zweitens können Glykosaminoglykan-Ablagerungen in Muskelfaszien die Muskelkraft und -beweglichkeit einschränken. Viele Hashimoto-Patientinnen berichten, dass Sport sich 'nach doppelter Arbeit anfühlt' – genau das ist der hypothyreote Muskelbefund. Normalisierung der Schilddrüsenwerte verbessert die Muskelfunktion meist deutlich.",
+      schilddruese:
+        "Schilddrüsenunterfunktion und Muskelschwäche sind direkt verbunden: T3 ist der entscheidende Regulator des muskulären Energiestoffwechsels. Bei Hypothyreose werden Muskeln rasch müde, regenerieren langsam und verkrampfen leicht. Charakteristisch ist proximale Muskelschwäche (Oberschenkel, Schultern), erhöhte CK-Werte und gelegentlich ein angeschwollenes, teigiges Gefühl in Muskeln und Gelenken.",
+    },
+    whenToSeeDoctor:
+      "Bei Muskelschwäche mit stark erhöhter CK: Abklärung einer Myopathie. Bei Muskelschwäche und bekannter Hashimoto: Schilddrüsenwerte prüfen, ob TSH optimal (0,5–2,0) eingestellt ist. Bei Muskelschwäche und Statintherapie: Statininduzierte Myopathie ausschließen (CK-Kontrolle, ggf. Statinwechsel). Bei Muskelschwäche mit Schluckbeschwerden oder Atembeteiligung: sofort neurologisch abklären.",
+    naturalRemedies: [
+      "Schilddrüsenwerte optimieren (TSH <2,0): wichtigste Maßnahme bei Hypothyreose-assoziierter Muskelschwäche",
+      "Krafttraining (2–3× wöchentlich): stimuliert Muskelproteinsynthese und bremst menopausalen Muskelschwund",
+      "Vitamin D3 (2000–4000 IU täglich): Vitamin-D-Rezeptoren in Muskeln regulieren Kraft und Kontraktilität",
+      "Magnesium (400 mg täglich): essenziell für normale Muskelkontraktion und Regeneration",
+      "Ausreichend Protein (1,5–2 g/kg Körpergewicht täglich): Grundlage für Muskelerhalt besonders in der Menopause",
+    ],
+    relatedConditions: ["hashimoto", "schilddruese", "hormone"],
+    faqs: [
+      {
+        question: "Kann Schilddrüsenunterfunktion Muskelschwäche verursachen?",
+        answer:
+          "Ja – Hypothyreose-Myopathie ist ein anerkanntes Krankheitsbild. Schilddrüsenhormonmangel verlangsamt den Energiestoffwechsel in Muskelzellen. Typisch sind proximale Schwäche (Oberschenkel, Schultern), rasche Ermüdbarkeit, Muskelkrämpfe und erhöhte CK-Werte. Nach Normalisierung der Schilddrüsenwerte bessert sich die Muskelkraft meist deutlich – oft innerhalb von Wochen.",
+      },
+      {
+        question: "Warum nehmen Muskeln in den Wechseljahren ab?",
+        answer:
+          "Östrogen wirkt direkt auf Muskelproteinsynthese und bremst den altersbedingten Muskelabbau. Nach der Menopause verlieren Frauen 1–2 % Muskelmasse pro Jahr – besonders Typ-II-Muskelfasern (Kraft, Schnelligkeit). Hormontherapie kann diesen Verlust bremsen. Krafttraining ist die wirksamste Maßnahme: 2–3× wöchentlich progressives Widerstandstraining erhält Muskelmasse und Knochendichte gleichzeitig.",
+      },
+      {
+        question: "Was sind typische Zeichen einer Hashimoto-Myopathie?",
+        answer:
+          "Typische Zeichen: Rasche Ermüdbarkeit auch bei leichter körperlicher Aktivität, Steifigkeit besonders morgens, Muskelkrämpfe, Gefühl schwerer Beine, erhöhte CK-Werte im Blutbild. Diese Symptome bessern sich in vielen Fällen, wenn die Schilddrüsensubstitution auf optimale Werte (TSH 0,5–2,0, fT3 im oberen Drittel) eingestellt wird.",
+      },
+    ],
+  },
+
+  bauchbeschwerden: {
+    slug: "bauchbeschwerden",
+    name: "Bauchbeschwerden",
+    nameFull: "Bauchbeschwerden & Darmprobleme durch Hormonstörungen",
+    description:
+      "Blähungen, Verstopfung, Durchfall und Bauchschmerzen sind häufige Begleitsymptome bei Hashimoto, PCOS und hormonellen Dysbalancen – Schilddrüsenhormone und Östrogen wirken direkt auf die Darmfunktion.",
+    metaDescription:
+      "Bauchbeschwerden durch Hormone: Warum Hashimoto, PCOS und Wechseljahre den Darm belasten – Ursachen, Diagnose und welche Ernährung wirklich hilft.",
+    causes: [
+      "Hypothyreose (Hashimoto): verlangsamt die Darmperistaltik direkt und verursacht Verstopfung, Blähungen und langsame Verdauung",
+      "Östrogenmangel in der Menopause: beeinflusst Darmmotilität, Zusammensetzung des Darmmikrobioms und Schmerzwahrnehmung",
+      "PCOS und Insulinresistenz: fördert intestinale Dysbiose und erhöhte Darmdurchlässigkeit (Leaky Gut)",
+      "Autoimmune Begleiterkrankungen bei Hashimoto: Zöliakie tritt häufiger bei Hashimoto auf (3–5-fach erhöhtes Risiko)",
+      "Chronischer Stress: Cortisol verändert die Darmbarriere-Integrität und das Darmmikrobiom",
+      "SIBO (Dünndarmfehlbesiedelung): häufiger bei Hypothyreose durch verlangsamte intestinale Transitzeit",
+      "Progesteronabfall in der Perimenopause: Progesteron relaxiert glatte Muskulatur – sein Fehlen kann zu Krämpfen führen",
+    ],
+    detailedExplanation:
+      "Der Darm ist hormonell äußerst sensitiv: Schilddrüsenhormone regulieren die Geschwindigkeit der Darmperistaltik direkt. Bei Hypothyreose verlangsamt sich die gesamte Magen-Darm-Passage – Verstopfung, Blähungen und Völlegefühl sind klassische Hypothyreose-Symptome, die von vielen nicht mit der Schilddrüse in Verbindung gebracht werden. Hashimoto und Hypothyreose erhöhen auch das Risiko für SIBO (Dünndarmfehlbesiedelung), weil die verlangsamte Transitzeit Bakterien Zeit gibt, sich im Dünndarm anzusiedeln.\n\nBei PCOS wird der Darm über Insulinresistenz beeinflusst: Erhöhtes Insulin und chronische Low-Grade-Entzündung verändern das Darmmikrobiom und erhöhen die Durchlässigkeit der Darmschleimhaut (intestinale Permeabilität). Studien zeigen eine spezifische Darmmikrobiom-Dysbiose bei PCOS-Patientinnen – weniger schützende Lactobacillus-Stämme, mehr proinflammatorische Bakterien. Ernährungsinterventionen, die Insulinresistenz adressieren, verbessern daher auch die Darmgesundheit.",
+    diagnosticTests: [
+      { test: "TSH, fT3, fT4 + Anti-TPO", relevance: "Hypothyreose als direkte Ursache der verlangsamten Darmmotilität erkennen; auch subklinische Hypothyreose kann Darmprobleme verursachen" },
+      { test: "Zöliakie-Antikörper (Anti-tTG IgA, Gesamt-IgA)", relevance: "Zöliakie tritt 3–5-fach häufiger bei Hashimoto auf und verursacht Bauchbeschwerden, Blähungen und Malabsorption" },
+      { test: "SIBO-Atemtest (Glukose oder Laktose)", relevance: "Dünndarmfehlbesiedelung bei Hypothyreose häufiger – verursacht Blähungen, Bauchschmerzen und veränderten Stuhlgang" },
+      { test: "Nüchterninsulin + HbA1c (bei PCOS)", relevance: "Insulinresistenz als Treiber von Darmdysbiose und -inflammation erkennen" },
+      { test: "Stuhlmikrobiom-Analyse", relevance: "Fakultativ, aber aufschlussreich bei persistierenden Darmbeschwerden und PCOS – zeigt Dysbiose-Muster" },
+    ],
+    conditionIntros: {
+      hashimoto:
+        "Bauchbeschwerden und Hashimoto gehen häufiger zusammen als allgemein bekannt. Hypothyreose verlangsamt die Darmperistaltik direkt – Verstopfung, Blähungen und das Gefühl der 'trägen Verdauung' sind klassische, aber wenig bekannte Hashimoto-Symptome. Dazu kommt das 3–5-fach erhöhte Risiko für Zöliakie bei Hashimoto. Und chronische Darmentzündung ('Leaky Gut') wird als möglicher Auslöser für Autoimmunerkrankungen diskutiert – eine bidirektionale Beziehung.",
+      pcos:
+        "PCOS und Darmgesundheit sind eng verbunden: Insulinresistenz und chronische Low-Grade-Entzündung verändern das Darmmikrobiom nachweislich. Studien zeigen bei PCOS-Frauen konsistent eine Darmdysbiose mit weniger schützenden Bakterienstämmen. Blähungen, Bauchschmerzen und veränderte Stuhlgänge sind bei PCOS häufiger – und besserbar durch Ernährungsinterventionen, die auch die Insulinresistenz adressieren.",
+    },
+    whenToSeeDoctor:
+      "Bei Blut im Stuhl oder schwarzem Stuhl sofort abklären. Bei starkem unbeabsichtigten Gewichtsverlust mit Darmbeschwerden. Bei Bauchschmerzen plus Hashimoto: Zöliakie ausschließen lassen. Bei chronischen Bauchbeschwerden, die nicht auf Ernährungsumstellung ansprechen: Gastroenterologin aufsuchen und TSH prüfen.",
+    naturalRemedies: [
+      "Glutenfreie Ernährung bei Hashimoto testen (4–8 Wochen): viele berichten Verbesserung von Darmbeschwerden und Hashimoto-Symptomen auch ohne Zöliakie-Diagnose",
+      "Ausreichend Flüssigkeit + Ballaststoffe gegen Hypothyreose-Verstopfung: 1,5–2 l Wasser + 30 g Ballaststoffe täglich",
+      "Probiotika (Lactobacillus rhamnosus, Bifidobacterium longum): gut belegt für Darmmikrobiom-Verbesserung, besonders bei PCOS",
+      "Inositol (Myo-Inositol 4 g täglich) bei PCOS: verbessert Insulinsensitivität und indirekt Darmgesundheit",
+      "Stressreduktion: Cortisol schädigt die Darmbarriere direkt – Yoga, Meditation und ausreichend Schlaf schützen den Darm",
+    ],
+    relatedConditions: ["hashimoto", "pcos", "hormone"],
+    faqs: [
+      {
+        question: "Kann Hashimoto Bauchprobleme verursachen?",
+        answer:
+          "Ja – Hypothyreose verlangsamt die Darmperistaltik direkt und verursacht Verstopfung, Blähungen und Völlegefühl. Dazu tritt Zöliakie bei Hashimoto 3–5-mal häufiger auf als in der Allgemeinbevölkerung. Und eine Darmdysbiose ('Leaky Gut') wird als möglicher Trigger für Autoimmunerkrankungen wie Hashimoto diskutiert. Bei Hashimoto mit Darmbeschwerden: TSH optimieren und Zöliakie ausschließen lassen.",
+      },
+      {
+        question: "Warum haben Frauen mit PCOS oft Bauchbeschwerden?",
+        answer:
+          "PCOS und Insulinresistenz verändern das Darmmikrobiom: Studien zeigen weniger schützende Lactobacillus-Stämme und eine erhöhte Darmdurchlässigkeit bei PCOS-Patientinnen. Dazu können Blutzuckerschwankungen durch Insulinresistenz direkte Magen-Darm-Symptome verursachen. Ernährungsinterventionen (kohlenhydratreduziert, Inositol, Probiotika) bessern sowohl die Insulinresistenz als auch die Darmbeschwerden.",
+      },
+      {
+        question: "Wie verändert die Menopause den Darm?",
+        answer:
+          "Östrogen beeinflusst das Darmmikrobiom und die Darmbarriere-Integrität. Nach der Menopause verändert sich das Mikrobiom: die Diversität nimmt ab, proinflammatorische Stämme nehmen zu. Das erhöht das Risiko für Blähungen, Reizdarmsyndrom und Darmdysbiose. Probiotika und eine ballaststoffreiche, entzündungshemmende Ernährung können diesen Effekt abschwächen.",
+      },
+    ],
+  },
+
+  tinnitus: {
+    slug: "tinnitus",
+    name: "Tinnitus",
+    nameFull: "Tinnitus & Ohrgeräusche durch Hormonstörungen",
+    description:
+      "Tinnitus – Ohrgeräusche wie Pfeifen, Rauschen oder Klingeln – ist ein häufig übersehenes Symptom der Perimenopause und von Schilddrüsenerkrankungen. Östrogen und Schilddrüsenhormone wirken direkt auf das Innenohr.",
+    metaDescription:
+      "Tinnitus durch Hormone: Warum Wechseljahre, Schilddrüsenerkrankungen und Hormonschwankungen Ohrgeräusche verursachen – Ursachen und was hilft.",
+    causes: [
+      "Östrogenmangel in der Perimenopause: Östrogen wirkt neuroprotektiv auf die Haarzellen des Innenohrs",
+      "Östrogenschwankungen destabilisieren die Endolymph-Produktion im Innenohr (ähnlich wie bei Morbus Menière)",
+      "Hypothyreose: Schilddrüsenhormonmangel verringert die Durchblutung des Innenohrs und schädigt Cochleazellen",
+      "Hyperthyreose: erhöhter Blutfluss und Herzfrequenz können pulsatilen Tinnitus verursachen",
+      "Hashimoto: autoimmune Komponente kann Innenohrstrukturen direkt angreifen (autoimmune Innenohrerkrankung)",
+      "Blutdruckschwankungen in der Perimenopause: vaskuläre Veränderungen beeinflussen Innenohr-Durchblutung",
+      "Chronischer Stress und erhöhtes Cortisol: sensibilisiert auditorische Nervenbahnen",
+    ],
+    detailedExplanation:
+      "Das Innenohr ist hochsensibel gegenüber hormonellen Veränderungen. Östrogen-Rezeptoren finden sich in Cochleazellen, Spiralganglien und der Stria vascularis (Bestandteil des Innenohrs). Östrogen hat neuroprotektive Wirkung auf die Haarzellen der Cochlea und reguliert die Zusammensetzung der Endolymphe (Innenohrflüssigkeit). Wenn der Östrogenspiegel in der Perimenopause fällt oder stark schwankt, kann das Innenohr aus dem Gleichgewicht geraten – ähnlich wie es bei Morbus Menière der Fall ist. Studien zeigen, dass Frauen in der Perimenopause häufiger über neu aufgetretene Ohrgeräusche und Hörschwankungen berichten.\n\nDie Verbindung zwischen Schilddrüse und Tinnitus ist gut dokumentiert: Hypothyreose reduziert die Durchblutung des Innenohrs und verlangsamt den Energiestoffwechsel in Cochleazellen. Beides beeinträchtigt die Haarzellen-Funktion. Eine Studie in der Zeitschrift JAMA Otolaryngology zeigte, dass Hypothyreose-Patientinnen ein signifikant erhöhtes Risiko für Tinnitus und sensorineurale Schwerhörigkeit haben. Nach optimaler Schilddrüsenbehandlung verbessert sich der Tinnitus in einem erheblichen Anteil der Fälle.",
+    diagnosticTests: [
+      { test: "TSH, fT3, fT4", relevance: "Hypothyreose als häufige und gut behandelbare Tinnitus-Ursache erkennen; Normalisierung der Schilddrüsenwerte kann Tinnitus verbessern" },
+      { test: "Blutdruckmessung (auch 24h-Messung)", relevance: "Hypertonie verursacht pulsatilen Tinnitus; Blutdruckschwankungen in der Perimenopause als Tinnitus-Trigger identifizieren" },
+      { test: "FSH + Östradiol", relevance: "Perimenopausalen Östrogenmangel als Innenohr-Stressor bestätigen" },
+      { test: "Audiometrie (HNO-Facharzt)", relevance: "Hörverlust und Tinnitus-Frequenz bestimmen – Grundlage für Therapieentscheidung und Morbus-Menière-Abgrenzung" },
+      { test: "Anti-TPO + Anti-TG", relevance: "Hashimoto: erhöhtes Risiko für autoimmune Innenohrerkrankung als Tinnitus-Ursache" },
+    ],
+    conditionIntros: {
+      menopause:
+        "Tinnitus in den Wechseljahren – ein Symptom, das viele überrascht. Östrogen schützt die Haarzellen des Innenohrs und reguliert die Innenohrflüssigkeit. Wenn der Östrogenspiegel fällt oder stark schwankt, können Ohrgeräusche erstmals auftreten oder sich verschlimmern. Besonders neu aufgetretener Tinnitus in der Perimenopause (meist 45–52 Jahre) sollte hormonell abgeklärt werden. Hormontherapie (HRT) hat in Fallberichten und kleineren Studien Tinnitus verbessert.",
+      schilddruese:
+        "Schilddrüsenerkrankungen sind eine oft übersehene Ursache von Tinnitus. Hypothyreose reduziert die Innenohr-Durchblutung und den cochleären Energiestoffwechsel. Hashimoto mit autoimmuner Komponente kann das Innenohr direkt angreifen. Nach optimaler Schilddrüsenbehandlung verbessert sich Tinnitus in vielen Fällen – ein Aspekt, der in der HNO-Behandlung häufig vernachlässigt wird.",
+    },
+    whenToSeeDoctor:
+      "Bei plötzlich auftretendem Tinnitus mit Hörverlust sofort zur HNO (Tinnitus-Notfall, evtl. Hörsturz). Bei einseitigem Tinnitus mit Schwindel und Hörfluktuationen: Morbus Menière ausschließen. Bei neuem Tinnitus in der Perimenopause: HNO + Hormonstatus + Schilddrüse parallel abklären. Bei Tinnitus und bekannter Hashimoto: prüfen, ob Schilddrüsenwerte optimal eingestellt sind.",
+    naturalRemedies: [
+      "Schilddrüsenwerte optimieren: häufig verbessert sich Tinnitus bei Hashimoto nach optimaler Schilddrüseneinstellung deutlich",
+      "Lärm und Stille abwechseln: weder dauerhafter Lärm noch absolute Stille sind günstig – gleichmäßiger Hintergrundklang (Naturgeräusche, weißes Rauschen) überdeckt Tinnitus",
+      "Stressreduktion: Cortisol sensibilisiert Hörbahnen – Entspannungsverfahren (Yoga, Atemübungen) reduzieren Tinnitus-Wahrnehmung",
+      "Ginkgo biloba (240 mg täglich, standardisiert auf 24 % Flavonoide): mäßige Evidenz für Verbesserung der Innenohr-Durchblutung",
+      "Magnesium (400 mg täglich): schützt Haarzellen vor lärmbedingter Schädigung; möglicherweise auch bei hormonellem Tinnitus hilfreich",
+    ],
+    relatedConditions: ["menopause", "schilddruese"],
+    faqs: [
+      {
+        question: "Können Wechseljahre Tinnitus verursachen?",
+        answer:
+          "Ja – perimenopausaler Tinnitus ist dokumentiert, aber wenig bekannt. Östrogen schützt die Haarzellen des Innenohrs. Wenn es fällt oder stark schwankt, kann das Innenohr aus dem Gleichgewicht geraten. Neu aufgetretener Tinnitus in der Perimenopause sollte immer hormonell abgeklärt werden – HNO, Hormonstatus und Schilddrüse parallel prüfen.",
+      },
+      {
+        question: "Kann die Schilddrüse Tinnitus verursachen?",
+        answer:
+          "Ja – sowohl Hypothyreose als auch Hyperthyreose können Tinnitus verursachen. Hypothyreose reduziert die Innenohr-Durchblutung und den cochleären Energiestoffwechsel. Hyperthyreose erhöht Herzrate und Blutfluss, was pulsatilen Tinnitus verursachen kann. Bei Tinnitus immer TSH messen – eine optimale Schilddrüsenbehandlung verbessert Tinnitus in vielen Fällen.",
+      },
+      {
+        question: "Was hilft bei hormonell bedingtem Tinnitus?",
+        answer:
+          "Wichtigste Maßnahmen: Schilddrüsenwerte optimieren (TSH 0,5–2,0, fT3 im oberen Drittel), hormonellen Status prüfen lassen (Östrogen, Progesteron), Stress reduzieren. Kognitive Verhaltenstherapie (KVT) für Tinnitus hat die stärkste Evidenz für Tinnitus-Distress-Reduktion, unabhängig von der Ursache.",
+      },
+    ],
+  },
+
   blasenschwaeche: {
     slug: "blasenschwaeche",
     name: "Blasenschwäche & häufiger Harndrang",
