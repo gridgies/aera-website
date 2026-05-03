@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { LeadMagnetCTA } from "@/components/ui/LeadMagnetCTA";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/fragen/tsh-wert-tabelle`;
@@ -165,6 +166,8 @@ export default function TshWertTabellePage() {
               <strong>{"< 2,5 mU/L im 1. Trimester"}</strong>). TSH steigt physiologisch mit dem Alter leicht an.
             </p>
           </div>
+
+          <LeadMagnetCTA />
 
           {/* Age table */}
           <section className="mb-16">
