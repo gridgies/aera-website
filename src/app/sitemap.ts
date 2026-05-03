@@ -10,14 +10,14 @@ const BASE_URL = "https://www.aerahealth.de";
 // Static dates prevent Google from seeing every page as "modified today" on every crawl,
 // which wastes crawl budget and dilutes freshness signals. Update these when content changes.
 const DATES = {
-  homepage:    new Date("2025-04-01"),
-  pillar:      new Date("2025-03-15"),
-  guide:       new Date("2025-03-01"),
-  symptom:     new Date("2025-02-15"),
-  fragen:      new Date("2025-03-01"),
-  comparison:  new Date("2025-02-01"),
-  agePage:     new Date("2025-02-01"),
-  trust:       new Date("2025-01-15"),
+  homepage:    new Date("2026-04-30"),
+  pillar:      new Date("2026-04-25"),
+  guide:       new Date("2026-04-20"),
+  symptom:     new Date("2026-04-15"),
+  fragen:      new Date("2026-04-20"),
+  comparison:  new Date("2026-04-10"),
+  agePage:     new Date("2026-04-10"),
+  trust:       new Date("2026-03-15"),
   artikel:     new Date("2026-04-24"),
 };
 
