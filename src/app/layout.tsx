@@ -53,7 +53,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.aerahealth.de"),
   alternates: {
     canonical: "/",
-    languages: { "de-DE": "/", "x-default": "/" },
   },
   openGraph: {
     title: "Aera Health | Frauengesundheit: Hormone, Wechseljahre & Hashimoto",

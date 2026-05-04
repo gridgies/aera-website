@@ -7,9 +7,13 @@ export function organizationSchema() {
     "@id": `${BASE_URL}/#organization`,
     name: "Aera Health",
     url: BASE_URL,
+    foundingDate: "2024",
     logo: {
       "@type": "ImageObject",
-      url: `${BASE_URL}/logo.png`,
+      url: `${BASE_URL}/apple-touch-icon.png`,
+      contentUrl: `${BASE_URL}/apple-touch-icon.png`,
+      width: 180,
+      height: 180,
     },
     contactPoint: {
       "@type": "ContactPoint",
@@ -29,7 +33,8 @@ export function organizationSchema() {
     knowsLanguage: "de",
     description:
       "Personalisierte Unterstützung für Frauengesundheit: Hormone, Wechseljahre, Hashimoto und hormonelle Balance.",
-    sameAs: [],
+    // sameAs: populate once social profiles are created
+    // e.g. ["https://www.linkedin.com/company/aera-health", "https://www.instagram.com/aerahealth"]
   };
 }
 
@@ -46,14 +51,6 @@ export function websiteSchema() {
       "@id": `${BASE_URL}/#organization`,
     },
     inLanguage: "de-DE",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${BASE_URL}/suche?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -63,12 +60,14 @@ export function medicalWebPageSchema({
   url,
   datePublished,
   dateModified,
+  condition,
 }: {
   name: string;
   description: string;
   url: string;
   datePublished?: string;
   dateModified?: string;
+  condition?: { name: string; icdCode?: string };
 }) {
   return {
     "@context": "https://schema.org",
@@ -78,10 +77,15 @@ export function medicalWebPageSchema({
     url,
     inLanguage: "de-DE",
     isPartOf: { "@id": `${BASE_URL}/#website` },
-    about: {
-      "@type": "MedicalCondition",
-      name: "Hormonelle Gesundheit",
-    },
+    about: condition
+      ? {
+          "@type": "MedicalCondition",
+          name: condition.name,
+          ...(condition.icdCode && {
+            code: { "@type": "MedicalCode", code: condition.icdCode, codingSystem: "ICD-10" },
+          }),
+        }
+      : { "@type": "Thing", name: "Hormonelle Frauengesundheit" },
     audience: {
       "@type": "PatientsAudience",
       audienceType: "Frauen mit hormonellen Beschwerden",
@@ -93,6 +97,7 @@ export function medicalWebPageSchema({
     reviewedBy: {
       "@type": "Organization",
       name: "Aera Health Redaktion",
+      url: `${BASE_URL}/ueber-uns`,
     },
     speakable: {
       "@type": "SpeakableSpecification",

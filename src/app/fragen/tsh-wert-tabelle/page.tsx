@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description:
       "TSH Normalwerte für Frauen nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle.",
     url: PAGE_URL,
+    type: "article",
   },
 };
 

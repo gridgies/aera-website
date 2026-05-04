@@ -10,6 +10,14 @@ import { breadcrumbSchema, medicalWebPageSchema, faqSchema, jsonLd } from "@/lib
 
 const BASE_URL = "https://www.aerahealth.de";
 
+const CONDITION_MEDICAL_ENTITIES: Record<string, { name: string; icdCode: string }> = {
+  menopause: { name: "Menopause", icdCode: "N95.1" },
+  hashimoto: { name: "Hashimoto-Thyreoiditis", icdCode: "E06.3" },
+  schilddruese: { name: "Schilddrüsenerkrankung", icdCode: "E07.9" },
+  hormone: { name: "Hormonelle Dysbalance", icdCode: "E34.9" },
+  pcos: { name: "Polyzystisches Ovarialsyndrom", icdCode: "E28.2" },
+};
+
 /** Renders a paragraph string, converting **text** to <strong> elements. */
 function RichParagraph({ text, className }: { text: string; className?: string }) {
   const parts = text.split(/\*\*(.+?)\*\*/g);
@@ -46,6 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description: condition.metaDescription,
       url: `${BASE_URL}/${conditionSlug}`,
+      type: "article",
       images: [{ url: ogImage, width: 1200, height: 630, alt: condition.topicName }],
     },
     twitter: {
@@ -95,6 +104,7 @@ export default async function ConditionPage({ params }: Props) {
             description: condition.metaDescription,
             url: pageUrl,
             dateModified: today,
+            condition: CONDITION_MEDICAL_ENTITIES[conditionSlug],
           })
         )}
       />

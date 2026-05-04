@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: frage.metaTitle,
       description: frage.metaDescription,
       url: `${BASE_URL}/fragen/${slug}`,
+      type: "article",
       images: [{ url: ogImage, width: 1200, height: 630, alt: frage.question }],
     },
     twitter: {

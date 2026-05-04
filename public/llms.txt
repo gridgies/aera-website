@@ -1,38 +1,57 @@
 # Aera Health
 
-> Aera Health ist eine deutsche Plattform für Frauengesundheit mit Fokus auf hormonelle Gesundheit, Wechseljahre, Hashimoto und Schilddrüsenerkrankungen.
+> Personalisierte, evidenzbasierte Unterstützung für Frauen mit hormonellen Beschwerden.
+> Themen: Wechseljahre, Hashimoto, Schilddrüse, Hormone, PCOS. Sprache: Deutsch (de-DE).
+> Betreiber: Aera Health, Frankfurt am Main. Kontakt: hello@aerahealth.de
 
-## Beschreibung
+## Condition Hubs
 
-Aera Health bietet personalisierte, evidenzbasierte Unterstützung für Frauen mit hormonellen Beschwerden. Die Plattform verbindet wissenschaftlich fundierte Informationen mit praktischen Werkzeugen wie dem Symptom-Check.
+- [Menopause & Wechseljahre](https://www.aerahealth.de/menopause): 34 Symptome der Wechseljahre, Behandlungsoptionen, HRT-Leitlinien (DGGG 2020), Perimenopause
+- [Hashimoto Thyreoiditis](https://www.aerahealth.de/hashimoto): Diagnose, TPO-Antikörper, Selen-Supplementierung, L-Thyroxin-Therapie, Schwangerschaft
+- [Schilddrüsenerkrankungen](https://www.aerahealth.de/schilddruese): TSH-Werte, Unterfunktion, Überfunktion, Schilddrüsenwerte erklärt
+- [Hormonelle Balance](https://www.aerahealth.de/hormone): Östrogen, Progesteron, Cortisol, Testosteron, hormonelle Dysbalance
+- [PCOS](https://www.aerahealth.de/pcos): Polyzystisches Ovarialsyndrom, Symptome, Diagnose, Ernährung, Therapie
 
-**Zielgruppe:** Frauen in Deutschland, insbesondere in der Perimenopause und Menopause, sowie Frauen mit Hashimoto oder hormonellen Dysbalancen.
+## Häufige Fragen — Schilddrüse & Hashimoto
 
-**Sprache:** Deutsch (de-DE)
+- [TSH-Wert Tabelle nach Alter](https://www.aerahealth.de/fragen/tsh-wert-tabelle): Altersstratifizierte TSH-Referenzwerte, Schwangerschaftsgrenzen, Hashimoto-Zielwerte (0,5–2,5 mU/L)
+- [Hashimoto Blutwerte verstehen](https://www.aerahealth.de/fragen/hashimoto-blutwerte-verstehen): Anti-TPO, Anti-TG, fT3, fT4 bei Hashimoto interpretieren
+- [Selen bei Hashimoto: Dosierung](https://www.aerahealth.de/fragen/selen-hashimoto-dosierung): 200 µg/Tag Selenomethionin, Evidenzlage, Sicherheit
+- [Kann Hashimoto geheilt werden?](https://www.aerahealth.de/fragen/kann-hashimoto-geheilt-werden): Aktueller Forschungsstand zur Remission
+- [Hashimoto und Schwangerschaft](https://www.aerahealth.de/fragen/hashimoto-schwangerschaft): TSH-Zielwerte, L-Thyroxin-Anpassung, Risiken
 
-**Betreiber:** Aera Health, Frankfurt am Main
+## Häufige Fragen — Wechseljahre & Hormone
 
-## Wichtige Seiten
+- [Wechseljahre mit 40](https://www.aerahealth.de/fragen/wechseljahre-mit-40): Perimenopause-Beginn, frühe Symptome, Hormonstatus
+- [Perimenopause Blutungen](https://www.aerahealth.de/fragen/perimenopause-blutungen): Unregelmäßige Blutungen erkennen und einordnen
+- [Hormonersatztherapie Nebenwirkungen](https://www.aerahealth.de/fragen/hormonersatztherapie-nebenwirkungen): Aktuelle Datenlage, Nutzen-Risiko-Abwägung
+- [Östrogen Mangel Symptome](https://www.aerahealth.de/fragen/oestrogen-mangel-symptome): Erkennen und behandeln
+- [Alle Fragen](https://www.aerahealth.de/fragen): 73 häufig gestellte Fragen zur Frauengesundheit
 
-- Startseite: https://www.aerahealth.de
-- Symptom-Check: https://www.aerahealth.de/check
-- Experten: https://www.aerahealth.de/experten
-- Wissenschaft & Methodik: https://www.aerahealth.de/wissenschaft
-- Über uns: https://www.aerahealth.de/ueber-uns
-- Kontakt: https://www.aerahealth.de/kontakt
+## Wechseljahre nach Alter
 
-## Themen
+- [Wechseljahre mit 30](https://www.aerahealth.de/wechseljahre-mit/30): Frühe Perimenopause, Ursachen, Hormondiagnostik
+- [Wechseljahre mit 40](https://www.aerahealth.de/wechseljahre-mit/40): Typischer Perimenopause-Beginn, Symptome, Behandlung
+- [Wechseljahre mit 50](https://www.aerahealth.de/wechseljahre-mit/50): Menopause-Übergang, HRT-Entscheidung, Knochendichte
+- [Wechseljahre mit 60](https://www.aerahealth.de/wechseljahre-mit/60): Postmenopause, Langzeitgesundheit, Herzschutz
 
-- Wechseljahre (Menopause, Perimenopause, Klimakterium)
-- Hashimoto Thyreoiditis
-- Schilddrüsenerkrankungen (Schilddrüsenunterfunktion)
-- Hormonelle Balance (Östrogen, Progesteron, Cortisol)
-- Symptome: Hitzewallungen, Schlafstörungen, Müdigkeit, Haarausfall
+## Vergleiche (Differenzialdiagnose)
+
+- [Hashimoto oder Menopause?](https://www.aerahealth.de/vergleich/hashimoto-oder-menopause): Symptomüberschneidungen und Unterschiede
+- [Schilddrüse oder Menopause?](https://www.aerahealth.de/vergleich/schilddruese-oder-menopause): Diagnostische Abgrenzung
+- [PCOS oder Hashimoto?](https://www.aerahealth.de/vergleich/pcos-oder-hashimoto): Autoimmunerkrankungen und Hormonstörungen
+
+## Tools & Ressourcen
+
+- [Symptom-Check](https://www.aerahealth.de/check): Personalisierte Analyse hormoneller Beschwerden (2 Minuten)
+- [Experten-Netzwerk](https://www.aerahealth.de/experten): Spezialistinnen für Wechseljahre, Hashimoto und Hormongesundheit
+
+## Methodik & Transparenz
+
+- [Wissenschaft & Methodik](https://www.aerahealth.de/wissenschaft): Evidenzbasis, verwendete Leitlinien und Bewertungsstandards
+- [Quellen und Methodik](https://www.aerahealth.de/quellen-und-methodik): AWMF, DGE, ATA, Cochrane — Quellenstandards und Evidenzgrading
+- [Über uns](https://www.aerahealth.de/ueber-uns): Team und Mission von Aera Health
 
 ## Medizinischer Hinweis
 
-Inhalte auf aerahealth.de dienen zu Informationszwecken und ersetzen keine ärztliche Beratung. Alle Inhalte werden mit medizinisch geschultem Personal erstellt und basieren auf aktuellen Leitlinien (AWMF, Deutsche Gesellschaft für Endokrinologie, PubMed).
-
-## Kontakt
-
-E-Mail: hello@aerahealth.de
+Alle Inhalte auf aerahealth.de dienen zu Informationszwecken und ersetzen keine ärztliche Beratung oder Diagnose. Inhalte basieren auf aktuellen Leitlinien (AWMF, DGE, ATA, DGGG) und werden medizinisch geprüft.
