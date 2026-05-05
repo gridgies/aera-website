@@ -5,6 +5,7 @@ import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { AGE_PAGES } from "@/data/agePages";
 import { FRAGEN_LIST } from "@/data/fragenData";
 import { VERGLEICHE_LIST } from "@/data/vergleiche";
+import { BLOG_POSTS } from "@/data/blogPosts";
 
 const BASE_URL = "https://www.aerahealth.de";
 
@@ -45,6 +46,9 @@ const D = {
   darmHormone:    gitDate("src/app/themen/darm-und-hormone/page.tsx"),
   hrt2026:        gitDate("src/app/themen/hormonersatztherapie-2026/page.tsx"),
   glp1Pcos:       gitDate("src/app/themen/glp1-pcos-wechseljahre/page.tsx"),
+  // Blog
+  blogIndex:      gitDate("src/app/blog/page.tsx"),
+  blogMai2026:    gitDate("src/app/blog/mai-2026/page.tsx"),
   // Data-driven page groups — date reflects last content update to the data file
   conditions:   gitDate("src/data/conditions.ts"),
   symptoms:     gitDate("src/data/symptoms.ts"),
@@ -74,6 +78,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/themen/darm-und-hormone`,           lastModified: D.darmHormone, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/themen/hormonersatztherapie-2026`,  lastModified: D.hrt2026,     changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/themen/glp1-pcos-wechseljahre`,     lastModified: D.glp1Pcos,    changeFrequency: "monthly", priority: 0.80 },
+    // Blog
+    { url: `${BASE_URL}/blog`,             lastModified: D.blogIndex,   changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${BASE_URL}/blog/mai-2026`,    lastModified: D.blogMai2026, changeFrequency: "monthly", priority: 0.80 },
   ];
 
   const conditionPages: MetadataRoute.Sitemap = Object.values(CONDITIONS_DATA).map((c) => ({

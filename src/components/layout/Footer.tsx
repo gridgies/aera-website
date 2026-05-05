@@ -8,6 +8,7 @@ const CONDITION_LINKS = [
 ];
 
 const CONTENT_LINKS = [
+  { href: "/blog", label: "Blog & Newsletter" },
   { href: "/themen", label: "Alle Themen" },
   { href: "/fragen", label: "Fragen & Antworten" },
   { href: "/wissenschaft", label: "Wissenschaft" },

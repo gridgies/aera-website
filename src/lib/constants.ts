@@ -2,6 +2,7 @@ import { QuizQuestion, Condition, Step, NavLink } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Themen", href: "/themen" },
+  { label: "Blog", href: "/blog" },
   { label: "Expert:innen", href: "/experten" },
   { label: "Wissenschaft", href: "/wissenschaft" },
 ];
