@@ -19,7 +19,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "wie-lange-dauern-wechseljahre": {
     slug: "wie-lange-dauern-wechseljahre",
     question: "Wie lange dauern die Wechseljahre?",
-    metaTitle: "Wie lange dauern die Wechseljahre?",
+    metaTitle: "Wie lange dauern die Wechseljahre? Phasen & Dauer (2026)",
     metaDescription:
       "Wie lange dauern die Wechseljahre wirklich? Perimenopause, Menopause, Postmenopause erklärt – mit typischen Zeiträumen.",
     answer:
@@ -58,7 +58,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "wann-beginnen-die-wechseljahre": {
     slug: "wann-beginnen-die-wechseljahre",
     question: "Wann beginnen die Wechseljahre?",
-    metaTitle: "Wann beginnen die Wechseljahre? Typisches Alter & erste Zeichen",
+    metaTitle: "Wann beginnen die Wechseljahre? Alter & Frühzeichen (2026)",
     metaDescription:
       "Wann beginnen die Wechseljahre? Durchschnittsalter in Deutschland, erste Anzeichen der Perimenopause und was die Menopause beeinflusst.",
     answer:
@@ -96,7 +96,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "was-sind-die-ersten-anzeichen-der-wechseljahre": {
     slug: "was-sind-die-ersten-anzeichen-der-wechseljahre",
     question: "Was sind die ersten Anzeichen der Wechseljahre?",
-    metaTitle: "Erste Anzeichen der Wechseljahre: Diese Symptome sollten Sie kennen",
+    metaTitle: "Erste Anzeichen Wechseljahre: 10 Symptome erkennen (2026)",
     metaDescription:
       "Erste Anzeichen der Wechseljahre: Welche Symptome kommen zuerst? Perimenopause erkennen, bevor Hitzewallungen auftreten.",
     answer:
@@ -135,7 +135,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "wie-erkenne-ich-hashimoto": {
     slug: "wie-erkenne-ich-hashimoto",
     question: "Wie erkenne ich Hashimoto?",
-    metaTitle: "Wie erkenne ich Hashimoto? Symptome, Diagnose und Bluttests",
+    metaTitle: "Hashimoto erkennen: Symptome, Diagnose & Bluttest (2026)",
     metaDescription:
       "Hashimoto erkennen: Typische Symptome, welche Bluttests nötig sind und warum Hashimoto oft jahrelang unerkannt bleibt.",
     answer:
@@ -174,7 +174,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "kann-hashimoto-geheilt-werden": {
     slug: "kann-hashimoto-geheilt-werden",
     question: "Kann Hashimoto geheilt werden?",
-    metaTitle: "Kann Hashimoto geheilt werden? Was die Wissenschaft sagt",
+    metaTitle: "Kann Hashimoto geheilt werden? Was die Wissenschaft sagt (2026)",
     metaDescription:
       "Kann Hashimoto geheilt werden? Aktuelle Erkenntnisse zu Remission, Behandlung und dem Leben mit Hashimoto.",
     answer:
@@ -213,7 +213,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "welche-hormone-testen-lassen": {
     slug: "welche-hormone-testen-lassen",
     question: "Welche Hormone testen lassen als Frau?",
-    metaTitle: "Welche Hormone testen lassen? Das komplette Hormonpanel für Frauen",
+    metaTitle: "Welche Hormone testen? Komplettes Hormonpanel Frauen 2026",
     metaDescription:
       "Welche Hormone sollten Frauen testen lassen? Das vollständige Hormonpanel – von Schilddrüse bis Sexualhormone – erklärt.",
     answer:
@@ -256,7 +256,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hitzewallungen-was-hilft-sofort": {
     slug: "hitzewallungen-was-hilft-sofort",
     question: "Was hilft sofort gegen Hitzewallungen?",
-    metaTitle: "Was hilft sofort gegen Hitzewallungen? Bewährte Tipps",
+    metaTitle: "Was hilft sofort gegen Hitzewallungen? Bewährte Tipps (2026)",
     metaDescription:
       "Was hilft sofort gegen Hitzewallungen? Schnelle Maßnahmen für akute Schübe und langfristige Strategien für weniger Hitzewallungen.",
     answer:
@@ -294,7 +294,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "welche-blutwerte-bei-muedigkeit": {
     slug: "welche-blutwerte-bei-muedigkeit",
     question: "Welche Blutwerte bei Müdigkeit testen lassen?",
-    metaTitle: "Welche Blutwerte bei Müdigkeit? Das komplette Diagnosepanel",
+    metaTitle: "Welche Blutwerte bei Müdigkeit prüfen? Diagnose (2026)",
     metaDescription:
       "Chronische Müdigkeit: Welche Blutwerte testen lassen? Komplette Übersicht über sinnvolle Laborwerte bei anhaltender Erschöpfung.",
     answer:
@@ -336,7 +336,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hashimoto-ernaehrung-was-essen": {
     slug: "hashimoto-ernaehrung-was-essen",
     question: "Was essen bei Hashimoto? Die beste Ernährung",
-    metaTitle: "Hashimoto Ernährung: Was essen, was meiden?",
+    metaTitle: "Hashimoto Ernährung: Was essen, was meiden? (2026)",
     metaDescription:
       "Hashimoto Ernährung: Was hilft wirklich? Glutenfrei, entzündungshemmend, selenreich – Ernährungsguide für Hashimoto-Betroffene.",
     answer:
@@ -378,7 +378,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "oestrogendominanz-symptome": {
     slug: "oestrogendominanz-symptome",
     question: "Östrogendominanz Symptome: Woran erkennt man zu viel Östrogen?",
-    metaTitle: "Östrogendominanz Symptome: Erkennen, Ursachen & was wirklich hilft",
+    metaTitle: "Östrogendominanz Symptome 2026: Erkennen, Ursachen & Behandlung",
     metaDescription:
       "Östrogendominanz Symptome: Gewichtszunahme, Stimmungsschwankungen, starke Periode und Brustschmerzen. Ursachen, Diagnose und natürliche Behandlung erklärt.",
     answer:
@@ -435,7 +435,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "progesteronmangel-symptome": {
     slug: "progesteronmangel-symptome",
     question: "Progesteronmangel Symptome: Anzeichen erkennen und was hilft",
-    metaTitle: "Progesteronmangel Symptome: Erkennen, Diagnose & Behandlung",
+    metaTitle: "Progesteronmangel Symptome 2026: Erkennen & Behandlung",
     metaDescription:
       "Progesteronmangel Symptome bei Frauen: Schlafprobleme, Zyklusstörungen, Angst und PMS. Ursachen, Diagnose und wann Progesteron sinnvoll ist.",
     answer:
@@ -492,7 +492,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "schilddruesenwerte-verstehen": {
     slug: "schilddruesenwerte-verstehen",
     question: "Schilddrüsenwerte verstehen: Was sind normale TSH-, T3- und T4-Werte?",
-    metaTitle: "Schilddrüsenwerte verstehen: TSH, fT3, fT4 erklärt",
+    metaTitle: "Schilddrüsenwerte verstehen: TSH, fT3, fT4 erklärt (2026)",
     metaDescription:
       "Schilddrüsenwerte erklärt: Was bedeuten TSH, fT3, fT4 und Antikörper? Normwerte und was bei Abweichungen zu tun ist.",
     answer:
@@ -530,7 +530,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "brain-fog-frauen": {
     slug: "brain-fog-frauen",
     question: "Brain Fog bei Frauen: Ursachen und was hilft",
-    metaTitle: "Brain Fog bei Frauen: Hormonelle Ursachen und Behandlung",
+    metaTitle: "Brain Fog bei Frauen: Hormonelle Ursachen und Behandlung (2026)",
     metaDescription:
       "Brain Fog bei Frauen: Warum hormonelle Veränderungen (Wechseljahre, Hashimoto) zu geistiger Unklarheit führen und was wirklich hilft.",
     answer:
@@ -569,7 +569,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "wechseljahre-test-zuhause": {
     slug: "wechseljahre-test-zuhause",
     question: "Wechseljahre Test zuhause: Was gibt es und wie zuverlässig ist er?",
-    metaTitle: "Wechseljahre Test zuhause: FSH-Test, Speicheltest & Co.",
+    metaTitle: "Wechseljahre Test zuhause: FSH-Test, Speicheltest & Co. (2026)",
     metaDescription:
       "Wechseljahre Test zuhause: Welche Tests gibt es, wie zuverlässig sind sie und was zeigen sie wirklich?",
     answer:
@@ -607,7 +607,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "perimenopause-dauer": {
     slug: "perimenopause-dauer",
     question: "Wie lange dauert die Perimenopause?",
-    metaTitle: "Wie lange dauert die Perimenopause? Phasen und Zeiträume",
+    metaTitle: "Wie lange dauert die Perimenopause? Phasen und Zeiträume (2026)",
     metaDescription:
       "Perimenopause Dauer: Von 2 bis 10 Jahren – was beeinflusst die Länge? Phasen der Perimenopause erklärt.",
     answer:
@@ -645,7 +645,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hashimoto-muedigkeit-was-hilft": {
     slug: "hashimoto-muedigkeit-was-hilft",
     question: "Hashimoto Müdigkeit: Was hilft wirklich?",
-    metaTitle: "Hashimoto Müdigkeit: Ursachen und was wirklich hilft",
+    metaTitle: "Hashimoto Müdigkeit: Ursachen und was wirklich hilft (2026)",
     metaDescription:
       "Hashimoto Müdigkeit trotz normaler Werte? Ursachen, optimale Schilddrüseneinstellung und Lebensstilmaßnahmen gegen chronische Erschöpfung bei Hashimoto.",
     answer:
@@ -684,7 +684,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "wechseljahre-gewichtszunahme-vermeiden": {
     slug: "wechseljahre-gewichtszunahme-vermeiden",
     question: "Wie vermeide ich Gewichtszunahme in den Wechseljahren?",
-    metaTitle: "Wechseljahre Gewichtszunahme vermeiden: Was wirklich hilft",
+    metaTitle: "Wechseljahre Gewichtszunahme vermeiden: Was wirklich hilft (2026)",
     metaDescription:
       "Gewichtszunahme in den Wechseljahren verhindern: Warum Kalorien allein nicht helfen und welche Strategien wirklich funktionieren.",
     answer:
@@ -727,7 +727,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hashimoto-und-wechseljahre-zusammenhang": {
     slug: "hashimoto-und-wechseljahre-zusammenhang",
     question: "Hashimoto und Wechseljahre: Wie hängen sie zusammen?",
-    metaTitle: "Hashimoto und Wechseljahre: Zusammenhang, Diagnose & Behandlung",
+    metaTitle: "Hashimoto und Wechseljahre 2026: Zusammenhang & Behandlung",
     metaDescription:
       "Hashimoto und Wechseljahre gleichzeitig: Wie die beiden Erkrankungen sich gegenseitig beeinflussen und warum Diagnosen so oft verwechselt werden.",
     answer:
@@ -770,7 +770,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "cortisol-zu-hoch-symptome-frau": {
     slug: "cortisol-zu-hoch-symptome-frau",
     question: "Cortisol zu hoch: Welche Symptome haben Frauen?",
-    metaTitle: "Cortisol zu hoch bei Frauen: Symptome und was hilft",
+    metaTitle: "Cortisol zu hoch bei Frauen: Symptome und was hilft (2026)",
     metaDescription:
       "Erhöhtes Cortisol bei Frauen: Symptome erkennen (Bauchfett, Schlafstörungen, Angst), Ursachen und natürliche Wege zur Regulierung.",
     answer:
@@ -813,7 +813,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "pms-oder-perimenopause-unterschied": {
     slug: "pms-oder-perimenopause-unterschied",
     question: "PMS oder Perimenopause: Wie erkenne ich den Unterschied?",
-    metaTitle: "PMS oder Perimenopause? Unterschied erkennen",
+    metaTitle: "PMS oder Perimenopause? Unterschied erkennen (2026)",
     metaDescription:
       "PMS oder Perimenopause? So erkennen Sie den Unterschied – Symptome, Timing und welche Untersuchungen helfen.",
     answer:
@@ -852,7 +852,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "tsh-wert-normal-trotzdem-symptome": {
     slug: "tsh-wert-normal-trotzdem-symptome",
     question: "TSH normal, aber trotzdem Symptome – wie kann das sein?",
-    metaTitle: "TSH normal aber trotzdem Symptome: Was steckt dahinter?",
+    metaTitle: "TSH normal aber trotzdem Symptome: Was steckt dahinter? (2026)",
     metaDescription:
       "TSH im Normbereich, aber Müdigkeit, Haarausfall, Gewichtszunahme? Diese Gründe erklären, warum TSH allein nicht reicht.",
     answer:
@@ -895,7 +895,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "vitamin-d-mangel-symptome-frau": {
     slug: "vitamin-d-mangel-symptome-frau",
     question: "Vitamin-D-Mangel bei Frauen: Welche Symptome?",
-    metaTitle: "Vitamin-D-Mangel Symptome bei Frauen: Erkennen und beheben",
+    metaTitle: "Vitamin-D-Mangel Symptome bei Frauen: Erkennen und beheben (2026)",
     metaDescription:
       "Vitamin-D-Mangel Symptome bei Frauen: Müdigkeit, Muskelschwäche, Stimmungstiefs und mehr. Optimaler Wert und wie man Mangel behebt.",
     answer:
@@ -934,7 +934,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "oestrogen-natuerlich-erhoehen": {
     slug: "oestrogen-natuerlich-erhoehen",
     question: "Östrogen natürlich erhöhen: Was funktioniert wirklich?",
-    metaTitle: "Östrogen natürlich erhöhen: Lebensmittel, Ernährung & Tipps",
+    metaTitle: "Östrogen natürlich erhöhen 2026: Lebensmittel & Tipps",
     metaDescription:
       "Östrogen natürlich erhöhen bei Wechseljahren: Welche Lebensmittel (Phytoöstrogene) wirklich helfen und was Wissenschaft dazu sagt.",
     answer:
@@ -973,7 +973,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "schilddruesenunterfunktion-symptome-frau": {
     slug: "schilddruesenunterfunktion-symptome-frau",
     question: "Schilddrüsenunterfunktion Symptome bei Frauen: Was sind die Zeichen?",
-    metaTitle: "Schilddrüsenunterfunktion Symptome bei Frauen: Vollständige Übersicht",
+    metaTitle: "Schilddrüsenunterfunktion Symptome Frauen 2026: Übersicht",
     metaDescription:
       "Schilddrüsenunterfunktion Symptome bei Frauen: Müdigkeit, Gewichtszunahme, Frieren, Haarausfall und mehr. Wann zum Arzt und welche Tests.",
     answer:
@@ -1012,7 +1012,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hashimoto-schub-symptome": {
     slug: "hashimoto-schub-symptome",
     question: "Hashimoto Schub: Symptome erkennen und was dann zu tun ist",
-    metaTitle: "Hashimoto Schub Symptome: Woran du ihn erkennst & was hilft",
+    metaTitle: "Hashimoto Schub Symptome 2026: Erkennen & was hilft",
     metaDescription:
       "Hashimoto Schub Symptome: extreme Müdigkeit, Gelenkschmerzen, Haarausfall und mehr. Was einen Schub auslöst, wie lange er dauert und was wirklich hilft.",
     answer:
@@ -1074,7 +1074,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "fruehere-wechseljahre-ursachen": {
     slug: "fruehere-wechseljahre-ursachen",
     question: "Frühe Wechseljahre: Ursachen und was man tun kann",
-    metaTitle: "Frühe Wechseljahre (vor 45): Ursachen, Diagnose und Behandlung",
+    metaTitle: "Frühe Wechseljahre (vor 45) 2026: Ursachen & Behandlung",
     metaDescription:
       "Frühe Wechseljahre vor dem 45. Lebensjahr: Ursachen (Genetik, Autoimmun, Rauchen), Diagnose und warum Behandlung besonders wichtig ist.",
     answer:
@@ -1113,7 +1113,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "perimenopause-angst-panikattacken": {
     slug: "perimenopause-angst-panikattacken",
     question: "Perimenopause und Angst: Warum hormonelle Veränderungen Panik auslösen",
-    metaTitle: "Perimenopause Angst und Panikattacken: Hormonelle Ursachen",
+    metaTitle: "Perimenopause Angst und Panikattacken: Hormonelle Ursachen (2026)",
     metaDescription:
       "Angst und Panikattacken in der Perimenopause: Warum Hormonschwankungen das Nervensystem beeinflussen und was wirklich hilft.",
     answer:
@@ -1152,7 +1152,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "haarausfall-frau-hormone": {
     slug: "haarausfall-frau-hormone",
     question: "Haarausfall bei Frauen durch Hormone: Ursachen & Hilfe",
-    metaTitle: "Haarausfall Frau Hormone: Ursachen, Tests & Behandlung",
+    metaTitle: "Haarausfall Frau Hormone: Ursachen, Tests & Behandlung (2026)",
     metaDescription:
       "Haarausfall bei Frauen ist oft hormonell bedingt. Welche Hormone Haarausfall verursachen, welche Tests helfen und was wirklich wirkt.",
     answer:
@@ -1196,7 +1196,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hormonersatztherapie-vor-und-nachteile": {
     slug: "hormonersatztherapie-vor-und-nachteile",
     question: "Hormonersatztherapie: Vor- und Nachteile im Überblick",
-    metaTitle: "Hormonersatztherapie (HRT): Vor- und Nachteile, Risiken & Nutzen",
+    metaTitle: "Hormonersatztherapie (HRT) 2026: Nutzen, Risiken & für wen?",
     metaDescription:
       "Hormonersatztherapie bei Wechseljahren: Was sind die Vorteile, welche Risiken gibt es wirklich? Aktuelle Studienlage und Empfehlungen der DGGG.",
     answer:
@@ -1240,7 +1240,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "cortisol-senken-natuerlich": {
     slug: "cortisol-senken-natuerlich",
     question: "Cortisol natürlich senken: Was wirklich funktioniert",
-    metaTitle: "Cortisol senken natürlich: Evidenzbasierte Methoden gegen chronischen Stress",
+    metaTitle: "Cortisol senken natürlich 2026: Evidenzbasierte Methoden",
     metaDescription:
       "Cortisol dauerhaft zu hoch? Diese evidenzbasierten Methoden senken Cortisol natürlich – mit Studienbelegs zu Ashwagandha, Schlaf, Ernährung und Atemtechniken.",
     answer:
@@ -1284,7 +1284,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "libidoverlust-frau-ursachen": {
     slug: "libidoverlust-frau-ursachen",
     question: "Libidoverlust bei Frauen: Ursachen & Hilfe",
-    metaTitle: "Libidoverlust Frau: Hormonelle Ursachen, Tests & Behandlung",
+    metaTitle: "Libidoverlust Frau 2026: Hormonelle Ursachen & Behandlung",
     metaDescription:
       "Libidoverlust bei Frauen hat meist hormonelle Ursachen – Östrogenmangel, Testosteronmangel, erhöhtes Cortisol, Hashimoto. Was wirklich hilft.",
     answer:
@@ -1328,7 +1328,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "selen-hashimoto-dosierung": {
     slug: "selen-hashimoto-dosierung",
     question: "Selen bei Hashimoto: Dosierung, Wirkung & Studienlage",
-    metaTitle: "Selen bei Hashimoto: Richtige Dosierung & wissenschaftliche Evidenz",
+    metaTitle: "Selen bei Hashimoto 2026: Dosierung & Evidenz",
     metaDescription:
       "Selen kann Anti-TPO-Antikörper bei Hashimoto senken – was zeigen die Studien? Welche Dosierung ist sinnvoll und was ist zu beachten?",
     answer:
@@ -1372,7 +1372,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "fsh-wert-wechseljahre": {
     slug: "fsh-wert-wechseljahre",
     question: "FSH-Wert und Wechseljahre: Was bedeutet der Wert?",
-    metaTitle: "FSH-Wert Wechseljahre: Normwerte, Interpretation & Bedeutung",
+    metaTitle: "FSH-Wert Wechseljahre 2026: Normwerte & Interpretation",
     metaDescription:
       "Was sagt der FSH-Wert über Wechseljahre und Perimenopause aus? Normwerte, Grenzbereiche und warum FSH allein nicht ausreicht.",
     answer:
@@ -1411,7 +1411,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "ferritin-mangel-symptome": {
     slug: "ferritin-mangel-symptome",
     question: "Ferritinmangel bei Frauen: Symptome, Grenzwerte & Behandlung",
-    metaTitle: "Ferritinmangel Symptome Frau: Werte, Ursachen & was hilft",
+    metaTitle: "Ferritinmangel Symptome Frau: Werte, Ursachen & was hilft (2026)",
     metaDescription:
       "Ferritinmangel ist bei Frauen häufig und führt zu Erschöpfung, Haarausfall und Konzentrationsproblemen – auch bei normalem Blutbild. Welche Werte wirklich zählen.",
     answer:
@@ -1455,7 +1455,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hashimoto-gewichtszunahme-was-hilft": {
     slug: "hashimoto-gewichtszunahme-was-hilft",
     question: "Gewichtszunahme bei Hashimoto: Ursachen & was wirklich hilft",
-    metaTitle: "Hashimoto Gewichtszunahme: Ursachen, Ernährung & Behandlung",
+    metaTitle: "Hashimoto Gewichtszunahme 2026: Ursachen & Behandlung",
     metaDescription:
       "Gewichtszunahme trotz Diät bei Hashimoto: Welche hormonellen Mechanismen dahinterstecken und was wirklich hilft – von Schilddrüsenwerten bis Ernährung.",
     answer:
@@ -1499,7 +1499,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "stimmungsschwankungen-wechseljahre-behandlung": {
     slug: "stimmungsschwankungen-wechseljahre-behandlung",
     question: "Stimmungsschwankungen in den Wechseljahren: Ursachen & Hilfe",
-    metaTitle: "Stimmungsschwankungen Wechseljahre: Ursachen, Behandlung & Hausmittel",
+    metaTitle: "Stimmungsschwankungen Wechseljahre 2026: Ursachen & Tipps",
     metaDescription:
       "Stimmungsschwankungen, Reizbarkeit und Weinen in den Wechseljahren: Was hormonell dahintersteckt und welche Behandlungen wirklich helfen.",
     answer:
@@ -1538,7 +1538,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "amh-wert-zu-niedrig": {
     slug: "amh-wert-zu-niedrig",
     question: "AMH-Wert zu niedrig: Was bedeutet das für die Fruchtbarkeit?",
-    metaTitle: "AMH-Wert zu niedrig: Bedeutung, Normwerte & nächste Schritte",
+    metaTitle: "AMH-Wert zu niedrig 2026: Bedeutung, Normwerte & Schritte",
     metaDescription:
       "Ein niedriger AMH-Wert zeigt geringe Eierstockreserve an. Was das für Fruchtbarkeit und Perimenopause bedeutet, welche Normwerte gelten und was man tun kann.",
     answer:
@@ -1577,7 +1577,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "progesteron-erhoehen-natuerlich": {
     slug: "progesteron-erhoehen-natuerlich",
     question: "Progesteron natürlich erhöhen: Was hilft wirklich?",
-    metaTitle: "Progesteron erhöhen natürlich: Evidenzbasierte Methoden & Supplemente",
+    metaTitle: "Progesteron natürlich erhöhen 2026: Methoden & Supplemente",
     metaDescription:
       "Progesteronmangel natürlich beheben: Welche Lebensstiländerungen, Kräuter und Supplemente wirklich helfen – und wann bioidentisches Progesteron sinnvoll ist.",
     answer:
@@ -1616,7 +1616,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "wechseljahre-natuerlich-behandeln": {
     slug: "wechseljahre-natuerlich-behandeln",
     question: "Wechseljahre natürlich behandeln: Was wirklich hilft",
-    metaTitle: "Wechseljahre natürlich behandeln: Evidenzbasierte Methoden ohne Hormone",
+    metaTitle: "Wechseljahre natürlich behandeln 2026: Methoden ohne Hormone",
     metaDescription:
       "Wechseljahre ohne Hormontherapie behandeln: Diese pflanzlichen Mittel, Lebensstiländerungen und Supplemente sind wissenschaftlich belegt.",
     answer:
@@ -2361,7 +2361,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hashimoto-ernaehrung-was-vermeiden": {
     slug: "hashimoto-ernaehrung-was-vermeiden",
     question: "Was sollte man bei Hashimoto nicht essen?",
-    metaTitle: "Hashimoto Ernährung: Was vermeiden? Die wichtigsten Regeln",
+    metaTitle: "Hashimoto Ernährung: Was vermeiden? Die wichtigsten Regeln (2026)",
     metaDescription:
       "Hashimoto und Ernährung: Gluten, Soja, Jod, Milch – was wirklich vermieden werden sollte und was Mythos ist. Evidenzbasierte Ernährungsempfehlungen bei Hashimoto.",
     answer:
@@ -2484,7 +2484,7 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
   "hitzewallungen-was-hilft-sofort-detail": {
     slug: "hitzewallungen-was-hilft-sofort-detail",
     question: "Was hilft sofort gegen Hitzewallungen?",
-    metaTitle: "Hitzewallungen: Was hilft sofort? 8 bewährte Methoden",
+    metaTitle: "Hitzewallungen: Was hilft sofort? 8 bewährte Methoden (2026)",
     metaDescription:
       "Hitzewallungen in den Wechseljahren: Was hilft sofort und langfristig? Von Kleidung über Atemtechniken bis Hormontherapie – evidenzbasierte Tipps.",
     answer:

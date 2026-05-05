@@ -6,7 +6,7 @@ const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/schilddruese/werte`;
 
 export const metadata: Metadata = {
-  title: "Schilddrüsenwerte verstehen: TSH, fT3, fT4 – Tabelle & Normalwerte",
+  title: "Schilddrüsenwerte Tabelle 2026: TSH, fT3, fT4 Normalwerte für Frauen",
   description:
     "TSH, freies T3, freies T4, TPO-Antikörper: Was bedeuten Ihre Schilddrüsenwerte? Normalwerte, optimale Bereiche und wann eine Behandlung sinnvoll ist.",
   alternates: { canonical: "/schilddruese/werte" },

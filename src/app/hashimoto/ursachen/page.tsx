@@ -6,7 +6,7 @@ const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/hashimoto/ursachen`;
 
 export const metadata: Metadata = {
-  title: "Hashimoto Ursachen: Warum greift das Immunsystem die Schilddrüse an?",
+  title: "Hashimoto Ursachen: Genetik, Hormone & Auslöser erklärt (2026)",
   description:
     "Die Ursachen von Hashimoto Thyreoiditis: Genetik, hormonelle Faktoren, Jod, Selen, Stress und Infektionen. Was die Forschung weiß – und was Sie selbst tun können.",
   alternates: { canonical: "/hashimoto/ursachen" },

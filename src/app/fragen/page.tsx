@@ -7,12 +7,12 @@ import { FragenList } from "@/components/ui/FragenList";
 const BASE_URL = "https://www.aerahealth.de";
 
 export const metadata: Metadata = {
-  title: "Fragen & Antworten: Wechseljahre, Hashimoto, Hormone",
+  title: "Fragen zu Wechseljahren, Hashimoto & Hormonen – Antworten 2026",
   description:
     "Häufige Fragen zu Wechseljahren, Hashimoto, Schilddrüse und Hormonen – medizinisch fundiert beantwortet von der Aera Health Redaktion.",
   alternates: { canonical: "/fragen" },
   openGraph: {
-    title: "Fragen & Antworten: Wechseljahre, Hashimoto, Hormone",
+    title: "Fragen zu Wechseljahren, Hashimoto & Hormonen – Antworten 2026",
     description:
       "Häufige Fragen zu Wechseljahren, Hashimoto, Schilddrüse und Hormonen – medizinisch fundiert beantwortet.",
     url: `${BASE_URL}/fragen`,

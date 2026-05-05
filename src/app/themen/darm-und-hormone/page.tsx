@@ -6,7 +6,7 @@ const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/themen/darm-und-hormone`;
 
 export const metadata: Metadata = {
-  title: "Darm und Hormone: Warum dein Mikrobiom die Wechseljahre beeinflusst",
+  title: "Darm und Hormone 2026: Wie das Mikrobiom Wechseljahre beeinflusst",
   description:
     "Dein Darm produziert und reguliert Östrogen. Wie das Östrobolom funktioniert, was Perimenopause mit dem Mikrobiom macht – und was du konkret tun kannst.",
   alternates: { canonical: "/themen/darm-und-hormone" },

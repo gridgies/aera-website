@@ -6,7 +6,7 @@ import { faqSchema, jsonLd } from "@/lib/schema";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Aera Health | Frauengesundheit: Hormone, Wechseljahre & Hashimoto verstehen",
+  title: "Frauengesundheit: Wechseljahre, Hashimoto & Hormone verstehen | Aera Health",
   description:
     "Personalisierte Unterstützung für Wechseljahre, Hashimoto, Schilddrüse und hormonelle Balance. Wissenschaftlich fundiert, für Frauen in Deutschland.",
   alternates: {

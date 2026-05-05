@@ -182,7 +182,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Schilddrüsenunterfunktion",
     conditionBName: "Menopause",
     title: "Schilddrüsenunterfunktion oder Menopause? Symptome im Vergleich",
-    metaTitle: "Schilddrüsenunterfunktion oder Menopause? Unterschiede & Diagnose",
+    metaTitle: "Schilddrüsenunterfunktion oder Menopause? Diagnose (2026)",
     metaDescription:
       "Müdigkeit, Gewichtszunahme, Haarausfall – Schilddrüsenunterfunktion und Menopause haben fast dieselben Symptome. Woran du sie erkennst und welche Blutwerte entscheiden.",
     intro:
@@ -299,7 +299,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Hashimoto",
     conditionBName: "Schilddrüsenunterfunktion",
     title: "Hashimoto oder Schilddrüsenunterfunktion? Der wichtige Unterschied",
-    metaTitle: "Hashimoto vs. Schilddrüsenunterfunktion: Der entscheidende Unterschied erklärt",
+    metaTitle: "Hashimoto vs. Schilddrüsenunterfunktion: Unterschied erklärt 2026",
     metaDescription:
       "Hashimoto ist eine Autoimmunerkrankung, Hypothyreose eine Funktionsstörung – aber Hashimoto ist die häufigste Ursache. Symptome, Diagnose & Behandlung im Vergleich.",
     intro:
@@ -421,7 +421,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Hashimoto",
     conditionBName: "Burnout",
     title: "Burnout oder Hashimoto? So erkennst du den Unterschied",
-    metaTitle: "Burnout oder Hashimoto? Symptome, Unterschiede & Diagnose",
+    metaTitle: "Burnout oder Hashimoto? Symptome, Unterschiede & Diagnose (2026)",
     metaDescription:
       "Erschöpfung, Konzentrationsprobleme, Antriebslosigkeit – Burnout und Hashimoto haben fast identische Symptome. Welcher Bluttest entscheidet und was wirklich dahintersteckt.",
     intro:
@@ -550,7 +550,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Perimenopause",
     conditionBName: "Depression",
     title: "Perimenopause oder Depression? Wenn Hormonschwankungen die Stimmung überwältigen",
-    metaTitle: "Perimenopause oder Depression? Symptome, Unterschiede & Diagnose",
+    metaTitle: "Perimenopause oder Depression? Symptome & Diagnose (2026)",
     metaDescription:
       "Stimmungstiefs, Antriebslosigkeit und Weinen ohne Grund – ist es die Perimenopause oder eine Depression? Wie man unterscheidet und was wirklich hilft.",
     intro:
@@ -674,7 +674,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Hormonstörungen",
     conditionBName: "Menopause",
     title: "Hormonstörung oder Menopause? Was hinter deinen Symptomen steckt",
-    metaTitle: "Hormonstörung oder Menopause? Symptome, Ursachen & Diagnose",
+    metaTitle: "Hormonstörung oder Menopause? Symptome & Diagnose (2026)",
     metaDescription:
       "Stimmungsschwankungen, Müdigkeit, Schlafprobleme – Hormonstörungen und Menopause haben ähnliche Symptome. Wie du den Unterschied erkennst und was wirklich hilft.",
     intro:
@@ -786,7 +786,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Hashimoto",
     conditionBName: "Nebennierenschwäche",
     title: "Hashimoto oder Nebennierenschwäche? Symptome, Unterschiede & Diagnose",
-    metaTitle: "Hashimoto oder Nebennierenschwäche? Symptome erkennen & unterscheiden",
+    metaTitle: "Hashimoto oder Nebennierenschwäche? Symptome (2026)",
     metaDescription:
       "Hashimoto und Nebennierenschwäche haben viele gemeinsame Symptome – extreme Müdigkeit, Konzentrationsprobleme, Schlafstörungen. Wie du sie unterscheidest und welche Tests helfen.",
     intro:
@@ -893,7 +893,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Perimenopause",
     conditionBName: "Schwangerschaft",
     title: "Perimenopause oder Schwangerschaft? Symptome unterscheiden",
-    metaTitle: "Perimenopause oder Schwangerschaft? Symptome & Unterschiede erklärt",
+    metaTitle: "Perimenopause oder Schwangerschaft? Unterschied (2026)",
     metaDescription:
       "Perimenopause oder Schwangerschaft? Viele Symptome sind ähnlich. Wie du sie unterscheidest, welche Tests helfen und wann du zum Arzt solltest.",
     intro:
@@ -995,7 +995,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "PMS",
     conditionBName: "PMDS",
     title: "PMS oder PMDS? Symptome, Unterschiede & was wirklich hilft",
-    metaTitle: "PMS oder PMDS? Unterschied, Diagnose & Behandlung erklärt",
+    metaTitle: "PMS oder PMDS? Unterschied, Diagnose & Behandlung erklärt (2026)",
     metaDescription:
       "PMS oder PMDS? Der Unterschied liegt in der Schwere – PMDS ist eine ernsthafte Erkrankung mit depressiven Episoden. Symptome, Diagnose und was hilft.",
     intro:
@@ -1096,7 +1096,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Hashimoto",
     conditionBName: "Eisenmangel-Anämie",
     title: "Hashimoto oder Eisenmangel? Wenn Erschöpfung den falschen Namen bekommt",
-    metaTitle: "Hashimoto oder Eisenmangel? Symptome unterscheiden & richtig testen",
+    metaTitle: "Hashimoto oder Eisenmangel? Symptome & Diagnose (2026)",
     metaDescription:
       "Müdigkeit, Haarausfall, Konzentrationsprobleme – Hashimoto und Eisenmangel-Anämie haben fast identische Symptome. Welcher Bluttest entscheidet und was die Ursache wirklich ist.",
     intro:
@@ -1208,7 +1208,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "PCOS",
     conditionBName: "Hashimoto",
     title: "PCOS oder Hashimoto? Wenn Hormonprobleme sich ähneln",
-    metaTitle: "PCOS oder Hashimoto? Symptome, Unterschiede & Diagnose erklärt",
+    metaTitle: "PCOS oder Hashimoto? Symptome & Diagnose erklärt (2026)",
     metaDescription:
       "Zyklusprobleme, Haarausfall, Gewichtszunahme – PCOS und Hashimoto haben ähnliche Symptome. Wie du sie unterscheidest, warum sie gemeinsam auftreten und welche Tests helfen.",
     intro:
@@ -1320,7 +1320,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Perimenopause",
     conditionBName: "Angststörung",
     title: "Perimenopause oder Angststörung? Wenn Hormone Panik auslösen",
-    metaTitle: "Perimenopause oder Angststörung? Symptome & Unterschied erklärt",
+    metaTitle: "Perimenopause oder Angststörung? Symptome (2026)",
     metaDescription:
       "Herzrasen, Panikattacken, innere Unruhe – Perimenopause oder Angststörung? Wie hormonelle Veränderungen Angstsymptome auslösen und wann psychiatrische Hilfe nötig ist.",
     intro:
@@ -1427,7 +1427,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Schilddrüsenunterfunktion",
     conditionBName: "Eisenmangel",
     title: "Schilddrüsenunterfunktion oder Eisenmangel? Symptome unterscheiden",
-    metaTitle: "Schilddrüse oder Eisenmangel? Müdigkeit, Haarausfall & die richtige Diagnose",
+    metaTitle: "Schilddrüse oder Eisenmangel? Müdigkeit & Diagnose (2026)",
     metaDescription:
       "Schilddrüsenunterfunktion und Eisenmangel haben fast identische Symptome. Welcher Bluttest entscheidet, warum beides oft zusammen auftritt und was wirklich hilft.",
     intro:
@@ -1539,7 +1539,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Menopause",
     conditionBName: "Typ-2-Diabetes / Insulinresistenz",
     title: "Menopause oder Diabetes? Wenn Blutzucker und Hormone sich verwirren",
-    metaTitle: "Menopause oder Diabetes? Gewichtszunahme, Erschöpfung & Blutzucker erklärt",
+    metaTitle: "Menopause oder Diabetes? Symptome & Blutzucker (2026)",
     metaDescription:
       "Gewichtszunahme, Erschöpfung, Heißhunger – Menopause und Insulinresistenz haben viele gemeinsame Symptome. Warum Wechseljahre Diabetes-Risiko erhöhen und was dagegen hilft.",
     intro:
@@ -1646,7 +1646,7 @@ export const VERGLEICHE_DATA: Record<string, VergleichPage> = {
     conditionAName: "Hashimoto",
     conditionBName: "Fibromyalgie",
     title: "Hashimoto oder Fibromyalgie? Wenn Schmerz und Erschöpfung verwirren",
-    metaTitle: "Hashimoto oder Fibromyalgie? Symptome, Unterschiede & Diagnose",
+    metaTitle: "Hashimoto oder Fibromyalgie? Symptome & Diagnose (2026)",
     metaDescription:
       "Muskelschmerzen, Erschöpfung, Konzentrationsprobleme, Schlafstörungen – Hashimoto und Fibromyalgie sind kaum zu unterscheiden. Welche Tests helfen und warum beide oft gleichzeitig auftreten.",
     intro:

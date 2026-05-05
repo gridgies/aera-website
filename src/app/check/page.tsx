@@ -1,8 +1,8 @@
 import { QuizContainer } from "@/components/quiz/QuizContainer";
 
 export const metadata = {
-  title: "Aera Check | Verstehe deine Gesundheit",
-  description: "Beantworte ein paar Fragen und erhalte personalisierte Einblicke in deine hormonelle Gesundheit.",
+  title: "Kostenloser Symptom-Check: Wechseljahre, Hashimoto oder Hormone?",
+  description: "Beantworte 10 Fragen und erhalte eine erste Einschätzung: Wechseljahre, Hashimoto oder hormonelle Dysbalance?",
 };
 
 export default function CheckPage() {
