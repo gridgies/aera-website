@@ -28,15 +28,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Drei Phasen: Perimenopause, Menopause, Postmenopause",
-          text: "Die 'Wechseljahre' sind eigentlich ein Prozess mit drei Phasen. Die Perimenopause beginnt oft schon mit 40–45 Jahren und kann bis zu 10 Jahre dauern. Die Menopause ist der Zeitpunkt der letzten Menstruation – bestätigt nach 12 Monaten ohne Periode. Dann beginnt die Postmenopause.",
+          text: "Die 'Wechseljahre' sind eigentlich ein Prozess mit drei klar definierten Phasen. Die Perimenopause beginnt oft schon mit 40–45 Jahren und kann 4–10 Jahre dauern – in dieser Phase schwanken Östrogen und Progesteron stark und unvorhersehbar. Die Menopause ist kein Prozess, sondern ein konkreter Zeitpunkt: der letzte Menstruationstag – bestätigt erst nach 12 aufeinanderfolgenden Monaten ohne Blutung, also rückblickend. Das Durchschnittsalter der Menopause in Deutschland liegt bei 51 Jahren. Die Postmenopause beginnt direkt danach und hält für den Rest des Lebens an. Östrogen fällt in der Postmenopause auf ein dauerhaft niedrigeres Niveau. Dieses veränderte Hormonniveau erklärt die langfristigen Gesundheitsrisiken wie Osteoporose und Herz-Kreislauf-Erkrankungen.",
         },
         {
           heading: "Wie lange halten Hitzewallungen an?",
-          text: "Hitzewallungen sind das häufigste Beschwerden der Wechseljahre. Eine Studie der Universität Pennsylvania (SWAN-Studie) zeigte, dass Hitzewallungen im Median 7,4 Jahre anhalten. Frauen, die früher damit beginnen, erleben sie oft länger.",
+          text: "Hitzewallungen sind die häufigsten Beschwerden der Wechseljahre und betreffen bis zu 80 % der Frauen. Die SWAN-Studie (Study of Women's Health Across the Nation), eine der größten Längsschnittstudien zu Wechseljahren mit über 3.000 Teilnehmerinnen, zeigte, dass Hitzewallungen im Median 7,4 Jahre anhalten. Frauen, die Hitzewallungen bereits vor der Menopause (also während der Perimenopause) beginnen, erleben sie im Durchschnitt länger – bis zu 11,8 Jahre. Frauen, die erst nach der Menopause damit beginnen, haben kürzere Verläufe (im Median 3,4 Jahre). Übergewicht, Rauchen und chronischer Stress verlängern die Hitzewallungsdauer zusätzlich.",
         },
         {
           heading: "Wann sind die Wechseljahre abgeschlossen?",
-          text: "Die Postmenopause beginnt nach 12 Monaten ohne Menstruation und hält für den Rest des Lebens an. Viele Beschwerden bessern sich in dieser Phase, aber manche Symptome (z.B. Scheidentrockenheit) können ohne Behandlung bestehen bleiben.",
+          text: "Die Postmenopause beginnt nach 12 aufeinanderfolgenden Monaten ohne Menstruation und hält für den Rest des Lebens an. Viele Beschwerden wie Hitzewallungen und Schlafstörungen bessern sich im Laufe der Postmenopause deutlich, wenn sich der Körper an das neue Hormonniveau anpasst. Allerdings bleiben einige Symptome ohne Behandlung dauerhaft bestehen: Scheidentrockenheit (Vaginalatrophie) und Schmerzen beim Geschlechtsverkehr entstehen durch den anhaltenden Östrogenmangel im Vaginalgewebe und verbessern sich nicht spontan. Langfristig erhöht der Östrogenmangel das Risiko für Osteoporose (Knochendichtemessung ab 60 empfohlen) und Herz-Kreislauf-Erkrankungen. Lokale östrogenhaltige Cremes oder HRT können diese langfristigen Risiken und Symptome effektiv behandeln.",
         },
       ],
     },
@@ -67,15 +67,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Durchschnittsalter der Menopause in Deutschland",
-          text: "In Deutschland tritt die Menopause im Durchschnitt mit 51 Jahren ein. Dieser Zeitpunkt wird rückblickend festgestellt – nach 12 aufeinanderfolgenden Monaten ohne Menstruation. Die Perimenopause, die Übergangsphase davor, beginnt typischerweise 4–10 Jahre früher.",
+          text: "In Deutschland tritt die Menopause im Durchschnitt mit 51 Jahren ein – dieser Wert ist in den letzten Jahrzehnten stabil geblieben und unterscheidet sich kaum von anderen westeuropäischen Ländern. Wichtig: Dieser Zeitpunkt wird rückblickend festgestellt – erst nach 12 aufeinanderfolgenden Monaten ohne Menstruation gilt die letzte Blutung offiziell als Menopause. Solange noch sporadische Blutungen auftreten, befindet sich eine Frau in der Perimenopause. Die Perimenopause, die Übergangsphase vor der Menopause, beginnt typischerweise 4–10 Jahre früher – also oft zwischen 40 und 47 Jahren. Sie kann je nach Frau sehr unterschiedlich verlaufen: manche erleben sie kaum, andere sehr intensiv mit starken Hormonschwankungen.",
         },
         {
           heading: "Erste Anzeichen erkennen",
-          text: "Die ersten Zeichen einer beginnenden Perimenopause sind oft subtil: Zyklusveränderungen (kürzere oder längere Abstände), verstärkte PMS-Symptome, erste Schlafstörungen und Stimmungsschwankungen. Viele Frauen bemerken es erst, wenn Hitzewallungen auftreten.",
+          text: "Die ersten Zeichen einer beginnenden Perimenopause sind oft subtil und werden häufig anderen Ursachen zugeschrieben. Zyklusveränderungen sind das früheste Signal: Der Zyklus wird unregelmäßiger, kürzer (unter 25 Tage) oder länger (über 35 Tage). Perioden können stärker oder schwächer werden. Verstärkte PMS-Symptome – besonders Reizbarkeit, Brustspannen und Stimmungsschwankungen in der Woche vor der Periode – sind ein klassisches Frühzeichen. Erste Schlafstörungen, besonders das nächtliche Erwachen ohne ersichtlichen Grund zwischen 2 und 4 Uhr morgens, können auftreten, noch bevor Hitzewallungen beginnen. Viele Frauen bemerken den Beginn der Perimenopause erst rückblickend – wenn die Hitzewallungen einsetzen.",
         },
         {
           heading: "Was beeinflusst den Zeitpunkt der Menopause?",
-          text: "Genetik ist der stärkste Faktor – wann Ihre Mutter in die Menopause kam, ist ein guter Indikator. Rauchen beschleunigt die Menopause um 1–2 Jahre. Auch Operationen an den Eierstöcken, Chemotherapie und bestimmte Autoimmunerkrankungen können eine frühere Menopause auslösen.",
+          text: "Genetik ist der stärkste Einflussfaktor: Wann Mutter und Großmutter in die Wechseljahre kamen, ist ein sehr guter Prädiktor. Rauchen beschleunigt die Menopause um durchschnittlich 1–2 Jahre, da Nikotin den Östrogenstoffwechsel beeinflusst und Eierstockreserven schneller abbaut. Operative Eingriffe haben sofortige Auswirkungen: Entfernung beider Eierstöcke (Oophorektomie) löst eine sofortige chirurgische Menopause aus, auch bei jungen Frauen. Chemotherapie und Strahlentherapie im Beckenbereich können die Eierstöcke dauerhaft schädigen. Autoimmunerkrankungen – insbesondere Hashimoto, Lupus und rheumatoide Arthritis – erhöhen das Risiko einer frühzeitigen Ovarialinsuffizienz (POI). Sehr niedriges Körpergewicht oder exzessiver Sport können Hormone unterdrücken und die Menopause vorziehen.",
         },
       ],
     },
@@ -105,15 +105,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Die häufigsten frühen Symptome",
-          text: "Die Perimenopause beginnt schleichend. Die ersten Zeichen sind oft: unregelmäßigerer Zyklus (kürzer oder länger), stärkere Blutungen, intensivere PMS-Symptome, erste Ein- oder Durchschlafprobleme und unerklärliche Reizbarkeit.",
+          text: "Die Perimenopause beginnt schleichend – viele Frauen erkennen sie erst rückblickend. Die ersten Anzeichen sind oft subtil und werden häufig anderen Ursachen zugeschrieben. Häufige frühe Symptome: Zyklusveränderungen (Zyklus wird kürzer auf unter 26 Tage oder länger), stärkere Periodenblutungen, intensivere PMS-Symptome in der Lutealphase, erste Ein- oder Durchschlafprobleme (besonders in der zweiten Zyklushälfte) und unerklärliche Reizbarkeit. Die SWAN-Studie, die über 3.000 Frauen mehr als 20 Jahre beobachtete, zeigte, dass Zyklusveränderungen das verlässlichste erste Zeichen sind – noch vor Hitzewallungen. Eine verringerte Stresstoleranz und das Gefühl, 'nicht mehr die gleiche zu sein', werden von vielen Frauen als die ersten merkbaren Veränderungen beschrieben.",
         },
         {
           heading: "Warum Stimmungsschwankungen oft die ersten Warnzeichen sind",
-          text: "Progesteron sinkt in der Perimenopause vor dem Östrogen. Da Progesteron eine beruhigende Wirkung hat, können Angstzustände, Reizbarkeit und Stimmungsschwankungen die ersten spürbaren Symptome sein – manchmal Jahre vor den ersten Hitzewallungen.",
+          text: "Progesteron sinkt in der Perimenopause als erstes Hormon – oft schon 5–10 Jahre vor der eigentlichen Menopause. Da Progesteron über GABA-Rezeptoren direkt beruhigend auf das Gehirn wirkt (ähnlich wie ein natürliches Beruhigungsmittel), führt sein Abfall zu deutlichen neurologischen Symptomen: Angstzustände, innere Unruhe, Schlafprobleme besonders in der zweiten Zyklushälfte, Verstärkung des PMS und Stimmungsschwankungen. Diese Symptome können Jahre vor den ersten Hitzewallungen auftreten – und werden häufig als 'Stress' oder 'Burnout' fehlgedeutet. Viele Frauen erhalten in dieser Phase zuerst eine Angststörungsdiagnose oder Antidepressiva, ohne dass der hormonelle Hintergrund erkannt wird.",
         },
         {
           heading: "Symptome, die oft übersehen werden",
-          text: "Weniger bekannte frühe Symptome: Herzrasen oder Herzstolpern, Migräne, die sich verändert, Brain Fog und Vergesslichkeit, Gelenkschmerzen, trockene Haut und erhöhte Empfindlichkeit gegenüber Stress.",
+          text: "Weniger bekannte, aber häufig berichtete frühe Perimenopause-Symptome: Herzrasen und Herzstolpern (Palpitationen) durch Veränderungen des autonomen Nervensystems, auch ohne Hitzewallungen. Migräne verändert sich oder tritt erstmals auf – Östrogenschwankungen sind ein bekannter Migräne-Trigger. Brain Fog und Vergesslichkeit: Östrogen unterstützt kognitive Funktionen im Hippocampus. Diffuse Gelenkschmerzen und Muskelsteifigkeit morgens, die oft mit Rheuma verwechselt werden. Trockene Haut und Schleimhäute – auch Scheidentrockenheit beginnt früher als gedacht. Erhöhte Empfindlichkeit gegenüber Alkohol, Koffein und Stress. Veränderung des Körpergeruchs. All diese Symptome können Jahre vor Hitzewallungen beginnen.",
         },
       ],
     },
@@ -144,15 +144,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Die typischen Symptome von Hashimoto",
-          text: "Hashimoto Thyreoiditis verursacht meist Symptome einer Schilddrüsenunterfunktion: chronische Müdigkeit und Erschöpfung, Gewichtszunahme, Haarausfall, Frieren, Konzentrationsprobleme, trockene Haut, Verstopfung und Stimmungsschwankungen. In Schubphasen können auch Überfunktionssymptome (Herzrasen, Unruhe) auftreten.",
+          text: "Hashimoto Thyreoiditis verursacht meist Symptome einer Schilddrüsenunterfunktion, weil das Autoimmungeschehen schrittweise Schilddrüsengewebe zerstört und die Hormonproduktion mindert. Typische Symptome: chronische Müdigkeit und Erschöpfung trotz ausreichend Schlaf, Gewichtszunahme ohne Ernährungsänderung, diffuser Haarausfall, ständiges Frieren, Konzentrationsprobleme und Brain Fog, trockene Haut, Verstopfung und Stimmungsschwankungen bis Depressionen. In aktiven Schubphasen (Hashimoto-Thyreoiditis mit akuter Entzündung) kann es vorübergehend auch zu Überfunktionssymptomen kommen: Herzrasen, Unruhe, Schwitzen und Gewichtsverlust – weil beschädigtes Schilddrüsengewebe kurzzeitig mehr Hormone freisetzt. Dieser Wechsel zwischen Unter- und Überfunktionssymptomen ist charakteristisch für aktive Hashimoto-Schübe.",
         },
         {
           heading: "Welche Bluttests für Hashimoto?",
-          text: "Der wichtigste Test ist die Messung der TPO-Antikörper (Thyreoperoxidase-Antikörper). Diese sind bei etwa 90 % der Hashimoto-Patienten erhöht. Dazu sollten TSH, fT3 und fT4 gemessen werden. Eine Schilddrüsen-Sonographie ergänzt die Diagnose – die Schilddrüse zeigt bei Hashimoto ein charakteristisches echoarmes Bild.",
+          text: "Der wichtigste einzelne Test ist die Messung der TPO-Antikörper (Thyreoperoxidase-Antikörper) – diese sind bei etwa 90 % der Hashimoto-Patientinnen erhöht und bestätigen die Autoimmunerkrankung. Zusätzlich sollten gemessen werden: TSH (Screening-Wert für Schilddrüsenfunktion), fT3 und fT4 (die eigentlichen aktiven Hormone, nicht nur TSH), Tg-Antikörper (Thyreoglobulin-Antikörper, positiv bei weiteren 5–10 % der Hashimoto-Fälle). Eine Schilddrüsen-Sonographie ergänzt die Labordiagnostik: Bei Hashimoto zeigt die Schilddrüse ein charakteristisches echoarmes ('dunkles'), inhomogenes Bild – ein erfahrener Sonografist erkennt Hashimoto oft schon im Ultraschall, auch wenn Antikörper noch im Normbereich sind.",
         },
         {
           heading: "Warum wird Hashimoto so oft spät erkannt?",
-          text: "Hashimoto wird häufig 5–10 Jahre nicht erkannt, weil die Symptome unspezifisch sind und oft anderen Ursachen zugeschrieben werden. TSH kann lange im Normbereich liegen, selbst wenn die Krankheit aktiv ist. Wer klassische Symptome hat, sollte explizit nach den TPO-Antikörpern fragen.",
+          text: "Hashimoto wird im Durchschnitt 5–10 Jahre zu spät erkannt, weil mehrere Faktoren zusammenkommen. Erstens sind die Symptome unspezifisch – Müdigkeit, Gewichtszunahme und Stimmungsprobleme werden häufig als Burnout, Depressionen oder einfach 'Stress' fehlgedeutet. Zweitens liegt TSH oft noch im Normbereich, selbst wenn die Autoimmunreaktion bereits aktiv ist und Schilddrüsengewebe angegriffen wird – viele Ärzte testen nur TSH, nicht die entscheidenden Antikörper. Drittens schwanken die Symptome – in guten Phasen verschwinden Beschwerden fast ganz, was die Diagnose weiter verzögert. Wer klassische Symptome hat, sollte explizit nach TPO-Antikörpern und fT3 fragen – und nicht nur auf einen TSH-Wert warten.",
         },
       ],
     },
@@ -183,15 +183,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Was bedeutet Remission bei Hashimoto?",
-          text: "Remission bedeutet: die Autoimmunaktivität nimmt ab, Antikörperwerte sinken, und die Schilddrüsenfunktion stabilisiert sich. Das ist möglich – und bei einigen Frauen sinken die TPO-Antikörper dauerhaft in den Normbereich. Eine 'Heilung' im Sinne von Verschwinden der Erkrankung ist jedoch selten.",
+          text: "Remission bedeutet bei Hashimoto: Die Autoimmunaktivität nimmt ab, TPO-Antikörperwerte sinken, und die Schilddrüsenfunktion stabilisiert sich – die Betroffene ist weitgehend beschwerdefrei. Das ist bei einem Teil der Frauen tatsächlich möglich: Studien zeigen, dass bei 10–20 % der Hashimoto-Patientinnen die TPO-Antikörper dauerhaft in den Normbereich sinken können. Eine vollständige 'Heilung' im Sinne des dauerhaften Verschwindens der Autoimmunprädisposition ist jedoch selten. Hashimoto ist eine genetisch bedingte Autoimmunerkrankung – die Veranlagung bleibt. Was sich verändern lässt, ist die Aktivität der Immunreaktion: Sie kann durch gezielte Maßnahmen stark gedämpft werden. Spontane Remissionen sind ebenfalls dokumentiert – besonders nach dem Abklingen auslösender Stressoren.",
         },
         {
           heading: "Was hilft, um Hashimoto zu verbessern?",
-          text: "Maßnahmen, die die Krankheitsaktivität reduzieren können: Selen (200 µg täglich kann TPO-Antikörper senken), Vitamin D optimieren (Mangel verstärkt Autoimmunaktivität), glutenfreie Ernährung (hilft einem Teil der Betroffenen), Stressreduktion, Schlafen und Bewegung. Die Datenlage ist teilweise noch begrenzt, aber diese Maßnahmen schaden nicht.",
+          text: "Maßnahmen, die die Autoimmunaktivität bei Hashimoto nachweislich reduzieren können: Selen (200 µg Natriumselenit täglich) – mehrere randomisierte Studien zeigen, dass Selen-Supplementierung TPO-Antikörper signifikant senkt und die Lebensqualität verbessert. Vitamin-D-Optimierung auf 40–60 ng/ml: Vitamin-D-Mangel ist bei Hashimoto häufig und korreliert mit höherer Antikörperaktivität – Supplementierung reduziert nachweislich TPO- und TG-Antikörper. Glutenfreie Ernährung hilft einem Teil der Betroffenen, besonders wenn gleichzeitig eine Zöliakie oder Glutensensitivität vorliegt (tritt bei Hashimoto 10-fach häufiger auf). Stressreduktion ist medizinisch wesentlich, da Cortisol den Immunstatus direkt beeinflusst. Inositol (Myo-Inositol 2g täglich) zeigt vielversprechende Ergebnisse bei der Reduktion von TSH und Antikörpern.",
         },
         {
           heading: "Behandlung: L-Thyroxin",
-          text: "Wenn die Schilddrüsenfunktion durch Hashimoto beeinträchtigt ist, wird L-Thyroxin (Schilddrüsenhormon) supplementiert. Das ersetzt die fehlende Hormonproduktion und verbessert die Symptome deutlich. Die Dosis wird regelmäßig angepasst.",
+          text: "Wenn die Schilddrüsenfunktion durch Hashimoto beeinträchtigt ist, wird L-Thyroxin (synthetisches T4) verschrieben – das ersetzt die fehlende Hormonproduktion der Schilddrüse und normalisiert den TSH-Wert. Die Dosierung beginnt niedrig (12,5–25 µg täglich) und wird alle 6–8 Wochen anhand von Bluttests angepasst. L-Thyroxin sollte morgens nüchtern eingenommen werden, mindestens 30–60 Minuten vor dem Frühstück und Kaffee – Kalzium, Eisen und Soja reduzieren die Aufnahme erheblich. Bei Frauen, die trotz normalisiertem TSH weiterhin Symptome haben, kann eine Kombination aus T4 und T3 (Liothyronin) sinnvoll sein – dies sollte mit einem erfahrenen Endokrinologen besprochen werden.",
         },
       ],
     },
@@ -222,19 +222,19 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Das Schilddrüsen-Panel",
-          text: "TSH, fT3, fT4 und TPO-Antikörper sind die wichtigsten Schilddrüsenwerte. TSH allein reicht nicht – fT3 und fT4 zeigen die tatsächlich aktiven Hormone. TPO-Antikörper schließen Hashimoto ein oder aus.",
+          text: "TSH, fT3, fT4 und TPO-Antikörper sind die wichtigsten Schilddrüsenwerte. TSH allein reicht nicht – es zeigt nur das Steuersignal der Hirnanhangsdrüse, nicht die tatsächlich aktiven Schilddrüsenhormone. fT3 (das aktive Schilddrüsenhormon) kann zu niedrig sein, obwohl TSH noch im Normbereich liegt – weil die Umwandlung von T4 zu T3 gestört ist. fT4 zeigt das Vorläuferhormon. TPO-Antikörper (Anti-TPO) schließen Hashimoto ein oder aus: Erhöhte Antikörper beweisen eine aktive Autoimmunreaktion, die Symptome verursachen kann, noch bevor TSH abweicht. Tg-Antikörper (Anti-Tg) ergänzen das Bild bei Hashimoto-Verdacht. Ohne dieses vollständige Panel bleiben viele Schilddrüsenerkrankungen jahrelang unerkannt.",
         },
         {
           heading: "Sexualhormone",
-          text: "Östradiol (E2) ist das wichtigste Östrogen und zeigt den aktuellen Status in der Perimenopause. FSH steigt an, wenn die Eierstöcke nachlassen. LH, Progesteron und Testosteron ergänzen das Bild. DHEA-S spiegelt die Nebennierenaktivität wider.",
+          text: "Östradiol (E2) ist das wichtigste Östrogen im reproduktiven Alter und zeigt den aktuellen Hormonstatus. Wichtig: In der Perimenopause schwankt Östradiol extrem – ein einzelner Wert sagt wenig; Messungen an mehreren Zyklusmomenten sind aussagekräftiger. FSH (follikelstimulierendes Hormon) steigt an, wenn die Eierstöcke nachlassen – ein Wert über 25 IU/L am Zyklustag 3–5 deutet auf Perimenopause hin. LH steigt parallel zu FSH. Progesteron sollte in der zweiten Zyklushälfte (Tag 19–22) gemessen werden – das ist der einzige Zeitpunkt mit aussagekräftigen Werten. Testosteron (als freies Testosteron, nicht nur Gesamttestosteron) ist das wichtigste Libidohormon auch für Frauen. DHEA-S spiegelt die Nebennierenreserve und Androgenvorstufen wider. AMH (Anti-Müller-Hormon) misst die Eierstockreserve stabil und unabhängig vom Zyklustag.",
         },
         {
           heading: "Stresshormone und Mikronährstoffe",
-          text: "Cortisol (Speicheltest über den Tag verteilt ist aussagekräftiger als Bluttest) zeigt die Nebennierenbelastung. Ferritin (nicht nur Eisen!) ist der beste Marker für den Eisenspeicher. Vitamin D sollte bei >40 ng/ml liegen. Vitamin B12 ist wichtig für Energie und Nerven.",
+          text: "Cortisol: Ein einzelner Bluttest ist wenig aussagekräftig wegen des Tagesprofils. Ein Speichel-Tagesprofil (Morgen, Mittag, Abend, Nacht) gibt ein präziseres Bild der Nebennierenbelastung und zeigt Dysregulationsmuster. Insulin (nüchtern): Insulinresistenz ist bei bis zu 30 % der normgewichtigen Frauen vorhanden und häufig unsichtbar im Standardlabor. Nüchterninsulin unter 7 µIU/ml ist der Zielwert. Ferritin (nicht nur Eisen oder Hämoglobin!): Ferritin ist der Eisenspeicher – unter 70 µg/l verursacht Haarausfall und Erschöpfung, auch wenn das Blutbild noch 'normal' ist. Vitamin D (25-OH-Vitamin D): Zielwert über 40 ng/ml für optimale Immunfunktion und Hormonbalance. Vitamin B12: unter 300 pg/ml verursacht Energie- und Nervensymptome.",
         },
         {
           heading: "Wann und wo testen lassen?",
-          text: "Die meisten Sexualhormone sollten in der ersten Zyklushälfte (Tag 3–5 nach Beginn der Menstruation) gemessen werden – außer Progesteron, das in der zweiten Hälfte (Tag 19–22) gemessen wird. Gynäkologe oder Endokrinologe sind die richtigen Anlaufstellen.",
+          text: "Das Timing der Blutabnahme ist für Sexualhormone entscheidend. Östradiol, FSH, LH und AMH: am besten an Zyklustag 3–5 (frühe Follikelphase, 2–5 Tage nach Beginn der Menstruation). In dieser Phase sind die Referenzwerte am stabilsten. Progesteron: ausschließlich in der Lutealphase (Tag 19–22), um zu bestätigen, ob ein Eisprung stattgefunden hat. Bei ausbleibender Periode: Messung zu beliebigem Zeitpunkt, plus hCG-Test zum Ausschluss einer Schwangerschaft. Anlaufstellen: Gynäkologin oder Endokrinologin für Hormonpanels. Internistin oder Hausärztin für Schilddrüse, Ferritin, Vitamin D. Spezialisierte Labore (z.B. Synlab, Labor Berlin) bieten auch Heimbluttests für einige Werte an.",
         },
       ],
     },
@@ -265,15 +265,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Sofortmaßnahmen bei einer Hitzewallung",
-          text: "Wenn eine Hitzewallung einsetzt: sofort tiefe, ruhige Atemzüge nehmen. Kühles Wasser auf Handgelenke, Nacken oder Schläfen tupfen. Kleidung lockern. Bei Möglichkeit in einen kühleren Raum wechseln oder frische Luft schnappen.",
+          text: "Wenn eine Hitzewallung einsetzt, hilft die 4-7-8-Atemtechnik sofort: 4 Sekunden einatmen, 7 Sekunden Atem halten, 8 Sekunden ausatmen. Diese Technik aktiviert das Parasympathikus-Nervensystem und kann die Intensität der Wallung innerhalb von Minuten reduzieren. Kühles Wasser auf Handgelenke, Nacken oder Schläfen tupfen – diese Stellen haben viele oberflächliche Blutgefäße und kühlen den Körper schnell. Kleidung lockern oder schichtweise ausziehen. Kühles (nicht eiskaltes) Wasser trinken senkt die Körperkerntemperatur. Fächer oder ein Miniventilator im Handgepäck sind besonders im Büro oder in der Bahn hilfreich. Bei starken Hitzewallungen kann ein kleines Kühlpflaster oder Kältespray auf dem Nacken die Symptomdauer deutlich verkürzen.",
         },
         {
           heading: "Was Hitzewallungen auslöst – und was man meiden sollte",
-          text: "Häufige Trigger: Alkohol, scharfes Essen, Koffein, heißes Essen und Trinken, Stress, enge synthetische Kleidung, heiße Duschen. Nicht alle Trigger treffen jede Frau – ein Tagebuch hilft, die eigenen Auslöser zu identifizieren.",
+          text: "Die häufigsten Hitzewallungs-Trigger: Alkohol (besonders Rotwein, auch kleine Mengen), scharfes und heißes Essen, Koffein, emotionaler Stress und Aufregung, enge synthetische Kleidung, heiße Duschen und Bäder, warme Räume und Überhitzung. Die Trigger sind sehr individuell – was bei einer Frau Hitzewallungen auslöst, ist für eine andere irrelevant. Ein Trigger-Tagebuch für 4–6 Wochen gibt Klarheit: Notieren Sie wann und wie intensiv Hitzewallungen auftreten, was vorher gegessen oder getrunken wurde und das aktuelle Stresslevel. Körpergewicht spielt ebenfalls eine Rolle: Übergewicht erhöht die lokale Wärmeproduktion und verstärkt Hitzewallungen.",
         },
         {
           heading: "Langfristige Strategien",
-          text: "Bewährte Mittel: pflanzliche Präparate (Traubsilberkerze, Rotklee-Isoflavone), regelmäßiger Ausdauersport, Entspannungstraining wie Yoga oder Atemübungen, kühle Schlafumgebung. Bei starken Hitzewallungen ist Hormonersatztherapie (HRT) die wirksamste Behandlung.",
+          text: "Regelmäßiger Ausdauersport (mindestens 150 Minuten pro Woche) reduziert nachweislich Häufigkeit und Intensität von Hitzewallungen und verbessert Schlaf und Stimmung erheblich. Pflanzliche Präparate: Traubsilberkerze (Cimicifuga racemosa, 20–40 mg täglich) ist das am besten untersuchte Mittel – Meta-Analysen zeigen eine Reduktion von Hitzewallungen um ca. 26 %. Rotklee-Isoflavone (40–80 mg täglich) helfen ebenfalls moderat. Entspannungstechniken (Yoga, Meditations-basierte Atemübungen) sind durch Cochrane-Reviews als wirksam bestätigt. Schlafumgebung auf 16–18 °C kühlen und atmungsaktive Bettwäsche verwenden. Bei stark alltagsbeeinträchtigenden Hitzewallungen ist die Hormonersatztherapie (HRT) mit Abstand die wirksamste Behandlung – sie spricht bei 80–90 % der Frauen an.",
         },
       ],
     },
@@ -303,19 +303,19 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Schilddrüse (häufigste Ursache bei Frauen)",
-          text: "TSH: der erste Screening-Wert. Bei Müdigkeit auch fT3 und fT4 messen – TSH allein kann normal sein, obwohl fT3 (das aktive Hormon) zu niedrig ist. TPO-Antikörper: schließen Hashimoto ein oder aus.",
+          text: "Die Schilddrüse ist die häufigste hormonelle Ursache chronischer Müdigkeit bei Frauen. TSH ist der erste Screening-Wert – reicht aber allein nicht aus. Bei chronischer Müdigkeit sollte immer das vollständige Schilddrüsen-Panel gemessen werden: fT3 (das aktive Schilddrüsenhormon) kann zu niedrig sein, obwohl TSH noch im 'Normbereich' liegt – weil die Umwandlung von T4 zu T3 gestört ist. fT4 zeigt, wie viel Vorläuferhormon verfügbar ist. TPO-Antikörper (Anti-TPO) schließen Hashimoto ein oder aus: Erhöhte Antikörper beweisen eine aktive Autoimmunreaktion, die Symptome verursachen kann, auch wenn TSH noch normal ist. Ein TSH allein ist als Müdigkeits-Screening unzureichend.",
         },
         {
           heading: "Eisen und Blutbild",
-          text: "Ferritin ist der wichtigste Eisenwert – nicht nur Eisen! Ein Ferritin unter 30 µg/l verursacht Müdigkeit, unter 70 µg/l oft Haarausfall. Das vollständige Blutbild zeigt, ob eine Anämie (niedriger Hämoglobin) vorliegt.",
+          text: "Ferritin ist der wichtigste Eisenwert bei Müdigkeit – weit wichtiger als 'Eisen' oder 'Hämoglobin' allein. Ferritin misst den Eisenspeicher: Ein niedriger Ferritinspiegel bedeutet, dass der Körper aus seinem Eisenspeicher schöpft, noch bevor das Hämoglobin absinkt. Viele Frauen haben Ferritin im offiziellen 'Normbereich' von 12–80 µg/l, leiden aber bereits unter funktionellem Eisenmangel: Ferritin unter 50–70 µg/l verursacht chronische Erschöpfung, unter 70 µg/l oft diffusen Haarausfall. Das vollständige Blutbild (CBC) zeigt Hämoglobin, Hämatokrit und MCV und deckt manifeste Anämie auf. Ferritin immer explizit anfragen – viele Ärzte messen nur Serumeisen oder das Blutbild, aber nicht den Speicher.",
         },
         {
           heading: "Vitamine und Nährstoffe",
-          text: "Vitamin D (25-OH-Vitamin D): Zielwert >40 ng/ml. Unter 20 ng/ml verursacht Müdigkeit und Muskelschmerzen. Vitamin B12: Unter 300 pg/ml entstehen Energie- und Nervensymptome. Folsäure und Magnesium können ebenfalls relevant sein.",
+          text: "Vitamin D (als 25-OH-Vitamin D messen): In Deutschland haben ca. 60 % der Bevölkerung suboptimale Werte. Zielwert für Symptomfreiheit: über 40 ng/ml. Unter 20 ng/ml verursacht Müdigkeit, Muskelschmerzen und gedrückte Stimmung. Supplementierung: 2.000–4.000 IU täglich Vitamin D3 zusammen mit Vitamin K2. Vitamin B12 (im Serum oder als Holotranscobalamin): Unter 300 pg/ml entstehen Energie- und Nervensymptome (Kribbeln, Konzentrationsprobleme). Bei Frauen, die Metformin nehmen oder Magenprobleme haben, ist B12-Mangel häufig. Folsäure: wichtig für Zellteilung und Energiestoffwechsel, besonders bei MTHFR-Mutation. Magnesium: Serum-Magnesium ist wenig aussagekräftig (90 % des Magnesiums ist intrazellulär) – Symptome deuten auf Mangel hin trotz 'normaler' Serum-Werte.",
         },
         {
           heading: "Hormone und Stoffwechsel",
-          text: "HbA1c und Nüchternblutzucker: Insulinresistenz ist eine häufige unerkannte Ursache von Müdigkeit. Cortisol: Ein Tagesprofiil (Speichel) zeigt Nebennierenerschöpfung besser als ein einzelner Bluttest. Östradiol: Bei perimenopausalem Östrogenabfall kommt es zu Erschöpfung.",
+          text: "Blutzucker und Insulinresistenz: HbA1c und Nüchternblutzucker allein zeigen keine frühe Insulinresistenz. Nüchterninsulin (Zielwert: unter 7–8 µIU/ml) ist sensitiver. Insulinresistenz ist bei bis zu 30 % der schlanken Frauen vorhanden und verursacht Energie-Crashes nach Mahlzeiten und nachmittägliche Erschöpfung. Cortisol: Ein einzelner Blut-Cortisol-Wert ist wenig aussagekräftig wegen des Tagesprofils. Ein Speichel-Tagesprofil (Morgen, Mittag, Abend, Nacht) zeigt Dysregulation besser: Chronisch flaches Cortisol-Profil oder nächtlich erhöhtes Cortisol erklären viele Müdigkeitssymptome. Östradiol: Der perimenopausal schwankende Östrogenspiegel ist eine häufig übersehene Ursache von Erschöpfung ab 40 – besonders kombiniert mit niedrigem fT3 und Ferritinmangel.",
         },
       ],
     },
@@ -345,19 +345,19 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Selen: Das wichtigste Mineral bei Hashimoto",
-          text: "Selen ist für die Schilddrüsenfunktion essenziell und hat antioxidative Wirkung. Studien zeigen, dass 200 µg Selen täglich die TPO-Antikörper senken kann. Gute Quellen: Paranüsse (1–2 pro Tag reichen!), Fisch, Fleisch, Eier.",
+          text: "Selen ist das wichtigste Mineral für die Schilddrüse: Es ist essentieller Cofaktor der Schilddrüsenperoxidase (TPO), des Enzyms, das Schilddrüsenhormone synthetisiert, und der Deiodinase, die T4 in aktives T3 umwandelt. Gleichzeitig hat Selen starke antioxidative Wirkung – bei Hashimoto entstehende freie Radikale durch die Autoimmunreaktion werden durch Selenoproteine neutralisiert. Mehrere randomisierte Studien und Meta-Analysen zeigen: 200 µg Selen täglich senkt Anti-TPO-Antikörper signifikant (durchschnittlich 40–50 % nach 6–12 Monaten) und verbessert die Lebensqualität. Natürliche Quellen: 2 Paranüsse täglich liefern ca. 100–150 µg Selen. Weitere Quellen: fettreicher Seefisch (Lachs, Thunfisch, Hering), Fleisch (besonders Leber), Eier und Hülsenfrüchte.",
         },
         {
           heading: "Gluten: Weglassen oder nicht?",
-          text: "Hashimoto und Zöliakie kommen häufiger gemeinsam vor. Auch ohne Zöliakie berichten viele Betroffene von Besserung bei glutenfreier Ernährung. Ein dreimonatiger Selbstversuch ist empfehlenswert. Wissenschaftlich ist die Datenlage noch begrenzt, aber das Risiko ist gering.",
+          text: "Gluten ist bei Hashimoto ein kontroverses Thema. Das Faktische: Hashimoto und Zöliakie treten 10-mal häufiger zusammen auf als in der Normalbevölkerung – bei allen Hashimoto-Patientinnen lohnt sich daher ein Zöliakie-Screening (Anti-tTG-Antikörper). Bei bestätigter Zöliakie ist konsequente Glutenfreiheit essenziell und verbessert nachweislich die Schilddrüsenfunktion und senkt Antikörper. Ohne Zöliakie, aber mit Hashimoto: Die Datenlage ist weniger eindeutig. Einige kleine Studien zeigen Verbesserung der TPO-Antikörper und Symptome auch ohne Zöliakie-Diagnose. Viele Betroffene berichten subjektiv deutliche Verbesserung. Ein 3-monatiger Selbstversuch mit konsequenter Glutenfreiheit (Weizen, Gerste, Roggen, Dinkel) ist mit geringem Risiko verbunden und kann aufklären, ob persönlich eine Glutensensitivität vorliegt.",
         },
         {
           heading: "Entzündungshemmend essen",
-          text: "Entzündungshemmende Lebensmittel: Fettreicher Fisch (Lachs, Makrele, Sardinen), Olivenöl, Walnüsse, Beeren, grünes Blattgemüse, Kurkuma, Ingwer. Zu meiden: verarbeitete Lebensmittel, Zucker, Transfette, übermäßig Alkohol.",
+          text: "Eine anti-entzündliche Ernährung ist die Grundlage jeder Hashimoto-Ernährungsstrategie, weil Hashimoto eine Autoimmunkrankheit mit chronischer Entzündungskomponente ist. Empfehlenswert: Fettreicher Seefisch 2–3× pro Woche (Lachs, Makrele, Sardinen, Hering) – liefert EPA und DHA, die systemische Entzündungsmarker nachweislich senken. Extra-vergines Olivenöl als primäres Fett – Polyphenole hemmen Entzündungswege. Walnüsse und Leinsamen als Omega-3-Quellen. Beerenobst (Blaubeeren, Himbeeren, Erdbeeren) – reich an Anthocyanen mit anti-entzündlicher Wirkung. Kurkuma (Curcumin) + Pfeffer (Piperin für bessere Aufnahme): hemmt NF-κB, den zentralen Entzündungsregulator. Zu reduzieren: verarbeitete Lebensmittel, Zucker, Transfette aus Frittiertem, übermäßiger Alkohol.",
         },
         {
           heading: "Jod: Mit Vorsicht",
-          text: "Jod ist für die Schilddrüse nötig, aber bei Hashimoto kann eine zu hohe Jodzufuhr die Autoimmunreaktion verstärken. Jodiertes Salz und moderate Jodfufuhr über Fisch und Milchprodukte sind in der Regel unproblematisch. Hochdosierte Jodpräparate sollten ohne ärztliche Kontrolle vermieden werden.",
+          text: "Jod ist der Grundbaustein der Schilddrüsenhormone T3 und T4 – ohne Jod keine Hormonproduktion. Gleichzeitig ist Jodexzess bei Hashimoto problematisch: Hohe Jodmengen können die Thyreoperoxidase (TPO) oxidativ schädigen und die Autoimmunreaktion verstärken. Der kritische Unterschied liegt in der Menge: Moderate Jodzufuhr aus natürlichen Quellen – jodiertes Salz, gelegentlicher Seefisch und Milchprodukte – ist bei Hashimoto unbedenklich und notwendig. Problematisch sind hochdosierte Jodsupplemente (über 300–500 µg täglich) und Algenprodukte (Kelp, Spirulina – extrem jodreich). Diese können bei Hashimoto-Patientinnen Schübe auslösen. Empfehlung: Normale, jodhaltige Ernährung ohne Jodpräparate – und bei medizinischen Untersuchungen mit Kontrastmittel den Arzt auf Hashimoto hinweisen.",
         },
       ],
     },
@@ -501,15 +501,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "TSH: Das Steuerungshormon",
-          text: "TSH wird von der Hirnanhangsdrüse produziert und steuert die Schilddrüse. Hoher TSH bedeutet: Schilddrüse arbeitet zu wenig (Hypothyreose). Niedriger TSH bedeutet: Schilddrüse überaktiv (Hyperthyreose). Der 'Normbereich' in Labors ist weit – viele Frauen fühlen sich mit TSH über 2,5 bereits schlecht.",
+          text: "TSH (thyreoidstimulierendes Hormon) wird von der Hirnanhangsdrüse produziert und steuert die Schilddrüsenhormon-Produktion über eine negative Rückkopplung. Ein hoher TSH bedeutet: Die Hirnanhangsdrüse treibt die Schilddrüse an, weil zu wenig Schilddrüsenhormon im Blut ist – Zeichen einer Unterfunktion (Hypothyreose). Ein niedriger TSH bedeutet: Schilddrüse produziert zu viel Hormon – Zeichen einer Überfunktion (Hyperthyreose). Der offizielle Laborbereich (0,4–4,0 mIU/l) ist sehr weit. Klinisch behandeln viele Endokrinologen bereits ab TSH > 2,5 mIU/l, wenn Symptome vorliegen – der optimale Bereich für Wohlbefinden liegt erfahrungsgemäß bei 1,0–2,5 mIU/l. Wichtig: TSH schwankt tagesabhängig (morgens höher) und kann durch akute Erkrankungen, Stress und Medikamente beeinflusst werden.",
         },
         {
           heading: "fT3 und fT4: Die eigentlichen Schilddrüsenhormone",
-          text: "T4 (Thyroxin) ist das Speicherhormon, das von der Schilddrüse produziert wird. Es wird in den Geweben in das aktive T3 umgewandelt. Manchmal ist T4 normal, aber T3 niedrig – weil die Umwandlung gestört ist. Deshalb ist es wichtig, beide Werte zu messen.",
+          text: "T4 (Thyroxin) ist das Haupthormon, das die Schilddrüse produziert – aber es ist biologisch fast inaktiv. Es wird erst in den Körperzellen (vor allem in Leber, Niere und Muskeln) durch das Enzym Deiodinase in das aktive T3 umgewandelt. fT4 zeigt, wie viel T4 im Blut verfügbar ist. fT3 ist der Wert, der tatsächlich an den Zellrezeptoren wirkt und Energiestoffwechsel, Körpertemperatur, Herzfrequenz und Gehirnfunktion steuert. Das Problem: Bei manchen Frauen ist die T4→T3-Umwandlung gestört – durch Nährstoffmangel (Selen, Zink, Eisen), chronischen Stress (Cortisol hemmt die Umwandlung), oder genetische Varianten des Deiodinase-Enzyms. In diesen Fällen ist TSH normal, fT3 aber zu niedrig – und die Symptome einer Unterfunktion bestehen trotzdem.",
         },
         {
           heading: "Antikörper: TPO und Tg",
-          text: "TPO-Antikörper (Thyreoperoxidase): erhöht bei Hashimoto (und Morbus Basedow). Tg-Antikörper (Thyreoglobulin): ebenfalls bei Hashimoto, weniger sensitiv. Erhöhte Antikörper zeigen eine aktive Autoimmunreaktion an, auch wenn die Schilddrüsenfunktion noch normal ist.",
+          text: "TPO-Antikörper (Anti-Thyreoperoxidase, Anti-TPO): erhöht bei Hashimoto Thyreoiditis und Morbus Basedow. TPO ist das Enzym, das Schilddrüsenhormone produziert – Antikörper dagegen stören die Hormonproduktion. Normwert: unter 34 IU/ml (laborabhängig). Tg-Antikörper (Anti-Thyreoglobulin): ebenfalls bei Hashimoto erhöht, aber weniger sensitiv – etwa 70 % der Hashimoto-Fälle haben erhöhte TPO-Antikörper, aber nur 40 % erhöhte Tg-Antikörper. Wichtig: Erhöhte Antikörper zeigen eine aktive Autoimmunreaktion an, selbst wenn TSH, fT3 und fT4 noch im Normbereich liegen. In diesem Stadium verursacht die Autoimmunreaktion bereits Entzündung und Gewebsschaden in der Schilddrüse – und kann Symptome wie Erschöpfung und Haarausfall verursachen, auch wenn 'alle Schilddrüsenwerte normal' sind.",
         },
       ],
     },
@@ -539,15 +539,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Was ist Brain Fog?",
-          text: "Brain Fog beschreibt einen Zustand geistiger Unklarheit: Konzentrationsprobleme, Vergesslichkeit, das Gefühl, 'durch Watte zu denken', verlangsamtes Denken. Er ist keine Krankheit, sondern ein Symptom – und häufig hormonell bedingt.",
+          text: "Brain Fog beschreibt einen Zustand geistiger Unklarheit, der für Betroffene sehr belastend ist: Konzentrationsprobleme, Vergesslichkeit, das Gefühl, 'durch Watte zu denken', verlangsamtes Denken, Wortfindungsprobleme und die Unfähigkeit, komplexe Aufgaben zu fokussieren. Er ist keine eigenständige Erkrankung, sondern ein Symptom – häufig hormonell bedingt und deshalb bei Frauen in der Perimenopause, bei Hashimoto-Erkrankung oder nach Einnahme hormonhaltiger Medikamente besonders häufig. Kognitive Veränderungen in der Perimenopause werden in Studien bei bis zu 60 % der Frauen beobachtet. Wichtig: Brain Fog ist in der Regel reversibel, wenn die zugrunde liegende Ursache behandelt wird – er bedeutet keine dauerhafte kognitive Verschlechterung.",
         },
         {
           heading: "Hormonelle Ursachen",
-          text: "Östrogen schützt das Gehirn. Es fördert Gedächtniskonsolidierung, Serotonin und Durchblutung. Sinkt es in der Perimenopause, leidet die Kognition. Auch Schilddrüsenhormone sind essenziell für Gehirnfunktion – Hashimoto-bedingte Unterfunktion verursacht Brain Fog.",
+          text: "Östrogen ist ein Neuroprotektor: Es fördert Synapsenbildung im Hippocampus (dem Gedächtniszentrum), unterstützt die Acetylcholin-Produktion und verbessert die zerebrale Durchblutung. Wenn Östrogen in der Perimenopause sinkt, bemerken viele Frauen deutliche kognitive Veränderungen. Schilddrüsenhormone sind ebenso essenziell für die Gehirnfunktion: T3 ist das aktive Hormon in den Neuronen. Bei Hashimoto-bedingter Unterfunktion oder schlechter T4→T3-Umwandlung entstehen Konzentrationsprobleme und Gedächtnisdefizite, die mit Brain Fog identisch sind. Auch Ferritinmangel (unter 50 µg/l) kann neuronale Funktionen beeinträchtigen – Eisen ist Co-Faktor für Dopamin- und Serotonin-Synthese, die für Konzentration und Antrieb unverzichtbar sind.",
         },
         {
           heading: "Was hilft gegen Brain Fog?",
-          text: "Wichtigste Maßnahmen: Ursache klären (Bluttest!), Schlaf priorisieren (Gedächtniskonsolidierung passiert im Schlaf), regelmäßige aerobe Bewegung (verbessert Durchblutung und Neuroplastizität), Omega-3-Fett DHA (Hauptfettsäure im Gehirn), Stressreduktion (Cortisol schadet dem Hippocampus).",
+          text: "Ursache klären ist der erste Schritt: Bluttest mit TSH, fT3, fT4, Anti-TPO, Ferritin, Vitamin D, B12, Östradiol und FSH. Schlaf priorisieren ist medizinisch unumgänglich – Gedächtniskonsolidierung und neuronale Entgiftung (Glymphatisches System) finden ausschließlich im Schlaf statt. Chronischer Schlafmangel verschlechtert kognitive Leistung innerhalb weniger Tage messbar. Regelmäßige aerobe Bewegung (30 Min., 4× wöchentlich) erhöht BDNF (Brain-Derived Neurotrophic Factor) und verbessert nachweislich Gedächtnis und Konzentration. DHA (Omega-3, 2 g täglich) ist die wichtigste Strukturfettsäure des Gehirns. Stressreduktion ist kritisch: Chronisch erhöhtes Cortisol schädigt den Hippocampus nachweislich. Bei hormonell bedingtem Brain Fog kann Hormontherapie die Kognition signifikant verbessern.",
         },
       ],
     },
@@ -578,15 +578,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Welche Heimtests gibt es?",
-          text: "Die häufigsten Heimtests messen FSH im Urin (ähnlich wie ein Schwangerschaftstest). Es gibt auch Speicheltests, die mehrere Hormone messen. Diese sind bequem, aber teuer und weniger genau als Bluttests.",
+          text: "Die häufigsten Wechseljahre-Heimtests messen FSH (follikelstimulierendes Hormon) im Urin – ähnlich wie ein Schwangerschaftstest, mit einem Teststreifen. Bekannte Produkte: Clearblue Menopause FSH-Test, Cerascreen Wechseljahre-Test, verschiedene Apothekenmarken. Neben Urintests gibt es auch Speicheltests (z.B. von Cerascreen oder medivere), die mehrere Hormone gleichzeitig messen – darunter Östradiol, Progesteron, Testosteron und DHEA-S. Speicheltests sind bequemer als Bluttests, aber weniger präzise und in der Reproduzierbarkeit schwächer. Alle Heimtests sind ein erster Hinweis, kein Diagnoseersatz. Sie kosten zwischen 15 und 100 Euro und sind in Apotheken und online erhältlich.",
         },
         {
           heading: "Warum ein einmaliger FSH-Test wenig aussagt",
-          text: "FSH schwankt in der Perimenopause stark – von einem Tag auf den anderen kann der Wert stark variieren. Selbst in der Menopause kann FSH kurzzeitig niedrig sein. Ein erhöhter FSH-Wert ist ein Hinweis, aber kein Beweis für die Menopause.",
+          text: "FSH schwankt in der Perimenopause stark und unvorhersehbar – von einem Monat auf den anderen kann der Wert erheblich variieren. Ein FSH-Wert über 25 IU/L gilt als Hinweis auf Perimenopause, aber ein einmaliger normaler Wert schließt die Perimenopause nicht aus. Sogar in der Menopause kann FSH kurzzeitig auf normale Werte absinken. Für eine verlässliche Einschätzung sind 2–3 Messungen im Abstand von mehreren Monaten aussagekräftiger als ein Einzelwert. Außerdem misst FSH nur die Reaktion der Hirnanhangsdrüse, nicht direkt den Hormonhaushalt der Eierstöcke – AMH (Anti-Müller-Hormon) ist für die Eierstockreserve ein präziserer Marker und schwankt deutlich weniger im Zyklus.",
         },
         {
           heading: "Was ist aussagekräftiger?",
-          text: "Symptome und ihre Entwicklung über Zeit sind oft aussagekräftiger als ein Einzeltest. Wenn Symptome auftreten, ist ein ärztlicher Bluttest mit FSH, LH, Östradiol, TSH und weiteren Werten deutlich informativer. Ihre Gynäkologin kann die Werte im Kontext interpretieren.",
+          text: "Symptome und ihre Entwicklung über Zeit sind für die Diagnose der Perimenopause oft verlässlicher als ein Einzeltest. Eine Gynäkologin kann mit einem vollständigen ärztlichen Bluttest (FSH, LH, Östradiol, AMH, Progesteron, TSH und Antikörper) ein genaues Bild der Hormonsituation erstellen. Wichtig: Die Hormone müssen zum richtigen Zeitpunkt im Zyklus gemessen werden – Östradiol und FSH idealerweise an Tag 3–5, Progesteron an Tag 19–22. Ein Symptomtagebuch über 2–3 Monate, in dem Zykluslänge, Stimmung, Schlaf und Beschwerden notiert werden, liefert Ihrer Gynäkologin oft mehr Informationen als ein einmaliger Urintest.",
         },
       ],
     },
@@ -616,15 +616,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Frühe Perimenopause (erste Anzeichen bis Zyklusveränderungen)",
-          text: "Die frühe Perimenopause beginnt subtil: PMS wird stärker, die Stimmung schwankt mehr, der Schlaf verschlechtert sich leicht. Der Zyklus ist noch regelmäßig, aber Hormonspiegel beginnen zu schwanken. Diese Phase dauert 2–5 Jahre.",
+          text: "Die frühe Perimenopause beginnt subtil und wird von vielen Frauen zunächst nicht als solche erkannt. Charakteristisch: PMS-Symptome werden intensiver, Stimmungsschwankungen häufiger, der Schlaf schlechter – besonders in der zweiten Zyklushälfte. Der Zyklus ist noch weitgehend regelmäßig, aber die Hormonspiegel beginnen zu schwanken. Progesteron sinkt dabei als erstes, lange bevor Östrogen deutlich abfällt. Das erklärt, warum erste Perimenopause-Symptome oft PMS-ähnlich aussehen: Reizbarkeit, Schlafprobleme, Brustspannen und Stimmungstiefs in der Lutealphase. Die SWAN-Studie (Study of Women's Health Across the Nation) zeigte, dass diese frühe Phase durchschnittlich 2–5 Jahre dauert und bei vielen Frauen ohne typische Hitzewallungen beginnt.",
         },
         {
           heading: "Späte Perimenopause (Zyklusunregelmäßigkeiten bis letzter Periode)",
-          text: "Die späte Perimenopause ist durch deutliche Zyklusveränderungen (Aussetzer >60 Tage), intensive Hitzewallungen und Schlafstörungen geprägt. Diese Phase dauert durchschnittlich 1–3 Jahre bis zur letzten Menstruation.",
+          text: "Die späte Perimenopause ist durch deutliche Zyklusveränderungen geprägt: Die Abstände zwischen Perioden werden länger, es kommt zu Aussetzern von mehr als 60 Tagen. Gleichzeitig werden Hitzewallungen intensiver und häufiger – besonders nächtlicher Nachtschweiß stört den Schlaf erheblich. Typisch für diese Phase ist auch erhöhte emotionale Sensibilität, die durch hormonelle Schwankungen und Schlafentzug entsteht. Paradoxerweise kann Östrogen in dieser Phase noch kurzfristig höher als normal ansteigen ('Östrogenspitzen'), bevor es endgültig abfällt – was zu Reizbarkeit und Brustspannung führt. Diese Phase dauert durchschnittlich 1–3 Jahre und endet mit der letzten Menstruation.",
         },
         {
           heading: "Was die Dauer beeinflusst",
-          text: "Genetik: Die Mutter als Indikator. Rauchen: verkürzt die fruchtbare Phase und kann Symptome verstärken. Körpergewicht, Stress und allgemeine Gesundheit spielen ebenfalls eine Rolle.",
+          text: "Genetik ist der stärkste Einflussfaktor: Wann Ihre Mutter und Großmutter in die Menopause kamen, gilt als der verlässlichste Vorhersagewert für den eigenen Zeitpunkt. Rauchen beschleunigt den Follikelverlust und verfrüht die Menopause um durchschnittlich 1–2 Jahre – das Risiko steigt proportional zur Rauchdauer. Körpergewicht hat eine zweiseitige Rolle: Untergewicht und intensiver Ausdauersport können Zyklen destabilisieren, während Übergewicht die hormonellen Schwankungen in der Perimenopause verstärkt. Chronischer Stress erhöht dauerhaft Cortisol, was Progesteron verdrängt und die HPA-Achse belastet. Autoimmunerkrankungen wie Hashimoto sowie bestimmte Operationen oder Chemotherapie können die Perimenopause erheblich früher einsetzen lassen.",
         },
       ],
     },
@@ -654,15 +654,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Warum bin ich bei Hashimoto trotz Medikamente noch müde?",
-          text: "Müdigkeit trotz L-Thyroxin ist häufig. Mögliche Ursachen: TSH-Zielwert noch zu hoch (optimal unter 1–2 mIU/l), schlechte T4→T3-Umwandlung (kombinierte T4/T3-Therapie erwägen), gleichzeitige Mängel (Vitamin D, Ferritin, B12), Begleiterkrankungen (Glutenunverträglichkeit, Nebennierenerschöpfung).",
+          text: "Müdigkeit trotz L-Thyroxin hat meist konkrete Ursachen. Der TSH-Zielwert liegt im Labor-Normbereich (0,4–4,0 mU/L), aber funktional fühlen sich viele Frauen erst bei TSH unter 2,0 mU/L wirklich energiegeladen. Eine gestörte T4→T3-Umwandlung ist eine weitere häufige Ursache: T4 (Levothyroxin) muss in den Körperzellen in aktives T3 umgewandelt werden – dieser Schritt wird durch Selenmangel, chronische Entzündung, Stress und Kalorienmangel blockiert. Dann bleibt T4 hoch, aber die Zellen erhalten zu wenig aktives Schilddrüsenhormon. Begleitende Mängel verstärken das Problem: Vitamin-D-Mangel, Ferritin unter 70 µg/l, Vitamin-B12-Mangel, Glutenunverträglichkeit oder eine Cortisolstörung können alle zur anhaltenden Erschöpfung beitragen – unabhängig von den Schilddrüsenwerten.",
         },
         {
           heading: "Nährstoffe gegen Hashimoto-Müdigkeit",
-          text: "Selen (200 µg täglich) unterstützt die T4→T3-Umwandlung und reduziert Antikörper. Vitamin D: Zielwert 50–70 ng/ml, oft stark unterversorgt bei Hashimoto. Ferritin: Zielwert >70 µg/l für gute Schilddrüsenfunktion. Magnesium: verbessert Schlaf und Energiestoffwechsel.",
+          text: "Selen (200 µg täglich als Selenomethionin) ist das wichtigste Mineral für die Schilddrüsenfunktion: Es ist Co-Faktor der Deiodinase-Enzyme, die T4 in aktives T3 umwandeln, und reduziert oxidativen Stress in der Schilddrüse. Studien zeigen, dass Selen Anti-TPO-Antikörper um 30–50 % senken kann. Vitamin D: Zielwert 50–70 ng/ml – bei Hashimoto-Patientinnen ist Vitamin-D-Mangel besonders häufig, da der Autoimmunprozess Vitamin D verbraucht. Ferritin-Zielwert: >70 µg/l – unter diesem Wert ist die Schilddrüsenhormon-Verwertung in den Zellen eingeschränkt. Magnesium (300 mg abends) verbessert Schlafqualität und den mitochondrialen Energiestoffwechsel. Vitamin B12 (Zielwert >400 pg/ml) ist essenziell für Energieproduktion und sollte aktiv kontrolliert werden.",
         },
         {
           heading: "Lebensstil bei Hashimoto-Erschöpfung",
-          text: "Sanfte Bewegung: Überlastung verschlechtert Hashimoto-Symptome. Ausdauersport in Maßen ist besser als Hochintensiv-Training. Schlaf priorisieren. Anti-entzündliche Ernährung. Glutenfreier Versuch (3 Monate).",
+          text: "Sanfte, regelmäßige Bewegung ist der Schlüssel – intensive Hochintensiv-Einheiten (HIIT) erhöhen Cortisol stark, was bei Hashimoto Schübe triggern und die T4→T3-Umwandlung hemmen kann. Empfohlen: Spazierengehen, Yoga, Schwimmen, moderates Krafttraining. Schlaf priorisieren ist medizinisch wichtig: Chronischer Schlafmangel erhöht systemische Entzündungsmarker (IL-6, CRP) und verschlechtert Schilddrüsenwerte messbar. Anti-entzündliche Ernährung mit viel Gemüse, fettem Fisch (Omega-3), Olivenöl und Hülsenfrüchten reduziert die chronische Inflammation. Ein glutenfreier Selbstversuch über 3 Monate lohnt sich besonders, wenn gleichzeitig Verdauungsprobleme bestehen – bei Hashimoto tritt Zöliakie 10-fach häufiger auf als in der Normalbevölkerung.",
         },
       ],
     },
@@ -693,19 +693,19 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Warum nehmen Frauen in den Wechseljahren zu?",
-          text: "Sinkende Östrogenspiegel verlagern die Fettspeicherung vom Unterkörper in den Bauchbereich. Gleichzeitig verlangsamt sich der Stoffwechsel durch Muskelabbau und eine reduzierte Schilddrüsenaktivität. Cortisol – das Stresshormon – steigt relativ an und fördert die Bauchfettbildung zusätzlich.",
+          text: "Die Gewichtszunahme in den Wechseljahren hat mehrere hormonelle Mechanismen, die zusammenwirken. Sinkende Östrogenspiegel verlagern die Fettspeicherung aktiv vom Unterkörper (Hüften, Oberschenkel) in den Bauchbereich (viszerales Fett). Viszerales Fett ist metabolisch aktiver als subkutanes Fett und erhöht Entzündungsmarker sowie das Risiko für Insulinresistenz. Parallel verlangsamt sich der Grundumsatz durch Muskelabbau (Sarkopenie): Ab 40 verlieren Frauen ohne Training jährlich 0,5–1 % Muskelmasse – Muskeln sind die größten Kalorienverbraucher im Ruhezustand. Cortisol steigt relativ an, wenn Progesteron fällt – der 'Pregnenolon-Steal'-Mechanismus. Cortisol fördert direkt die Bauchfettbildung und Insulinresistenz. Dazu kommt häufig eine Verlangsamung der Schilddrüsenfunktion in der Perimenopause, die den Grundumsatz weiter senkt.",
         },
         {
           heading: "Krafttraining ist wichtiger als Ausdauer",
-          text: "Muskeln sind der größte Stoffwechselmacher des Körpers. In den Wechseljahren verlieren Frauen ohne Training jährlich ca. 0,5–1 % Muskelmasse. Krafttraining 2–3x pro Woche erhält nicht nur Muskeln, sondern verbessert auch die Insulinsensitivität – ein Schlüsselfaktor für die Gewichtskontrolle.",
+          text: "Krafttraining ist für Frauen in der Perimenopause und Menopause die wirkungsvollste Maßnahme gegen Gewichtszunahme – wirkungsvoller als Cardio allein. Muskeln sind der größte Stoffwechselmacher: Je mehr aktive Muskelmasse, desto höher der Grundumsatz – auch in Ruhe. In den Wechseljahren verlieren Frauen ohne Training jährlich 0,5–1 % Muskelmasse (Sarkopenie). Krafttraining 2–3× pro Woche (progressive Überlastung, zusammengesetzte Bewegungen wie Kniebeugen, Kreuzheben, Bankdrücken) erhält nicht nur Muskeln, sondern verbessert auch die Insulinsensitivität (was Gewichtszunahme am Bauch direkt hemmt), die Knochendichte (Schutz vor Osteoporose), Körperhaltung und psychisches Wohlbefinden. Cardio bleibt wertvoll für Herzgesundheit und Stimmung – als Ergänzung zum Krafttraining, nicht als Ersatz.",
         },
         {
           heading: "Protein ist entscheidend",
-          text: "Protein sättigt länger, schützt Muskelmasse beim Abnehmen und hat eine hohe thermische Wirkung (der Körper verbrennt Kalorien beim Verdauen). Ziel: 1,2–1,6 g Protein pro kg Körpergewicht täglich. Gute Quellen: Hülsenfrüchte, Eier, Fisch, Hähnchen, griechischer Joghurt.",
+          text: "Ausreichend Protein ist in der Perimenopause und Menopause entscheidender als je zuvor: Protein sättigt länger durch stärkere Sättigungshormone (GLP-1, Peptid YY), schützt Muskelmasse beim Abnehmen (ohne ausreichend Protein wird bei Kalorienreduktion bevorzugt Muskeln statt Fett abgebaut), hat hohe thermische Wirkung (25–30 % der Protein-Kalorien werden beim Verdauen verbrannt), und stabilisiert den Blutzucker. Zielwert für Frauen ab 40: 1,2–1,6 g Protein pro kg Körpergewicht täglich (höher als die allgemeine Empfehlung von 0,8 g/kg). Gute Quellen: Hülsenfrüchte (Linsen, Kichererbsen), Eier, Fisch, Hähnchenbrust, griechischer Joghurt (20 g Protein pro 200 g), Magerquark, Tempeh.",
         },
         {
           heading: "Schlaf und Stressreduktion nicht unterschätzen",
-          text: "Schlafmangel erhöht Ghrelin (Hungerhormon) und senkt Leptin (Sättigungshormon). Chronischer Stress erhöht Cortisol, was direkt die Bauchfettbildung fördert. Wer schlecht schläft, isst im Schnitt 300–500 kcal mehr pro Tag.",
+          text: "Schlaf und Stress sind bei der Wechseljahre-Gewichtszunahme unterschätzte, aber hormonell direkte Faktoren. Schlafmangel hat sofortige metabolische Folgen: Ghrelin (das Hungerhormon) steigt um 15–28 %, Leptin (das Sättigungshormon) sinkt um 15–20 %. Das Ergebnis: erhöhter Hunger, besonders auf Kohlenhydrate und Fettes, und vermindertes Sättigungsgefühl. Studien zeigen: Frauen mit unter 6 Stunden Schlaf nehmen im Durchschnitt 300–500 kcal mehr pro Tag zu sich. Chronischer Stress erhöht Cortisol, was direkt drei Mechanismen aktiviert: Bauchfetteinlagerung durch Cortisolrezeptoren im viszeralen Fettgewebe, Insulinresistenz, und Heißhunger auf zuckerhaltige und fettreiche Nahrung. Praxis: 7–8 Stunden Schlaf priorisieren, Schlafzimmer kühlen (18 °C), und aktive Stressbewältigung (Atemübungen, Yoga, Naturaufenthalte).",
         },
       ],
     },
@@ -736,19 +736,19 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Warum werden Hashimoto und Wechseljahre oft verwechselt?",
-          text: "Beide Erkrankungen verursachen nahezu identische Symptome: chronische Müdigkeit, Gewichtszunahme, Haarausfall, Schlafstörungen, Stimmungsschwankungen und Konzentrationsprobleme. Frauen zwischen 40 und 55 sind am häufigsten von beiden betroffen. Ohne gezielten Bluttest ist eine Unterscheidung klinisch kaum möglich.",
+          text: "Hashimoto Thyreoiditis und Perimenopause teilen sich ein fast identisches Symptomspektrum, was zu häufigen Fehldiagnosen oder Übersehen einer der beiden Erkrankungen führt. Beide verursachen: Chronische Müdigkeit und Erschöpfung trotz ausreichend Schlaf. Gewichtszunahme, besonders am Bauch, trotz unveränderter Ernährung. Diffuser Haarausfall. Schlafstörungen und nächtliches Aufwachen. Stimmungsschwankungen, Reizbarkeit, depressive Verstimmung. Konzentrationsprobleme und Wortfindungsschwäche (Brain Fog). Der Häufigkeitsgipfel für beide Erkrankungen liegt bei Frauen zwischen 40 und 55 – genau die Lebensphase, in der die Perimenopause einsetzt. Ohne gezielten Bluttest (Schilddrüsenpanel + Hormonstatus) ist eine Differenzierung klinisch kaum möglich. Und bei vielen Frauen liegen beide gleichzeitig vor.",
         },
         {
           heading: "Wie beeinflussen sich Hashimoto und Wechseljahre gegenseitig?",
-          text: "Östrogen beeinflusst die Schilddrüsenfunktion direkt. Sinkt Östrogen in der Perimenopause, kann sich eine vorhandene Hashimoto-Erkrankung verschlechtern oder erstmals symptomatisch werden. Gleichzeitig stören Schilddrüsenhormone den Zyklus und können Wechseljahressymptome imitieren oder verstärken.",
+          text: "Östrogen und Schilddrüsenhormone sind eng verknüpft – sie beeinflussen sich gegenseitig auf mehreren Ebenen. Östrogen erhöht thyroxinbindendes Globulin (TBG): Wenn Östrogen in der Perimenopause fällt, verändert sich die TBG-Konzentration, was die Interpretation von Schilddrüsenwerten erschwert. Gleichzeitig moduliert Östrogen das Immunsystem – ein Östrogenabfall kann die Autoimmunaktivität bei Hashimoto verstärken oder erstmals triggern. Frauen berichten häufig, dass ihre Hashimoto-Diagnose in den Perimenopause-Jahren gestellt wurde, obwohl die Erkrankung möglicherweise schon früher latent vorhanden war. Umgekehrt kann eine unerkannte Schilddrüsenunterfunktion Zyklusstörungen verursachen, die wie Perimenopause aussehen. Beides kann sich gegenseitig verstärken – deshalb ist ein vollständiges Panel essenziell.",
         },
         {
           heading: "Diagnose: Was testen lassen?",
-          text: "Optimales Panel wenn beide Erkrankungen möglich sind: TSH, fT3, fT4, TPO-Antikörper (Hashimoto), Östradiol (E2), FSH (Eierstockreserve), LH, Testosteron, Vitamin D, Ferritin. Beide Erkrankungen lassen sich so mit einem Bluttest gemeinsam diagnostizieren.",
+          text: "Wenn sowohl Hashimoto als auch Perimenopause möglich sind, sollte das diagnostische Panel beide Hormonsysteme abdecken: Schilddrüse komplett: TSH (als Screening), fT3 (aktives Hormon), fT4 (Vorläuferhormon), Anti-TPO (Hashimoto) und Anti-TG (Hashimoto, weniger sensitiv). Ovarielle Funktion: Östradiol (E2, am Zyklustag 3–5), FSH (steigt bei Perimenopause), LH (luteinisierendes Hormon), AMH (Eierstockreserve, stabiler als FSH). Weitere Marker: Testosteron und SHBG, Vitamin D (bei beiden Erkrankungen oft mangelhaft und therapeutisch relevant), Ferritin (oft niedrig bei starken Perimenopause-Blutungen). Idealerweise alles in einem Blutabnahme-Termin – am Zyklustag 3–5 für die genauesten Werte.",
         },
         {
           heading: "Behandlung wenn beides vorliegt",
-          text: "Beide Erkrankungen müssen getrennt behandelt werden. Hashimoto: L-Thyroxin-Einstellung, Selen, entzündungshemmende Ernährung. Wechseljahre: je nach Beschwerden pflanzliche Mittel oder Hormonersatztherapie. Wichtig: Wenn sich die Schilddrüsenwerte nach dem Start einer Östrogentherapie verändern, muss die L-Thyroxin-Dosis angepasst werden.",
+          text: "Beide Erkrankungen erfordern eine eigenständige, koordinierte Behandlung. Hashimoto: L-Thyroxin optimal einstellen (TSH-Zielwert 0,5–2,0 mIU/l, fT3 im oberen Drittel des Referenzbereichs), Selen 200 µg täglich, anti-entzündliche Ernährung, Vitamin D optimieren. Wechseljahre: je nach Beschwerden pflanzliche Mittel (Rotklee, Traubsilberkerze) oder Hormonersatztherapie. Wichtige Wechselwirkung: Wenn eine Östrogentherapie begonnen wird, verändert Östrogen die thyroxinbindenden Proteine im Blut. Das bedeutet: Die L-Thyroxin-Dosis muss in den ersten Wochen nach HRT-Beginn überprüft und ggf. angepasst werden. Schilddrüsenwerte nach 6–8 Wochen nach HRT-Beginn kontrollieren lassen.",
         },
       ],
     },
@@ -779,19 +779,19 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Was ist Cortisol und wann ist es zu hoch?",
-          text: "Cortisol ist das wichtigste Stresshormon und wird von den Nebennieren produziert. Morgens sollte es hoch sein (gibt Energie), abends niedrig. Chronischer Stress führt zu dauerhaft erhöhten Cortisolspiegeln – mit weitreichenden Folgen für Hormonsystem, Stoffwechsel und Schlaf.",
+          text: "Cortisol ist das primäre Stresshormon und wird von der Nebennierenrinde produziert. Physiologisch hat Cortisol ein klares Tagesprofil: Morgens zwischen 6 und 8 Uhr ist es am höchsten (Cortisol Awakening Response) – das gibt Energie und mobilisiert Glukose. Im Tagesverlauf sinkt es kontinuierlich und sollte abends niedrig sein für erholsamen Schlaf. Kurzfristig erhöhtes Cortisol (akuter Stress) ist normal und nützlich. Chronisch erhöhte oder dauerhaft dysregulierte Cortisolspiegel (flaches Tagesprofil, abends zu hoch) sind problematisch: Sie beeinflussen nahezu jedes Hormonsystem im Körper, fördern Bauchfettbildung, stören Schlaf und greifen direkt in die Sexualhormonachse ein.",
         },
         {
           heading: "Typische Symptome bei Cortisol-Überschuss",
-          text: "Kennzeichen: Bauchfett, das sich trotz Sport und Diät kaum verändert, Schlafstörungen (besonders Aufwachen 2–4 Uhr morgens), Herzrasen und Angstgefühle, Stimmungsschwankungen, häufige Infekte, Zyklusunregelmäßigkeiten und verminderte Libido.",
+          text: "Chronisch erhöhte oder dysregulierte Cortisolspiegel äußern sich durch charakteristische Symptome: Bauchfett, das sich trotz Sport und Diät kaum verändert – Cortisolrezeptoren sind im viszeralen Fettgewebe besonders dicht, weshalb Cortisol gezielt Bauchfett aufbaut. Schlafstörungen: nächtliches Aufwachen zwischen 2 und 4 Uhr morgens ist oft ein Zeichen für erhöhtes Nacht-Cortisol. Herzrasen und innere Unruhe, da Cortisol das sympathische Nervensystem stimuliert. Anhaltende Angstgefühle und Reizbarkeit. Häufige Infekte durch Immunsuppression: Chronisches Cortisol hemmt T-Zellen und NK-Zellen. Zyklusunregelmäßigkeiten und ausbleibender Eisprung, da Cortisol die GnRH-Ausschüttung hemmt. Verminderte Libido durch Unterdrückung der Testosteron- und Östrogenproduktion.",
         },
         {
           heading: "Wie Cortisol die anderen Hormone beeinflusst",
-          text: "Erhöhtes Cortisol blockiert die Progesteronproduktion (Cortisol und Progesteron konkurrieren um dieselbe Vorstufe). Es verstärkt Insulinresistenz, hemmt die Schilddrüsenhormon-Umwandlung von T4 zu T3 und senkt Östrogen. Ein hoher Cortisol-Spiegel kann alle anderen Hormonsysteme destabilisieren.",
+          text: "Erhöhtes Cortisol blockiert die Progesteronproduktion (Cortisol und Progesteron konkurrieren um dieselbe Vorstufe – Pregnenolon – in den Nebennieren). Es verstärkt Insulinresistenz durch Mobilisierung von Glukose aus dem Speicher (Glykogenolyse und Glukoneogenese), hemmt die Schilddrüsenhormon-Umwandlung von T4 zu T3 (Cortisol hemmt das Deiodinase-Enzym direkt), und senkt Östrogen indirekt durch GnRH-Suppression. Ein chronisch erhöhter Cortisolspiegel kann alle anderen Hormonsysteme gleichzeitig destabilisieren – ein häufig übersehener gemeinsamer Nenner bei Frauen mit multiplen Hormonsymptomen.",
         },
         {
           heading: "Was hilft bei zu viel Cortisol?",
-          text: "Stress reduzieren: Atemübungen, Meditation, Yoga. Schlaf priorisieren – die Nebennieren erholen sich hauptsächlich zwischen 22 und 2 Uhr. Adaptogene (Ashwagandha, Rhodiola) können helfen. Koffein reduzieren (stimuliert Cortisol). Regelmäßige Mahlzeiten (Blutzuckerschwankungen sind Stressreize).",
+          text: "Cortisol senken erfordert mehrere parallele Maßnahmen: Stressreduktion ist die wichtigste Maßnahme – Atemübungen (4-7-8-Technik, Box Breathing) aktivieren den Parasympathikus und senken Cortisol messbar. Meditation (10 Min. täglich) senkt Cortisol nach 8 Wochen nachweislich um 20–30 %. Schlaf priorisieren: Die Nebennieren regenerieren sich hauptsächlich in den Stunden vor Mitternacht – Schlafbeginn vor 23 Uhr ist metabolisch wichtiger als Schlafdauer allein. Adaptogene: Ashwagandha (KSM-66, 300–600 mg täglich) senkt Cortisol in randomisierten Studien signifikant. Rhodiola rosea (200–400 mg täglich) reduziert stressbedingte Cortisol-Dysregulation. Koffein nach 14 Uhr meiden – Koffein stimuliert direkt die Cortisolausschüttung. Regelmäßige Mahlzeiten ohne lange Pausen stabilisieren Blutzucker und eliminieren einen häufigen Cortisol-Trigger.",
         },
       ],
     },
@@ -822,15 +822,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "PMS: Das Muster",
-          text: "PMS tritt definitionsgemäß in den 1–2 Wochen vor der Menstruation auf und ist an den Zyklus gebunden. Typische Symptome: Brustspannen, Blähungen, Reizbarkeit, Stimmungsschwankungen, Heißhunger. Entscheidend: Die Symptome hören mit Beginn der Blutung auf.",
+          text: "PMS (Prämenstruelles Syndrom) tritt definitionsgemäß in den 1–2 Wochen vor der Menstruation auf und ist streng an den Zyklus gebunden. Der entscheidende diagnostische Hinweis: Die Symptome hören mit dem Beginn der Blutung auf – oft innerhalb von 1–2 Tagen. Typische PMS-Symptome entstehen durch den Abfall von Progesteron in der zweiten Zyklushälfte: Brustspannen und Empfindlichkeit, Blähungen und Wassereinlagerungen, Reizbarkeit und emotionale Überreaktionen, Heißhunger (besonders auf Kohlenhydrate und Süßes), Kopfschmerzen und Migräne. PMDS (Prämenstruelle Dysphorische Störung) ist die schwere Form: ausgeprägte Depressionen und extreme Reizbarkeit, die soziale Funktionen beeinträchtigen. PMS betrifft 20–40 % der Frauen, PMDS ca. 3–8 %.",
         },
         {
           heading: "Perimenopause: Das Muster",
-          text: "In der Perimenopause sind die Symptome nicht streng zyklusgebunden. Sie treten auch in Phasen auf, in denen früher keine Beschwerden waren. Dazu kommen neue Symptome: Hitzewallungen, Nachtschweiß, Schlafstörungen, veränderte Zykluslänge. Oft werden PMS-Symptome gleichzeitig intensiver.",
+          text: "In der Perimenopause sind die Symptome nicht streng zyklusgebunden – das ist der wichtigste Unterschied zu PMS. Beschwerden können in jeder Zyklusphase auftreten, auch zu Zeiten, in denen früher keine Symptome waren. Die hormonellen Schwankungen sind unregelmäßiger und extremer als beim normalen PMS: Östrogen kann in einem Monat ungewöhnlich hoch und im nächsten sehr niedrig sein. Neue Symptome, die bei PMS selten sind, deuten auf Perimenopause hin: Hitzewallungen (besonders nachts), Nachtschweiß, veränderte Zykluslänge (kürzer oder länger), neue Schlafstörungen. Gleichzeitig werden vorhandene PMS-Symptome oft intensiver: Das Gehirn reagiert empfindlicher auf Hormonschwankungen, und Progesteron (das Beruhigungshormon) sinkt zuerst und stärker.",
         },
         {
           heading: "Ab wann ist Perimenopause wahrscheinlicher?",
-          text: "Ab dem 40. Lebensjahr sollte bei neuen oder stärker werdenden Hormonsymptomen Perimenopause in Betracht gezogen werden. Ein Bluttest (FSH, Östradiol) gibt erste Hinweise – obwohl FSH in der frühen Perimenopause noch normal sein kann.",
+          text: "Ab dem 40. Lebensjahr sollte bei neuen oder stärker werdenden Hormonsymptomen Perimenopause aktiv in Betracht gezogen werden – auch wenn der Zyklus noch regelmäßig ist. In der frühen Perimenopause kann der Zyklus äußerlich noch normal erscheinen, während die Hormonschwankungen darunter bereits erheblich sind. Ein Bluttest gibt erste Hinweise, ist aber kein sicheres Diagnosewerkzeug: FSH kann in der frühen Perimenopause noch im normalen Bereich liegen – weil die Eierstöcke noch Östrogen produzieren, wenn auch unregelmäßig. AMH (Anti-Müller-Hormon) ist der verlässlichste Marker für die Eierstockreserve und schwankt kaum im Zyklus. Ein Symptomtagebuch über 2–3 Monate (Zykluslänge, Stimmung, Beschwerden) ist oft aussagekräftiger als ein einmaliger Bluttest.",
         },
       ],
     },
@@ -904,15 +904,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Symptome eines Vitamin-D-Mangels",
-          text: "Frühe Anzeichen: anhaltende Müdigkeit und Erschöpfung, die durch Schlaf nicht besser wird. Muskelschwäche und diffuse Muskelschmerzen, besonders an Beinen und Rücken. Gedrückte Stimmung oder Winterdepression. Häufige Erkältungen (Vitamin D ist für das Immunsystem essenziell).",
+          text: "Vitamin-D-Mangel verursacht ein breites Spektrum an Symptomen, die leicht anderen Ursachen zugeschrieben werden. Frühe und häufige Anzeichen: Anhaltende Erschöpfung und Müdigkeit, die auch nach ausreichend Schlaf nicht besser wird – weil Vitamin D Mitochondrien (die Energielieferanten der Zelle) direkt beeinflusst. Diffuse Muskelschwäche und Schmerzen, besonders an Beinen, Oberschenkeln und Rücken. Gedrückte Stimmung oder saisonal bedingte Depression (SAD) – Vitamin-D-Rezeptoren sind im Hippocampus und präfrontalen Kortex vorhanden. Häufige Infekte und langsame Heilung: Vitamin D reguliert T-Zellen und Makrophagen des Immunsystems. Haarausfall – Vitamin-D-Rezeptoren in Haarfollikeln sind für den Wachstumszyklus essenziell. In Deutschland haben ca. 60 % der Bevölkerung suboptimale Vitamin-D-Werte.",
         },
         {
           heading: "Welcher Vitamin-D-Wert ist optimal?",
-          text: "Der Laborwert 25-OH-Vitamin D zeigt den Versorgungsstatus: Unter 20 ng/ml gilt als Mangel. Zwischen 20 und 30 ng/ml: Grenzbereich. Optimal für Frauen mit hormonellen Erkrankungen: 40–60 ng/ml. Bei Hashimoto kann Vitamin-D-Mangel die Autoimmunaktivität verstärken.",
+          text: "Der Laborwert 25-OH-Vitamin D (Calcidiol) zeigt den Versorgungsstatus zuverlässig an. Offizielle Einteilung: Unter 12 ng/ml: schwerer Mangel mit Osteomalazie-Risiko. 12–20 ng/ml: Mangel. 20–30 ng/ml: Grenzbereich, suboptimal. Über 30 ng/ml: laut Leitlinien ausreichend. Für Frauen mit hormonellen Erkrankungen empfehlen viele Endokrinologen 40–60 ng/ml als Zielwert: Bei Hashimoto korreliert Vitamin-D-Mangel klar mit höherer TPO-Antikörper-Aktivität – Supplementierung auf 40+ ng/ml senkt die Antikörperwerte in Studien signifikant. In der Perimenopause ist Vitamin D für den Knochenerhalt und die Stimmungsregulierung besonders wichtig. Toxizität entsteht erst ab dauerhaft über 100 ng/ml – normale Supplementierungsdosen sind sicher.",
         },
         {
           heading: "Wie viel Vitamin D einnehmen?",
-          text: "Bei nachgewiesenem Mangel werden oft 2.000–5.000 IU täglich empfohlen. Wichtig: Vitamin D3 (nicht D2) und immer zusammen mit Vitamin K2 einnehmen (schützt vor Kalziumeinlagerungen in Gefäßen). Den Wert nach 3 Monaten kontrollieren.",
+          text: "Bei nachgewiesenem Mangel werden in der klinischen Praxis oft höhere Dosen als die offizielle Empfehlung (800 IU/Tag) eingesetzt: 2.000–5.000 IU täglich sind bei Mangel sicher und effektiv. Vitamin D3 (Cholecalciferol) wählen, nicht D2 (Ergocalciferol) – D3 erhöht den Blutspiegel 2–3-mal effektiver. Vitamin D immer zusammen mit Vitamin K2 (MK-7, 100–200 µg täglich) einnehmen: K2 lenkt das durch Vitamin D aufgenommene Kalzium in die Knochen statt in die Gefäße. Vitamin D ist fettlöslich – es wird am besten zu einer fettreichen Mahlzeit aufgenommen. Den Blutspiegel nach 3 Monaten kontrollieren und die Dosis anpassen: Das Ziel ist 40–60 ng/ml, nicht einfach 'über dem Mangel'.",
         },
       ],
     },
@@ -943,15 +943,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Phytoöstrogene: Was sie sind und wie sie wirken",
-          text: "Phytoöstrogene sind pflanzliche Verbindungen, die schwach an Östrogen-Rezeptoren binden. Sie sind kein Ersatz für körpereigenes Östrogen, können aber Symptome lindern. Wichtigste Quellen: Soja (Isoflavone), Leinsamen (Lignane), Rotklee, Kichererbsen, Hülsenfrüchte.",
+          text: "Phytoöstrogene sind pflanzliche Verbindungen, die strukturell dem menschlichen Östrogen ähneln und schwach an Östrogenrezeptoren (ER-α und ER-β) binden. Sie sind kein Ersatz für körpereigenes Östrogen – ihre östrogene Aktivität ist 100–1.000-mal schwächer – können aber in Abwesenheit von körpereigenem Östrogen (wie in der Menopause) eine moderate östrogene Wirkung entfalten. Die wichtigsten Phytoöstrogen-Klassen: Isoflavone aus Soja (Tofu, Edamame, Sojamilch), Tempeh und Miso. Lignane aus Leinsamen (die konzentrierteste pflanzliche Quelle), Sesam und Vollkorngetreide. Hülsenfrüchte (Kichererbsen, Linsen, Bohnen) enthalten moderate Mengen. Eine sojahaltige Ernährung (ähnlich der traditionellen japanischen Kost) wird mit milderen Wechseljahresbeschwerden assoziiert.",
         },
         {
           heading: "Was die Wissenschaft sagt",
-          text: "Isoflavone aus Soja zeigen in Studien moderate Wirkung bei Hitzewallungen – besonders bei Frauen, die Equol produzieren können (ca. 30 % der Westeuropäerinnen). Leinsamen (2 EL täglich) haben in kleinen Studien ebenfalls Wirkung auf Wechseljahresbeschwerden gezeigt. Rotklee-Extrakte sind pflanzlich und haben die meisten Belege.",
+          text: "Die Studienlage zu Phytoöstrogenen ist differenziert. Isoflavone aus Soja zeigen in Studien eine moderate Reduktion von Hitzewallungen – im Schnitt 20–25 % weniger Episoden. Entscheidend ist der Equol-Faktor: Equol ist ein Stoffwechselprodukt von Daidzein (einem Isoflavon), das nur von bestimmten Darmbakterienstämmen produziert werden kann. Nur ca. 25–30 % der Westeuropäerinnen sind 'Equol-Produzentinnen' – bei ihnen zeigen Soja-Isoflavone die stärkste Wirkung. Leinsamen (2 EL gemahlene Leinsamen täglich) haben in kleinen Studien Wirkung auf Hitzewallungen und Stimmung gezeigt. Rotklee-Extrakte (Trifolium pratense, 40–160 mg Isoflavone täglich) haben von allen pflanzlichen Optionen die robusteste Evidenz bei Hitzewallungen. Schwarzer Cohosh (Traubensilberkerze) wirkt nicht über Phytoöstrogene, sondern serotonerg – eine bewährte Alternative.",
         },
         {
           heading: "Lebensstil: Was Östrogen beeinflusst",
-          text: "Körpergewicht: Fettzellen (Adipozyten) produzieren Östrogen (Östron). Sehr dünne Frauen haben oft niedrigeres Östrogen. Übermäßiger Sport kann den Östrogenspiegel senken (Athleten-Amenorrhö). Chronischer Stress senkt Östrogen indirekt. Alkohol erhöht kurzfristig Östrogen – ist aber langfristig schädlich.",
+          text: "Körpergewicht beeinflusst den Östrogenspiegel direkt: Fettzellen (Adipozyten) produzieren Östron (eine schwächere Östrogenform) durch das Enzym Aromatase. Postmenopausale Frauen mit höherem Körpergewicht haben oft höhere Östronwerte – was einerseits vor Hitzewallungen schützt, andererseits das Brustkrebsrisiko erhöhen kann. Untergewicht und exzessiver Sport senken die Östrogenproduktion stark (athletische Amenorrhö entsteht wenn Körperfett unter ca. 17 % sinkt). Chronischer Stress senkt Östrogen indirekt über zwei Wege: Cortisol konkurriert mit Progesteron und Östrogen um Vorläufermoleküle (Pregnenolon), und hemmt die GnRH-Ausschüttung im Hypothalamus. Ausreichend Schlaf (7–8 Stunden) ist hormonell wichtig: Im Schlaf werden Wachstumshormon und Sexualhormone reguliert. Alkohol erhöht kurzfristig Östrogen, erhöht aber langfristig das Brustkrebsrisiko.",
         },
       ],
     },
@@ -982,15 +982,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Die häufigsten Symptome im Überblick",
-          text: "Eine Schilddrüsenunterfunktion verlangsamt nahezu alle Körperprozesse. Typisch: extreme Erschöpfung, die sich trotz Schlaf nicht bessert. Gewichtszunahme ohne Änderung der Ernährung. Ständiges Frieren, auch wenn anderen warm ist. Haarausfall und brüchige Nägel. Heisere Stimme. Depressive Stimmung.",
+          text: "Eine Schilddrüsenunterfunktion verlangsamt nahezu alle Körperprozesse, weil T3 (das aktive Schilddrüsenhormon) jede einzelne Körperzelle antreibt. Typische Symptome: extreme Erschöpfung, die sich trotz ausreichend Schlaf nicht bessert. Gewichtszunahme ohne Änderung der Ernährung (verlangsamter Grundumsatz). Ständiges Frieren auch bei normaler Raumtemperatur. Diffuser Haarausfall und brüchige Nägel. Heisere, raue Stimme durch Verdickung des Gewebes im Kehlkopfbereich. Depressive Verstimmung und Antriebslosigkeit. Verlangsamte Verdauung und Verstopfung. Verminderte Herzfrequenz. Das Besondere an der Schilddrüsenunterfunktion ist, dass diese Symptome einzeln unspezifisch sind und leicht anderen Ursachen zugeschrieben werden – was die Diagnose oft verzögert.",
         },
         {
           heading: "Symptome, die oft übersehen werden",
-          text: "Weniger bekannte Zeichen: Verlangsamte Reflexe, geschwollenes Gesicht (besonders Augenlider morgens), Wassereinlagerungen, Carpal-Tunnel-Syndrom, erhöhter Cholesterinspiegel, unregelmäßiger Zyklus oder starke Menstruationsblutungen.",
+          text: "Weniger bekannte, aber klinisch relevante Zeichen einer Schilddrüsenunterfunktion: Verlangsamte Reflexe (testbar beim Neurologen mit dem Reflexhammer – bei Hypothyreose ist die Entspannungsphase des Reflexes verlangsamt). Geschwollenes, aufgedunsenes Gesicht morgens, besonders die Augenlider (Myxödem – Flüssigkeitseinlagerung durch veränderte Gewebseigenschaften). Erhöhter Cholesterinspiegel trotz gesunder Ernährung (T3-Mangel hemmt den Cholesterinabbau in der Leber). Carpal-Tunnel-Syndrom durch Wassereinlagerungen, die den Nerv komprimieren. Unregelmäßiger Zyklus, starke Periodenblutungen oder Zyklusaussetzer – Schilddrüsenhormone sind für die Reproduktionshormonachse essenziell.",
         },
         {
           heading: "Wann ist Hashimoto die Ursache?",
-          text: "In Deutschland ist Hashimoto Thyreoiditis die häufigste Ursache einer Schilddrüsenunterfunktion. Unterschied: Bei gewöhnlicher Hypothyreose ohne Autoimmunkomponente sind die TPO-Antikörper normal. Bei Hashimoto sind sie erhöht. Die Behandlung (L-Thyroxin) ist in beiden Fällen ähnlich, aber das Wissen um Hashimoto hilft, den Verlauf besser zu verstehen.",
+          text: "In Deutschland ist Hashimoto Thyreoiditis die mit Abstand häufigste Ursache einer Schilddrüsenunterfunktion bei Frauen – sie erklärt schätzungsweise 90 % aller Hypothyreose-Fälle. Der Unterschied zur einfachen Hypothyreose: Bei Hashimoto sind TPO-Antikörper (Thyreoperoxidase-Antikörper) erhöht, was die zugrunde liegende Autoimmunreaktion nachweist. Bei gewöhnlicher Hypothyreose ohne Autoimmunkomponente (z.B. nach Radiojodtherapie oder Schilddrüsenoperation) sind die Antikörper normal. Die Behandlung mit L-Thyroxin ist in beiden Fällen ähnlich, aber das Wissen um Hashimoto ermöglicht gezieltere Maßnahmen: Selen-Supplementierung, Stressreduktion und Kontrolle von Nahrungsmittelunverträglichkeiten zur Reduktion der Autoimmunaktivität.",
         },
       ],
     },
@@ -1083,15 +1083,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Ab wann spricht man von früher Menopause?",
-          text: "Frühe Menopause: vor dem 45. Lebensjahr. Vorzeitige Ovarialinsuffizienz (POI): vor dem 40. Lebensjahr. Ca. 5 % der Frauen erleben frühe Menopause, ca. 1 % vorzeitige Ovarialinsuffizienz. Beide Formen erhöhen das Risiko für Langzeiterkrankungen, wenn sie nicht behandelt werden.",
+          text: "Frühe Menopause wird als das Eintreten der letzten Periode vor dem 45. Lebensjahr definiert. Vorzeitige Ovarialinsuffizienz (POI) bezeichnet den Verlust der Eierstockfunktion vor dem 40. Lebensjahr. Ca. 5 % der Frauen erleben eine frühe Menopause (40–45 Jahre), ca. 1 % eine vorzeitige Menopause (vor 40). Wichtige Konsequenz: Beide Formen erhöhen das langfristige Gesundheitsrisiko erheblich. Östrogen schützt Knochen, Herz, Gehirn und das Urogenitalsystem. Wer 5–10 Jahre früher als der Durchschnitt in die Menopause kommt, hat entsprechend länger einen Östrogenmangel ohne Behandlung. Aktuelle Leitlinien (DGGG, NICE) empfehlen ausdrücklich eine Hormontherapie bis mindestens zum durchschnittlichen Menopausealter von 51 Jahren.",
         },
         {
           heading: "Häufige Ursachen",
-          text: "Genetische Faktoren sind am wichtigsten – wenn Mutter oder Schwester früh in die Menopause kamen, ist das Risiko erhöht. Rauchen beschleunigt die Menopause um 1–2 Jahre. Autoimmunerkrankungen (Hashimoto, Typ-1-Diabetes, Lupus) können die Eierstöcke angreifen. Chemotherapie und Strahlentherapie im Beckenbereich sind häufige medizinische Ursachen.",
+          text: "Genetische Faktoren sind der stärkste Prädiktor für frühzeitige Menopause: Wenn Mutter oder ältere Schwester früh in die Wechseljahre kamen, ist die Wahrscheinlichkeit einer frühen eigenen Menopause deutlich erhöht. Mutationen im FMR1-Gen (Fragile-X) erhöhen das POI-Risiko erheblich und sollten bei POI unter 40 getestet werden. Rauchen beschleunigt die Menopause um durchschnittlich 1–2 Jahre durch direkte Schädigung der Eierstockreserve. Autoimmunerkrankungen können die Eierstöcke direkt angreifen: Hashimoto Thyreoiditis, Typ-1-Diabetes, Addison-Krankheit und systemischer Lupus sind mit erhöhtem POI-Risiko assoziiert. Gonadentoxische Behandlungen: Chemotherapie (besonders Alkylantien wie Cyclophosphamid) und Strahlentherapie im Becken- und Wirbelsäulenbereich schädigen Eizellen dauerhaft.",
         },
         {
           heading: "Warum Behandlung besonders wichtig ist",
-          text: "Östrogen schützt Knochen, Herz und Gehirn. Wer früh in die Menopause kommt und keine Hormontherapie erhält, hat ein deutlich höheres Risiko für Osteoporose, Herzerkrankungen und kognitivem Abbau. Aktuelle Leitlinien empfehlen HRT bis mindestens zum natürlichen Menopausealter (ca. 51).",
+          text: "Östrogen ist ein wichtiges Schutzhormon für multiple Organsysteme. Bei früher oder vorzeitiger Menopause ohne Hormontherapie steigen die Langzeitrisiken erheblich. Osteoporose-Risiko: Knochendichte nimmt ohne Östrogen schnell ab – bei frühzeitiger Menopause ist das Frakturrisiko im Alter deutlich erhöht. Kardiovaskuläres Risiko: Östrogen schützt Blutgefäße und verbessert das Lipidprofil. Früher Östrogenverlust erhöht das Herzerkrankungsrisiko. Kognitive Gesundheit: Östrogen unterstützt Neurotransmitter und Gehirnstoffwechsel – frühzeitige Menopause ohne Behandlung ist mit erhöhtem Demenzrisiko assoziiert. Die DGGG, NICE und ESHRE empfehlen übereinstimmend: HRT mindestens bis zum durchschnittlichen Menopausealter von 51 Jahren, da die Nutzen-Risiko-Bilanz in diesem Fall klar positiv ist.",
         },
       ],
     },
@@ -1122,15 +1122,15 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Warum Perimenopause Angst verursacht",
-          text: "Progesteron hat direkte angstlösende Wirkung – es bindet an GABA-Rezeptoren im Gehirn, ähnlich wie ein natürliches Beruhigungsmittel. Wenn Progesteron in der Perimenopause als erstes sinkt, kann Angst entstehen. Gleichzeitig beeinflussen schwankende Östrogenspiegel Serotonin, Dopamin und Noradrenalin.",
+          text: "Progesteron hat direkte angstlösende (anxiolytische) Wirkung: Es wird im Gehirn zu Allopregnanolon abgebaut – einem Neurosteroiden, das an GABA-A-Rezeptoren bindet und eine ähnliche beruhigende Wirkung hat wie Benzodiazepine, aber körpereigen und ohne Abhängigkeitspotenzial. In der Perimenopause sinkt Progesteron als erstes und stärker als Östrogen – schon Monate bevor Hitzewallungen beginnen. Dieser Progesteronabfall bedeutet für das Nervensystem: weniger GABA-Aktivität, weniger Pufferwirkung gegen Stressreaktionen. Parallel beeinflusst Östrogen die Serotoninproduktion und Serotonin-Rezeptoren (besonders für emotionale Regulation). Schwankende Östrogenspiegel in der Perimenopause destabilisieren das Serotonin-System – was depressive Verstimmungen, Reizbarkeit und Panikbereitschaft erklären kann.",
         },
         {
           heading: "Wie Panikattacken in der Perimenopause entstehen",
-          text: "Hitzewallungen können Panikattacken auslösen oder imitieren: Herzrasen, Schwitzen, Benommenheit, Kurzatmigkeit. Nächtliche Hitzewallungen führen zu Schlafmangel, der Angst verstärkt. Cortisol steigt relativ an, wenn Progesteron fällt – ein Teufelskreis aus Stress und Hormonstörung.",
+          text: "Hitzewallungen und Panikattacken überschneiden sich symptomatisch erheblich – und können kausal zusammenhängen. Eine Hitzewallung aktiviert physiologisch das sympathische Nervensystem: Herzrasen (Tachykardie), Schwitzen, Flush, Benommenheit und Kurzatmigkeit sind identische Symptome einer Panikattacke. Für das Gehirn ist dieser Zustand schwer von Gefahr zu unterscheiden – was echte Angst und Katastrophisieren auslösen kann. Nächtliche Hitzewallungen unterbrechen den Schlaf in der Tiefschlafphase. Chronischer Schlafmangel erhöht Cortisol, senkt die Amygdala-Kontrolle und erhöht die Panikbereitschaft messbar. Der Teufelskreis: Stress erhöht Cortisol → Cortisol konkurriert mit Progesteron → weniger Progesteron → weniger GABA-Puffer → mehr Angst → mehr Cortisol.",
         },
         {
           heading: "Was hilft bei Perimenopause-Angst?",
-          text: "Kurzfristig: Atemübungen (4-7-8-Technik), Bewegung, Kälteexposition (kalte Dusche beruhigt das Nervensystem). Mittelfristig: Magnesiumglycinat abends, Ashwagandha, Omega-3. Langfristig: bioidentisches Progesteron (auf Rezept) ist für viele Frauen sehr wirksam. Wenn Angst schwer ist, psychotherapeutische Unterstützung zusätzlich.",
+          text: "Kurzfristig: Die 4-7-8-Atemtechnik (4 Sekunden einatmen, 7 Sekunden halten, 8 Sekunden ausatmen) aktiviert den Vagusnerv und dämpft die Amygdala-Aktivierung innerhalb von Minuten. Kalte Dusche oder Eiswasser ins Gesicht (Tauchreflex) senkt Herzfrequenz und Adrenalin akut. Regelmäßige Bewegung baut Cortisol ab – Aerobic und Yoga sind belegt. Mittelfristig: Magnesiumglycinat (300–400 mg abends) unterstützt GABA und verbessert Schlaftiefe. Ashwagandha (KSM-66, 300–600 mg täglich) senkt Cortisol in Studien signifikant. Omega-3 (EPA+DHA 2 g täglich) reduziert systemische Entzündung und unterstützt Neurotransmitter-Balance. Langfristig: Bioidentisches mikronisiertes Progesteron (z.B. Utrogest, auf Rezept) ist für viele Frauen das wirksamste Mittel gegen perimenopausale Angst.",
         },
       ],
     },
@@ -1669,19 +1669,19 @@ export const FRAGEN_DATA: Record<string, FrageData> = {
       sections: [
         {
           heading: "Warum schlafen in den Wechseljahren so schwer fällt",
-          text: "Progesteron – das Schlafhormon – sinkt in der Perimenopause zuerst. Östrogen beeinflusst Melatonin und den Schlaf-Wach-Rhythmus. Hitzewallungen und Nachtschweiß wecken Frauen mehrfach pro Nacht. Cortisol-Dysregulation kann zu frühem Aufwachen um 3–4 Uhr führen.",
+          text: "Schlafstörungen sind eines der häufigsten und belastendsten Symptome der Perimenopause – bis zu 60 % der Frauen berichten davon. Die hormonellen Ursachen sind mehrdimensional: Progesteron (das wichtigste Schlafhormon) ist der erste Hormonwert, der in der Perimenopause sinkt – oft Jahre bevor Hitzewallungen beginnen. Progesteron bindet an GABA-A-Rezeptoren und hat beruhigende, schlaffördernde Wirkung. Östrogen beeinflusst die Melatonin-Synthese und den zirkadianen Rhythmus. Schwankende Östrogenspiegel destabilisieren den Schlaf-Wach-Rhythmus. Hitzewallungen und Nachtschweiß wecken Frauen mehrfach pro Nacht – besonders in der Tiefschlafphase (Slow-Wave-Sleep, für Erholung essenziell). Cortisol-Dysregulation erklärt das klassische Muster des frühen Aufwachens um 2–4 Uhr morgens mit Grübeln: Nacht-Cortisol ist zu hoch, was den Schlaf unterbricht.",
         },
         {
           heading: "Sofortmaßnahmen",
-          text: "Schlafzimmer kühlen auf 16–18 °C. Atmungsaktive Bettwäsche (Leinen, Bambus). Kein Alkohol – er stört Schlafarchitektur und verstärkt Hitzewallungen. Kein Koffein nach 14 Uhr. Bildschirme 1 Stunde vor dem Schlaf meiden.",
+          text: "Unmittelbar wirksame Schlafhygiene-Maßnahmen, die bei Wechseljahres-Schlafstörungen besonders relevant sind: Schlafzimmer auf 16–18 °C kühlen – der Körper initiiert den Schlaf durch Absenkung der Körperkerntemperatur. Hitzewallungen werden in einem kühleren Raum weniger häufig und kürzer. Atmungsaktive Bettwäsche aus Leinen oder Bambus reguliert die Wärme besser als Synthetik oder Baumwolle. Kein Alkohol: Auch ein Glas Wein stört die Schlafarchitektur (REM-Schlaf wird reduziert) und verstärkt nächtliche Hitzewallungen erheblich. Kein Koffein nach 14 Uhr – die Halbwertszeit von Koffein beträgt 5–7 Stunden, d.h. um 22 Uhr hat die Hälfte noch Wirkung. Bildschirme (blaulichthaltig) 1 Stunde vor dem Schlaf meiden – sie unterdrücken die Melatonin-Ausschüttung.",
         },
         {
           heading: "Wirksame Nahrungsergänzung",
-          text: "Magnesiumglycinat (300–400 mg, 1 Stunde vor dem Schlaf) fördert GABA und entspannt Muskeln. L-Theanin kann das Einschlafen erleichtern. Melatonin (0,5–1 mg) hilft beim Einschlafen, aber nicht beim Durchschlafen. Mönchspfeffer kann Progesteron indirekt unterstützen.",
+          text: "Gezielte Nahrungsergänzungsmittel können den Schlaf in der Perimenopause spürbar verbessern: Magnesiumglycinat (300–400 mg, 1 Stunde vor dem Schlaf) ist die wirkungsvollste nicht-hormonelle Option – es aktiviert GABA-Rezeptoren, entspannt Muskeln, senkt Herzfrequenz und unterstützt die körpereigene Melatonin-Synthese. L-Theanin (200 mg abends) – eine Aminosäure aus grünem Tee – fördert entspannte Wachheit (Alpha-Wellen) und erleichtert den Einschlafprozess ohne Sedierung. Melatonin (0,5–1 mg) hilft beim Einschlafen besonders bei Schlafphasenproblemen – behandelt aber nicht das Durchschlafproblem. Mönchspfeffer (Vitex agnus-castus, 20–40 mg täglich) kann die Progesteronproduktion indirekt unterstützen – Wirkung tritt nach 3 Monaten ein.",
         },
         {
           heading: "Wenn nichts hilft: medizinische Optionen",
-          text: "Hormontherapie (HRT) ist die wirksamste Behandlung bei hormonell bedingten Schlafstörungen in der Perimenopause. Bioidentisches Progesteron hat dabei direkte schlaffördernde Wirkung. Kognitive Verhaltenstherapie für Insomnie (CBT-I) ist langfristig genauso wirksam wie Schlafmittel – und ohne Abhängigkeitsrisiko.",
+          text: "Wenn Schlafhygiene und Supplemente nicht ausreichen, sind medizinische Optionen klar wirksam. Hormontherapie (HRT) ist die wirksamste Behandlung bei hormonell bedingten Schlafstörungen in der Perimenopause – sie adressiert die Ursache, nicht nur das Symptom. Bioidentisches mikronisiertes Progesteron (z.B. Utrogest 100 mg oral abends) wirkt direkt schlaffördernd über GABA-Rezeptoren und verbessert den Slow-Wave-Sleep (Tiefschlaf). Östrogen reduziert Hitzewallungen und Nachtschweiß, die den Schlaf unterbrechen. Kognitive Verhaltenstherapie für Insomnie (CBT-I) ist laut Studienlage langfristig genauso wirksam wie Schlafmittel – und ohne Abhängigkeitsrisiko. CBT-I adressiert dysfunktionale Gedanken über Schlaf und schlechte Schlafgewohnheiten in 6–8 Sitzungen.",
         },
       ],
     },
