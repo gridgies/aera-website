@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/schilddruese/werte`;
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     description:
       "Laborwerte der Schilddrüse verständlich erklärt: TSH-Referenzbereich, optimale fT3/fT4-Werte, Antikörper und wann Sie zum Arzt sollten.",
     url: PAGE_URL,
+    images: [{ url: ogUrl("Schilddrüsenwerte: TSH, fT3, fT4 Tabelle & Normalwerte", "Laborwerte der Schilddrüse verständlich erklärt: TSH-Referenzbereich, optimale fT3/fT4-Werte, Antikörper und wann zum Arzt."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Schilddrüsenwerte: TSH, fT3, fT4 Tabelle & Normalwerte",
+    description: "Laborwerte der Schilddrüse verständlich erklärt: TSH-Referenzbereich, optimale fT3/fT4-Werte, Antikörper und wann Sie zum Arzt sollten.",
+    images: [ogUrl("Schilddrüsenwerte: TSH, fT3, fT4 Tabelle & Normalwerte", "Laborwerte der Schilddrüse verständlich erklärt: TSH-Referenzbereich, optimale fT3/fT4-Werte, Antikörper und wann zum Arzt.")],
   },
 };
 

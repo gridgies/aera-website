@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, articleSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/blog/mai-2026`;
@@ -16,6 +17,13 @@ export const metadata: Metadata = {
     description:
       "FDA entfernt HRT-Warnhinweis, Femtech-Boom, Menopause und Alzheimer-Risiko: Die wichtigsten Entwicklungen im Mai 2026.",
     url: PAGE_URL,
+    images: [{ url: ogUrl("Frauengesundheit Mai 2026 – Was sich gerade verändert", "FDA entfernt HRT-Warnhinweis, Femtech-Boom, Menopause und Alzheimer-Risiko: Die wichtigsten Entwicklungen im Mai 2026."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frauengesundheit Mai 2026 – Was sich gerade verändert | Aera Health Blog",
+    description: "FDA entfernt HRT-Warnhinweis, Femtech-Boom, Menopause und Alzheimer-Risiko: Die wichtigsten Entwicklungen im Mai 2026.",
+    images: [ogUrl("Frauengesundheit Mai 2026 – Was sich gerade verändert", "FDA entfernt HRT-Warnhinweis, Femtech-Boom, Menopause und Alzheimer-Risiko: Die wichtigsten Entwicklungen im Mai 2026.")],
   },
 };
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blogPosts";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     description:
       "Monatliche Einblicke: Hormone, Menopause, Femtech und was sich in der Frauengesundheit gerade verändert.",
     url: `${BASE_URL}/blog`,
+    images: [{ url: ogUrl("Aera Health Blog – Frauengesundheit im Überblick", "Monatliche Einblicke: Hormone, Menopause, Femtech und was sich in der Frauengesundheit gerade verändert."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aera Health Blog – Frauengesundheit im Überblick",
+    description: "Monatliche Einblicke: Hormone, Menopause, Femtech und was sich in der Frauengesundheit gerade verändert.",
+    images: [ogUrl("Aera Health Blog – Frauengesundheit im Überblick", "Monatliche Einblicke: Hormone, Menopause, Femtech und was sich in der Frauengesundheit gerade verändert.")],
   },
 };
 

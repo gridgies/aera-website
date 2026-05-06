@@ -5,6 +5,7 @@ import { FRAGEN_LIST } from "@/data/fragenData";
 import { AGE_PAGES } from "@/data/agePages";
 import { VERGLEICHE_LIST } from "@/data/vergleiche";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
     description:
       "Ratgeber zu Menopause, Hashimoto, Schilddrüse und Hormonen. Wissenschaftlich fundiert für Frauen.",
     url: `${BASE_URL}/themen`,
+    images: [{ url: ogUrl("Gesundheitsthemen – Menopause, Hashimoto & Hormone", "Ratgeber zu Menopause, Hashimoto, Schilddrüse und Hormonen. Wissenschaftlich fundiert für Frauen."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gesundheitsthemen – Menopause, Hashimoto & Hormone",
+    description: "Ratgeber zu Menopause, Hashimoto, Schilddrüse und Hormonen. Wissenschaftlich fundiert für Frauen.",
+    images: [ogUrl("Gesundheitsthemen – Menopause, Hashimoto & Hormone", "Ratgeber zu Menopause, Hashimoto, Schilddrüse und Hormonen. Wissenschaftlich fundiert für Frauen.")],
   },
 };
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { METHODOLOGY_STEPS, SCIENCE_PRINCIPLES } from "@/lib/constants";
 import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 import type { Metadata } from "next";
 
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
     description:
       "Evidenzbasierte Frauengesundheit: Hormone, Wechseljahre und Hashimoto nach aktuellen medizinischen Leitlinien.",
     url: "https://www.aerahealth.de/wissenschaft",
+    images: [{ url: ogUrl("Wissenschaftliche Methodik – Aera Health", "Evidenzbasierte Frauengesundheit: Hormone, Wechseljahre und Hashimoto nach aktuellen medizinischen Leitlinien."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wissenschaftliche Methodik – Aera Health",
+    description: "Evidenzbasierte Frauengesundheit: Hormone, Wechseljahre und Hashimoto nach aktuellen medizinischen Leitlinien.",
+    images: [ogUrl("Wissenschaftliche Methodik – Aera Health", "Evidenzbasierte Frauengesundheit: Hormone, Wechseljahre und Hashimoto nach aktuellen medizinischen Leitlinien.")],
   },
 };
 

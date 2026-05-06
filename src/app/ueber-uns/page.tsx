@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { medicalWebPageSchema, organizationSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Über uns – Aera Health",
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     description:
       "Erfahre, wer hinter Aera Health steht und warum wir Frauengesundheit anders denken.",
     url: "https://www.aerahealth.de/ueber-uns",
+    images: [{ url: ogUrl("Über uns – Aera Health", "Erfahre, wer hinter Aera Health steht und warum wir Frauengesundheit anders denken."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Über uns – Aera Health",
+    description: "Erfahre, wer hinter Aera Health steht und warum wir Frauengesundheit anders denken.",
+    images: [ogUrl("Über uns – Aera Health", "Erfahre, wer hinter Aera Health steht und warum wir Frauengesundheit anders denken.")],
   },
 };
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FRAGEN_LIST } from "@/data/fragenData";
 import { breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { FragenList } from "@/components/ui/FragenList";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 
@@ -16,6 +17,13 @@ export const metadata: Metadata = {
     description:
       "Häufige Fragen zu Wechseljahren, Hashimoto, Schilddrüse und Hormonen – medizinisch fundiert beantwortet.",
     url: `${BASE_URL}/fragen`,
+    images: [{ url: ogUrl("Fragen zu Wechseljahren, Hashimoto & Hormonen – Antworten 2026", "Häufige Fragen zu Wechseljahren, Hashimoto, Schilddrüse und Hormonen – medizinisch fundiert beantwortet."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fragen zu Wechseljahren, Hashimoto & Hormonen – Antworten 2026",
+    description: "Häufige Fragen zu Wechseljahren, Hashimoto, Schilddrüse und Hormonen – medizinisch fundiert beantwortet.",
+    images: [ogUrl("Fragen zu Wechseljahren, Hashimoto & Hormonen – Antworten 2026", "Häufige Fragen zu Wechseljahren, Hashimoto, Schilddrüse und Hormonen – medizinisch fundiert beantwortet.")],
   },
 };
 

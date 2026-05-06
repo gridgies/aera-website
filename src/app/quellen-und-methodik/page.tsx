@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     description:
       "Transparenz über unsere medizinischen Quellen, redaktionellen Standards und wissenschaftliche Methodik.",
     url: `${BASE_URL}/quellen-und-methodik`,
+    images: [{ url: ogUrl("Quellen & Methodik – Aera Health", "Transparenz über unsere medizinischen Quellen, redaktionellen Standards und wissenschaftliche Methodik."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quellen & Methodik – Aera Health",
+    description: "Transparenz über unsere medizinischen Quellen, redaktionellen Standards und wissenschaftliche Methodik.",
+    images: [ogUrl("Quellen & Methodik – Aera Health", "Transparenz über unsere medizinischen Quellen, redaktionellen Standards und wissenschaftliche Methodik.")],
   },
 };
 

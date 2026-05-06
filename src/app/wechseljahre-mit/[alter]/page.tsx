@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { AGE_PAGES } from "@/data/agePages";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 
@@ -27,6 +28,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: page.title,
       description: page.metaDescription,
       url: `${BASE_URL}/wechseljahre-mit/${alter}`,
+      images: [{ url: ogUrl(page.title, page.metaDescription), width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.title,
+      description: page.metaDescription,
+      images: [ogUrl(page.title, page.metaDescription)],
     },
   };
 }

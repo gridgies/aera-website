@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/hashimoto/ernaehrung`;
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     description:
       "Hashimoto und Ernährung: Gluten meiden, Selen ergänzen, entzündungsarm essen. Evidenzbasierter Überblick für Hashimoto-Patientinnen.",
     url: PAGE_URL,
+    images: [{ url: ogUrl("Hashimoto Ernährung: Was wirklich hilft (und was Mythos ist)", "Gluten meiden, Selen ergänzen, entzündungsarm essen. Evidenzbasierter Überblick für Hashimoto-Patientinnen."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hashimoto Ernährung: Was wirklich hilft (und was Mythos ist)",
+    description: "Hashimoto und Ernährung: Gluten meiden, Selen ergänzen, entzündungsarm essen. Evidenzbasierter Überblick für Hashimoto-Patientinnen.",
+    images: [ogUrl("Hashimoto Ernährung: Was wirklich hilft (und was Mythos ist)", "Gluten meiden, Selen ergänzen, entzündungsarm essen. Evidenzbasierter Überblick für Hashimoto-Patientinnen.")],
   },
 };
 

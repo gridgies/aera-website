@@ -5,6 +5,7 @@ import { VERGLEICHE_DATA, VERGLEICHE_LIST } from "@/data/vergleiche";
 import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { breadcrumbSchema, medicalWebPageSchema, faqSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 
@@ -29,6 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: page.metaTitle,
       description: page.metaDescription,
       url: `${BASE_URL}/vergleich/${slug}`,
+      images: [{ url: ogUrl(page.metaTitle, page.metaDescription), width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metaTitle,
+      description: page.metaDescription,
+      images: [ogUrl(page.metaTitle, page.metaDescription)],
     },
   };
 }

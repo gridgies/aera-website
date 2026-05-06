@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ogUrl } from "@/lib/og";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 
 const BASE_URL = "https://www.aerahealth.de";
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     description:
       "FDA-Entscheidung 2025, bioidentische Hormone, echte Risiken: Der aktuelle Stand zur Hormonersatztherapie für Frauen in Deutschland.",
     url: PAGE_URL,
+    images: [{ url: ogUrl("HRT 2026: Hormonersatztherapie – Was sich geändert hat", "FDA-Entscheidung 2025, bioidentische Hormone, echte Risiken"), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HRT 2026: Hormonersatztherapie – Was sich geändert hat",
+    description: "FDA-Entscheidung 2025, bioidentische Hormone, echte Risiken: Der aktuelle Stand zur Hormonersatztherapie für Frauen in Deutschland.",
+    images: [ogUrl("HRT 2026: Hormonersatztherapie – Was sich geändert hat", "FDA-Entscheidung 2025, bioidentische Hormone, echte Risiken")],
   },
 };
 

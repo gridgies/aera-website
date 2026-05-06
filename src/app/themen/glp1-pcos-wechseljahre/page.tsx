@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/themen/glp1-pcos-wechseljahre`;
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     description:
       "Wie Semaglutid (Ozempic/Wegovy) die Insulinsensitivität bei PCOS verbessert, was in den Wechseljahren bekannt ist – und für wen GLP-1 nicht geeignet ist.",
     url: PAGE_URL,
+    images: [{ url: ogUrl("GLP-1 bei PCOS und Wechseljahren: Ozempic & Hormone 2026", "Wie Semaglutid die Insulinsensitivität bei PCOS verbessert – und für wen GLP-1 nicht geeignet ist"), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GLP-1 bei PCOS und Wechseljahren: Ozempic & Hormone 2026",
+    description: "Wie Semaglutid (Ozempic/Wegovy) die Insulinsensitivität bei PCOS verbessert, was in den Wechseljahren bekannt ist – und für wen GLP-1 nicht geeignet ist.",
+    images: [ogUrl("GLP-1 bei PCOS und Wechseljahren: Ozempic & Hormone 2026", "Wie Semaglutid die Insulinsensitivität bei PCOS verbessert – und für wen GLP-1 nicht geeignet ist")],
   },
 };
 

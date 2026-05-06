@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { LeadMagnetCTA } from "@/components/ui/LeadMagnetCTA";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/fragen/tsh-wert-tabelle`;
@@ -17,6 +18,13 @@ export const metadata: Metadata = {
       "TSH Normalwerte für Frauen nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle.",
     url: PAGE_URL,
     type: "article",
+    images: [{ url: ogUrl("TSH-Wert Tabelle für Frauen nach Alter: Normalwerte 2026", "TSH Normalwerte nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TSH-Wert Tabelle für Frauen nach Alter: Normalwerte 2026",
+    description: "TSH Normalwerte für Frauen nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle.",
+    images: [ogUrl("TSH-Wert Tabelle für Frauen nach Alter: Normalwerte 2026", "TSH Normalwerte nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle.")],
   },
 };
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/hashimoto/ursachen`;
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     description:
       "Warum entwickeln manche Frauen Hashimoto? Genetische Veranlagung, Östrogen, Jodüberschuss, Infektionen und Stress – alle Ursachen erklärt.",
     url: PAGE_URL,
+    images: [{ url: ogUrl("Hashimoto Ursachen: Genetik, Hormone, Umwelt & Lebensstil", "Warum entwickeln manche Frauen Hashimoto? Genetische Veranlagung, Östrogen, Jodüberschuss, Infektionen und Stress erklärt."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hashimoto Ursachen: Genetik, Hormone, Umwelt & Lebensstil",
+    description: "Warum entwickeln manche Frauen Hashimoto? Genetische Veranlagung, Östrogen, Jodüberschuss, Infektionen und Stress – alle Ursachen erklärt.",
+    images: [ogUrl("Hashimoto Ursachen: Genetik, Hormone, Umwelt & Lebensstil", "Warum entwickeln manche Frauen Hashimoto? Genetische Veranlagung, Östrogen, Jodüberschuss, Infektionen und Stress erklärt.")],
   },
 };
 

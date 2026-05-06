@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { ogUrl } from "@/lib/og";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/hashimoto/trockene-haut`;
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     description:
       "Rissige Ellenbogen, schuppige Schienbeine und raue Fersen: So verursacht Hashimoto Hauttrockenheit – und das können Sie dagegen tun.",
     url: PAGE_URL,
+    images: [{ url: ogUrl("Trockene Haut bei Hashimoto: Ursachen & was hilft", "Rissige Ellenbogen, schuppige Schienbeine: So verursacht Hashimoto Hauttrockenheit – und das können Sie dagegen tun."), width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trockene Haut bei Hashimoto: Ursachen & was hilft",
+    description: "Rissige Ellenbogen, schuppige Schienbeine und raue Fersen: So verursacht Hashimoto Hauttrockenheit – und das können Sie dagegen tun.",
+    images: [ogUrl("Trockene Haut bei Hashimoto: Ursachen & was hilft", "Rissige Ellenbogen, schuppige Schienbeine: So verursacht Hashimoto Hauttrockenheit – und das können Sie dagegen tun.")],
   },
 };
 
