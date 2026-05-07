@@ -6,7 +6,7 @@ import { buildSystemPrompt } from "@/lib/companionPrompt";
 
 const MAX_MESSAGES_PER_CONVERSATION = 30;
 const MAX_HISTORY_SENT_TO_AI = 6;
-const MAX_TOKENS_PER_RESPONSE = 600;
+const MAX_TOKENS_PER_RESPONSE = 900;
 const BETA_USER_MESSAGE_LIMIT = 5;
 
 export async function POST(request: NextRequest) {

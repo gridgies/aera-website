@@ -24,8 +24,8 @@ function parseAssistantContent(text: string): ParsedContent {
     return "";
   });
 
-  // Parse [CHIPS: label1 | label2 | ...]
-  cleaned = cleaned.replace(/\[CHIPS:\s*([^\]]+)\]/g, (_, labels) => {
+  // Parse [CHIPS: label1 | label2 | ...] — also handles truncated blocks missing the closing ]
+  cleaned = cleaned.replace(/\[CHIPS:\s*([^\]]+)\]?/g, (_, labels) => {
     chips.push(...labels.split("|").map((l: string) => l.trim()).filter(Boolean));
     return "";
   });
