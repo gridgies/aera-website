@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateText } from "ai";
+import { anthropic } from "@ai-sdk/anthropic";
 import { getSupabaseServer } from "@/lib/supabase-server";
 
 // POST /api/companion/title — generate a short title from the first user message
@@ -16,7 +17,7 @@ export async function POST(request: NextRequest) {
   }
 
   const { text } = await generateText({
-    model: "anthropic/claude-sonnet-4.6",
+    model: anthropic("claude-sonnet-4-6"),
     maxOutputTokens: 30,
     messages: [
       {

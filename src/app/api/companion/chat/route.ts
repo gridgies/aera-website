@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { streamText, UIMessage, convertToModelMessages, isTextUIPart } from "ai";
+import { anthropic } from "@ai-sdk/anthropic";
 import { getSupabaseServer } from "@/lib/supabase-server";
 import { buildSystemPrompt } from "@/lib/companionPrompt";
 
@@ -100,7 +101,7 @@ export async function POST(request: NextRequest) {
   }
 
   const result = streamText({
-    model: "anthropic/claude-sonnet-4.6",
+    model: anthropic("claude-sonnet-4-6"),
     system: systemPrompt,
     messages: await convertToModelMessages(recentMessages),
     maxOutputTokens: MAX_TOKENS_PER_RESPONSE,
