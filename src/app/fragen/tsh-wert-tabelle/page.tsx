@@ -3,28 +3,32 @@ import Link from "next/link";
 import { breadcrumbSchema, faqSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { LeadMagnetCTA } from "@/components/ui/LeadMagnetCTA";
 import { ogUrl } from "@/lib/og";
+import { gitDateStr } from "@/lib/buildDate";
 
 const BASE_URL = "https://www.aerahealth.de";
 const PAGE_URL = `${BASE_URL}/fragen/tsh-wert-tabelle`;
+const DATA_DATE = gitDateStr("src/app/fragen/tsh-wert-tabelle/page.tsx");
+
+const TITLE = "TSH-Wert Tabelle Frauen: Normalwerte nach Alter & Wechseljahre";
+const DESCRIPTION =
+  "Normalbereich 0,4–4,0 mU/L – aber was ist optimal in den Wechseljahren, mit 40, 50+ oder bei Hashimoto? Alle TSH-Referenzwerte nach Alter als übersichtliche Tabelle.";
 
 export const metadata: Metadata = {
-  title: "TSH-Wert Tabelle für Frauen nach Alter [2026]: Normalwerte & Bedeutung",
-  description:
-    "TSH-Wert Tabelle für Frauen nach Alter: Welche Schilddrüsenwerte sind normal mit 30, 40, 50+? Inkl. fT3, fT4 Referenzwerte & Schwangerschaft. Jetzt Tabelle ansehen.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/fragen/tsh-wert-tabelle" },
   openGraph: {
-    title: "TSH-Wert Tabelle für Frauen nach Alter: Normalwerte 2026",
-    description:
-      "TSH Normalwerte für Frauen nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: PAGE_URL,
     type: "article",
-    images: [{ url: ogUrl("TSH-Wert Tabelle für Frauen nach Alter: Normalwerte 2026", "TSH Normalwerte nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle."), width: 1200, height: 630 }],
+    images: [{ url: ogUrl(TITLE, DESCRIPTION), width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TSH-Wert Tabelle für Frauen nach Alter: Normalwerte 2026",
-    description: "TSH Normalwerte für Frauen nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle.",
-    images: [ogUrl("TSH-Wert Tabelle für Frauen nach Alter: Normalwerte 2026", "TSH Normalwerte nach Altersgruppe, in der Schwangerschaft und bei Hashimoto – als übersichtliche Tabelle.")],
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [ogUrl(TITLE, DESCRIPTION)],
   },
 };
 
@@ -122,10 +126,10 @@ export default function TshWertTabellePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbSchema(breadcrumbs))} />
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(faqSchema(faqs))} />
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(medicalWebPageSchema({
-        name: "TSH-Wert Tabelle für Frauen nach Alter: Normalwerte & Bedeutung",
-        description: "TSH-Wert Tabelle für Frauen nach Alter: Normalwerte mit 30, 40, 50+, in der Schwangerschaft und bei Hashimoto.",
+        name: TITLE,
+        description: DESCRIPTION,
         url: PAGE_URL,
-        dateModified: today,
+        dateModified: DATA_DATE,
       }))} />
 
       <article className="min-h-screen">
