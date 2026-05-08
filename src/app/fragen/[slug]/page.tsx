@@ -4,8 +4,10 @@ import Link from "next/link";
 import { FRAGEN_DATA, FRAGEN_LIST } from "@/data/fragenData";
 import { CONDITIONS_DATA } from "@/data/conditions";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
+import { gitDateStr } from "@/lib/buildDate";
 
 const BASE_URL = "https://www.aerahealth.de";
+const DATA_DATE = gitDateStr("src/data/fragenData.ts");
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -78,7 +80,7 @@ export default async function FragePage({ params }: Props) {
             name: frage.question,
             description: frage.metaDescription,
             url: pageUrl,
-            dateModified: today,
+            dateModified: DATA_DATE,
           })
         )}
       />

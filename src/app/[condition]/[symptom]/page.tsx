@@ -5,8 +5,10 @@ import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA, type DiagnosticTest } from "@/data/symptoms";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { InlineSignupForm } from "@/components/ui/InlineSignupForm";
+import { gitDateStr } from "@/lib/buildDate";
 
 const BASE_URL = "https://www.aerahealth.de";
+const DATA_DATE = gitDateStr("src/data/symptoms.ts");
 
 interface Props {
   params: Promise<{ condition: string; symptom: string }>;
@@ -83,7 +85,7 @@ export default async function ConditionSymptomPage({ params }: Props) {
             name: `${symptom.name} bei ${condition.topicName}`,
             description: symptom.metaDescription,
             url: pageUrl,
-            dateModified: today,
+            dateModified: DATA_DATE,
           })
         )}
       />

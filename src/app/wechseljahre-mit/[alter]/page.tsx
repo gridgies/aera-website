@@ -4,8 +4,10 @@ import Link from "next/link";
 import { AGE_PAGES } from "@/data/agePages";
 import { faqSchema, breadcrumbSchema, medicalWebPageSchema, jsonLd } from "@/lib/schema";
 import { ogUrl } from "@/lib/og";
+import { gitDateStr } from "@/lib/buildDate";
 
 const BASE_URL = "https://www.aerahealth.de";
+const DATA_DATE = gitDateStr("src/data/agePages.ts");
 
 interface Props {
   params: Promise<{ alter: string }>;
@@ -66,7 +68,7 @@ export default async function AgeWechseljahreSeite({ params }: Props) {
             name: page.title,
             description: page.metaDescription,
             url: pageUrl,
-            dateModified: today,
+            dateModified: DATA_DATE,
           })
         )}
       />

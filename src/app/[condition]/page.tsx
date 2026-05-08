@@ -7,8 +7,10 @@ import { FRAGEN_LIST } from "@/data/fragenData";
 import { AGE_PAGES } from "@/data/agePages";
 import { PILLAR_CONTENT } from "@/data/pillarContent";
 import { breadcrumbSchema, medicalWebPageSchema, faqSchema, jsonLd } from "@/lib/schema";
+import { gitDateStr } from "@/lib/buildDate";
 
 const BASE_URL = "https://www.aerahealth.de";
+const DATA_DATE = gitDateStr("src/data/conditions.ts");
 
 const CONDITION_MEDICAL_ENTITIES: Record<string, { name: string; icdCode: string }> = {
   menopause: { name: "Menopause", icdCode: "N95.1" },
@@ -103,7 +105,7 @@ export default async function ConditionPage({ params }: Props) {
             name: `${condition.topicName}: Symptome, Ursachen & Behandlung`,
             description: condition.metaDescription,
             url: pageUrl,
-            dateModified: today,
+            dateModified: DATA_DATE,
             condition: CONDITION_MEDICAL_ENTITIES[conditionSlug],
           })
         )}

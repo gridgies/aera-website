@@ -6,8 +6,10 @@ import { CONDITIONS_DATA } from "@/data/conditions";
 import { SYMPTOMS_DATA } from "@/data/symptoms";
 import { breadcrumbSchema, medicalWebPageSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { ogUrl } from "@/lib/og";
+import { gitDateStr } from "@/lib/buildDate";
 
 const BASE_URL = "https://www.aerahealth.de";
+const DATA_DATE = gitDateStr("src/data/vergleiche.ts");
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -82,7 +84,7 @@ export default async function VergleichPage({ params }: Props) {
             name: page.title,
             description: page.metaDescription,
             url: pageUrl,
-            dateModified: today,
+            dateModified: DATA_DATE,
           })
         )}
       />
